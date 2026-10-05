@@ -1,0 +1,6 @@
+node_modules/
+__pycache__/
+assets/avatars/emily/reference/
+assets/avatars/reference/
+assets/avatars/*/blobs/
+.superpowers/
