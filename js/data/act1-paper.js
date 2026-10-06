@@ -79,9 +79,10 @@
       id: 'a1-muse', act: 1, minutes: 1.25, layout: 'gallery',
       text: 'Meta Muse and OpenAI Dots: cute companions marketed as the cure for enshittification, sold by the companies selling enshittification.',
       media: [{ src: 'assets/act1/muse-keroppi.png', alt: 'Chat companion profile with a green Keroppi-style frog avatar wearing a bow tie, labeled “Keroppi, Active.”' },
-        { src: 'assets/act1/meta-tamagotchi.png', alt: 'A hand with pink manicured nails holding a small black Meta device showing a cream, plush-looking cartoon creature, captioned “Meta unveils pocket-sized ‘AI Tamagotchi.’”' }],
+        { src: 'assets/act1/meta-tamagotchi.png', alt: 'A hand with pink manicured nails holding a small black Meta device showing a cream, plush-looking cartoon creature, captioned “Meta unveils pocket-sized ‘AI Tamagotchi.’”' },
+        { src: 'assets/act1/daily-show-jolly.jpg', alt: 'The Daily Show thumbnail “The AI Endgame Is… Socialism?”: Jolly, Muse’s fuzzy cream-colored mascot, wears a fur hat with a red star and a hammer and sickle on its belly, surrounded by Elon Musk, Sam Altman, Mark Zuckerberg, Sundar Pichai and another tech executive, with Jon Stewart at right.' }],
       fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
-      notes: 'The lure of AI as interface, and the next death of search and even of the feed. They are obvious Sanrio and Labubu riffs with OpenClaw wrappers, but they are marketed as the solution to the very problem their makers created.',
+      notes: 'The lure of AI as interface, and the next death of search and even of the feed. They are obvious Sanrio and Labubu riffs with OpenClaw wrappers, but they are marketed as the solution to the very problem their makers created. Even The Daily Show noticed: on October 5, 2026, Jon Stewart voiced Jolly, Muse’s default mascot, at his desk. It offered help with scheduling and email, then “assuming power of attorney.” Stewart: “I can see right through this cutesy act of yours, Muse. You won’t rid our world of humanity that easily.” Clip: https://www.youtube.com/watch?v=S18jxWZntUo',
     },
     {
       id: 'a1-muse-video', act: 1, minutes: 1, layout: 'gallery',
