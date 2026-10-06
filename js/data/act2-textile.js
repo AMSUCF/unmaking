@@ -26,14 +26,14 @@
       notes: 'It is toxic geek masculinity all the way down. Name the history before celebrating access.',
     },
     {
-      id: 'a2-widner', act: 2, minutes: 1.25, layout: 'quote',
+      id: 'a2-widner', act: 2, minutes: 1, layout: 'quote',
       text: '“Yes, make 2012 your year of code. Learn to code. Not only is it a critical skill for DH folks, but coding should also be considered a basic literacy. I have been coding since I was 10 years old, when I learned BASIC (and its GOTOs) on my Commodore 64, one of the first popular home computers. I learned to code not because I had specific problems I wanted to solve; instead, coding was (and is) fun, a way of thinking, a way of making the computer do neat things, and an entry into a fascinating and rich culture.”',
       source: 'Michael Widner, “Learn to Code; Learn Code Culture,” HASTAC (2012)',
       fx: ['stitch-in'], avatar: { pose: 'point', x: 60 },
       notes: 'The optimistic case, sincerely meant. We would be remiss not to mention the death of HASTAC here.',
     },
     {
-      id: 'a2-posner', act: 2, minutes: 1.25, layout: 'quote',
+      id: 'a2-posner', act: 2, minutes: 1, layout: 'quote',
       text: '“Should you choose to learn in a group setting, you will immediately be conspicuous. It might be hard to see why this is a problem; after all, everyone wants more women in programming. Surely people are glad you’re there. Well, that’s true, as far as it goes. But it also makes you extremely conscious of your mistakes, confusion, and skill level. You are there as a representative of every woman. If you mess up or need extra clarification, it’s because you really shouldn’t — you suspected this anyway — you shouldn’t be there in the first place.”',
       source: 'Miriam Posner, “Some Things to Think About Before You Exhort Everyone to Code” (2012)',
       fx: ['stitch-in'], avatar: { pose: 'point', x: 60 },
@@ -45,6 +45,13 @@
       source: 'Elizabeth Losh, “What Can the Digital Humanities Learn from Feminist Game Studies?” DHQ 9.2 (2015)',
       fx: ['needle-pass'],
       notes: 'Tools are not neutral, just less obviously loaded.',
+    },
+    {
+      id: 'a2-haraway', act: 2, minutes: 0.75, layout: 'quote',
+      text: '“Technology is not neutral. We’re inside of what we make, and it’s inside of us. We’re living in a world of connections — and it matters which ones get made and unmade.”',
+      source: 'Donna Haraway, interviewed in Hari Kunzru, “You Are Cyborg,” Wired (1997)',
+      fx: ['stitch-in'], avatar: { pose: 'talk', x: 60 },
+      notes: 'Losh says tools only seem neutral; Haraway says why they never are. “Made and unmade” is our title, and the method: critical making is choosing which connections to make, and which to unmake.',
     },
     {
       id: 'a2-manovich', act: 2, minutes: 0.75, layout: 'statement',
@@ -89,7 +96,7 @@
       notes: 'Twining, with Stuart Moulthrop: a book about a tool and the community that grew it.',
     },
     {
-      id: 'a2-klimas', act: 2, minutes: 1.25, layout: 'quote',
+      id: 'a2-klimas', act: 2, minutes: 1, layout: 'quote',
       text: '“[Twine] might have been my graduate thesis, originally, if I had the patience to complete one … at the time, I had been experimenting with ways to create hypertext that were strongly code-oriented. I was studying interaction design, so Twine was my attempt to make something that would be friendly to people who were writers more than coders.”',
       source: 'Chris Klimas, interview with Anastasia Salter and Stuart Moulthrop for Twining',
       media: [{ src: 'assets/act2/twine-interface.png', alt: 'A Twine story map: passages as text boxes connected by arrows.' }],
