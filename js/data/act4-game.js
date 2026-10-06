@@ -10,24 +10,34 @@
       notes: 'Anastasia returns. A game act, because games are where we think about agency most directly.',
     },
     {
-      id: 'a4-triad', act: 4, minutes: 1, layout: 'statement', room: 'workshop', agency: 1,
+      id: 'a4-triad', act: 4, minutes: 0.75, layout: 'statement', room: 'workshop', agency: 1,
       heading: 'Material, tools, time… and steps',
       text: 'Nowviskie’s triad (pp. 11–12), plus a fourth loss: control over the steps and decisions themselves, sold as convenience.',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'Bethany Nowviskie’s triad as we use it in the book. Agents add a fourth thing we can lose.',
     },
     {
-      id: 'a4-contribution', act: 4, minutes: 1, layout: 'statement', room: 'workshop', agency: 0,
+      id: 'a4-contribution', act: 4, minutes: 0.75, layout: 'statement', room: 'workshop', agency: 0,
       text: 'If my agent does all the work to create a website, a Tracery bot, a 3D print file, where is the human contribution? When does lowering barriers remove the point of making?',
       fx: ['iris-in'], avatar: { pose: 'point', x: 60 },
       notes: 'The honest worry. Watch the agency meter hit zero.',
     },
     {
-      id: 'a4-pun', act: 4, minutes: 1, layout: 'statement', room: 'workshop', agency: 0,
+      id: 'a4-pun', act: 4, minutes: 0.5, layout: 'statement', room: 'workshop', agency: 0,
       heading: 'The pun is the argument',
       text: 'Making restores human agency. Agentic AI transfers it to the system.',
       fx: ['pixel-dissolve'],
       notes: 'The title’s pun: agency, and agentic.',
+    },
+    {
+      id: 'a4-undertale', act: 4, minutes: 0.75, layout: 'gallery', room: 'office', agency: 1,
+      text: 'Undertale was made almost entirely by one person in GameMaker. Every fight has another option: MERCY.',
+      media: [
+        { src: 'assets/act4/undertale-cover.jpg', alt: 'Cover of Undertale: Can a Game Give Hope? by Anastasia Salter, in the Replay series: a large red pixel-art heart outlined in black.' },
+        { src: 'assets/act4/undertale-bad-time.png', alt: 'Undertale battle screen: the skeleton Sans grins above the line “You feel like you’re going to have a bad time,” over the menu FIGHT, ACT, ITEM, MERCY.' },
+      ],
+      fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
+      notes: 'From my book on Undertale. A low-code tool let one person make a game that changed how people play other games. It challenged players to reconsider what games ask of us: you could fight everything, or choose not to, and the game remembers your choices. Hold that menu in mind for the next one.',
     },
     {
       id: 'a4-unmake', act: 4, minutes: 1, layout: 'choice', room: 'office', agency: 2,
@@ -45,7 +55,7 @@
       notes: 'The inspection pattern from Act III, made concrete. These questions work for students, for reviewers, and for us. Reveal one per press.',
     },
     {
-      id: 'a4-defaults', act: 4, minutes: 1, layout: 'gallery', room: 'commons', agency: 2,
+      id: 'a4-defaults', act: 4, minutes: 0.75, layout: 'gallery', room: 'commons', agency: 2,
       heading: 'Whose defaults?',
       text: 'Ask an image model for a “professor of digital culture” and see who it imagines. We built our guides by hand.',
       media: [
@@ -63,7 +73,7 @@
       notes: 'Stanford Daily, Sept. 21, 2026. Confirm the citation.',
     },
     {
-      id: 'a4-political', act: 4, minutes: 1, layout: 'statement', room: 'commons', agency: 2,
+      id: 'a4-political', act: 4, minutes: 0.75, layout: 'statement', room: 'commons', agency: 2,
       text: 'Our book is intentionally political, written in a state where humanities work was cast as a “public threat” (p. xiv; pp. 231–232).',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'Florida context. Making is never neutral, and neither is teaching it.',
@@ -94,7 +104,7 @@
       source: 'Swiss AI Initiative, Apertus',
       url: 'https://www.apertus-ai.org/',
       fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
-      notes: 'From the CAPE talk: to take control of our creative work through AI, we need to learn from projects like the Swiss AI Initiative and build community-driven tools that are thoughtfully and intentionally sourced. Apertus is public institutions building a model in the open.',
+      notes: 'From my earlier talk: to take control of our creative work through AI, we need to learn from projects like the Swiss AI Initiative and build community-driven tools that are thoughtfully and intentionally sourced. Apertus is public institutions building a model in the open.',
     },
     {
       id: 'a4-why-local', act: 4, minutes: 1, layout: 'choice', room: 'workshop', agency: 4,
@@ -104,24 +114,35 @@
       notes: 'Reveal one per press. Local models are less capable than frontier models, and that is part of the lesson: their limits are visible. Control, privacy, stability, and literacy all come from being able to hold the model.',
     },
     {
-      id: 'a4-dh-hub', act: 4, minutes: 1, layout: 'image', room: 'commons', agency: 4,
-      text: 'The DH center as hub: where people come for AI help, and leave with literacy and control instead of a subscription.',
-      media: [{ src: 'assets/act4/cape-lab.png', alt: 'Pixel-art poster for CAPE, the Creative AI, Play, and Empowerment Lab: a figure with a lantern looks out over an island town toward a glowing peak, beside signposts reading Culture, Democracy, Equity, Creativity, Play, and a friendly robot.' }],
-      source: 'CAPE: Creative AI, Play, and Empowerment Lab',
+      id: 'a4-dh-hub', act: 4, minutes: 1, layout: 'statement', room: 'commons', agency: 4,
+      heading: 'The DH center as hub',
+      text: 'Where people come for AI help, and leave with literacy and control instead of a subscription.',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
-      notes: 'From the CAPE talk: our field’s history of customized tool-making, and of building entry points into procedural creativity for those not versed in code, is essential to finding ways forward. DH scholars are well positioned to make these interventions through collaborative, feminist approaches to research-creation. The center redirects people away from frontier defaults toward local models, community tools, and the skills to inspect both.',
+      notes: 'From my earlier talk: our field’s history of customized tool-making, and of building entry points into procedural creativity for those not versed in code, is essential to finding ways forward. DH scholars are well positioned to make these interventions through collaborative, feminist approaches to research-creation. The center redirects people away from frontier defaults toward local models, community tools, and the skills to inspect both.',
     },
     {
-      id: 'a4-classroom', act: 4, minutes: 1, layout: 'statement', room: 'commons', agency: 5,
+      id: 'a4-classroom', act: 4, minutes: 0.75, layout: 'statement', room: 'commons', agency: 5,
       text: 'In DH classrooms, we can empower students to use agentic AI for research, critical making, and digital communication, without an alienating approach to programming education.',
       fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
       notes: 'The opportunity.',
     },
     {
-      id: 'a4-responsibility', act: 4, minutes: 1, layout: 'statement', room: 'commons', agency: 5,
+      id: 'a4-responsibility', act: 4, minutes: 0.75, layout: 'statement', room: 'commons', agency: 5,
       text: 'We also have the responsibility to give students a critical lens on these tools, with pathways from frontier platforms to local models and greater control, never losing sight of community or their own expertise.',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'The responsibility. The agency meter is full: that is the goal.',
+    },
+    {
+      id: 'a4-end-of-world', act: 4, minutes: 1, layout: 'gallery', room: 'commons', agency: 5,
+      text: 'How to make at the end of the world: Carol processes data toward no apparent end, and finds community anyway. We keep making.',
+      media: [
+        { src: 'assets/act4/loveless.jpg', alt: 'Cover of How to Make Art at the End of the World: A Manifesto for Research-Creation by Natalie Loveless, pink-to-red gradient over a highlighted screen of text.' },
+        { src: 'assets/act4/carol-poster.jpg', alt: 'Poster for Carol & the End of the World: an animated middle-aged woman on a motorcycle shades her eyes on a dark road, a giant face and a glowing planet behind her.' },
+        { src: 'assets/act4/carol-office.webp', alt: 'Still from Carol & the End of the World: Carol types at an old beige computer in a pale office full of identical workstations.' },
+      ],
+      source: 'Natalie Loveless, How to Make Art at the End of the World (2019); Carol & the End of the World (Netflix, 2023)',
+      fx: ['iris-in'], avatar: { pose: 'talk', x: 60 },
+      notes: 'The two works behind the title of my earlier talk. Loveless on research-creation as a way of making knowledge; Carol working, processing data toward no apparent end while finding joy in an Applebee’s community even as the world crashes around her. Those of us who make are perhaps in a similar place. Bookend with Emily’s Dark Tower slide: the world moved on, and we are still here making.',
     },
     {
       id: 'a4-credits', act: 4, minutes: 0.75, layout: 'credits', room: 'commons', agency: 5,

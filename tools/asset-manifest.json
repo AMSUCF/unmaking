@@ -25,6 +25,9 @@
   "assets/avatars/anastasia/source/walk4.png": "AuthorFunctionSlides/sprites/walk4.png",
   "assets/avatars/anastasia/source/walk5.png": "AuthorFunctionSlides/sprites/walk5.png",
   "assets/avatars/anastasia/source/sheet.jpg": "AuthorFunctionSlides/additions/sprites.jpg",
-  "assets/act4/apertus.png": "CAPE/apertus.png",
-  "assets/act4/cape-lab.png": "CAPE/cape.png"
+  "assets/act4/undertale-cover.jpg": "AuthorFunctionSlides/undertale.jpg",
+  "assets/act4/undertale-bad-time.png": "AuthorFunctionSlides/badtime.png",
+  "assets/act4/loveless.jpg": "AuthorFunctionSlides/loveless.jpg",
+  "assets/act4/carol-poster.jpg": "AuthorFunctionSlides/CarolPoster.jpg",
+  "assets/act4/carol-office.webp": "AuthorFunctionSlides/carol.webp"
 }
