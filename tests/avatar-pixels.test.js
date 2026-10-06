@@ -56,3 +56,11 @@ test('art never touches the frame border (only outline may)', () => {
     }));
   }));
 });
+
+test('anastasia wears a pixie cut: no hair below the glasses row, ears visible', () => {
+  const g = AP.compose('anastasia', 'idle');
+  // head is stamped at y=1; row 8 of the head (grid y=9) is the ear/lower-glasses row.
+  for (let y = 10; y < 20; y++) assert.ok(!/[Hh]/.test(g[y]), 'hair below ear row at y=' + y);
+  assert.equal(g[9][7 + 3], 'S', 'left ear visible');
+  assert.equal(g[9][7 + 12], 'S', 'right ear visible');
+});
