@@ -48,6 +48,38 @@
         await ctx.Avatar.walkTo(ctx.lead, -200);
         ctx.Avatar.hide(ctx.lead);
       },
+      'zine-to-pixels': async (root, ctx) => {
+        const grid = el('div', 'pixel-grid');
+        const n = 32 * 18;
+        const colours = ['#f4f1e8', '#111', '#ff4fb8', '#b6ff3b', '#22e0ff'];
+        const tiles = [];
+        for (let i = 0; i < n; i++) {
+          const t = el('i');
+          t.style.background = colours[i % colours.length];
+          t.style.visibility = 'hidden';
+          grid.append(t);
+          tiles.push(t);
+        }
+        fxLayer().append(grid);
+        const seed = Random.hashString(ctx.scene.id);
+        const cover = Random.shuffledOrder(n, seed);
+        const uncover = Random.shuffledOrder(n, seed + 1);
+        const leaving = ctx.Avatar.walkTo(ctx.lead, -200);
+        for (let s = 0; s < 12; s++) {
+          for (let k = Math.floor(s * n / 12); k < Math.floor((s + 1) * n / 12); k++) tiles[cover[k]].style.visibility = 'visible';
+          await wait(50);
+        }
+        ctx.setCraft('game');
+        ctx.Avatar.setSkin(ctx.lead, 'zine');
+        tiles.forEach((t) => { t.style.background = '#0d0b1a'; });
+        for (let s = 0; s < 12; s++) {
+          for (let k = Math.floor(s * n / 12); k < Math.floor((s + 1) * n / 12); k++) tiles[uncover[k]].style.visibility = 'hidden';
+          await wait(50);
+        }
+        grid.remove();
+        await leaving;
+        ctx.Avatar.hide(ctx.lead);
+      },
     },
   });
 })();

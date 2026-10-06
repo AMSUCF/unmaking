@@ -1,1 +1,39 @@
-/* ACT IV — INDIE GAME (implemented in Task 11) */
+/* ACT IV — INDIE GAME: pixel rooms, HUD bar with agency meter, dialogue box, choice menus */
+body[data-craft="game"] #stage { color: #f2f2f2; font-family: 'VT323', monospace; }
+.backdrop-game { background: #1c1430; image-rendering: pixelated; }
+.backdrop-game .hudbar { position: absolute; top: 0; left: 0; right: 0; height: 40px; display: flex; justify-content: space-between; align-items: center; padding: 0 18px; background: #000; color: #fff; font: 14px/1 'Press Start 2P', monospace; z-index: 1; }
+.backdrop-game .agency { color: #9dff00; letter-spacing: 2px; }
+.backdrop-game .wall { position: absolute; left: 0; right: 0; top: 40px; bottom: 150px; }
+.backdrop-game .floor { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; border-top: 6px solid #22160e; }
+.backdrop-game .prop { position: absolute; }
+.room-workshop .wall { background: linear-gradient(#6b4a2e 0 72%, #553a24 72% 76%, #6b4a2e 76%); }
+.room-workshop .floor { background: repeating-conic-gradient(#3a2a1e 0 25%, #4a3626 0 50%) 0 0 / 48px 48px; }
+.room-workshop .prop { right: 90px; bottom: 150px; width: 260px; height: 90px; background: #8a5a32; box-shadow: inset 0 -12px 0 #5a3a20, -40px -60px 0 -30px #c0c0c0, 20px -70px 0 -32px #e2b33c; }
+.room-office .wall { background: linear-gradient(#2e3a5a 0 72%, #26304a 72%); }
+.room-office .floor { background: repeating-conic-gradient(#3b3b4f 0 25%, #45455c 0 50%) 0 0 / 48px 48px; }
+.room-office .prop { right: 80px; top: 90px; width: 200px; height: 140px; background: #0d2a1a; border: 10px solid #9a9a9a; box-shadow: 0 0 40px #3cff8a55, inset 0 0 30px #3cff8a66; animation: crt 2s steps(2) infinite; }
+@keyframes crt { 50% { box-shadow: 0 0 46px #3cff8a77, inset 0 0 36px #3cff8a88; } }
+.room-commons .wall { background: linear-gradient(#7fb0d8 0 62%, #5f8f4a 62%); }
+.room-commons .floor { background: repeating-conic-gradient(#4f7d3a 0 25%, #5a8a42 0 50%) 0 0 / 48px 48px; }
+.room-commons .prop { right: 70px; bottom: 150px; width: 140px; height: 220px; background: #2f5a2a; clip-path: polygon(50% 0, 70% 20%, 62% 20%, 85% 45%, 72% 45%, 100% 75%, 58% 75%, 58% 100%, 42% 100%, 42% 75%, 0 75%, 28% 45%, 15% 45%, 38% 20%, 30% 20%); }
+
+[data-craft="game"] .scene { padding: 64px 80px 190px 220px; }
+[data-craft="game"] .scene.avatar-right { padding: 64px 220px 190px 80px; }
+[data-craft="game"] .layout-title, [data-craft="game"] .layout-handoff, [data-craft="game"] .layout-credits { padding: 64px 200px 190px; }
+[data-craft="game"] .card { background: #0d0b1a; border: 4px solid #f2f2f2; box-shadow: 0 0 0 4px #0d0b1a, 10px 10px 0 4px rgba(0, 0, 0, .5); padding: 26px 34px; }
+[data-craft="game"] .heading { font-family: 'Press Start 2P', monospace; font-size: 26px; line-height: 1.5; color: #ffd84a; }
+[data-craft="game"] .text { font-size: 38px; }
+[data-craft="game"] .media img { border: 6px solid #0d0b1a; outline: 4px solid #f2f2f2; }
+[data-craft="game"] .choice { font-family: 'Press Start 2P', monospace; font-size: 18px; line-height: 1.6; color: #cfcfcf; }
+[data-craft="game"] .choice::before { content: '  '; white-space: pre; }
+[data-craft="game"] .choice.current { color: #fff; }
+[data-craft="game"] .choice.current::before { content: '▶ '; color: #ffd84a; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+[data-craft="game"] .credits { font-family: 'Press Start 2P', monospace; font-size: 16px; line-height: 2.4; animation: roll 24s linear forwards; }
+[data-craft="game"] .layout-credits .card { height: 420px; }
+@keyframes roll { from { transform: translateY(380px); } to { transform: translateY(-40px); } }
+.pixel-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(18, 1fr); }
+.pixel-grid i { background: #0d0b1a; }
+
+[data-craft="game"] .avatar { bottom: 150px; }
+[data-craft="game"] #say { left: 40px !important; right: 40px; bottom: 14px; max-width: none; height: 124px; padding: 14px 20px; background: #000; border: 4px solid #fff; color: #9dff00; font: 34px/1.15 'VT323', monospace; }
