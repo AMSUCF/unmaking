@@ -1,1 +1,44 @@
-/* ACT III — E-ZINE (implemented in Task 10) */
+/* ACT III — E-ZINE: photocopied collage on a Web 1.0 tiled ground, marquee, hit counter */
+body[data-craft="zine"] #stage { color: #111; font-family: 'Special Elite', 'Courier New', monospace; }
+.backdrop-zine { background: #141414 radial-gradient(#ff4fb8 1px, transparent 1.6px) 0 0 / 26px 26px; animation: stars 30s linear infinite; }
+.backdrop-zine::before { content: ''; position: absolute; inset: 0; background: radial-gradient(#22e0ff 1px, transparent 1.6px) 13px 13px / 26px 26px; opacity: .7; }
+@keyframes stars { to { background-position: 260px 520px; } }
+.backdrop-zine .page {
+  position: absolute; inset: 56px 40px 26px; transform: rotate(-.6deg);
+  background-color: #f4f1e8;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='t'><feTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 4.2'/></filter><rect width='100%' height='100%' filter='url(%23t)' opacity='.35'/></svg>"), linear-gradient(90deg, transparent 49.6%, rgba(0, 0, 0, .08) 50%, transparent 50.4%);
+  box-shadow: 8px 10px 0 #000;
+}
+.backdrop-zine .staple { position: absolute; left: 50%; width: 30px; height: 5px; margin-left: -15px; background: linear-gradient(#bbb, #777); border-radius: 2px; }
+.backdrop-zine .staple.s1 { top: 110px; } .backdrop-zine .staple.s2 { bottom: 70px; }
+.backdrop-zine .ticker { position: absolute; top: 0; left: 0; right: 0; height: 42px; overflow: hidden; background: #000; color: #9dff00; font: 30px/42px 'VT323', monospace; white-space: nowrap; }
+.backdrop-zine .ticker span { display: inline-block; padding-left: 100%; animation: marquee 22s linear infinite; }
+@keyframes marquee { to { transform: translateX(-100%); } }
+.backdrop-zine .counter { position: absolute; right: 54px; bottom: 34px; padding: 2px 8px; background: #000; color: #ff4fb8; font: 24px/1 'VT323', monospace; letter-spacing: 2px; }
+
+[data-craft="zine"] .scene { padding-top: 84px; }
+[data-craft="zine"] .card-wrap { transform: rotate(var(--tilt, 0deg)); }
+[data-craft="zine"] .card { background: #fff; border: 3px solid #111; box-shadow: 6px 6px 0 #111; padding: 32px 40px; }
+[data-craft="zine"] .text { font-size: 32px; }
+[data-craft="zine"] .source { font-family: 'VT323', monospace; font-size: 22px; }
+[data-craft="zine"] .source::before { content: '>> '; color: #ff4fb8; }
+[data-craft="zine"] .media { position: relative; transform: rotate(var(--tilt, 0deg)); }
+[data-craft="zine"] .media img { filter: grayscale(1) contrast(1.7) brightness(1.08); border: 3px solid #111; background: #fff; }
+[data-craft="zine"] .media::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle, rgba(0, 0, 0, .4) 1px, transparent 1.6px) 0 0 / 5px 5px; mix-blend-mode: multiply; opacity: .4; }
+[data-craft="zine"] .media:has(video)::after { display: none; }
+[data-craft="zine"] .media video { border: 3px solid #111; box-shadow: 6px 6px 0 #ff4fb8; }
+
+.ransom { display: flex; flex-wrap: wrap; gap: 4px 2px; align-items: center; }
+.ransom span { display: inline-block; padding: 2px 6px; font-size: .9em; transform: rotate(var(--r)) scale(var(--s)); }
+.ransom .space { width: 16px; padding: 0; }
+.r-mono { font-family: 'Rubik Mono One', sans-serif; } .r-type { font-family: 'Special Elite', monospace; }
+.r-hand { font-family: 'Patrick Hand', cursive; } .r-pixel { font-family: 'VT323', monospace; font-size: 1.2em !important; }
+.r-serif { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; } .r-courier { font-family: 'Courier Prime', monospace; font-weight: 700; }
+.k-paper { background: #fff; color: #111; box-shadow: 1px 1px 0 #111; } .k-ink { background: #111; color: #fff; }
+.k-yellow { background: #f4e04d; color: #111; } .k-pink { background: #ff4fb8; color: #fff; } .k-lime { background: #b6ff3b; color: #111; }
+.scan-bar { position: absolute; left: 0; right: 0; top: 0; height: 46px; background: linear-gradient(transparent, rgba(190, 255, 200, .85), #fff, rgba(190, 255, 200, .85), transparent); box-shadow: 0 0 50px 14px rgba(180, 255, 200, .55); mix-blend-mode: screen; }
+
+.avatar[data-skin="zine"] { animation: xerox-jitter .5s steps(2) infinite; }
+.avatar[data-skin="zine"] img { image-rendering: auto; filter: grayscale(1) contrast(2) brightness(1.1) drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(5px 5px 0 #ff4fb8); }
+@keyframes xerox-jitter { from { transform: translate(0, 0) rotate(-1deg); } to { transform: translate(1px, -1px) rotate(1deg); } }
+[data-craft="zine"] #say { background: #fff; border: 3px solid #111; box-shadow: 5px 5px 0 #ff4fb8; font-family: 'Special Elite', monospace; }

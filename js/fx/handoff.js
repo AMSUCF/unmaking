@@ -36,6 +36,18 @@
         await ctx.Avatar.walkTo(ctx.lead, -200);
         ctx.Avatar.hide(ctx.lead);
       },
+      'scan-to-zine': async (root, ctx) => {
+        const bar = el('div', 'scan-bar');
+        bar.style.height = '70px';
+        fxLayer().append(bar);
+        const sweep = anim(bar, [{ transform: 'translateY(-80px)' }, { transform: 'translateY(760px)' }], { duration: 1800, easing: 'linear' });
+        await wait(900);
+        await swapBackdrop(ctx, 'zine');
+        await sweep;
+        bar.remove();
+        await ctx.Avatar.walkTo(ctx.lead, -200);
+        ctx.Avatar.hide(ctx.lead);
+      },
     },
   });
 })();
