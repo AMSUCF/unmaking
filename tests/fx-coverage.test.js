@@ -7,8 +7,8 @@ const { FX_NAMES } = require('../js/core/acts.js');
 const { ROOT } = require('./helpers.js');
 
 // Grow these as Tasks 9-11 implement crafts and handoffs.
-const CRAFTS_IMPLEMENTED = ['paper'];
-const HANDOFFS_IMPLEMENTED = [];
+const CRAFTS_IMPLEMENTED = ['paper', 'textile'];
+const HANDOFFS_IMPLEMENTED = ['pattern-to-cloth'];
 
 const source = (craft) => fs.readFileSync(path.join(ROOT, 'js', 'fx', `${craft}.js`), 'utf8');
 

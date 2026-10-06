@@ -6,7 +6,7 @@ const Deck = require('../js/core/deck.js');
 const { existsExactCase } = require('./helpers.js');
 
 // Append each act's file as it is written (Tasks 9-11).
-const ACT_FILES = ['act1-paper.js'];
+const ACT_FILES = ['act1-paper.js', 'act2-textile.js'];
 const lists = ACT_FILES.map((f) => require(`../js/data/${f}`));
 
 lists.forEach((list, i) => {

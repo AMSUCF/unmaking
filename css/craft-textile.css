@@ -1,1 +1,38 @@
-/* ACT II — TEXTILE (implemented in Task 9) */
+/* ACT II — TEXTILE: linen ground, quilt border, running stitches, cross-stitch headings */
+body[data-craft="textile"] #stage { color: #2d2a4a; font-family: 'Courier Prime', 'Courier New', monospace; --thread: #7b4fb3; --thread-2: #c0544a; }
+.backdrop-textile {
+  background-color: #e9e0cc;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(80, 60, 30, .07) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(80, 60, 30, .07) 0 1px, transparent 1px 4px);
+}
+.backdrop-textile .quilt-border { position: absolute; left: 0; right: 0; height: 40px; display: flex; }
+.backdrop-textile .quilt-border.top { top: 0; }
+.backdrop-textile .quilt-border.bottom { bottom: 0; }
+.backdrop-textile .patch { flex: 1; outline: 2px dashed rgba(255, 255, 255, .75); outline-offset: -6px; }
+.backdrop-textile .patch:nth-child(4n+1) { background: repeating-linear-gradient(0deg, #c0544a 0 6px, #e98e7f 6px 12px), repeating-linear-gradient(90deg, rgba(255,255,255,.35) 0 6px, transparent 6px 12px); background-blend-mode: screen; }
+.backdrop-textile .patch:nth-child(4n+2) { background: radial-gradient(#fff 2px, transparent 2.5px) 0 0 / 12px 12px, #7b4fb3; }
+.backdrop-textile .patch:nth-child(4n+3) { background: repeating-linear-gradient(45deg, #3f8f8a 0 5px, #6fbab3 5px 10px); }
+.backdrop-textile .patch:nth-child(4n) { background: #e2b33c; }
+.backdrop-textile .spool { position: absolute; right: 36px; bottom: 60px; width: 54px; height: 78px; background: linear-gradient(#b88b55 0 12px, #7b4fb3 12px 66px, #b88b55 66px); border-radius: 6px; animation: spool-wobble 3s ease-in-out infinite alternate; }
+.backdrop-textile .loose-thread { position: absolute; right: 60px; bottom: 100px; width: 420px; height: 160px; fill: none; stroke: #7b4fb3; stroke-width: 2.5; opacity: .6; }
+@keyframes spool-wobble { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+
+[data-craft="textile"] .card { background: #fbf6ea; border-radius: 10px; padding: 50px 58px; box-shadow: inset 0 0 18px rgba(120, 90, 50, .18), 0 6px 0 #cfc3a6, 0 14px 22px rgba(0, 0, 0, .18); }
+[data-craft="textile"] .card::before { content: ''; position: absolute; inset: 14px; border: 3px dashed var(--thread); border-radius: 8px; pointer-events: none; }
+[data-craft="textile"] .card.stitching::before { opacity: 0; }
+[data-craft="textile"] .card.stitching > :not(.stitch-svg) { opacity: 0; }
+.stitch-svg { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+[data-craft="textile"] .heading-canvas { display: block; max-width: 100%; height: auto; image-rendering: pixelated; }
+[data-craft="textile"] .text { font-size: 34px; }
+[data-craft="textile"] .source { font-style: italic; }
+[data-craft="textile"] .media img { border: 10px solid #fbf6ea; outline: 3px dashed var(--thread-2); outline-offset: -6px; box-shadow: 0 8px 14px rgba(0, 0, 0, .2); }
+[data-craft="textile"] .gallery .media:nth-child(odd) img { transform: rotate(-1.5deg); }
+[data-craft="textile"] .gallery .media:nth-child(even) img { transform: rotate(1.5deg); }
+.needle { position: absolute; top: -20px; left: -40px; width: 120px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #888, #f4f4f4 40%, #aaa); box-shadow: 0 2px 2px rgba(0, 0, 0, .3); }
+.needle::after { content: ''; position: absolute; left: 6px; top: 1px; width: 10px; height: 4px; border-radius: 2px; background: #e9e0cc; }
+
+.avatar[data-skin="textile"] img { filter: drop-shadow(0 4px 2px rgba(0, 0, 0, .2)); }
+.avatar[data-skin="textile"].walking img { animation: wobble .3s steps(2) infinite; }
+@keyframes wobble { from { transform: rotate(-2deg); } to { transform: rotate(2deg); } }
+[data-craft="textile"] #say { background: #fbf6ea; border: 3px dashed var(--thread-2); outline: 6px solid #fbf6ea; border-radius: 6px; font-family: 'Courier Prime', monospace; }
