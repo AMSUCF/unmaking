@@ -1,0 +1,8 @@
+#notes { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; max-height: 40vh; overflow: auto; padding: 14px 18px; background: rgba(0, 0, 0, .86); color: #f4f4f4; font: 18px/1.4 system-ui, sans-serif; border-radius: 10px; }
+.notes-meta { font-size: 13px; opacity: .7; margin-bottom: 6px; }
+.notes-clock { margin-top: 8px; font: 700 16px/1 ui-monospace, monospace; }
+.notes-clock[data-pace="behind"], #p-pace[data-pace="behind"] { color: #ff6b6b; }
+.notes-clock[data-pace="ahead"], #p-pace[data-pace="ahead"] { color: #8fd3ff; }
+.notes-clock[data-pace="on"], #p-pace[data-pace="on"] { color: #9dff7a; }
+#blackout { position: fixed; inset: 0; z-index: 60; background: #000; }
+#errors { position: fixed; top: 12px; left: 12px; right: 12px; z-index: 70; max-height: 50vh; overflow: auto; margin: 0; padding: 12px; background: #3a0010; color: #ffd6de; font: 13px/1.4 ui-monospace, monospace; white-space: pre-wrap; }

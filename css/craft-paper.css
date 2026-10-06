@@ -1,0 +1,45 @@
+/* ACT I — PAPER: pop-up book, cut paper, washi tape, paper-puppet avatar */
+body[data-craft="paper"] #stage { background: #efe4cf; color: #2b2118; font-family: 'Special Elite', 'Courier New', monospace; }
+.backdrop-paper {
+  background-color: #efe4cf;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.backdrop-paper .paper-sun { position: absolute; right: 140px; top: 70px; width: 120px; height: 120px; border-radius: 50%; background: #f2b04a; filter: drop-shadow(0 4px 2px rgba(80, 50, 20, .3)); animation: sun-turn 40s linear infinite; }
+.backdrop-paper .hill { position: absolute; left: -10%; width: 120%; border-radius: 50% 50% 0 0 / 100% 100% 0 0; filter: drop-shadow(0 -3px 2px rgba(60, 40, 20, .25)); }
+.backdrop-paper .hill.h3 { bottom: 0; height: 330px; background: #c7b48b; animation: drift 18s ease-in-out infinite alternate; }
+.backdrop-paper .hill.h2 { bottom: 0; height: 230px; background: #a9c09b; left: -30%; animation: drift 14s ease-in-out infinite alternate-reverse; }
+.backdrop-paper .hill.h1 { bottom: 0; height: 120px; background: #8aa57e; animation: drift 11s ease-in-out infinite alternate; }
+.backdrop-paper .scrap { position: absolute; width: 22px; height: 22px; clip-path: polygon(50% 0, 100% 100%, 0 80%); background: hsl(calc(var(--hue) * 40 + 10), 55%, 62%); animation: spin var(--spin) linear infinite; opacity: .8; }
+@keyframes drift { from { transform: translateX(-20px); } to { transform: translateX(20px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes sun-turn { to { transform: rotate(360deg); } }
+
+[data-craft="paper"] .scene { filter: drop-shadow(0 10px 8px rgba(60, 40, 20, .28)) drop-shadow(0 2px 1px rgba(60, 40, 20, .25)); }
+[data-craft="paper"] .card-wrap { transform: rotate(var(--tilt, 0deg)); }
+[data-craft="paper"] .card { background: #fffaf0; padding: 46px 56px; }
+[data-craft="paper"] .heading { font-family: 'Patrick Hand', cursive; font-size: 56px; color: #b6452c; font-weight: 400; }
+[data-craft="paper"] .layout-title .heading { font-size: 66px; }
+[data-craft="paper"] .source, [data-craft="paper"] .byline { font-family: 'Patrick Hand', cursive; font-size: 22px; }
+[data-craft="paper"] .media img { background: #fff; padding: 10px; transform: rotate(var(--tilt, 0deg)); }
+.tape { position: absolute; top: -14px; z-index: 3; width: 120px; height: 34px; background: repeating-linear-gradient(45deg, rgba(240, 170, 170, .78) 0 8px, rgba(250, 214, 200, .78) 8px 16px); }
+.tape.left { left: -24px; transform: rotate(-28deg); }
+.tape.right { right: -24px; transform: rotate(24deg); }
+.cut-line { position: absolute; left: -12px; top: -12px; overflow: visible; fill: none; stroke: #6b5a45; stroke-width: 2; stroke-dasharray: 10 8; }
+.scissors { position: absolute; top: -30px; left: -20px; font-size: 34px; color: #6b5a45; }
+.tear-half, .turn-page { position: absolute; inset: 0; background: #efe4cf; }
+.turn-page { transform-origin: 0 50%; backface-visibility: hidden; box-shadow: 10px 0 30px rgba(0, 0, 0, .25); }
+
+/* Paper puppet on a stick */
+.avatar[data-skin="paper"] img {
+  image-rendering: auto;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(4px 8px 4px rgba(60, 40, 20, .35));
+  animation: puppet-sway 2.4s ease-in-out infinite alternate;
+}
+.avatar[data-skin="paper"].walking img { animation: puppet-hop .25s ease-in-out infinite alternate; }
+.avatar[data-skin="paper"]::after { content: ''; position: absolute; left: 50%; bottom: -60px; z-index: -1; width: 8px; height: 90px; margin-left: -4px; border-radius: 3px; background: linear-gradient(90deg, #b88b55, #d9b07a); box-shadow: 2px 3px 3px rgba(0, 0, 0, .25); }
+@keyframes puppet-sway { from { transform: rotate(-2deg); } to { transform: rotate(2deg); } }
+@keyframes puppet-hop { from { transform: translateY(0) rotate(-3deg); } to { transform: translateY(-14px) rotate(3deg); } }
+
+[data-craft="paper"] #say { background: #fffaf0; border-radius: 18px; font-family: 'Patrick Hand', cursive; font-size: 26px; filter: drop-shadow(0 4px 3px rgba(60, 40, 20, .3)); }
+[data-craft="paper"] #say::after { content: ''; position: absolute; left: -16px; bottom: 14px; border: 10px solid transparent; border-right: 16px solid #fffaf0; }

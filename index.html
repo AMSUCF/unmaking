@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Critical (Un)Making</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/stage.css">
+  <link rel="stylesheet" href="css/craft-paper.css">
+  <link rel="stylesheet" href="css/craft-textile.css">
+  <link rel="stylesheet" href="css/craft-zine.css">
+  <link rel="stylesheet" href="css/craft-game.css">
+  <link rel="stylesheet" href="css/hud.css">
+</head>
+<body data-craft="paper" class="show-drafts">
+  <div id="stage">
+    <div id="backdrop"></div>
+    <div id="content"></div>
+    <div id="avatars"></div>
+    <div id="say" class="hidden" aria-live="polite"></div>
+    <div id="fx-layer"></div>
+  </div>
+  <div id="hud">
+    <div id="notes" class="hidden">
+      <div class="notes-meta"></div>
+      <div class="notes-body"></div>
+      <div class="notes-clock"></div>
+    </div>
+    <div id="blackout" class="hidden"></div>
+    <pre id="errors" class="hidden"></pre>
+  </div>
+
+  <script src="js/core/random.js"></script>
+  <script src="js/core/acts.js"></script>
+  <script src="js/core/deck.js"></script>
+  <script src="js/core/nav.js"></script>
+  <script src="js/core/timer.js"></script>
+  <script src="js/core/stitch.js"></script>
+  <script src="js/core/craft-shapes.js"></script>
+  <script src="js/data/act1-paper.js"></script>
+  <script src="js/fx/crafts.js"></script>
+  <script src="js/render/avatar.js"></script>
+  <script src="js/render/stage.js"></script>
+  <script src="js/fx/paper.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

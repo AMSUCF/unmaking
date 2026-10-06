@@ -1,0 +1,54 @@
+/* Stage: fixed 1280x720, scaled by main.js. Layers stack bottom to top. */
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #111; overflow: hidden; }
+#stage { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: 0 0; overflow: hidden; background: #222; }
+#backdrop, #content, #avatars, #fx-layer { position: absolute; inset: 0; }
+#backdrop { z-index: 0; overflow: hidden; transition: opacity .4s; }
+#content { z-index: 2; }
+#avatars { z-index: 3; pointer-events: none; }
+#say { position: absolute; z-index: 4; bottom: 236px; max-width: 360px; padding: 12px 16px; font-size: 22px; line-height: 1.25; pointer-events: none; }
+#fx-layer { z-index: 6; pointer-events: none; overflow: hidden; }
+.hidden { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Scene layouts. Avatar lives in the 220px left gutter (or right with .avatar-right). */
+.scene { position: absolute; inset: 0; display: grid; gap: 28px; align-items: center; justify-items: center; padding: 56px 72px 72px 220px; }
+.scene.avatar-right { padding: 56px 220px 72px 72px; }
+.card-wrap { position: relative; max-width: 100%; max-height: 100%; min-height: 0; }
+.card-wrap:has(.card:empty) { display: none; }
+.card { position: relative; display: flex; flex-direction: column; gap: 14px; max-height: 560px; padding: 36px 44px; overflow: hidden; }
+.heading { margin: 0; font-size: 46px; line-height: 1.1; }
+.text { margin: 0; flex: 1 1 auto; min-height: 0; overflow: hidden; line-height: 1.3; }
+blockquote.text { quotes: none; }
+.source, .byline { margin: 0; font-size: 18px; opacity: .8; }
+.media { margin: 0; display: grid; place-items: center; min-height: 0; }
+.media img, .media video { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.layout-title, .layout-handoff, .layout-credits { padding: 56px 200px; }
+.layout-title { grid-template-columns: minmax(0, 1fr) 300px; }
+.layout-title .heading { font-size: 62px; }
+.layout-title .media img { max-height: 500px; }
+.layout-statement .card { max-width: 860px; }
+.layout-quote:has(> .media) { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.layout-quote .media img { max-height: 500px; }
+.layout-image, .layout-video, .layout-handoff, .layout-gallery { grid-template-rows: minmax(0, 1fr) auto; }
+.layout-image .media img, .layout-video .media video, .layout-handoff .media img { max-height: 460px; }
+.layout-image .card, .layout-video .card, .layout-handoff .card, .layout-gallery .card { max-height: 180px; padding: 16px 28px; }
+.layout-image .text, .layout-video .text, .layout-handoff .text, .layout-gallery .text { font-size: 26px; }
+.gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 20px; width: 100%; height: 100%; min-height: 0; align-items: center; }
+.gallery .media img { max-height: 420px; }
+.choices { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.choice { opacity: 0; transform: translateX(-12px); transition: opacity .25s, transform .25s; font-size: 28px; }
+.choice.revealed { opacity: 1; transform: none; }
+.credits { list-style: none; margin: 0; padding: 0; text-align: center; font-size: 26px; line-height: 2; }
+.draft-flag { display: none; position: absolute; top: 12px; right: 12px; z-index: 5; padding: 4px 10px; background: #ff3b6b; color: #fff; font: 700 14px/1 system-ui, sans-serif; letter-spacing: .1em; transform: rotate(4deg); }
+body.show-drafts .draft-flag { display: block; }
+
+/* Avatars: .avatar > .frame > img. Flip lives on .frame so skins can animate img. */
+.avatar { position: absolute; bottom: 36px; left: -200px; width: 120px; height: 180px; }
+.avatar .frame { position: absolute; inset: 0; }
+.avatar.flip .frame { transform: scaleX(-1); }
+.avatar img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; image-rendering: pixelated; }
+.avatar.missing img { visibility: hidden; }
+.avatar.missing .frame::before { content: ''; position: absolute; inset: 16px 28px 0; border-radius: 30px 30px 6px 6px; background: radial-gradient(circle at 50% 16%, #4a4a4a 0 16%, transparent 17%), linear-gradient(#4a4a4a, #4a4a4a) 50% 100% / 70% 66% no-repeat; }
+.avatar.missing .frame::after { content: attr(data-label); position: absolute; left: 50%; bottom: -26px; transform: translateX(-50%); padding: 3px 6px; background: #000; color: #fff; font: 700 13px/1 system-ui, sans-serif; white-space: nowrap; }
