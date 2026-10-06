@@ -48,7 +48,7 @@
       notes: 'Each press reveals one option, like a dialogue menu. From the book: a critical maker rejects, supplements, extends, and critiques the tool. All four, not one.',
     },
     {
-      id: 'a4-ask', act: 4, minutes: 1.25, layout: 'choice', room: 'office', agency: 3,
+      id: 'a4-ask', act: 4, minutes: 1, layout: 'choice', room: 'office', agency: 3,
       heading: 'Ask of any agent:',
       choices: ['What did it plan?', 'Which tools did it call?', 'Which sources did it choose?', 'What did it skip?', 'Where would a human have chosen differently?'],
       fx: ['choice-menu'], avatar: { pose: 'point', x: 60 },
@@ -84,6 +84,14 @@
       media: [{ src: 'assets/act4/superintelligence.png', alt: 'Bluesky posts reporting an executive order requiring federal agencies to say “Super Intelligence” instead of “Artificial Intelligence.”' }],
       fx: ['iris-in'], draft: true,
       notes: 'Language as policy. Verify the order and its date before presenting.',
+    },
+    {
+      id: 'a4-doomer', act: 4, minutes: 0.5, layout: 'image', room: 'commons', agency: 1,
+      text: 'The doomer cycle and the hype cycle sell the same thing: an AI too powerful to question.',
+      media: [{ src: 'assets/act4/undertale-hyped.png', alt: 'Undertale screenshot: Bratty, a green alligator, and Catty, a purple cat, grin in an alley over two dialogue boxes that both read “SO hyped for the destruction of humanity.”' }],
+      source: 'Undertale (Toby Fox, 2015)',
+      fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
+      notes: 'Bratty and Catty, delighted about the end of humanity. Apocalypse talk is marketing too: if it might end the world, it must be powerful, and only its makers can manage it. Both stories take the decisions away from us.',
     },
     {
       id: 'a4-unmake-politics', act: 4, minutes: 0.75, layout: 'statement', room: 'commons', agency: 3,
