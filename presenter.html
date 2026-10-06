@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Presenter · Critical (Un)Making</title>
+  <link rel="stylesheet" href="css/hud.css">
+  <style>
+    body { margin: 0; padding: 20px; background: #15131c; color: #eee; font: 18px/1.45 system-ui, sans-serif; display: grid; gap: 14px; grid-template-columns: 2fr 1fr; grid-template-rows: auto 1fr auto; height: 100vh; box-sizing: border-box; }
+    body[data-presenter="emily"] #p-who { background: #b6452c; }
+    body[data-presenter="anastasia"] #p-who { background: #7b4fb3; }
+    header { grid-column: 1 / -1; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    #p-who { padding: 4px 10px; border-radius: 6px; font-weight: 700; }
+    #p-clock, #p-total { font: 700 26px/1 ui-monospace, monospace; }
+    #p-notes { font-size: 24px; overflow: auto; background: #1f1c29; padding: 16px; border-radius: 10px; }
+    aside { display: grid; gap: 12px; align-content: start; }
+    .label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; opacity: .6; }
+    #p-current, #p-next { background: #1f1c29; padding: 12px; border-radius: 10px; }
+    #p-url { word-break: break-all; font-size: 13px; opacity: .7; }
+    footer { grid-column: 1 / -1; display: flex; gap: 10px; }
+    button { font: 700 18px system-ui; padding: 10px 22px; border-radius: 8px; border: 0; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <span id="p-who">waiting for deck…</span>
+    <span id="p-meta"></span>
+    <span id="p-clock"></span>
+    <span id="p-pace"></span>
+    <span id="p-total"></span>
+  </header>
+  <main id="p-notes">Open the deck with npm start, then press P in the deck window.</main>
+  <aside>
+    <div><div class="label">Now on screen</div><div id="p-current"></div><div id="p-url"></div></div>
+    <div><div class="label">Next</div><div id="p-next"></div></div>
+  </aside>
+  <footer>
+    <button id="p-prev">◀ Prev</button>
+    <button id="p-next-btn">Next ▶</button>
+  </footer>
+
+  <script src="js/core/random.js"></script>
+  <script src="js/core/acts.js"></script>
+  <script src="js/core/deck.js"></script>
+  <script src="js/core/timer.js"></script>
+  <script src="js/data/act1-paper.js"></script>
+  <script src="js/data/act2-textile.js"></script>
+  <script src="js/data/act3-zine.js"></script>
+  <script src="js/data/act4-game.js"></script>
+  <script src="js/presenter.js"></script>
+</body>
+</html>
