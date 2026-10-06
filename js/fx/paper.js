@@ -3,6 +3,8 @@
   'use strict';
   const { anim, wait, fxLayer, el, svgEl } = Crafts;
   const seedOf = (scene) => Random.hashString(scene.id);
+  // fill:'both' would hold the last keyframe and override the CSS card tilt; drop it once finished.
+  const releaseHeld = (parts) => parts.forEach((p) => p.getAnimations().forEach((a) => a.cancel()));
   const wrapOf = (root) => root.querySelector('.card-wrap');
 
   Crafts.register('paper', {
@@ -41,6 +43,7 @@
           { transform: 'rotateX(10deg)', transformOrigin: '50% 100%', opacity: 1, offset: 0.7 },
           { transform: 'rotateX(0deg)', transformOrigin: '50% 100%', opacity: 1 },
         ], { duration: 900, delay: i * 160 })));
+        releaseHeld(parts);
       },
 
       'fold-in': async (root) => {
@@ -50,6 +53,7 @@
           { transform: 'perspective(900px) rotateY(-10deg)', transformOrigin: '0 50%', opacity: 1, offset: 0.75 },
           { transform: 'perspective(900px) rotateY(0deg)', transformOrigin: '0 50%', opacity: 1 },
         ], { duration: 800, delay: i * 140 })));
+        releaseHeld(parts);
       },
 
       'paper-tear': async (root, { scene }) => {

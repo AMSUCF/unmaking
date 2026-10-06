@@ -12,6 +12,7 @@
   const clock = Timer.createActClock();
   const channel = 'BroadcastChannel' in window ? new BroadcastChannel('unmaking-deck') : null;
   let pos = { index: -1, step: 0 };
+  let intended = pos; // latest requested target, so presses made mid-animation each count
 
   function fit() {
     const s = Math.min(innerWidth / 1280, innerHeight / 720);
@@ -22,6 +23,7 @@
 
   function request(target) {
     if (!target || target.index < 0 || target.index >= scenes.length) return;
+    intended = target;
     const t = queue.request(target);
     if (t) run(t, false);
   }
@@ -47,6 +49,7 @@
     }
     const next = queue.finish();
     if (next) run(next, true); // presses made during an animation land instantly
+    else intended = pos;
   }
 
   function status() {
@@ -79,8 +82,8 @@
     if (!data) return;
     if (data.type === 'hello') broadcast();
     if (data.type === 'nav') {
-      if (data.action === 'next') request(Nav.advance(pos, scenes));
-      if (data.action === 'prev') request(Nav.retreat(pos, scenes));
+      if (data.action === 'next') request(Nav.advance(intended, scenes));
+      if (data.action === 'prev') request(Nav.retreat(intended, scenes));
       if (data.action === 'goto') request({ index: data.index, step: 0 });
     }
   }
@@ -88,8 +91,8 @@
   function onKey(e) {
     const k = e.key;
     if (e.target && e.target.tagName === 'VIDEO' && k === ' ') return;
-    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(k)) { e.preventDefault(); request(Nav.advance(pos, scenes)); }
-    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); request(Nav.retreat(pos, scenes)); }
+    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(k)) { e.preventDefault(); request(Nav.advance(intended, scenes)); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); request(Nav.retreat(intended, scenes)); }
     else if (k === 'Home' || k === '0') request({ index: 0, step: 0 });
     else if (k === 'End') request({ index: scenes.length - 1, step: 0 });
     else if (/^[1-4]$/.test(k)) { const i = Nav.actStartIndex(scenes, Number(k)); if (i >= 0) request({ index: i, step: 0 }); }
@@ -118,7 +121,7 @@
     document.addEventListener('keydown', onKey);
     stageEl.addEventListener('click', (e) => {
       if (e.target.closest('a, button, video')) return;
-      request(Nav.advance(pos, scenes));
+      request(Nav.advance(intended, scenes));
     });
     if (channel) channel.onmessage = onMessage;
     setInterval(() => { renderNotes(); broadcast(); }, 1000);
