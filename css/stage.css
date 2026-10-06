@@ -19,7 +19,7 @@ html, body { margin: 0; height: 100%; background: #111; overflow: hidden; }
 .card { position: relative; display: flex; flex-direction: column; gap: 14px; max-height: 560px; padding: 36px 44px; overflow: hidden; }
 .heading { margin: 0; font-size: 46px; line-height: 1.1; }
 .text { margin: 0; flex: 1 1 auto; min-height: 0; overflow: hidden; line-height: 1.3; }
-blockquote.text { quotes: none; }
+blockquote.text { quotes: none; white-space: pre-line; }
 .source, .byline { margin: 0; font-size: 18px; opacity: .8; }
 .media { margin: 0; display: grid; place-items: center; min-height: 0; }
 .media img, .media video { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -36,7 +36,8 @@ blockquote.text { quotes: none; }
 .layout-image .card, .layout-video .card, .layout-handoff .card, .layout-gallery .card { max-height: 180px; padding: 16px 28px; }
 .layout-image .text, .layout-video .text, .layout-handoff .text, .layout-gallery .text { font-size: 26px; }
 .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 20px; width: 100%; height: 100%; min-height: 0; align-items: center; }
-.gallery .media img { max-height: 420px; }
+.gallery .media img, .gallery .media video { max-height: 420px; }
+.gallery .media video { width: 100%; }
 .choices { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
 .choice { opacity: 0; transform: translateX(-12px); transition: opacity .25s, transform .25s; font-size: 28px; }
 .choice.revealed { opacity: 1; transform: none; }

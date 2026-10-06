@@ -9,7 +9,7 @@
   function summary(s, step) {
     if (!s) return '(end of deck)';
     const choices = s.choices ? s.choices.map((c, i) => (i < step ? '✔ ' : '· ') + c).join('\n') : '';
-    return [s.heading, s.text, choices, s.source].filter(Boolean).join('\n');
+    return [s.heading, s.text && s.text.replace(/\*([^*\n]+)\*/g, '$1'), choices, s.source].filter(Boolean).join('\n');
   }
 
   channel.onmessage = ({ data }) => {

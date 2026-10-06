@@ -41,6 +41,16 @@ const Stage = (() => {
     return f;
   }
 
+  // Quote text may carry line breaks (\n) and *emphasis*, to keep a source's own spacing and italics.
+  function quoteText(text) {
+    const q = make('blockquote', 'text');
+    text.split(/(\*[^*\n]+\*)/).forEach((part) => {
+      if (/^\*[^*]+\*$/.test(part)) q.append(make('em', '', part.slice(1, -1)));
+      else if (part) q.append(document.createTextNode(part));
+    });
+    return q;
+  }
+
   function renderScene(scene) {
     const root = make('section', `scene layout-${scene.layout}`);
     root.dataset.id = scene.id;
@@ -52,7 +62,7 @@ const Stage = (() => {
 
     if (scene.heading) card.append(make(scene.layout === 'title' ? 'h1' : 'h2', 'heading', scene.heading));
     if (scene.layout === 'quote') {
-      card.append(make('blockquote', 'text', scene.text));
+      card.append(quoteText(scene.text));
       card.append(make('cite', 'source', scene.source));
       if (media[0]) root.append(figure(media[0]));
     } else if (scene.layout === 'gallery') {
