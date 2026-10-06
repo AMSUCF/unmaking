@@ -44,7 +44,7 @@
     {
       id: 'a1-dark-tower', act: 1, minutes: 1, layout: 'quote',
       heading: 'The world has moved on',
-      text: 'Life wasn’t golden... but life was *good*.\nAnd then the world moved on.\nFor reasons that no one truly understands...',
+      text: 'Life wasn’t golden... but life was *good*.\n\nAnd then the world moved on.\n\nFor reasons that no one truly understands...',
       source: 'Cory Doctorow, “The World Has Moved On. But It Need Not Stay This Way Forever,” Bulletin of the Atomic Scientists (2026)',
       url: 'https://www.tandfonline.com/doi/full/10.1080/00963402.2026.2720324#d1e126',
       fx: ['page-turn'],
