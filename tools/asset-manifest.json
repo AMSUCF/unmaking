@@ -24,5 +24,7 @@
   "assets/avatars/anastasia/source/walk3.png": "AuthorFunctionSlides/sprites/walk3.png",
   "assets/avatars/anastasia/source/walk4.png": "AuthorFunctionSlides/sprites/walk4.png",
   "assets/avatars/anastasia/source/walk5.png": "AuthorFunctionSlides/sprites/walk5.png",
-  "assets/avatars/anastasia/source/sheet.jpg": "AuthorFunctionSlides/additions/sprites.jpg"
+  "assets/avatars/anastasia/source/sheet.jpg": "AuthorFunctionSlides/additions/sprites.jpg",
+  "assets/act4/apertus.png": "CAPE/apertus.png",
+  "assets/act4/cape-lab.png": "CAPE/cape.png"
 }
