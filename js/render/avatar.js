@@ -6,7 +6,13 @@ const Avatar = (() => {
   const LABELS = { emily: 'Emily', anastasia: 'Anastasia' };
   const slots = {};
 
-  const src = (who, frame, skin) => `assets/avatars/${who}/${frame}${skin === 'textile' ? '.stitch' : ''}.png`;
+  // Runtime pixel-map canvases (AvatarPixels) are the primary source; PNG files are only a fallback.
+  const pixels = () => (typeof AvatarPixels !== 'undefined' ? AvatarPixels : null);
+  const src = (who, frame, skin) => {
+    const ap = pixels();
+    if (ap && ap.PALETTES[who]) return ap.url(who, frame, skin === 'textile' ? 'stitch' : 'plain');
+    return `assets/avatars/${who}/${frame}${skin === 'textile' ? '.stitch' : ''}.png`;
+  };
 
   function init(layer) {
     WHO.forEach((who) => {
@@ -34,6 +40,10 @@ const Avatar = (() => {
   }
 
   function preload() {
+    if (pixels()) {
+      WHO.forEach((w) => FRAMES.forEach((f) => ['plain', 'stitch'].forEach((k) => pixels().url(w, f, k))));
+      return Promise.resolve();
+    }
     const urls = [];
     WHO.forEach((w) => FRAMES.forEach((f) => ['paper', 'textile'].forEach((skin) => urls.push(src(w, f, skin)))));
     return Promise.all(urls.map((u) => new Promise((resolve) => {
