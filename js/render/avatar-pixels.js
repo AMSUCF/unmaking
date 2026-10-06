@@ -18,8 +18,8 @@
     K: '#14121c',                          // outline
   };
   const PALETTES = {
-    emily: Object.assign({}, BASE, { H: '#b98a55', h: '#d6ae78', P: '#2b2b36', p: '#1e1e28' }),
-    anastasia: Object.assign({}, BASE, { H: '#e0a63c', h: '#f2c869', G: '#6b4a2a', P: '#355b8c', p: '#284870' }),
+    emily: Object.assign({}, BASE, { H: '#b98a55', h: '#d6ae78', P: '#2b2b36', p: '#1e1e28', T: '#5e1f3d', t: '#47162e' }), // plum tee
+    anastasia: Object.assign({}, BASE, { H: '#e0a63c', h: '#f2c869', d: '#b47a26', G: '#7a5532', P: '#355b8c', p: '#284870' }),
   };
 
   // 16 wide, stamped at (HEAD_X, HEAD_Y). '.' shows what is behind (torso).
@@ -46,44 +46,64 @@
       '.hHH........HHh.',
       '..HH........HH..',
     ],
-    anastasia: [ // short blond pixie cut, round brown glasses
-      '....HHHhHHHH....',
-      '..HHHhhHHHHHHH..',
-      '.HHHHhHHHHHHHHH.',
-      '.HHHHHHHHHHHHHH.',
-      '.HHHHHHHHHHHHHH.',
-      '.HHHHHSSSSSSSHH.',
-      '.HHHSSSSSSSSHHH.',
-      '..HHGGGSSGGGHH..',
-      '...SGESSSSEGS...',
-      '...SGGGSSGGGS...',
-      '....SSSSSSSS....',
-      '....SSMMMMSS....',
+    anastasia: [ // short blond side-swept quiff with darker streaks, cropped sides, ears, round brown glasses
+      '....HhhhhHHH....',
+      '...HHHHdHHHdHH..',
+      '..HHHHdHHHdHHH..',
+      '..HHHdHHHdHHHH..',
+      '..HHSSSSSSSdHH..',
+      '..HSSSSSSSSSSH..',
+      '..SSGGSSSSGGSS..',
+      '.sSGESGGGGSEGSs.',
+      '..SSGGSSSSGGSS..',
+      '..SSSSSssSSSSS..',
+      '..SSSSSSSSSSSS..',
+      '..sSSSMMMMSSSs..',
+      '...sSSSSSSSSs...',
       '....sSSSSSSs....',
-      '.....sSSSSs.....',
       '......ssss......',
     ],
   };
 
-  // 16 wide, stamped at (HEAD_X, TORSO_Y): tee with the swooping silver loop.
-  const TORSO = [
-    '..TTTTTTTTTTTT..',
-    '.TTTTTTTTTTTTTT.',
-    '.TTTTTTTTTTTTTT.',
-    '.TTTTLLLLLLTTTT.',
-    '.TTTLLTTTTLLTTT.',
-    '.TTLLTTlTTTLLTT.',
-    '.TTLTTTTTTTTLTT.',
-    '.TTLTTlLLTTTLTT.',
-    '.TTLTTLLLLTTLTT.',
-    '.TTLLTTTTTTLLTT.',
-    '.TTTLLLLLLLLTTT.',
-    '.TTTTTLLlLTTTTT.',
-    '.TTTTTTTTTTTTTT.',
-    '.tTTTTTTTTTTTTt.',
-    '..tTTTTTTTTTTt..',
-    '..tttttttttttt..',
-  ];
+  // 16 wide, stamped at (HEAD_X, TORSO_Y): each presenter's human-in-the-loop tee.
+  const TORSOS = {
+    anastasia: [
+      '..TTTTTTTTTTTT..',
+      '.TTTTTTTTTTTTTT.',
+      '.TTTTTTTTTTTTTT.',
+      '.TTTTLLLLLLTTTT.',
+      '.TTTLLTTTTLLTTT.',
+      '.TTLLTTlTTTLLTT.',
+      '.TTLTTTTTTTTLTT.',
+      '.TTLTTlLLTTTLTT.',
+      '.TTLTTLLLLTTLTT.',
+      '.TTLLTTTTTTLLTT.',
+      '.TTTLLLLLLLLTTT.',
+      '.TTTTTLLlLTTTTT.',
+      '.TTTTTTTTTTTTTT.',
+      '.tTTTTTTTTTTTTt.',
+      '..tTTTTTTTTTTt..',
+      '..tttttttttttt..',
+    ],
+    emily: [ // silver ring around three lines of lettering, with a trailing swoosh
+      '..TTTTTTTTTTTT..',
+      '.TTTTTTTTTTTTTT.',
+      '.TTTTLLLLLLTTTT.',
+      '.TTTLTTTTTTLTTT.',
+      '.TTLTlLLlLLTLTT.',
+      '.TTLTTTTTTTTLTT.',
+      '.TTLTLLTLLlTLTT.',
+      '.TTLTTTTTTTTLTT.',
+      '.TTLTTLlLLTTLTT.',
+      '.TTTLTTTTTTLTTT.',
+      '.TTTTLLLLLLLTTT.',
+      '.TTTTTTTTTTTLTT.',
+      '.TTTTTTTTTTTTTT.',
+      '.tTTTTTTTTTTTTt.',
+      '..tTTTTTTTTTTt..',
+      '..tttttttttttt..',
+    ],
+  };
 
   // [leftX, rightX, leftLift, rightLift, leftArmDy, rightArmDy, bob, rightArm]
   const POSES = {
@@ -125,7 +145,7 @@
     rect(g, 9, 32, 12, 2, 'P');                       // hips
     leg(g, 9 + lx, ll, false);
     leg(g, 16 + rx, rl, true);
-    stamp(g, TORSO, HEAD_X, TORSO_Y + bob);
+    stamp(g, TORSOS[who], HEAD_X, TORSO_Y + bob);
     armDown(g, 5, lad);
     if (right === 'down') armDown(g, 22, rad);
     else if (right === 'raised') {                    // elbow out, forearm up, palm open
