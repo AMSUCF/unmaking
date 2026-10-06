@@ -24,3 +24,9 @@ Start at a specific scene with `index.html?scene=a3-perlow`.
 ## Develop
 - `npm test` runs the JS unit and content tests. `npm run test:py` runs the sprite tool tests.
 - `npm run import-assets` re-copies images from sibling repos (read-only on sources).
+
+## Rehearsal checklist
+- Each presenter runs their act with **N** on and checks that the pace chip stays green. Adjust `minutes` in `js/data/act*.js` to match how long you actually speak.
+- Resolve every DRAFT scene (press **R** to see them): add the missing citations and screenshots noted in each scene's `notes`.
+- Handoffs happen on the last scene of Acts I–III. The incoming presenter starts speaking on the next click.
+- Venue: bring the deck on a USB stick too. It runs from `file://` without Wi-Fi.
