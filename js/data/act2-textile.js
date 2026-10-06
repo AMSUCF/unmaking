@@ -115,6 +115,14 @@
       notes: 'Outline flags this; expand with an example (voice-driven building, alt-text workflows, adapting interfaces).',
     },
     {
+      id: 'a2-grandma-hobbies', act: 2, minutes: 0.5, layout: 'image',
+      text: 'Meanwhile, people are choosing the slow, material way on purpose.',
+      media: [{ src: 'assets/act2/grandma-hobbies.jpg', alt: 'New York Times headline “The Comforting Resurgence of ‘Grandma Hobbies’: In search of calm and community, new generations are learning centuries-old skills,” beside a photo of someone in clogs bending over a patchwork quilt laid out on a sheet in the grass.' }],
+      source: 'The New York Times, “The Comforting Resurgence of ‘Grandma Hobbies’”',
+      fx: ['quilt-assemble'],
+      notes: 'Materiality as a choice: quilting, knitting and sewing are coming back for calm and community, not efficiency. The friction is the point, which sets up the next slide on process.',
+    },
+    {
       id: 'a2-process', act: 2, minutes: 1, layout: 'image',
       heading: 'Process was the point… isn’t it still?',
       text: 'Process over product (p. 14); making restores agency (p. xiii). Agents automate the intermediate steps.',
