@@ -6,7 +6,7 @@
 
 **Architecture:** A static, dependency-free web deck in the style of `../AuthorFunctionSlides`. It uses classic `<script>` files so it runs from `file://`. Pure logic (deck validation, navigation, timing, stitch math, seeded shapes) lives in UMD modules under `js/core/` and is unit-tested with `node --test`. Scene content lives as data in `js/data/act*.js`. Each craft is a plug-in in `js/fx/<craft>.js` that registers a backdrop builder, a scene decorator, and named entrance effects with a small runtime (`Crafts`). `Stage` renders one scene at a time into a 1280×720 stage, and `Avatar` walks the presenters' sprites around it. Sprite slicing and cross-stitch pre-rendering are done offline with a tested Python/Pillow tool.
 
-**Tech Stack:** HTML/CSS/vanilla JS (Web Animations API, SVG masks, canvas), Node 22 `node:test`, Python 3.13 + Pillow 12, the `image-generator:image-generator` skill (Gemini) for Emily's sprite sheet, Google Fonts (downloaded once and vendored).
+**Tech Stack:** HTML/CSS/vanilla JS (Web Animations API, SVG masks, canvas), Node 22 `node:test`, Python 3.13 + Pillow 12, hand-authored pixel maps composed into avatar frames at runtime on canvas (the approach of `../HumanitiesAI/TeachingAI/js/avatar.js`; no image generation), Google Fonts (downloaded once and vendored).
 
 **Spec:** `docs/superpowers/specs/2026-10-05-unmaking-four-act-design.md` (read it first). The talk content source is `critical-unmaking-slide-outline.md`.
 
@@ -1568,65 +1568,33 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
 
 ---
 
-### Task 6: Emily's avatar (needs reference photos and her approval)
+### Task 6: Emily's avatar (SUPERSEDED by Task 6A)
+
+> Superseded: avatars are no longer generated with Gemini. Do not run the image-generator steps (Task 5 Steps 5-7 and all of this task). Both presenters' final avatars come from Task 6A (runtime pixel-map canvases). The photo-reference rules in Global Constraints still apply, and Dr. Johnson and Anastasia still approve the look before Task 6A is committed.
+
+---
+
+### Task 6A: Runtime pixel-map avatars for both presenters (replaces Gemini generation)
+
+**Reference (read-only):** `C:/Users/anast/Documents/GitHub/HumanitiesAI/TeachingAI/js/avatar.js` and `js/pixel.js`. There, the avatar is built from hand-written ASCII pixel maps (one letter per palette colour), a `POSES` table for legs and arm, `compose()` to stamp parts together, and `paint()` to auto-outline onto a canvas. Copy the technique; never write inside that repo.
 
 **Files:**
-- Uses (gitignored, already present): `assets/avatars/emily/reference/emily-1.jpg`, `emily-2.jpg`, `assets/avatars/reference/human-in-the-loop-shirt.jpg`
-- Create (generated): `assets/avatars/emily/source/sheet.png`, `assets/avatars/emily/{idle,walk1,walk2,walk3,walk4,talk,point}.png` and the matching `*.stitch.png` files
+- Create: `js/render/avatar-pixels.js` (UMD so the pure part runs in node), `tests/avatar-pixels.test.js`
+- Modify: `js/render/avatar.js` (use generated canvases when present, else the PNGs, else the labeled silhouette), `index.html` (script tag before `avatar.js`)
 
 **Interfaces:**
-- Consumes: `tools/slice_sprites.py` (Task 5) and Anastasia's frames as the style reference.
-- Produces: the same 14 files Task 5 produced for Anastasia, under `assets/avatars/emily/`.
+- Produces: `AvatarPixels.frame(who, pose, skin) -> HTMLCanvasElement` for `who` in `emily|anastasia`, `pose` in `idle, walk1, walk2, walk3, walk4, talk, point`, `skin` in `plain|stitch`. Frame size is 120x180 (stitch 240x360), RGBA, transparent background, facing right.
+- Pure part (node-testable): `AvatarPixels.compose(who, pose) -> string[][]` palette-letter grid, `AvatarPixels.POSES`, `AvatarPixels.PALETTES`. Canvas painting is the only DOM-dependent part.
+- Consumes: `Stitch.pixelsToStitches` for the stitch skin. Existing `Avatar.setSkin/walkTo/hide/show/place/positionOf` keep their signatures.
 
-> Anastasia supplied two reference photos of Dr. Johnson (`emily-1.jpg`, `emily-2.jpg`). Use only these. Do not search the web for photos of her, and never commit them. Until this task is done, the deck shows a labeled silhouette in her slot (Task 8), so Tasks 7–11 are not blocked.
+**Requirements:**
+- Hand-authored pixel maps per presenter: distinct hair, glasses and skin tone, informed by the reference photos (which stay gitignored and uncommitted), both wearing the slate-navy "human in the loop" tee (silver loop, a few glitter pixels).
+- Seven poses each, including `talk` (raised hand) and `point` (arm extended). Walk frames face right.
+- Auto-outline like the TeachingAI `paint()`; integer upscale with `imageSmoothingEnabled = false`.
+- Works from `file://` with no network and no generated assets; canvases are built once and cached.
+- Tests (node:test, no DOM): every pose composes to a grid of the expected size; both presenters have all 7 poses; grids differ between presenters; no unknown palette letters.
 
-- [ ] **Step 1: Confirm photos are present and gitignored**
-
-Run: `ls assets/avatars/emily/reference assets/avatars/reference && git check-ignore assets/avatars/emily/reference/* assets/avatars/reference/*`
-Expected: `emily-1.jpg`, `emily-2.jpg`, and `human-in-the-loop-shirt.jpg` are listed, and every path is echoed back by `check-ignore`, which means it is ignored.
-
-- [ ] **Step 2: Generate the sprite sheet**
-
-Invoke the `image-generator:image-generator` skill. Pass as reference images: `assets/avatars/anastasia/idle.png`, `assets/avatars/anastasia/walk1.png`, `assets/avatars/anastasia/talk.png` (style and shirt), `assets/avatars/reference/human-in-the-loop-shirt.jpg` (shirt), and both photos in `assets/avatars/emily/reference/` (likeness). Use this prompt:
-
-> Create a pixel-art sprite sheet for a NEW character, drawn in exactly the same style, pixel scale, outline weight, proportions and height as the first three reference sprites (a 1990s point-and-click adventure game character). The new character is a likeness of the person in the photo references: match her hairstyle and hair colour, glasses or no glasses, skin tone, and her trousers or skirt and shoes from the photos. Her top is the same t-shirt the reference sprites wear: a heathered slate-navy crew-neck tee with a silver oval loop on the chest (light-grey and white pixels with a few sparkle pixels; the "human in the loop" letters do not need to be legible). Solid flat cyan background #8CE3E3, no shadows, no text, no ground line. Row 1, five full-body frames: profile walk stride A facing right, profile walk stride B facing right, front-facing standing idle, profile walk stride C facing right, profile walk stride D facing right. Row 2, two full-body front-facing frames: talking with one hand raised palm up; pointing to the viewer's right with the arm fully extended. Leave a wide empty gap between every frame and between the rows.
-
-Save as `assets/avatars/emily/source/sheet.png`.
-
-- [ ] **Step 3: Slice and map the frames**
-
-```bash
-D=assets/avatars/emily
-python tools/slice_sprites.py sheet $D/source/sheet.png $D/blobs
-```
-Expected: seven `blob_NN.png` lines, row-major. If the count differs, adjust `--min-height` or `--min-gap`, or regenerate. With the layout above, the mapping is:
-```bash
-python tools/slice_sprites.py frame $D/blobs/blob_00.png walk1 $D
-python tools/slice_sprites.py frame $D/blobs/blob_01.png walk2 $D
-python tools/slice_sprites.py frame $D/blobs/blob_02.png idle  $D
-python tools/slice_sprites.py frame $D/blobs/blob_03.png walk3 $D
-python tools/slice_sprites.py frame $D/blobs/blob_04.png walk4 $D
-python tools/slice_sprites.py frame $D/blobs/blob_05.png talk  $D
-python tools/slice_sprites.py frame $D/blobs/blob_06.png point $D
-```
-
-- [ ] **Step 4: Check side by side**
-
-Read `assets/avatars/emily/idle.png` and `assets/avatars/anastasia/idle.png`. Expected: they match in height and pixel density, are clearly two different people, both wear the matching slate "human in the loop" tee, and the walk frames all face right.
-
-- [ ] **Step 5: Get Dr. Johnson's approval (human gate)**
-
-Stop and show Anastasia the seven Emily frames. She forwards them to Dr. Johnson. Do not commit until Anastasia confirms approval in the conversation. If changes are requested, revise the prompt and repeat Steps 2–4.
-
-- [ ] **Step 6: Commit (frames only, never the reference photos)**
-
-```bash
-git add assets/avatars/emily/*.png assets/avatars/emily/source/sheet.png
-git status --short assets/avatars/emily   # must not list reference/
-git commit -m "feat: Emily K. Johnson avatar frames (approved)
-
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
-```
+**Steps:** tests first (RED), then pure maps and compose (GREEN), then canvas painting and `avatar.js` integration, then a browser check of both avatars (idle, walk, talk, point) in paper and textile skins. Show both avatars to Anastasia (she forwards Emily's to Dr. Johnson) and commit only after approval, with a commit message ending `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`. The interim Anastasia PNGs and the slicer tool stay as fallback.
 
 ---
 
