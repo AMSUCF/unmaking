@@ -12,6 +12,7 @@
   const clock = Timer.createActClock();
   const channel = 'BroadcastChannel' in window ? new BroadcastChannel('unmaking-deck') : null;
   let pos = { index: -1, step: 0 };
+  let ready = false;
   let intended = pos; // latest requested target, so presses made mid-animation each count
 
   function fit() {
@@ -22,7 +23,7 @@
   }
 
   function request(target) {
-    if (!target || target.index < 0 || target.index >= scenes.length) return;
+    if (!ready || !target || target.index < 0 || target.index >= scenes.length) return;
     intended = target;
     const t = queue.request(target);
     if (t) run(t, false);
@@ -37,7 +38,8 @@
         const act = Acts.actByNumber(scene.act);
         const kind = instant ? 'cut' : Nav.transitionFor(pos.index, target.index, scenes);
         pos = { index: target.index, step: target.step };
-        clock.mark(scene.act);
+        if (kind === 'act-enter') clock.reset(scene.act); // a real forward entry into a new act starts its clock
+        else clock.mark(scene.act);
         try { history.replaceState(null, '', '?scene=' + scene.id); } catch (e) { /* file:// in some browsers */ }
         await Stage.show(scene, act, { kind, step: target.step });
       }
@@ -89,11 +91,13 @@
   }
 
   function onKey(e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return; // keep browser shortcuts (Ctrl+P/F/R/1-4)
     const k = e.key;
     if (e.target && e.target.tagName === 'VIDEO' && k === ' ') return;
+    if (e.repeat && ['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter', 'ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); return; }
     if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(k)) { e.preventDefault(); request(Nav.advance(intended, scenes)); }
     else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); request(Nav.retreat(intended, scenes)); }
-    else if (k === 'Home' || k === '0') request({ index: 0, step: 0 });
+    else if (k === 'Home' || k === '0') { clock.resetAll(); clock.mark(scenes[0].act); request({ index: 0, step: 0 }); }
     else if (k === 'End') request({ index: scenes.length - 1, step: 0 });
     else if (/^[1-4]$/.test(k)) { const i = Nav.actStartIndex(scenes, Number(k)); if (i >= 0) request({ index: i, step: 0 }); }
     else if (k === 'n' || k === 'N') { notesEl.classList.toggle('hidden'); renderNotes(); }
@@ -116,15 +120,18 @@
       console.warn(errors);
     }
     if (!scenes.length) return;
-    try { await document.fonts.ready; } catch (e) { /* fonts optional */ }
-    await Avatar.preload();
+    // Bind input first; request() no-ops until ready, so early presses are ignored, not lost to a crash.
     document.addEventListener('keydown', onKey);
     stageEl.addEventListener('click', (e) => {
       if (e.target.closest('a, button, video')) return;
       request(Nav.advance(intended, scenes));
     });
     if (channel) channel.onmessage = onMessage;
+    try { await document.fonts.ready; } catch (e) { /* fonts optional */ }
+    await Avatar.preload();
+    ready = true;
     setInterval(() => { renderNotes(); broadcast(); }, 1000);
+    if (/[?&]drafts=1(&|$)/.test(location.search)) document.body.classList.add('show-drafts');
     request({ index: Nav.parseStartParam(location.search, scenes), step: 0 });
   }
 

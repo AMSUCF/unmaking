@@ -42,4 +42,4 @@ body[data-craft="paper"] #stage { background: #efe4cf; color: #2b2118; font-fami
 @keyframes puppet-hop { from { transform: translateY(0) rotate(-3deg); } to { transform: translateY(-14px) rotate(3deg); } }
 
 [data-craft="paper"] #say { background: #fffaf0; border-radius: 18px; font-family: 'Patrick Hand', cursive; font-size: 26px; filter: drop-shadow(0 4px 3px rgba(60, 40, 20, .3)); }
-[data-craft="paper"] #say::after { content: ''; position: absolute; left: -16px; bottom: 14px; border: 10px solid transparent; border-right: 16px solid #fffaf0; }
+[data-craft="paper"] #say::after { content: ''; position: absolute; left: 50px; bottom: -24px; border: 10px solid transparent; border-top: 16px solid #fffaf0; }

@@ -67,6 +67,7 @@ const Avatar = (() => {
     if (s.walk) s.walk.cancel();
     s.walk = null;
     s.el.classList.remove('walking', 'flip');
+    if (s.frame !== 'idle') { s.frame = 'idle'; render(who); }
   }
 
   function place(who, x) {

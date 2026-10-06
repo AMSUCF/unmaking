@@ -6,7 +6,7 @@ html, body { margin: 0; height: 100%; background: #111; overflow: hidden; }
 #backdrop { z-index: 0; overflow: hidden; transition: opacity .4s; }
 #content { z-index: 2; }
 #avatars { z-index: 3; pointer-events: none; }
-#say { position: absolute; z-index: 4; bottom: 236px; max-width: 360px; padding: 12px 16px; font-size: 22px; line-height: 1.25; pointer-events: none; }
+#say { position: absolute; z-index: 4; bottom: 236px; width: 170px; max-width: 170px; padding: 10px 12px; font-size: 20px; line-height: 1.25; pointer-events: none; }
 #fx-layer { z-index: 6; pointer-events: none; overflow: hidden; }
 .hidden { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

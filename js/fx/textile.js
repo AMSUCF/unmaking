@@ -64,8 +64,7 @@
       root.querySelectorAll('.heading').forEach((h) => {
         const canvas = stitchText(h.textContent, { size: h.tagName === 'H1' ? 64 : 52 });
         canvas.className = 'heading-canvas';
-        canvas.setAttribute('role', 'img');
-        canvas.setAttribute('aria-label', h.textContent);
+        canvas.setAttribute('aria-hidden', 'true');
         h.classList.add('sr-only');
         h.after(canvas);
       });

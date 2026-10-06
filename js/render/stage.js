@@ -109,7 +109,8 @@ const Stage = (() => {
     const box = els.say;
     if (!text) { box.classList.add('hidden'); box.textContent = ''; return; }
     box.classList.remove('hidden');
-    box.style.left = Math.min(x + 140, 1280 - 380) + 'px';
+    // Anchor inside the 180-200px avatar gutter, above the lead's head, so it never covers the card.
+    box.style.left = (x > 640 ? Math.min(1280 - 178, Math.max(1080, x - 30)) : Math.max(8, x - 40)) + 'px';
     if (currentCraft === 'game') {
       box.textContent = '';
       let i = 0;

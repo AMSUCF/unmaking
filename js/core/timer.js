@@ -30,6 +30,7 @@
       mark(act) { if (!(act in started)) started[act] = now(); },
       elapsed(act) { return act in started ? now() - started[act] : 0; },
       reset(act) { started[act] = now(); },
+      resetAll() { for (const k of Object.keys(started)) delete started[k]; },
       total() {
         const times = Object.values(started);
         return times.length ? now() - Math.min(...times) : 0;

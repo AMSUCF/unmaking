@@ -35,3 +35,14 @@ test('act clock marks once, resets, and totals from the first mark', () => {
   c.reset(2);
   assert.equal(c.elapsed(2), 0);
 });
+
+test('act clock resetAll clears every act so clocks restart on next mark', () => {
+  let t = 0;
+  const c = Timer.createActClock(() => t);
+  c.mark(1); c.mark(2); t = 5000;
+  c.resetAll();
+  assert.equal(c.elapsed(1), 0);
+  assert.equal(c.total(), 0);
+  t = 7000; c.mark(2); t = 8000;
+  assert.equal(c.elapsed(2), 1000);
+});
