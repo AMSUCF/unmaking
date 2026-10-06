@@ -58,7 +58,7 @@
       notes: 'Agents crawl and post but do not read the way people do. Moltbook as the extreme case: a network performed by agents for human onlookers. TODO before presenting: add the statistic and source on collapsing search referral traffic.',
     },
     {
-      id: 'a1-creative-class', act: 1, minutes: 0.75, layout: 'statement',
+      id: 'a1-creative-class', act: 1, minutes: 1, layout: 'statement',
       heading: 'The fall of the creative class',
       text: 'Who still gets to make a living by making?',
       source: 'Apricitas Economics, “AI and the Fall of the Creative Class”',
@@ -67,7 +67,7 @@
       notes: 'Summarize the Apricitas data on creative employment. Pull one chart or number to say aloud.',
     },
     {
-      id: 'a1-artists-sue', act: 1, minutes: 0.5, layout: 'image',
+      id: 'a1-artists-sue', act: 1, minutes: 0.75, layout: 'image',
       text: 'Artists sue Stability AI, Midjourney and DeviantArt.',
       media: [{ src: 'assets/act1/artists-sue.jpg', alt: 'THE DECODER article header, “Artists sue Stability AI, Midjourney and DeviantArt,” by Matthias Bastian, January 16, 2023, over a Midjourney-generated painting of a teal-haired young man in a courtroom with flames behind him.' }],
       source: 'Matthias Bastian, THE DECODER, January 16, 2023',
@@ -76,7 +76,7 @@
       notes: 'The creative class fights back in court: the 2023 class action by artists against Stability AI, Midjourney and DeviantArt. Note the header art is itself Midjourney output.',
     },
     {
-      id: 'a1-muse', act: 1, minutes: 1, layout: 'gallery',
+      id: 'a1-muse', act: 1, minutes: 1.25, layout: 'gallery',
       text: 'Meta Muse and OpenAI Dots: cute companions marketed as the cure for enshittification, sold by the companies selling enshittification.',
       media: [{ src: 'assets/act1/muse-keroppi.png', alt: 'Chat companion profile with a green Keroppi-style frog avatar wearing a bow tie, labeled “Keroppi, Active.”' },
         { src: 'assets/act1/meta-tamagotchi.png', alt: 'A hand with pink manicured nails holding a small black Meta device showing a cream, plush-looking cartoon creature, captioned “Meta unveils pocket-sized ‘AI Tamagotchi.’”' },
@@ -118,7 +118,7 @@
       notes: 'The "Strengthening" section: relationship maintenance outsourced to a platform that profits from the data.',
     },
     {
-      id: 'a1-lens', act: 1, minutes: 0.75, layout: 'statement',
+      id: 'a1-lens', act: 1, minutes: 1, layout: 'statement',
       text: 'So agentic tools risk becoming another proprietary platform we overtrust, one that becomes our lens for the world.',
       fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
       notes: 'The risk, plainly stated.',

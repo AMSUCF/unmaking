@@ -10,20 +10,34 @@
       notes: 'Anastasia returns. A game act, because games are where we think about agency most directly.',
     },
     {
-      id: 'a4-triad', act: 4, minutes: 0.75, layout: 'statement', room: 'workshop', agency: 1,
+      id: 'a4-eliza', act: 4, minutes: 0.75, layout: 'image', room: 'office', agency: 1,
+      text: 'Talking machines aren’t new: ELIZA, 1966.',
+      media: [{ src: 'assets/act4/eliza.png', alt: 'E.L.I.Z.A. Talking: a browser recreation of Joseph Weizenbaum’s 1966 chatbot on a VT100-style terminal.' }],
+      fx: ['pixel-dissolve'], draft: true,
+      notes: 'Not in the outline yet, but the image is in the repo. The ELIZA effect: we read agency into pattern-matching.',
+    },
+    {
+      id: 'a4-racter', act: 4, minutes: 0.75, layout: 'image', room: 'office', agency: 1,
+      text: 'Neither is machine authorship: Racter and William Chamberlain, 1984.',
+      media: [{ src: 'assets/act4/racter-chamberlain.png', alt: 'Spread from The Policeman’s Beard Is Half Constructed: computer-generated limericks labeled “Work of stupefying genius,” beside an engraving of a man clutching his head.' }],
+      fx: ['pixel-dissolve'], draft: true,
+      notes: 'Confirm the source of this spread before presenting. Human authors were always behind the "machine" author.',
+    },
+    {
+      id: 'a4-triad', act: 4, minutes: 1.25, layout: 'statement', room: 'workshop', agency: 1,
       heading: 'Material, tools, time… and steps',
       text: 'Nowviskie’s triad (pp. 11–12), plus a fourth loss: control over the steps and decisions themselves, sold as convenience.',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'Bethany Nowviskie’s triad as we use it in the book. Agents add a fourth thing we can lose.',
     },
     {
-      id: 'a4-contribution', act: 4, minutes: 0.75, layout: 'statement', room: 'workshop', agency: 0,
+      id: 'a4-contribution', act: 4, minutes: 1.25, layout: 'statement', room: 'workshop', agency: 0,
       text: 'If my agent does all the work to create a website, a Tracery bot, a 3D print file, where is the human contribution? When does lowering barriers remove the point of making?',
       fx: ['iris-in'], avatar: { pose: 'point', x: 60 },
       notes: 'The honest worry. Watch the agency meter hit zero.',
     },
     {
-      id: 'a4-pun', act: 4, minutes: 0.5, layout: 'statement', room: 'workshop', agency: 0,
+      id: 'a4-pun', act: 4, minutes: 1, layout: 'statement', room: 'workshop', agency: 0,
       heading: 'The pun is the argument',
       text: 'Making restores human agency. Agentic AI transfers it to the system.',
       fx: ['pixel-dissolve'],
@@ -40,7 +54,7 @@
       notes: 'From my book on Undertale. A low-code tool let one person make a game that changed how people play other games. It challenged players to reconsider what games ask of us: you could fight everything, or choose not to, and the game remembers your choices. Hold that menu in mind for the next one.',
     },
     {
-      id: 'a4-unmake', act: 4, minutes: 1, layout: 'choice', room: 'office', agency: 2,
+      id: 'a4-unmake', act: 4, minutes: 1.25, layout: 'choice', room: 'office', agency: 2,
       heading: 'Can we unmake the agent?',
       text: 'A critical maker… (p. 10)',
       choices: ['Reject the tool', 'Supplement the tool', 'Extend the tool', 'Critique the tool'],
@@ -48,14 +62,14 @@
       notes: 'Each press reveals one option, like a dialogue menu. From the book: a critical maker rejects, supplements, extends, and critiques the tool. All four, not one.',
     },
     {
-      id: 'a4-ask', act: 4, minutes: 1, layout: 'choice', room: 'office', agency: 3,
+      id: 'a4-ask', act: 4, minutes: 1.5, layout: 'choice', room: 'office', agency: 3,
       heading: 'Ask of any agent:',
       choices: ['What did it plan?', 'Which tools did it call?', 'Which sources did it choose?', 'What did it skip?', 'Where would a human have chosen differently?'],
       fx: ['choice-menu'], avatar: { pose: 'point', x: 60 },
       notes: 'The inspection pattern from Act III, made concrete. These questions work for students, for reviewers, and for us. Reveal one per press.',
     },
     {
-      id: 'a4-defaults', act: 4, minutes: 0.75, layout: 'gallery', room: 'commons', agency: 2,
+      id: 'a4-defaults', act: 4, minutes: 1, layout: 'gallery', room: 'commons', agency: 2,
       heading: 'Whose defaults?',
       text: 'Ask an image model for a “professor of digital culture” and see who it imagines. We built our guides by hand.',
       media: [
@@ -73,7 +87,7 @@
       notes: 'Stanford Daily, Sept. 21, 2026. Confirm the citation.',
     },
     {
-      id: 'a4-political', act: 4, minutes: 0.75, layout: 'statement', room: 'commons', agency: 2,
+      id: 'a4-political', act: 4, minutes: 1, layout: 'statement', room: 'commons', agency: 2,
       text: 'Our book is intentionally political, written in a state where humanities work was cast as a “public threat” (p. xiv; pp. 231–232).',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'Florida context. Making is never neutral, and neither is teaching it.',
@@ -129,13 +143,13 @@
       notes: 'From my earlier talk: our field’s history of customized tool-making, and of building entry points into procedural creativity for those not versed in code, is essential to finding ways forward. DH scholars are well positioned to make these interventions through collaborative, feminist approaches to research-creation. The center redirects people away from frontier defaults toward local models, community tools, and the skills to inspect both.',
     },
     {
-      id: 'a4-classroom', act: 4, minutes: 0.75, layout: 'statement', room: 'commons', agency: 5,
+      id: 'a4-classroom', act: 4, minutes: 1, layout: 'statement', room: 'commons', agency: 5,
       text: 'In DH classrooms, we can empower students to use agentic AI for research, critical making, and digital communication, without an alienating approach to programming education.',
       fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
       notes: 'The opportunity.',
     },
     {
-      id: 'a4-responsibility', act: 4, minutes: 0.75, layout: 'statement', room: 'commons', agency: 5,
+      id: 'a4-responsibility', act: 4, minutes: 1, layout: 'statement', room: 'commons', agency: 5,
       text: 'We also have the responsibility to give students a critical lens on these tools, with pathways from frontier platforms to local models and greater control, never losing sight of community or their own expertise.',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'The responsibility. The agency meter is full: that is the goal.',
