@@ -3,7 +3,7 @@
   'use strict';
   const ACT2_SCENES = [
     {
-      id: 'a2-act', act: 2, minutes: 0.5, layout: 'statement',
+      id: 'a2-act', act: 2, minutes: 0.5, place: 'sewing-room', layout: 'statement',
       heading: 'Act II: Why Keep Making?',
       text: 'Thread · community · the learn-to-code wars',
       fx: ['stitch-in'], say: "Thanks, Emily. Let's pick up the needle.",
@@ -16,7 +16,7 @@
       notes: 'Pose the question we keep asking ourselves: are we critiquing (unflattening) or making? Critical making says both, at once.',
     },
     {
-      id: 'a2-learn-to-code', act: 2, minutes: 1, layout: 'gallery',
+      id: 'a2-learn-to-code', act: 2, minutes: 1, place: 'code-camp', layout: 'gallery',
       text: 'The learn-to-code movement (Hour of Code, “more hack, less yack,” credential-checking in DH) drew pushback for misogyny and for ignoring histories of exclusion.',
       media: [
         { src: 'assets/act2/geek.jpg', alt: 'Cover of Toxic Geek Masculinity in Media by Anastasia Salter and Bridget Blodgett.' },
@@ -40,7 +40,7 @@
       notes: 'The same year, the response. Who gets to be a beginner in public?',
     },
     {
-      id: 'a2-losh', act: 2, minutes: 1, layout: 'quote',
+      id: 'a2-losh', act: 2, minutes: 1, place: 'sampler-wall', layout: 'quote',
       text: '“Articulating a need for a feminist corrective in the digital humanities has come at a much slower pace, perhaps because the instrumentalism of a ‘tool’ seems much less blatantly anti-feminist than the instrumentalism of a gun.”',
       source: 'Elizabeth Losh, “What Can the Digital Humanities Learn from Feminist Game Studies?” DHQ 9.2 (2015)',
       fx: ['needle-pass'],
@@ -61,7 +61,7 @@
       notes: 'The counter-argument for learning code: not credentialing, but legibility of the systems that make culture.',
     },
     {
-      id: 'a2-casual-creators', act: 2, minutes: 1.25, layout: 'gallery',
+      id: 'a2-casual-creators', act: 2, minutes: 1.25, place: 'craft-fair', layout: 'gallery',
       text: 'Casual creators (Compton & Mateas) and low-code tools such as Twine, Tracery, Bitsy, and p5 are remixable because they share the common languages of the web.',
       media: [
         { src: 'assets/act2/cc-twine.png', alt: 'Twine’s editor with a single untitled passage on a blue grid.' },
@@ -104,7 +104,7 @@
       notes: 'A tool made for writers, not coders, by a designer thinking about who gets left out.',
     },
     {
-      id: 'a2-bridge', act: 2, minutes: 0.5, layout: 'statement',
+      id: 'a2-bridge', act: 2, minutes: 0.5, place: 'quilting-bee', layout: 'statement',
       text: 'From casual creators to agents: what happens when the tool can make the tool?',
       fx: ['stitch-in'], draft: true,
       notes: 'Outline: "more things need to be fleshed out here." Bridge from community-built tools to agents. Decide whether one or two more scenes belong here.',

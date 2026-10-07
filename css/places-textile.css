@@ -1,0 +1,43 @@
+/* ACT II places: felt appliqué inside an embroidery hoop. Felt pieces get a soft edge and a running stitch. */
+.place-textile { --plane-dim: .55; }
+.place-textile .plane-mid .piece, .place-textile .plane-egg .piece { border-radius: 6px; box-shadow: 0 3px 0 rgba(0, 0, 0, .12); outline: 2px dashed rgba(255, 255, 255, .55); outline-offset: -5px; }
+.place-textile .tx-hoop { background: radial-gradient(ellipse 62% 70% at 50% 50%, transparent 80%, rgba(184, 139, 85, .35) 81% 84%, rgba(120, 90, 50, .18) 85%); }
+.place-textile .tx-label { background: #fbf6ea; color: #7b4fb3; font: 700 16px/30px 'Courier Prime', monospace; text-align: center; letter-spacing: 1px; border: 2px solid #7b4fb3; outline: none; }
+.restitch-line { position: absolute; top: 0; bottom: 0; left: 0; width: 4px; background: repeating-linear-gradient(#7b4fb3 0 18px, transparent 18px 30px); }
+
+/* The Sewing Room */
+.place-textile .sr-window { background: repeating-linear-gradient(75deg, transparent 0 22px, rgba(123, 79, 179, .55) 22px 25px) 0 0 / 100% 200%, #cfe3ef; border: 8px solid #fbf6ea; animation: yarn-rain 3s linear infinite; }
+@keyframes yarn-rain { to { background-position: 0 220px, 0 0; } }
+.place-textile .sr-dressform { background: linear-gradient(#6b4a2e, #6b4a2e) 50% 100% / 8px 90px no-repeat, radial-gradient(ellipse 46px 100px at 50% 112px, #c0544a 96%, transparent) no-repeat; }
+.place-textile .sr-machine { background: linear-gradient(#e9e0cc, #e9e0cc) 10px 50px / 170px 20px no-repeat, linear-gradient(#3f8f8a, #3f8f8a) 20px 10px / 140px 40px no-repeat, linear-gradient(#3f8f8a, #3f8f8a) 140px 10px / 20px 60px no-repeat; }
+.place-textile .sr-spool { background: linear-gradient(#b88b55 0 12px, #7b4fb3 12px 66px, #b88b55 66px); animation: spool-wobble 3s ease-in-out infinite alternate; }
+@keyframes spool-wobble { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+.place-textile .sr-pincushion { background: radial-gradient(ellipse 22px 14px at 50% 60%, #c0544a 96%, transparent) no-repeat, linear-gradient(#4f7d3a, #4f7d3a) 50% 0 / 10px 6px no-repeat; }
+
+/* Code Camp */
+.place-textile .cc-desks { background: repeating-linear-gradient(90deg, #b88b55 0 160px, transparent 160px 200px) 0 0 / 100% 24px no-repeat, linear-gradient(#6b4a2e, #6b4a2e) 12px 24px / 8px 96px no-repeat, linear-gradient(#6b4a2e, #6b4a2e) 142px 24px / 8px 96px no-repeat; }
+.place-textile .cc-monitor { background: linear-gradient(#3a2f8f, #3a2f8f) 50% 50% / 80% 70% no-repeat, #d9cfb0; border-radius: 10px; }
+.place-textile .cc-banner { background: #e2b33c; color: #2d2a4a; font: 700 18px/30px 'Courier Prime', monospace; text-align: center; }
+.place-textile .cc-sampler { background: #3a2f8f; color: #9dc3ff; font: 700 15px/26px 'Courier Prime', monospace; padding: 12px 10px; }
+.place-textile .cc-spot { background: radial-gradient(ellipse 50px 170px at 50% 100%, rgba(255, 240, 180, .55), transparent 70%); }
+.place-textile .cc-chair { background: linear-gradient(#c0544a, #c0544a) 10px 0 / 40px 50px no-repeat, linear-gradient(#c0544a, #c0544a) 10px 50px / 40px 12px no-repeat, linear-gradient(#6b4a2e, #6b4a2e) 12px 62px / 5px 48px no-repeat, linear-gradient(#6b4a2e, #6b4a2e) 43px 62px / 5px 48px no-repeat; }
+
+/* The Sampler Wall */
+.place-textile .sw-frames { background: linear-gradient(#fbf6ea, #fbf6ea) 0 0 / 280px 200px no-repeat, linear-gradient(#fbf6ea, #fbf6ea) 340px 40px / 240px 260px no-repeat, linear-gradient(#fbf6ea, #fbf6ea) 640px 0 / 300px 180px no-repeat, linear-gradient(#fbf6ea, #fbf6ea) 120px 300px / 260px 200px no-repeat, linear-gradient(#fbf6ea, #fbf6ea) 660px 260px / 280px 240px no-repeat; outline: none !important; }
+.place-textile .sw-cyborg { background: #fbf6ea; color: #c0544a; font: italic 700 12px/18px 'Courier Prime', monospace; text-align: center; padding-top: 12px; border: 6px solid #b88b55; }
+.place-textile .sw-home { background: #fbf6ea; color: #3f8f8a; font: 700 15px/30px 'Courier Prime', monospace; text-align: center; }
+.place-textile .sw-jacquard { background: radial-gradient(circle 4px, #2d2a4a 96%, transparent) 0 0 / 15px 15px, #d9b07a; }
+
+/* The Craft Fair */
+.place-textile .cf-stalls { background: repeating-linear-gradient(90deg, #c0544a 0 40px, #fbf6ea 40px 80px) 0 0 / 300px 60px no-repeat, repeating-linear-gradient(90deg, #3f8f8a 0 40px, #fbf6ea 40px 80px) 330px 0 / 300px 60px no-repeat, repeating-linear-gradient(90deg, #7b4fb3 0 40px, #fbf6ea 40px 80px) 660px 0 / 300px 60px no-repeat, linear-gradient(#b88b55, #b88b55) 0 60px / 300px 200px no-repeat, linear-gradient(#b88b55, #b88b55) 330px 60px / 300px 200px no-repeat, linear-gradient(#b88b55, #b88b55) 660px 60px / 300px 200px no-repeat; }
+.place-textile .cf-bunting { background: conic-gradient(from 135deg at 50% 0, #c0544a 0 90deg, transparent 90deg) 0 0 / 30px 16px, conic-gradient(from 135deg at 50% 0, #e2b33c 0 90deg, transparent 90deg) 15px 0 / 30px 16px; outline: none !important; box-shadow: none !important; }
+.place-textile .cf-sign { background: #fbf6ea; color: #2d2a4a; font: 700 15px/30px 'Courier Prime', monospace; text-align: center; }
+.place-textile .cf-yarn { background: radial-gradient(circle 20px at 25px 24px, #c0544a 96%, transparent) no-repeat, radial-gradient(circle 18px at 62px 26px, #7b4fb3 96%, transparent) no-repeat; outline: none !important; }
+.place-textile .cf-able { background: #e98e7f; color: #fbf6ea; font: 700 14px/20px 'Courier Prime', monospace; text-align: center; padding-top: 50px; border-radius: 30px 30px 6px 6px; }
+
+/* The Quilting Bee */
+.place-textile .qb-frame { background: linear-gradient(#b88b55, #b88b55) 0 0 / 100% 16px no-repeat, linear-gradient(#b88b55, #b88b55) 0 100% / 100% 16px no-repeat, conic-gradient(#c0544a 25%, #e2b33c 0 50%, #3f8f8a 0 75%, #7b4fb3 0) 0 16px / 80px 80px; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 62% 0, 62% 100%, 0 100%); }
+.place-textile .qb-chairs { background: repeating-linear-gradient(90deg, #6b4a2e 0 8px, transparent 8px 60px) 0 0 / 100% 30px no-repeat, repeating-linear-gradient(90deg, #6b4a2e 0 34px, transparent 34px 60px) 0 16px / 100% 8px no-repeat, repeating-linear-gradient(90deg, #6b4a2e 0 5px, transparent 5px 29px, #6b4a2e 29px 34px, transparent 34px 60px) 0 24px / 100% 6px no-repeat; outline: none !important; }
+.place-textile .qb-tea { background: radial-gradient(ellipse 30px 20px at 60px 36px, #fbf6ea 96%, transparent) no-repeat, linear-gradient(#fbf6ea, #fbf6ea) 90px 26px / 20px 6px no-repeat, radial-gradient(ellipse 14px 10px at 140px 44px, #fbf6ea 96%, transparent) no-repeat; outline: none !important; }
+.place-textile .qb-robot { background: linear-gradient(#9a9a9a, #9a9a9a) 50% 100% / 30px 20px no-repeat, linear-gradient(20deg, transparent 46%, #9a9a9a 47% 53%, transparent 54%) 0 60px / 100% 110px no-repeat, linear-gradient(#c0c0c0, #c0c0c0) 40px 30px / 6px 40px no-repeat; animation: qb-poke 2.6s ease-in-out infinite; }
+@keyframes qb-poke { 50% { transform: translateY(-6px) rotate(-3deg); } }

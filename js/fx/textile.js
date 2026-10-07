@@ -1,7 +1,7 @@
 /* ACT II — TEXTILE craft: stitched headings, running-stitch reveals, quilt assembly. */
 (function () {
   'use strict';
-  const { anim, el, svgEl } = Crafts;
+  const { anim, el, svgEl, fxLayer } = Crafts;
   const THREAD = '#7b4fb3';
 
   function xStitch(ctx, x, y, c, p) {
@@ -55,9 +55,6 @@
         for (let i = 0; i < 16; i++) row.append(el('div', 'patch'));
         bg.append(row);
       });
-      const thread = svgEl('svg', { class: 'loose-thread', viewBox: '0 0 420 160' });
-      thread.append(svgEl('path', { d: 'M410 150 C 320 40, 220 170, 130 70 S 20 60, 0 10' }));
-      bg.append(thread, el('div', 'spool'));
     },
 
     decorate(root) {
@@ -68,6 +65,17 @@
         h.classList.add('sr-only');
         h.after(canvas);
       });
+    },
+
+    // A running stitch crosses the stage; the new felt is revealed behind the needle.
+    async placeTransition(oldEl, newEl) {
+      const line = el('div', 'restitch-line');
+      fxLayer().append(line);
+      await Promise.all([
+        anim(line, [{ transform: 'translateX(-40px)' }, { transform: 'translateX(1300px)' }], { duration: 800, easing: 'linear', fill: 'none' }),
+        anim(newEl, [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)' }], { duration: 800, easing: 'linear', fill: 'none' }),
+      ]);
+      line.remove();
     },
 
     fx: {
