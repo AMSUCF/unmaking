@@ -161,6 +161,21 @@
       notes: 'Definition from our NEH AI & DH workshop (week 7). Klimas built Twine for people who were writers more than coders; now anyone who can write a sentence can make the tool. That makes the agent the ultimate low-code platform, and the one that threatens to replace the rest: why learn Twine if you can describe the story? It is also continuous with distant coding: working with code you did not author line by line, by reading, directing, and judging it instead.',
     },
     {
+      id: 'a2-intelligent-ui', act: 2, minutes: 1, layout: 'statement',
+      heading: 'The interface is generated',
+      text: 'GPT-6’s “Intelligent UI” answers with a working tool built on the spot, for ChatGPT’s 1.2 billion weekly users. Natural language programming becomes the computer’s interface.',
+      source: 'OpenAI, “GPT-6 and Intelligent UI for everyone” (October 7, 2026)',
+      url: 'https://openai.com/index/gpt-6-for-everyone/',
+      fx: ['stitch-in'], avatar: { pose: 'talk', x: 60 },
+      notes: 'Announced the week of this talk. Ask a question and ChatGPT may answer with an interactive visual or a calculator it builds for that question, without leaving the conversation. Rolling out to paid tiers first, then Free and Go. This is the casual creator taken to its end point: not Twine for writers, but a new tool generated for every question, by everyone, with no making visible at all. Two questions to hold: who gets to keep the tool (it lives inside OpenAI’s platform, not on open ground like a Twine file), and what happens to learning when the interface is never built by us. Then the upside: an interface generated on demand can be generated for the person in front of it (next slide). TODO: add a screenshot of the announcement or an Intelligent UI answer; openai.com was blocked from the build environment.',
+    },
+    {
+      id: 'a2-accessibility', act: 2, minutes: 0.75, layout: 'statement',
+      text: 'Agentic AI also has significant implications for accessibility, as an interface and not just a generator.',
+      fx: ['stitch-in'], draft: true,
+      notes: 'Follows the Intelligent UI slide: if the interface is generated on demand, it can be generated for the person in front of it. Outline flags this; expand with an example (voice-driven building, alt-text workflows, adapting interfaces).',
+    },
+    {
       id: 'a2-metatools', act: 2, minutes: 1, layout: 'statement',
       text: 'Agentic AI coding tools are metatools. They work best making multipurpose things that replace proprietary platforms: our Canvas alternatives, my local recording, transcript, and video tools.',
       fx: ['needle-pass'], avatar: { pose: 'talk', x: 60 }, draft: true,
@@ -186,12 +201,6 @@
       url: 'https://bsky.app/profile/mrchrisadams.net/post/3mxbyijfzqk2l',
       fx: ['needle-pass'], avatar: { pose: 'point', x: 60 },
       notes: 'Chris Adams quote-posted O’Malley’s “decompiled Adobe suite” post: “I guess this is the week Bluesky answers this vital question.” The creative community’s bind: years of subscription lock-in, price hikes, and Adobe’s own AI turn on one side; AI on the other. (Adobe’s 2025 Bluesky debut drew such a backlash that it deleted its posts.) The metatools argument is that agents can help make the alternatives, as with our Canvas replacements and local tools. The caution, back to Act I: an agent can become the next landlord.',
-    },
-    {
-      id: 'a2-accessibility', act: 2, minutes: 0.75, layout: 'statement',
-      text: 'Agentic AI also has significant implications for accessibility, as an interface and not just a generator.',
-      fx: ['stitch-in'], draft: true,
-      notes: 'Outline flags this; expand with an example (voice-driven building, alt-text workflows, adapting interfaces).',
     },
     {
       id: 'a2-grandma-hobbies', act: 2, minutes: 0.5, layout: 'image',
