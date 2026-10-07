@@ -138,6 +138,13 @@
       notes: 'Outline: "more things need to be fleshed out here." Bridge from community-built tools to agents. Decide whether one or two more scenes belong here.',
     },
     {
+      id: 'a2-nl-programming', act: 2, minutes: 0.75, layout: 'statement',
+      heading: 'Natural language programming',
+      text: 'Describing what you want in prose and steering what the model builds. The prompt is the source; the running site is the output.',
+      fx: ['needle-pass'], avatar: { pose: 'talk', x: 60 },
+      notes: 'Definition from our NEH AI & DH workshop (week 7). Klimas built Twine for people who were writers more than coders; now anyone who can write a sentence can make the tool. That makes the agent the ultimate low-code platform, and the one that threatens to replace the rest: why learn Twine if you can describe the story? It is also continuous with distant coding: working with code you did not author line by line, by reading, directing, and judging it instead.',
+    },
+    {
       id: 'a2-metatools', act: 2, minutes: 1, layout: 'statement',
       text: 'Agentic AI coding tools are metatools. They work best making multipurpose things that replace proprietary platforms: our Canvas alternatives, my local recording, transcript, and video tools.',
       fx: ['needle-pass'], avatar: { pose: 'talk', x: 60 }, draft: true,
