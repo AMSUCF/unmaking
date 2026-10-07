@@ -167,6 +167,27 @@
       notes: 'Concrete examples from our own practice. TODO: add screenshots of the Canvas alternative and the local recording/transcript tools (gallery).',
     },
     {
+      id: 'a2-artcraft', act: 2, minutes: 1, layout: 'gallery',
+      text: 'The “decompiled Adobe suite” that went viral: ArtCraft’s Photoshop and Illustrator look-alikes, rebuilt in Rust with AI agents. Not decompiled: clean-room, from public specs.',
+      media: [
+        { src: 'assets/act2/artcraft-photocraft.jpg', alt: 'PhotoCraft, ArtCraft’s Photoshop look-alike, editing Hokusai’s The Great Wave with type layers, Vibrance and Curves adjustment layers, and a Curves editor over the histogram.' },
+        { src: 'assets/act2/artcraft-vectorcraft.jpg', alt: 'VectorCraft, ArtCraft’s Illustrator look-alike, editing a neon synthwave poster with Appearance and Properties panels open.' },
+      ],
+      source: 'ArtCraft, Crafting Apps (getartcraft.com/apps, October 2026)',
+      url: 'https://getartcraft.com/apps',
+      fx: ['quilt-assemble'], avatar: { pose: 'point', x: 60 },
+      notes: 'The week Adobe got remade. James O’Malley on Bluesky: “Holy shit. Someone has decompiled the Adobe suite, rebuilt it in Rust and released it as open source. Either all software is dead or the US copyright laws are about to receive an update.” What it actually is: ArtCraft’s Crafting Apps, open-source (MIT/Apache) stand-ins for Photoshop (PhotoCraft), Illustrator (VectorCraft), Acrobat (PrintCraft) and more. Their READMEs say “clean-room: implemented from public specs and observed behaviour only. No proprietary code, shaders or assets.” So not decompiled, and not Adobe: a fake Adobe suite, made by people steering AI coding agents (the repos ship AGENTS.md and CLAUDE.md files for them). Early alpha, not a professional replacement yet. And note the twist: every app is built to be driven by agents over MCP. The platform people resent gets remade, by agents, for agents. Is that an escape, or the next landlord?',
+    },
+    {
+      id: 'a2-ai-or-adobe', act: 2, minutes: 0.75, layout: 'image',
+      text: 'Agents offer a way out of platforms makers already resent, if we don’t just trade one landlord for another.',
+      media: [{ src: 'assets/act2/ai-or-adobe.png', alt: 'Two-buttons meme: a hand hovers between red buttons labeled “I hate AI more” and “I hate Adobe more,” above a sweating man wiping his brow.' }],
+      source: 'Chris Adams (@mrchrisadams.net) on Bluesky, quote-posting James O’Malley',
+      url: 'https://bsky.app/profile/mrchrisadams.net/post/3mxbyijfzqk2l',
+      fx: ['needle-pass'], avatar: { pose: 'point', x: 60 },
+      notes: 'Chris Adams quote-posted O’Malley’s “decompiled Adobe suite” post: “I guess this is the week Bluesky answers this vital question.” The creative community’s bind: years of subscription lock-in, price hikes, and Adobe’s own AI turn on one side; AI on the other. (Adobe’s 2025 Bluesky debut drew such a backlash that it deleted its posts.) The metatools argument is that agents can help make the alternatives, as with our Canvas replacements and local tools. The caution, back to Act I: an agent can become the next landlord.',
+    },
+    {
       id: 'a2-accessibility', act: 2, minutes: 0.75, layout: 'statement',
       text: 'Agentic AI also has significant implications for accessibility, as an interface and not just a generator.',
       fx: ['stitch-in'], draft: true,
