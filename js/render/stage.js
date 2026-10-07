@@ -16,6 +16,7 @@ const Stage = (() => {
     currentCraft = craft;
     document.body.dataset.craft = craft;
     Crafts.backdrop(craft, els.backdrop);
+    Places.reset(craft);
     Avatar.setSkinAll(craft);
   }
 
@@ -136,9 +137,17 @@ const Stage = (() => {
   const poseOf = (scene) => (scene.avatar && scene.avatar.pose) || 'idle';
   const xOf = (scene) => (scene.avatar && typeof scene.avatar.x === 'number' ? scene.avatar.x : 60);
 
-  async function show(scene, act, { kind, step }) {
+  async function show(scene, act, { kind, step, place, nextPlace }) {
     els.fx.replaceChildren();
     setCraft(act.craft);
+    if (place) {
+      await Places.go(act.craft, place, {
+        animate: kind !== 'cut',
+        onChange: () => els.content.replaceChildren(), // the old slide leaves with the old place
+        ctx: { Avatar, lead: act.presenter, scene },
+      });
+      Places.nudge(scene.id);
+    }
 
     const el = renderScene(scene);
     const x = xOf(scene);
@@ -169,7 +178,9 @@ const Stage = (() => {
       return;
     }
     const walking = Avatar.walkTo(lead, x);
-    const ctx = { scene, act, lead, other, setCraft, Avatar, stage: els };
+    // A handoff switches craft mid-fx; build the next act's first place under it.
+    const handoffCraft = (c) => { setCraft(c); if (nextPlace) Places.go(c, nextPlace); };
+    const ctx = { scene, act, lead, other, setCraft: handoffCraft, Avatar, stage: els };
     const fxCraft = scene.layout === 'handoff' ? 'handoff' : act.craft;
     for (const name of scene.fx || []) await Crafts.runFx(fxCraft, name, el, ctx);
     await walking;

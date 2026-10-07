@@ -3,6 +3,7 @@
   'use strict';
   const lists = [globalThis.ACT1_SCENES, globalThis.ACT2_SCENES, globalThis.ACT3_SCENES, globalThis.ACT4_SCENES].filter(Array.isArray);
   const { scenes, errors } = Deck.buildDeck(lists);
+  errors.push(...Deck.placeErrors(scenes), ...PlaceDecls.validateAll());
   const $ = (id) => document.getElementById(id);
   const stageEl = $('stage');
   const notesEl = $('notes');
@@ -41,7 +42,9 @@
         if (kind === 'act-enter') clock.reset(scene.act); // a real forward entry into a new act starts its clock
         else clock.mark(scene.act);
         try { history.replaceState(null, '', '?scene=' + scene.id); } catch (e) { /* file:// in some browsers */ }
-        await Stage.show(scene, act, { kind, step: target.step });
+        const place = Deck.placeOf(scenes, target.index);
+        const nextPlace = target.index + 1 < scenes.length ? Deck.placeOf(scenes, target.index + 1) : null;
+        await Stage.show(scene, act, { kind, step: target.step, place, nextPlace });
       }
       pos = { index: target.index, step: target.step };
       renderNotes();

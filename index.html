@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="css/craft-zine.css">
   <link rel="stylesheet" href="css/craft-game.css">
   <link rel="stylesheet" href="css/hud.css">
+  <link rel="stylesheet" href="css/places.css">
 </head>
 <body data-craft="paper">
   <div id="stage">
     <div id="backdrop"></div>
     <div id="content"></div>
     <div id="avatars"></div>
+    <div id="foreground"></div>
     <div id="say" class="hidden" aria-live="polite"></div>
     <div id="fx-layer"></div>
   </div>
@@ -32,6 +34,11 @@
 
   <script src="js/core/random.js"></script>
   <script src="js/core/acts.js"></script>
+  <script src="js/places/registry.js"></script>
+  <script src="js/places/paper.js"></script>
+  <script src="js/places/textile.js"></script>
+  <script src="js/places/zine.js"></script>
+  <script src="js/places/game.js"></script>
   <script src="js/core/deck.js"></script>
   <script src="js/core/nav.js"></script>
   <script src="js/core/timer.js"></script>
@@ -42,6 +49,7 @@
   <script src="js/data/act3-zine.js"></script>
   <script src="js/data/act4-game.js"></script>
   <script src="js/fx/crafts.js"></script>
+  <script src="js/render/places.js"></script>
   <script src="js/render/avatar-pixels.js"></script>
   <script src="js/render/avatar.js"></script>
   <script src="js/render/stage.js"></script>

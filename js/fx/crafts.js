@@ -38,5 +38,11 @@ const Crafts = (() => {
     return n;
   }
 
-  return { register, decorate, backdrop, runFx, anim, wait, fxLayer, el, svgEl };
+  // Optional per craft: animate from one place to the next. Both roots are in the backdrop; the new one is on top.
+  async function placeTransition(craft, oldEl, newEl, ctx) {
+    const t = registry[craft] && registry[craft].placeTransition;
+    if (t) await t(oldEl, newEl, ctx || {});
+  }
+
+  return { register, decorate, backdrop, runFx, placeTransition, anim, wait, fxLayer, el, svgEl };
 })();
