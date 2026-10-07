@@ -3,7 +3,7 @@
   'use strict';
   const ACT3_SCENES = [
     {
-      id: 'a3-flash-dead', act: 3, minutes: 0.75, layout: 'statement',
+      id: 'a3-flash-dead', act: 3, minutes: 0.75, place: 'flash-graveyard', layout: 'statement',
       heading: 'Flash is dead.',
       text: 'So is Twine pointless now? If an agent can make the thing, who owns what gets made?',
       fx: ['xerox-scan'], say: 'Fresh off the copier.',
@@ -24,7 +24,7 @@
       notes: 'Anastasia and John Murray’s Flash book. Corporate walled gardens and the works lost with them.',
     },
     {
-      id: 'a3-lawhead', act: 3, minutes: 1.5, layout: 'quote',
+      id: 'a3-lawhead', act: 3, minutes: 1.5, place: 'wayback-stacks', layout: 'quote',
       text: '“I feel like there’s a lot to learn from Flash. As an example of what technology enables for ‘the little people’, as an example of what it takes to destroy that and basically eradicate a huge portion of digital history, and as an example of how easy it is for something like that to just happen. If you look at it through the lens of digital history, it’s a good example of how easy it is for something that was really powerful and popular to be lost without much of a trace of what it once was.”',
       source: 'Nathalie Lawhead, “A Short History of Flash”',
       url: 'https://www.nathalielawhead.com/candybox/a-short-history-of-flash-the-forgotten-flash-website-movement-when-websites-were-the-new-emerging-artform',
@@ -43,7 +43,7 @@
       notes: 'Especially systems that compile and hide their source code. Agents are, in a sense, the ultimate compiled black box.',
     },
     {
-      id: 'a3-libgen', act: 3, minutes: 1, layout: 'image',
+      id: 'a3-libgen', act: 3, minutes: 1, place: 'babel', layout: 'image',
       text: 'Meanwhile, something is reading everything we make.',
       media: [{ src: 'assets/act3/libgen.png', alt: 'The Atlantic’s LibGen author search for “Anastasia Salter”, with 26 results including Jane Jensen and Plundered Hearts.' }],
       fx: ['xerox-scan'], draft: true,
@@ -57,7 +57,7 @@
       notes: 'A provocation we take seriously without fully endorsing. Zines were built on sharing.',
     },
     {
-      id: 'a3-gardens', act: 3, minutes: 1, layout: 'statement',
+      id: 'a3-gardens', act: 3, minutes: 1, place: 'geocities', layout: 'statement',
       text: 'Beyond copyright and credit: the tension between making things in other people’s walled gardens and planting an entirely new garden.',
       fx: ['ransom-shuffle'],
       notes: 'Authorship versus ownership. The question is not only who gets paid, but where the thing can live.',
@@ -80,7 +80,7 @@
       notes: 'Openness cuts both ways. TODO: add the Reuters article header screenshot and make this an image scene.',
     },
     {
-      id: 'a3-tracery', act: 3, minutes: 1, layout: 'image',
+      id: 'a3-tracery', act: 3, minutes: 1, place: 'bot-garden', layout: 'image',
       heading: 'Maintenance is resistance',
       text: 'Community: the people who keep the tools running.',
       media: [{ src: 'assets/act3/tracery.png', alt: 'Crystal Code Palace’s Tracery tutorial, with a grammar of animals and a list of generated results.' }],

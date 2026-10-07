@@ -1,0 +1,44 @@
+/* ACT III places: photocopied collage inside 90s browser windows. */
+.place-zine { --plane-dim: .45; }
+.place-zine .plane-mid .piece, .place-zine .plane-egg .piece { filter: grayscale(1) contrast(1.6); border: 3px solid #111; background-color: #fff; color: #111; }
+.place-zine .zw-window {
+  background-color: #f4f1e8;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='t'><feTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 4.2'/></filter><rect width='100%' height='100%' filter='url(%23t)' opacity='.35'/></svg>"), linear-gradient(90deg, transparent 49.6%, rgba(0, 0, 0, .08) 50%, transparent 50.4%);
+  box-shadow: 8px 10px 0 #000;
+  border: 3px solid #111;
+}
+.place-zine .zw-titlebar { background: linear-gradient(90deg, #000080, #1084d0); color: #fff; font: 22px/30px 'VT323', monospace; padding-left: 12px; }
+.place-zine .zw-titlebar::after { content: '_ ▢ ✕'; position: absolute; right: 10px; top: 0; letter-spacing: 6px; }
+
+/* The Flash Graveyard */
+.place-zine .fg-stones { background: radial-gradient(circle 28px at 28px 30px, #aaa 96%, transparent 100%) 0 0 / 56px 100px space no-repeat, linear-gradient(transparent 30px, #aaa 30px) 0 0 / 56px 100px space no-repeat; background-repeat: space no-repeat; filter: drop-shadow(2px 0 0 #111) drop-shadow(-2px 0 0 #111) drop-shadow(0 -2px 0 #111); }
+.place-zine .fg-flash { font: 16px/20px 'VT323', monospace; text-align: center; padding-top: 14px; border-radius: 30px 30px 0 0 !important; }
+.place-zine .fg-fence { background: repeating-linear-gradient(45deg, transparent 0 10px, #111 10px 12px), repeating-linear-gradient(-45deg, transparent 0 10px, #111 10px 12px) !important; border-width: 0 !important; }
+.place-zine .fg-getflash { background: #c00 !important; color: #fff !important; font: 18px/26px 'VT323', monospace; text-align: center; filter: none !important; }
+
+/* The Wayback Stacks */
+.place-zine .ws-shelves { background: repeating-linear-gradient(#111 0 6px, transparent 6px 130px), repeating-linear-gradient(90deg, #777 0 14px, #ccc 14px 20px, #999 20px 34px, #eee 34px 40px); }
+.place-zine .ws-floppies { background: repeating-linear-gradient(90deg, #111 0 30px, transparent 30px 34px) 0 30px / 340px 16px no-repeat, repeating-linear-gradient(90deg, #111 0 30px, transparent 30px 34px) 51px 15px / 238px 16px no-repeat, repeating-linear-gradient(90deg, #111 0 30px, transparent 30px 34px) 102px 0 / 136px 16px no-repeat !important; border-width: 0 !important; background-color: transparent !important; }
+.place-zine .ws-banner { font: 20px/26px 'VT323', monospace; text-align: center; }
+.place-zine .ws-cart { font: 14px/18px 'VT323', monospace; text-align: center; padding-top: 18px; }
+
+/* The Library of Babel */
+.place-zine .lb-hex { background: conic-gradient(from 30deg, #ddd 0 60deg, #aaa 0 120deg, #ccc 0 180deg, #999 0 240deg, #bbb 0 300deg, #888 0) 0 0 / 120px 104px; mask-image: linear-gradient(transparent, #000 30%, #000 60%, transparent); }
+.place-zine .lb-hose { background: repeating-linear-gradient(#111 0 10px, #555 10px 20px) !important; border-radius: 20px; }
+.place-zine .lb-sign { font: 20px/24px 'VT323', monospace; text-align: center; }
+
+/* GeoCities */
+.place-zine .gc-tiles { background: radial-gradient(#ff4fb8 2px, transparent 2.6px) 0 0 / 30px 30px, radial-gradient(#22e0ff 2px, transparent 2.6px) 15px 15px / 30px 30px; }
+.place-zine .gc-signs { font: 22px/28px 'VT323', monospace; text-align: center; }
+.place-zine .gc-construction { background: linear-gradient(#ffd800, #ffd800) 0 5px / 100% 20px no-repeat, repeating-linear-gradient(45deg, #ffd800 0 12px, #111 12px 24px) !important; color: #111 !important; font: 18px/30px 'VT323', monospace; text-align: center; animation: gc-blink 1s steps(2) infinite; filter: none !important; }
+@keyframes gc-blink { 50% { color: #c00; } }
+.place-zine .gc-webring { font: 24px/34px 'VT323', monospace; text-align: center; }
+
+/* The Bot Garden */
+.place-zine .bg-rows { background: repeating-linear-gradient(#777 0 3px, transparent 3px 46px), radial-gradient(circle 6px, #333 96%, transparent) 0 20px / 60px 46px; }
+.place-zine .bg-cage { background: repeating-linear-gradient(90deg, #111 0 3px, transparent 3px 12px) !important; border-radius: 40px 40px 0 0; }
+.place-zine .bg-tools { font: 20px/26px 'VT323', monospace; text-align: center; }
+.place-zine .bg-arcade { background: linear-gradient(#111, #111) 50% 30px / 46px 40px no-repeat !important; background-color: #fff !important; font: 14px/18px 'VT323', monospace; text-align: center; padding-top: 80px; }
+.place-zine .bg-birds { background: none !important; border-width: 0 !important; background-color: transparent !important; overflow: hidden; }
+.place-zine .bg-birds::before { content: 'v\A   v\A v\A    v\Av'; white-space: pre; display: block; font: 40px/54px 'VT323', monospace; color: #111; animation: bg-fly 6s linear infinite; }
+@keyframes bg-fly { from { transform: translateY(0); } to { transform: translateY(-40px); } }

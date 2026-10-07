@@ -3,18 +3,10 @@ body[data-craft="zine"] #stage { color: #111; font-family: 'Special Elite', 'Cou
 .backdrop-zine { background: #141414 radial-gradient(#ff4fb8 1px, transparent 1.6px) 0 0 / 26px 26px; animation: stars 30s linear infinite; }
 .backdrop-zine::before { content: ''; position: absolute; inset: 0; background: radial-gradient(#22e0ff 1px, transparent 1.6px) 13px 13px / 26px 26px; opacity: .7; }
 @keyframes stars { to { background-position: 260px 520px; } }
-.backdrop-zine .page {
-  position: absolute; inset: 56px 40px 26px; transform: rotate(-.6deg);
-  background-color: #f4f1e8;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='t'><feTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 4.2'/></filter><rect width='100%' height='100%' filter='url(%23t)' opacity='.35'/></svg>"), linear-gradient(90deg, transparent 49.6%, rgba(0, 0, 0, .08) 50%, transparent 50.4%);
-  box-shadow: 8px 10px 0 #000;
-}
-.backdrop-zine .staple { position: absolute; left: 50%; width: 30px; height: 5px; margin-left: -15px; background: linear-gradient(#bbb, #777); border-radius: 2px; }
-.backdrop-zine .staple.s1 { top: 110px; } .backdrop-zine .staple.s2 { bottom: 70px; }
-.backdrop-zine .ticker { position: absolute; top: 0; left: 0; right: 0; height: 42px; overflow: hidden; background: #000; color: #9dff00; font: 30px/42px 'VT323', monospace; white-space: nowrap; }
+.backdrop-zine .ticker { position: absolute; top: 0; left: 0; right: 0; height: 42px; overflow: hidden; background: #000; color: #9dff00; font: 30px/42px 'VT323', monospace; white-space: nowrap; z-index: 1; }
 .backdrop-zine .ticker span { display: inline-block; padding-left: 100%; animation: marquee 22s linear infinite; }
 @keyframes marquee { to { transform: translateX(-100%); } }
-.backdrop-zine .counter { position: absolute; right: 54px; bottom: 34px; padding: 2px 8px; background: #000; color: #ff4fb8; font: 24px/1 'VT323', monospace; letter-spacing: 2px; }
+.backdrop-zine .counter { position: absolute; right: 54px; bottom: 34px; padding: 2px 8px; background: #000; color: #ff4fb8; font: 24px/1 'VT323', monospace; letter-spacing: 2px; z-index: 1; }
 
 [data-craft="zine"] .scene { padding-top: 84px; }
 [data-craft="zine"] .card-wrap { transform: rotate(var(--tilt, 0deg)); }

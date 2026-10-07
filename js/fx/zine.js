@@ -1,13 +1,12 @@
 /* ACT III — E-ZINE craft: ransom headings, xerox scans, sticker slaps, misregistration. */
 (function () {
   'use strict';
-  const { anim, fxLayer, el } = Crafts;
+  const { anim, wait, fxLayer, el } = Crafts;
   const TICKER = '*** WHO OWNS WHAT WE MAKE? *** VIEW SOURCE *** COPY THIS ZINE *** NO LOGIN REQUIRED *** BEST VIEWED WITH YOUR OWN EYES *** ';
   const ZINE_FILTER = 'grayscale(1) contrast(1.7) brightness(1.08)';
 
   Crafts.register('zine', {
     backdrop(bg) {
-      bg.append(el('div', 'page'), el('div', 'staple s1'), el('div', 'staple s2'));
       const ticker = el('div', 'ticker');
       ticker.append(el('span', '', TICKER.repeat(3)));
       bg.append(ticker, el('div', 'counter', 'VISITORS: 000000'));
@@ -33,6 +32,12 @@
       root.querySelectorAll('.media').forEach((m) => m.style.setProperty('--tilt', ((rnd() - 0.5) * 5).toFixed(2) + 'deg'));
       const counter = document.querySelector('.backdrop-zine .counter');
       if (counter) counter.textContent = 'VISITORS: ' + String(seed % 1000000).padStart(6, '0');
+    },
+
+    // A new browser window pops open over the last one.
+    async placeTransition(oldEl, newEl) {
+      await anim(newEl, [{ transform: 'translate(40px, 30px) scale(.92)', opacity: 0 }, { transform: 'translate(0, 0) scale(1)', opacity: 1 }], { duration: 420, easing: 'steps(6)', fill: 'none' });
+      await wait(250);
     },
 
     fx: {
