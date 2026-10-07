@@ -59,7 +59,7 @@
       id: 'a1-student-gif-berge', act: 1, minutes: 0.5, layout: 'image',
       text: 'Reaction GIFs: “VR hates your living room.”',
       media: [{ src: 'assets/act1/student-berge.gif', alt: 'Looping GIF captioned “VR hates your living room”: a woman in a VR headset stalks through a living room with claws.' }],
-      source: 'PS Berge, Critical Making in the Age of AI (with permission)',
+      source: 'PB Berge, Critical Making in the Age of AI (with permission)',
       fx: ['popup-rise'],
       notes: 'GIF pattern, first of two. Berge’s GIF is trimmed to its first loop for the deck.',
     },
