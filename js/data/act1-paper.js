@@ -61,7 +61,7 @@
       media: [{ src: 'assets/act1/student-berge.gif', alt: 'Looping GIF captioned “VR hates your living room”: a woman in a VR headset stalks through a living room with claws.' }],
       source: 'PB Berge, Critical Making in the Age of AI (with permission)',
       fx: ['popup-rise'],
-      notes: 'GIF pattern, first of two. Berge’s GIF is trimmed to its first loop for the deck.',
+      notes: 'GIF pattern, first of two. Berge’s full GIF: three VR ads (Wolverine, Batman Arkham VR, the apartment crumbling into the void), re-encoded at 10 fps from CritMakingAgeOfAI/Examples/BergeGIF.gif. About 26 seconds; it loops, so no need to wait it out.',
     },
     {
       id: 'a1-student-gif-prior', act: 1, minutes: 0.5, layout: 'image',
