@@ -93,6 +93,14 @@
       notes: 'A provocation we take seriously without fully endorsing. Zines were built on sharing.',
     },
     {
+      id: 'a3-moulthrop', act: 3, minutes: 1.5, layout: 'quote',
+      text: '“Though some remainder tables may survive in obscure shops redolent of old page stock, a new end of books looms in which the text is not abandoned but consumed … its immolation serving to expand a voracious wordhoard. All will be assimilated, their uniqueness added to the collective. … Someone deeply committed to the new general poetics may see only a need for timely change in copyright law. Most of my 2025 seminar did not share that outlook, and I want to open space for them in this discussion. Any Star Trek fan knows the menacing next sentence of the Borg’s infamous greeting. Perhaps, though, resistance can be fertile rather than futile.”',
+      source: 'Stuart Moulthrop, “Movie Laughed in Sprocket-Language, or: a Night at the Chatbot,” Electronic Book Review (2026)',
+      url: 'https://electronicbookreview.com/publications/movie-laughed-in-sprocket-language/',
+      fx: ['misregister'], avatar: { pose: 'talk', x: 60 },
+      notes: 'Stuart answers Perlow. Yes, someone committed to the new general poetics sees only a copyright problem; most of his students saw something else, and refused to use his custom GPT (SeminarBot) on ethical, political, and aesthetic grounds. He gave them an opt-out assignment instead. The Borg line is “Resistance is futile.” His turn: resistance can be fertile. That is the bridge to the gardens slide: refusal as a making practice, not just a no. Full passage (the slide trims two bits, marked with ellipses): “Though some remainder tables may survive in obscure shops redolent of old page stock, a new end of books looms in which the text is not abandoned but consumed, at least on a per-copy basis, its immolation serving to expand a voracious wordhoard. All will be assimilated, their uniqueness added to the collective. There are of course different ways to value this outcome, depending on how one thinks about language machines. Someone deeply committed to the new general poetics may see only a need for timely change in copyright law. Most of my 2025 seminar did not share that outlook, and I want to open space for them in this discussion. Any Star Trek fan knows the menacing next sentence of the Borg’s infamous greeting. Perhaps, though, resistance can be fertile rather than futile.”',
+    },
+    {
       id: 'a3-gardens', act: 3, minutes: 1, place: 'geocities', layout: 'statement',
       text: 'Beyond copyright and credit: the tension between making things in other people’s walled gardens and planting an entirely new garden.',
       fx: ['ransom-shuffle'],
