@@ -16,7 +16,6 @@
 
   const LAYOUTS = ['title', 'statement', 'quote', 'image', 'gallery', 'video', 'choice', 'handoff', 'credits'];
   const POSES = ['idle', 'walk1', 'walk2', 'walk3', 'walk4', 'talk', 'point'];
-  const GAME_ROOMS = ['workshop', 'office', 'commons'];
 
   const FX_NAMES = {
     paper: ['popup-rise', 'fold-in', 'paper-tear', 'cut-out', 'page-turn'],
@@ -33,7 +32,7 @@
     return ACTS.find((a) => a.n === n) || null;
   }
 
-  const api = { PRESENTERS, ACTS, LAYOUTS, POSES, GAME_ROOMS, FX_NAMES, LIMITS, STAGE, actByNumber };
+  const api = { PRESENTERS, ACTS, LAYOUTS, POSES, FX_NAMES, LIMITS, STAGE, actByNumber };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.Acts = api;
 })(globalThis);

@@ -4,7 +4,7 @@
   const isNode = typeof module === 'object' && module.exports;
   const Acts = isNode ? require('./acts.js') : root.Acts;
   const PlaceDecls = isNode ? require('../places/index.js') : root.PlaceDecls;
-  const { ACTS, LAYOUTS, POSES, GAME_ROOMS, FX_NAMES, LIMITS, STAGE } = Acts;
+  const { ACTS, LAYOUTS, POSES, FX_NAMES, LIMITS, STAGE } = Acts;
 
   function validateScene(scene, act) {
     if (!scene || typeof scene !== 'object') return ['(scene): not an object'];
@@ -79,7 +79,6 @@
     if (scene.place !== undefined && !PlaceDecls.ids(act.craft).includes(scene.place)) fail(`place "${scene.place}" is not a ${act.craft} place`);
 
     if (act.craft === 'game') {
-      if (scene.room !== undefined && !GAME_ROOMS.includes(scene.room)) fail(`room must be one of ${GAME_ROOMS.join(', ')}`);
       if (scene.agency !== undefined && !(Number.isInteger(scene.agency) && scene.agency >= 0 && scene.agency <= 5)) fail('agency must be an integer 0-5');
     }
     return errs;

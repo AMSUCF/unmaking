@@ -1,0 +1,64 @@
+/* ACT IV places: pixel rooms. The canvas sky sits in the sky plane; props are crisp pixel shapes. */
+.place-game { --plane-dim: .7; image-rendering: pixelated; }
+.pixel-sky { position: absolute; inset: 0; width: 1280px; height: 720px; image-rendering: pixelated; }
+.iris-wipe { position: absolute; inset: 0; background: #000; }
+.place-game .g-floor { box-shadow: -14px 0 0 var(--f1, #3a2a1e), 14px 0 0 var(--f1, #3a2a1e); border-top: 6px solid #22160e; background: repeating-conic-gradient(var(--f1, #3a2a1e) 0 25%, var(--f2, #4a3626) 0 50%) 0 0 / 48px 48px; }
+
+/* THE WORKSHOP */
+.place-game .gw-pegboard { background: radial-gradient(circle, #3a2614 2px, transparent 2.5px) 0 0 / 20px 20px, #a07a4c; border: 8px solid #5a3a20; }
+.place-game .gw-bench { background: linear-gradient(#8a5a32 0 12px, #5a3a20 12px 16px, transparent 16px), linear-gradient(90deg, #5a3a20 0 16px, transparent 16px calc(100% - 16px), #5a3a20 calc(100% - 16px)); }
+.place-game .gw-lamp { background: linear-gradient(#c0c0c0, #c0c0c0) 50% 0 / 6px 150px no-repeat, linear-gradient(#e2b33c, #e2b33c) 50% 150px / 50px 22px no-repeat, radial-gradient(ellipse 34px 40px at 50% 190px, rgba(255, 220, 140, .6), transparent) no-repeat; }
+.place-game .gw-chicken { background: linear-gradient(#f2f2f2, #f2f2f2) 50% 0 / 4px 18px no-repeat, linear-gradient(#9a9a9a, #9a9a9a) 50% 18px / 16px 8px no-repeat, linear-gradient(#f6e05e, #f6e05e) 50% 28px / 22px 34px no-repeat, linear-gradient(#e04a3a, #e04a3a) 60% 26px / 6px 6px no-repeat; }
+.place-game .gw-floor { --f1: #3a2a1e; --f2: #4a3626; }
+
+/* MUSEUM OF TALKING MACHINES */
+.place-game .gm-plinth { background: linear-gradient(#1d1d2e, #1d1d2e) 50% 0 / 120px 90px no-repeat, linear-gradient(#9dff00, #9dff00) 50% 22px / 90px 4px no-repeat, linear-gradient(#cfcfcf, #8a8a8a) 50% 100% / 150px 140px no-repeat; }
+.place-game .gm-plaque { background: #b88b55; color: #1c1430; font: 10px/26px 'Press Start 2P', monospace; text-align: center; }
+.place-game .gm-hal { border-radius: 50%; background: radial-gradient(circle, #ffe08a 0 8%, #ff2a2a 10% 40%, #5a0000 42% 60%, #1a1a1a 62%); box-shadow: 0 0 18px #ff2a2a; animation: hal-pulse 3s ease-in-out infinite; }
+@keyframes hal-pulse { 50% { box-shadow: 0 0 30px #ff2a2a; } }
+.place-game .gm-floor { --f1: #1a1a28; --f2: #232336; }
+
+/* THE AGENT'S OFFICE */
+.place-game .go-crt { background: linear-gradient(#0d2a1a, #0d2a1a) 50% 30px / 160px 110px no-repeat, #9a9a9a; border: 6px solid #6a6a6a; box-shadow: inset 0 0 30px #3cff8a55; }
+.place-game .go-clippy { background: linear-gradient(#c0c0c0, #c0c0c0) 30% 10% / 8px 80% no-repeat, linear-gradient(#c0c0c0, #c0c0c0) 70% 20% / 8px 70% no-repeat, linear-gradient(#c0c0c0, #c0c0c0) 50% 8% / 34px 8px no-repeat, radial-gradient(circle, #111 3px, #fff 4px 8px, transparent 9px) 30% 30% / 20px 20px no-repeat, radial-gradient(circle, #111 3px, #fff 4px 8px, transparent 9px) 70% 30% / 20px 20px no-repeat; }
+.place-game .go-bubble { background: #ffffcc; color: #111; border: 3px solid #111; font: 18px/22px 'VT323', monospace; text-align: center; }
+.place-game .go-desk { background: linear-gradient(#6b4a2e 0 12px, transparent 12px), linear-gradient(90deg, #4a3220 0 14px, transparent 14px calc(100% - 14px), #4a3220 calc(100% - 14px)); }
+.place-game .go-save { background: #ffd84a; clip-path: polygon(50% 0, 62% 36%, 100% 38%, 70% 60%, 80% 100%, 50% 76%, 20% 100%, 30% 60%, 0 38%, 38% 36%); animation: save-twinkle 1.2s steps(2) infinite; }
+@keyframes save-twinkle { 50% { opacity: .4; } }
+.place-game .go-floor { --f1: #3b3b4f; --f2: #45455c; }
+
+/* THE COMMONS */
+.place-game .gk-capitol { background: radial-gradient(ellipse 60px 50px at 50% 70px, #e8e0d0 98%, transparent) no-repeat, linear-gradient(#e8e0d0, #e8e0d0) 50% 110px / 260px 20px no-repeat, repeating-linear-gradient(90deg, #e8e0d0 0 14px, transparent 14px 34px) 50% 130px / 240px 120px no-repeat, linear-gradient(#cfc6b2, #cfc6b2) 50% 100% / 300px 30px no-repeat; }
+.place-game .gk-palm { background: linear-gradient(#7a5a32, #7a5a32) 50% 60px / 12px 270px no-repeat; }
+.place-game .gk-palm::before { content: ''; position: absolute; left: 0; top: 20px; width: 72px; height: 70px; background: #2f7a3a; clip-path: polygon(50% 40%, 0 20%, 30% 50%, 0 80%, 45% 55%, 50% 100%, 55% 55%, 100% 80%, 70% 50%, 100% 20%); }
+.place-game .gk-cans { background: linear-gradient(90deg, #8a8a8a 0 36px, transparent 36px 48px, #6a6a6a 48px); border-top: 4px solid #4a4a4a; }
+.place-game .gk-floor { --f1: #4f7d3a; --f2: #5a8a42; }
+
+/* THE FRONTIER */
+.place-game .gf-corridor { background: linear-gradient(to right, #0b1830 0 2px, transparent 2px) 0 0 / 98px 100%, conic-gradient(from 180deg at 50% 45%, #1b2a4a, #0b1020, #1b2a4a); clip-path: polygon(0 0, 100% 0, 62% 45%, 62% 60%, 100% 100%, 0 100%, 38% 60%, 38% 45%); }
+.place-game .gf-glow { background: radial-gradient(closest-side, rgba(120, 200, 255, .55), transparent); }
+.place-game .gf-cake { color: #c8d6ff; font: 22px/26px 'VT323', monospace; transform: rotate(-3deg); opacity: .8; }
+.place-game .gf-floor { --f1: #0b1020; --f2: #121a30; }
+
+/* THE ALLOTMENT */
+.place-game .ga-fence { background: repeating-linear-gradient(90deg, #d8c39a 0 12px, transparent 12px 40px), linear-gradient(transparent 30px, #d8c39a 30px 40px, transparent 40px 70px, #d8c39a 70px 80px, transparent 80px); }
+.place-game .ga-beds { background: radial-gradient(circle 4px at 50% 30%, #4caf50 98%, transparent) 0 0 / 30px 38px, linear-gradient(transparent 22px, #6b4a2e 22px); }
+.place-game .ga-rack { background: repeating-linear-gradient(#2a2a2a 0 26px, #111 26px 30px); border: 4px solid #555; }
+.place-game .ga-rack::after { content: ''; position: absolute; inset: 8px 6px; background: radial-gradient(circle 2px, #9dff00 98%, transparent) 0 0 / 12px 30px; animation: save-twinkle .8s steps(2) infinite; }
+.place-game .ga-scarecrow { background: linear-gradient(#8a5a32, #8a5a32) 50% 20px / 6px 60px no-repeat, linear-gradient(#8a5a32, #8a5a32) 50% 34px / 50px 6px no-repeat, radial-gradient(circle 10px at 50% 14px, #e2b33c 98%, transparent) no-repeat, linear-gradient(#c0544a, #c0544a) 50% 0 / 30px 6px no-repeat; }
+.place-game .ga-floor { --f1: #5a8a42; --f2: #4f7d3a; }
+
+/* THE COMMONS, AT SUNRISE */
+.place-game .gq-library { background: linear-gradient(#cfc6b2, #cfc6b2) 50% 0 / 100% 40px no-repeat, repeating-linear-gradient(90deg, #e8e0d0 0 22px, transparent 22px 56px) 50% 50px / 90% 240px no-repeat, linear-gradient(#cfc6b2, #cfc6b2) 50% 100% / 100% 40px no-repeat; }
+.place-game .gq-students { background: radial-gradient(circle 5px at 50% 7px, #f1c9a8 98%, transparent) 0 0 / 26px 36px, linear-gradient(transparent 14px, #355b8c 14px) 8px 0 / 26px 36px; }
+.place-game .gq-tree { background: linear-gradient(#6b4a2e, #6b4a2e) 50% 120px / 14px 190px no-repeat, radial-gradient(circle 36px at 50% 70px, #3f8f4a 98%, transparent) no-repeat; }
+.place-game .gq-floor { --f1: #6fa04f; --f2: #7aad58; }
+
+/* THE ROAD AT THE END OF THE WORLD */
+.place-game .gd-planet { border-radius: 50%; background: radial-gradient(circle at 35% 35%, #9fe3d8, #3f8f8a 55%, #12333a 80%, transparent 81%); }
+.place-game .gd-cone { background: radial-gradient(ellipse 80px 460px at 70% 0, rgba(240, 180, 80, .45), transparent 70%); }
+.place-game .gd-post { background: #0a0a12; overflow: visible; }
+.place-game .gd-post::before { content: ''; position: absolute; left: -10px; top: 0; width: 32px; height: 10px; background: #f0b450; box-shadow: 0 0 18px #f0b450; }
+.place-game .gd-moto { background: radial-gradient(circle 14px at 22px 24px, #05050a 70%, transparent 72%), radial-gradient(circle 14px at 108px 24px, #05050a 70%, transparent 72%), linear-gradient(#05050a, #05050a) 30px 8px / 70px 12px no-repeat; }
+.place-game .gd-floor { --f1: #121018; --f2: #121018; background-image: linear-gradient(90deg, transparent 45%, #f0b450 45% 55%, transparent 55%); background-size: 120px 6px; background-repeat: repeat-x; background-position: 0 60px; }
+.place-game .ga-scarecrow { transform: translateY(12px); } /* keep the hat clear of the HUD bar */

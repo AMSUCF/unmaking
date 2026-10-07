@@ -2,29 +2,33 @@
 (function () {
   'use strict';
   const { anim, wait, fxLayer, el } = Crafts;
-  const ROOM_NAMES = { workshop: 'THE WORKSHOP', office: "THE AGENT'S OFFICE", commons: 'THE COMMONS' };
-
-  function setRoom(room) {
-    const bg = document.getElementById('backdrop');
-    ['workshop', 'office', 'commons'].forEach((r) => bg.classList.toggle('room-' + r, r === room));
-    const label = bg.querySelector('.room-name');
-    if (label) label.textContent = ROOM_NAMES[room];
-  }
-
   Crafts.register('game', {
     backdrop(bg) {
       const bar = el('div', 'hudbar');
-      bar.append(el('span', 'room-name', ROOM_NAMES.workshop), el('span', 'agency', 'AGENCY ▯▯▯▯▯'));
-      bg.append(bar, el('div', 'wall'), el('div', 'prop'), el('div', 'floor'));
-      setRoom('workshop');
+      bar.append(el('span', 'room-name', ''), el('span', 'agency', 'AGENCY ▯▯▯▯▯'));
+      bg.append(bar);
     },
 
     decorate(root, scene) {
-      setRoom(scene.room || 'workshop');
       const meter = document.querySelector('.backdrop-game .agency');
       if (meter && typeof scene.agency === 'number') {
         meter.textContent = 'AGENCY ' + '▮'.repeat(scene.agency) + '▯'.repeat(5 - scene.agency);
       }
+    },
+
+    // Leave by the right edge, iris to black, swap rooms, and come back in from the left.
+    async placeTransition(oldEl, newEl, ctx) {
+      newEl.style.visibility = 'hidden';
+      const { Avatar, lead } = ctx;
+      if (Avatar && lead && Avatar.isVisible(lead)) await Avatar.walkTo(lead, 1320);
+      const iris = el('div', 'iris-wipe');
+      fxLayer().append(iris);
+      await anim(iris, [{ clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(75% at 50% 50%)' }], { duration: 380, easing: 'steps(8)' });
+      oldEl.style.visibility = 'hidden';
+      newEl.style.visibility = '';
+      if (Avatar && lead) Avatar.place(lead, -160);
+      await anim(iris, [{ clipPath: 'circle(75% at 50% 50%)' }, { clipPath: 'circle(0% at 50% 50%)' }], { duration: 380, easing: 'steps(8)' });
+      iris.remove();
     },
 
     fx: {

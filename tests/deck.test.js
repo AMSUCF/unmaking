@@ -79,8 +79,8 @@ test('avatar pose and position are checked', () => {
 
 test('game-only fields are checked in act 4', () => {
   const g = (over) => errs(ok(Object.assign({ id: 'a4-g', act: 4 }, over)), A4);
-  assert.deepEqual(g({ room: 'office', agency: 3 }), []);
-  assert.ok(has(g({ room: 'kitchen' }), 'room'));
+  assert.deepEqual(g({ place: 'office', agency: 3 }), []);
+  assert.ok(has(g({ place: 'kitchen' }), 'is not a game place'));
   assert.ok(has(g({ agency: 7 }), 'agency'));
 });
 
