@@ -54,7 +54,7 @@ Notes:
 ## 2. Data model and validation
 
 - New optional scene field `place` (string). The effective place of a slide is its own `place`, or else that of the nearest earlier slide in the same act.
-- `Acts.PLACES` maps each craft to its list of place ids (the source of truth for validation). It replaces `GAME_ROOMS`.
+- The `PlaceDecls` registry (`js/places/registry.js`, which node can load directly) holds each craft's place declarations and is the source of truth for validation. It replaces `GAME_ROOMS`. Declarations live in `js/places/<craft>.js`, not inside the browser-only `js/fx` files, so the geometry rule can be unit-tested.
 - `Deck.validateScene` fails on a `place` not listed for the act's craft. Deck-level validation fails if the first slide of an act has no `place`.
 - Act IV migrates from `room` to `place`. `room` is removed from the data and from validation.
 - `Deck.placeOf(scenes, index)` returns the effective place, and is unit-tested.
@@ -127,7 +127,8 @@ Same-place advances only get the parallax nudge. Handoffs between acts are uncha
 
 | Unit | Responsibility |
 |---|---|
-| `js/core/acts.js` | `PLACES` per craft (ids only); remove `GAME_ROOMS` |
+| `js/places/registry.js`, `js/places/<craft>.js` | `PlaceDecls` registry, the geometry check, and each craft's declarations |
+| `js/core/acts.js` | remove `GAME_ROOMS` |
 | `js/core/deck.js` | validate `place`; `placeOf()`; first-slide rule |
 | `js/render/places.js` (new) | build a place from its declaration into the plane elements, apply parallax, run the place transition hook, position avatars on `floor`, add contact shadows |
 | `js/fx/{paper,textile,zine,game}.js` | each craft's `PLACES` declarations, ambient effects, place transition, label piece |
