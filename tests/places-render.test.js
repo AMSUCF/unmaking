@@ -156,3 +156,18 @@ test('each place owns its sky: the old one is stopped once after the transition,
   assert.equal(handles[0].stops, 1);
   delete global.PixelSky;
 });
+
+test('works when Crafts is only a global lexical binding, as in the browser', async () => {
+  const vm = require('node:vm');
+  const saved = global.Crafts;
+  delete global.Crafts;
+  delete global.__pt;
+  vm.runInThisContext("const Crafts = { placeTransition: async () => { globalThis.__pt = (globalThis.__pt || 0) + 1; } };");
+  assert.equal(globalThis.Crafts, undefined);
+  fresh();
+  await Places.go('paper', 'r-a');
+  await Places.go('paper', 'r-b', { animate: true });
+  assert.equal(global.__pt, 1);
+  assert.deepEqual(roots().map((r) => r.dataset.place), ['r-b']);
+  global.Crafts = saved;
+});

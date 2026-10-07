@@ -9,6 +9,8 @@
   const skies = new Map(); // place root -> its PixelSky handle
   let epoch = 0;      // bumped by every go()/reset(), so a stale transition never cleans up a newer place
 
+  // Crafts is a top-level const in a classic script (not a globalThis property); a bare identifier sees both that and node test globals.
+  const crafts = () => (typeof Crafts !== 'undefined' ? Crafts : g.Crafts);
   const $ = (id) => document.getElementById(id);
   const reducedMotion = () => typeof g.matchMedia === 'function' && g.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -72,7 +74,7 @@
     if (onChange) onChange();
     const next = mount(craft, id);
     next.root.style.zIndex = '1';
-    await g.Crafts.placeTransition(craft, old.root, next.root, ctx);
+    await crafts().placeTransition(craft, old.root, next.root, ctx);
     if (mine !== epoch) return true; // a newer go() or reset() owns the backdrop now
     next.root.style.zIndex = '';
     sweep(next.root);
