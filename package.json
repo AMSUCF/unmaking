@@ -7,6 +7,7 @@
     "test:py": "python -m unittest discover -s tests -p \"test_*.py\"",
     "start": "python -m http.server 8137",
     "import-assets": "node tools/import-assets.js",
-    "fetch-fonts": "node tools/fetch-fonts.js"
+    "fetch-fonts": "node tools/fetch-fonts.js",
+    "sweep": "node tools/place-sweep.js"
   }
 }
