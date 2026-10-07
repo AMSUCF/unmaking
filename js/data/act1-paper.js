@@ -107,6 +107,15 @@
       notes: 'Summarize the Apricitas data on creative employment. Pull one chart or number to say aloud.',
     },
     {
+      id: 'a1-organic', act: 1, minutes: 1, layout: 'statement',
+      heading: 'Certified organic',
+      text: 'Publishers now stamp books “Organic Literature”: human-written, with AI allowed only for formatting or brainstorming. Authorship anxiety, sold as a purity label.',
+      source: 'Books By People, as reported in Wired (October 2025)',
+      url: 'https://www.wired.com/story/organic-literature-books-by-people-stamp-ai/',
+      fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 }, draft: true,
+      notes: 'After the creative class fights back in court, the market answer: certify the human. Books By People, a UK start-up (Esme Dennys, Conrad Young, Gavin Johnston), certifies independent publishers: a cover stamp, a certification ID, a public directory. Verification is human evaluation, text analysis, and editorial-process review; they rejected AI detectors as too easy to fool. First stamped book: Gonzalo C Garcia’s Telenovela (Galley Beggar Press). Dennys: “There are just so many AI-generated books, and our aim is to provide an easy way for readers to be able to tell which ones are human-authored.” Questions for the room: where does “brainstorming” end and authorship begin? Would a writer who rebuilt their site with an agent still count? (Flores, in Act III, is that writer.) “Organic” borrows from food, the same move as the handmade revival Anastasia picks up in Act II: craft as a market label. TODO: add a screenshot of the Wired headline or the stamp (both sites are blocked from the build environment).',
+    },
+    {
       id: 'a1-agents-def', act: 1, minutes: 1, layout: 'image',
       text: 'Agents are generative AI put to a purpose: “An LLM agent runs tools in a loop to achieve a goal.” (Simon Willison)',
       media: [{ src: 'assets/act1/agents.jpg', alt: 'Pixel-art arcade-cabinet diagram titled “Agentic AI: The LLM at the Controls”: a brain in a captain’s hat plans, selects a tool, observes output, and loops, with a tool palette and the caption “An LLM agent runs tools in a loop to achieve a goal.”' }],

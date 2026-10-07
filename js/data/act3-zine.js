@@ -61,15 +61,6 @@
       notes: 'He asks himself “Ironic? Yes and no.” The agent as a ladder, not a landlord: use it to get out, then keep the thing you made on open ground (static HTML you can host anywhere). Spelling “Jeckyll” is his.',
     },
     {
-      id: 'a3-organic', act: 3, minutes: 1, layout: 'statement',
-      heading: 'Certified organic',
-      text: 'Publishers now stamp books “Organic Literature”: human-written, with AI allowed only for formatting or brainstorming. Authorship anxiety, sold as a purity label.',
-      source: 'Books By People, as reported in Wired (October 2025)',
-      url: 'https://www.wired.com/story/organic-literature-books-by-people-stamp-ai/',
-      fx: ['sticker-slap'], avatar: { pose: 'talk', x: 60 }, draft: true,
-      notes: 'The flip side of cyborg authorship. Books By People, a UK start-up (Esme Dennys, Conrad Young, Gavin Johnston), certifies independent publishers: a cover stamp, a certification ID, a public directory. Verification is human evaluation, text analysis, and editorial-process review; they rejected AI detectors as too easy to fool. First stamped book: Gonzalo C Garcia’s Telenovela (Galley Beggar Press). Dennys: “There are just so many AI-generated books, and our aim is to provide an easy way for readers to be able to tell which ones are human-authored.” Questions for the room: would Flores’s rebuilt sites pass? Where does “brainstorming” end and authorship begin? “Organic” borrows from food, the same move as Act II’s handmade revival: craft as a market label. TODO: add a screenshot of the Wired headline or the stamp (both sites are blocked from the build environment).',
-    },
-    {
       id: 'a3-libgen', act: 3, minutes: 1, place: 'babel', layout: 'image',
       text: 'Meanwhile, something is reading everything we make.',
       media: [{ src: 'assets/act3/libgen.png', alt: 'The Atlantic’s LibGen author search for “Anastasia Salter”, with 26 results including Jane Jensen and Plundered Hearts.' }],
