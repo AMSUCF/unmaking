@@ -116,13 +116,16 @@
       notes: 'Click the video to play (it does not autoplay; click does not advance). The open web at its best: a sharp, small, self-published game.',
     },
     {
-      id: 'a3-lost-boys', act: 3, minutes: 1, layout: 'image',
-      text: 'Subversive Twine: Mark Sample’s 10 LOST BOYS, a Peter Pan “custom RPG character generator” he tags antifa.',
-      media: [{ src: 'assets/act3/sample-10-lost-boys.png', alt: 'Title card for 10 LOST BOYS by Mark Sample: a loose ink drawing of a palm tree on a small island with two gulls, above the title in a monospace font.' }],
-      source: 'Mark Sample, 10 LOST BOYS (Twine, itch.io)',
-      url: 'https://samplereality.itch.io/10-lost-boys',
+      id: 'a3-content-moderator', act: 3, minutes: 1, layout: 'gallery',
+      text: 'Subversive Twine: Mark Sample’s Content Moderator Sim, a “workplace horror game” about the people who screen what platforms don’t want us to see.',
+      media: [
+        { src: 'assets/act3/content-moderator-title.png', alt: 'Title screen of Content Moderator Sim, “A Workplace Horror Game” by Mark Sample, with a pop-up notification “@CM4377 Back to work!!!”: “It’s close to the end of an 8 hour shift at ViralTitans, Inc., the third largest online content moderation subcontractor in the Bay area,” above links Back to Work, Content Warning and About.' },
+        { src: 'assets/act3/content-moderator-case.png', alt: 'A case in Content Moderator Sim: “You have screened 969 cases today. Time Remaining to Review this Case,” with a draining timer bar, then “Break is over. On the screen is a short video. Someone posted it to a social media site. Somebody else reported it as inappropriate.”' },
+      ],
+      source: 'Mark Sample, Content Moderator Sim (Twine/SugarCube, 2020)',
+      url: 'https://samplereality.itch.io/content-moderator-sim',
       fx: ['ransom-shuffle'],
-      notes: 'From its page: “Peter Pan thought ‘make-believe and true were exactly the same thing.’ … Build your own Lost Boy in this custom RPG character generator. Over 10 billion possible characters are possible!” Content warning: “Pirates and other scary grown-ups.” Sample tags it antifa on itch.io. Play it before the talk and describe its turn in your own words. Pairs with You Are Elon Musk: Twine as a small, free, open tool for political satire.',
+      notes: 'About five minutes of play: you are contractor CM4377 at ViralTitans, Inc., near the end of an eight-hour shift, with a draining timer on every case and a boss pinging you to get back to your queue. The game credits Sarah T. Roberts’s research on commercial content moderation (Behind the Screen, 2019); many cases come from the Guardian’s 2017 report on Facebook’s internal rulebook, and the August 2020 version adds the Kenosha militia page reported 455 times. Content warning in the game: brief written references to abuse, self-harm, racism, and brutality, no images or video. Twine at its sharpest: a small, free, open-source (BSD and CC BY) game that makes hidden platform labor felt. The same hidden labor now cleans and labels AI training data. And it sets up the next slide: someone has to look at what the worst tools produce.',
     },
     {
       id: 'a3-nudification', act: 3, minutes: 1, layout: 'statement',
