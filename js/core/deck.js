@@ -1,7 +1,9 @@
 /* Validates scene data and assembles the four acts into one deck. */
 (function (root) {
   'use strict';
-  const Acts = (typeof module === 'object' && module.exports) ? require('./acts.js') : root.Acts;
+  const isNode = typeof module === 'object' && module.exports;
+  const Acts = isNode ? require('./acts.js') : root.Acts;
+  const PlaceDecls = isNode ? require('../places/index.js') : root.PlaceDecls;
   const { ACTS, LAYOUTS, POSES, GAME_ROOMS, FX_NAMES, LIMITS, STAGE } = Acts;
 
   function validateScene(scene, act) {
@@ -74,6 +76,8 @@
       if (!a || typeof a.x !== 'number' || a.x < 0 || a.x > STAGE.width - STAGE.avatarWidth) fail('avatar.x out of stage');
     }
 
+    if (scene.place !== undefined && !PlaceDecls.ids(act.craft).includes(scene.place)) fail(`place "${scene.place}" is not a ${act.craft} place`);
+
     if (act.craft === 'game') {
       if (scene.room !== undefined && !GAME_ROOMS.includes(scene.room)) fail(`room must be one of ${GAME_ROOMS.join(', ')}`);
       if (scene.agency !== undefined && !(Number.isInteger(scene.agency) && scene.agency >= 0 && scene.agency <= 5)) fail('agency must be an integer 0-5');
@@ -117,7 +121,25 @@
     return [...set];
   }
 
-  const api = { validateScene, buildDeck, actMinutes, mediaPaths };
+  // A slide's place is its own, or the nearest earlier one in the same act.
+  function placeOf(scenes, index) {
+    const here = scenes[index];
+    if (!here) return null;
+    for (let i = index; i >= 0 && scenes[i].act === here.act; i--) if (scenes[i].place) return scenes[i].place;
+    return null;
+  }
+
+  function placeErrors(scenes) {
+    const errs = [];
+    ACTS.forEach((act) => {
+      if (!PlaceDecls.ids(act.craft).length) return;
+      const first = scenes.find((s) => s && s.act === act.n);
+      if (first && !first.place) errs.push(`${first.id}: first slide of act ${act.n} must set a place`);
+    });
+    return errs;
+  }
+
+  const api = { validateScene, buildDeck, actMinutes, mediaPaths, placeOf, placeErrors };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.Deck = api;
 })(globalThis);

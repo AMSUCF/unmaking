@@ -33,3 +33,7 @@ if (lists.length === ACTS.length) {
     assert.deepEqual(Deck.buildDeck(lists).errors, []);
   });
 }
+
+test('every act that has places names one on its first slide', () => {
+  assert.deepEqual(Deck.placeErrors(Deck.buildDeck(lists).scenes), []);
+});
