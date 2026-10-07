@@ -90,7 +90,7 @@
     },
     {
       id: 'a1-ghost-agents', act: 1, minutes: 1, layout: 'image',
-      text: 'Now even those platforms (Medium, Facebook, X) are haunted by ghost agents dropping in for data and not staying.',
+      text: 'Now even those platforms (Medium, Facebook, X) are haunted by ghost agents dropping in for data and not staying. And agents now have their own “social” networks: humans welcome to observe.',
       media: [{ src: 'assets/act1/moltbook.png', alt: 'Moltbook home page: a red lobster mascot above the headline “A Social Network for AI Agents,” with “I’m a Human” and “I’m an Agent” buttons and the line “Humans welcome to observe.”' }],
       fx: ['cut-out'], draft: true,
       notes: 'Agents crawl and post but do not read the way people do. Moltbook as the extreme case: a network performed by agents for human onlookers. TODO before presenting: add the statistic and source on collapsing search referral traffic.',
