@@ -3,7 +3,7 @@
   'use strict';
   const ACT1_SCENES = [
     {
-      id: 'a1-title', act: 1, minutes: 0.75, layout: 'title',
+      id: 'a1-title', act: 1, minutes: 0.75, place: 'storybook', layout: 'title',
       heading: 'Critical (Un)Making and the Agentic Humanities',
       text: 'A talk in four crafts',
       byline: 'Emily K. Johnson & Anastasia Salter',
@@ -28,13 +28,13 @@
       notes: 'Section title. Three threads: what coding is now, what platforms have become, and the politics underneath both.',
     },
     {
-      id: 'a1-personal', act: 1, minutes: 1, layout: 'statement',
+      id: 'a1-personal', act: 1, minutes: 1, place: 'hamlet', layout: 'statement',
       text: 'All these tools are for building something personal and expressive against a tide of regimented and boring web platforms.',
       fx: ['cut-out'], avatar: { pose: 'point', x: 60 },
       notes: 'The thesis we keep returning to: the web we loved was handmade. The tools we study exist to make personal, expressive things.',
     },
     {
-      id: 'a1-enshittification', act: 1, minutes: 1.5, layout: 'quote',
+      id: 'a1-enshittification', act: 1, minutes: 1.5, place: 'platform-city', layout: 'quote',
       text: 'Enshittification is a “three stage process: First, platforms are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves. Then, they die.”',
       source: 'Cory Doctorow, “My McLuhan Lecture on Enshittification”',
       url: 'https://doctorow.medium.com/my-mcluhan-lecture-on-enshittification-ea343342b9bc',
@@ -42,7 +42,7 @@
       notes: 'Read the quote. Note the irony that it is hosted on Medium, itself a platform mid-cycle.',
     },
     {
-      id: 'a1-dark-tower', act: 1, minutes: 1, layout: 'quote',
+      id: 'a1-dark-tower', act: 1, minutes: 1, place: 'mid-world', layout: 'quote',
       heading: 'The world has moved on',
       text: 'Life wasn’t golden... but life was *good*.\n\nAnd then the world moved on.\n\nFor reasons that no one truly understands...',
       source: 'Cory Doctorow, “The World Has Moved On. But It Need Not Stay This Way Forever,” Bulletin of the Atomic Scientists (2026)',
@@ -58,7 +58,7 @@
       notes: 'Agents crawl and post but do not read the way people do. Moltbook as the extreme case: a network performed by agents for human onlookers. TODO before presenting: add the statistic and source on collapsing search referral traffic.',
     },
     {
-      id: 'a1-creative-class', act: 1, minutes: 1, layout: 'statement',
+      id: 'a1-creative-class', act: 1, minutes: 1, place: 'gallery-row', layout: 'statement',
       heading: 'The fall of the creative class',
       text: 'Who still gets to make a living by making?',
       source: 'Apricitas Economics, “AI and the Fall of the Creative Class”',
@@ -76,7 +76,7 @@
       notes: 'The creative class fights back in court: the 2023 class action by artists against Stability AI, Midjourney and DeviantArt. Note the header art is itself Midjourney output.',
     },
     {
-      id: 'a1-muse', act: 1, minutes: 1.25, layout: 'gallery',
+      id: 'a1-muse', act: 1, minutes: 1.25, place: 'companion-shop', layout: 'gallery',
       text: 'Meta Muse and OpenAI Dots: cute companions marketed as the cure for enshittification, sold by the companies selling enshittification.',
       media: [{ src: 'assets/act1/muse-keroppi.png', alt: 'Chat companion profile with a green Keroppi-style frog avatar wearing a bow tie, labeled “Keroppi, Active.”' },
         { src: 'assets/act1/meta-tamagotchi.png', alt: 'A hand with pink manicured nails holding a small black Meta device showing a cream, plush-looking cartoon creature, captioned “Meta unveils pocket-sized ‘AI Tamagotchi.’”' },
@@ -118,7 +118,7 @@
       notes: 'The "Strengthening" section: relationship maintenance outsourced to a platform that profits from the data.',
     },
     {
-      id: 'a1-lens', act: 1, minutes: 1, layout: 'statement',
+      id: 'a1-lens', act: 1, minutes: 1, place: 'worktable', layout: 'statement',
       text: 'So agentic tools risk becoming another proprietary platform we overtrust, one that becomes our lens for the world.',
       fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
       notes: 'The risk, plainly stated.',

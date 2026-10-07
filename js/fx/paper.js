@@ -6,23 +6,15 @@
   // fill:'both' would hold the last keyframe and override the CSS card tilt; drop it once finished.
   const releaseHeld = (parts) => parts.forEach((p) => p.getAnimations().forEach((a) => a.cancel()));
   const wrapOf = (root) => root.querySelector('.card-wrap');
+  // On these slides the Companion Shop plushies' eyes turn toward the avatar.
+  const WATCHING = ['a1-muse-memory', 'a1-muse-strengthen'];
 
   Crafts.register('paper', {
-    backdrop(bg) {
-      const rnd = Random.mulberry32(7);
-      bg.append(el('div', 'paper-sun'));
-      ['h3', 'h2', 'h1'].forEach((h) => bg.append(el('div', 'hill ' + h)));
-      for (let i = 0; i < 9; i++) {
-        const s = el('div', 'scrap');
-        s.style.left = (rnd() * 100).toFixed(1) + '%';
-        s.style.top = (rnd() * 55).toFixed(1) + '%';
-        s.style.setProperty('--spin', (20 + rnd() * 40).toFixed(0) + 's');
-        s.style.setProperty('--hue', Math.floor(rnd() * 5));
-        bg.append(s);
-      }
-    },
+    backdrop() {},
 
     decorate(root, scene) {
+      const bg = document.getElementById('backdrop');
+      if (bg) bg.dataset.watch = WATCHING.includes(scene.id) ? '1' : '';
       const rnd = Random.mulberry32(seedOf(scene));
       const wrap = wrapOf(root);
       if (wrap) {
@@ -32,6 +24,14 @@
         if (rnd() > 0.5) wrap.append(el('div', 'tape right'));
       }
       root.querySelectorAll('.media').forEach((m) => m.style.setProperty('--tilt', ((rnd() - 0.5) * 4).toFixed(2) + 'deg'));
+    },
+
+    // The pop-up spread folds flat to the floor, then the next spread rises.
+    async placeTransition(oldEl, newEl) {
+      newEl.style.visibility = 'hidden';
+      await anim(oldEl, [{ transform: 'scaleY(1)' }, { transform: 'scaleY(0)' }], { duration: 320, easing: 'cubic-bezier(.5,0,.8,.4)', fill: 'forwards' });
+      newEl.style.visibility = '';
+      await anim(newEl, [{ transform: 'scaleY(0)' }, { transform: 'scaleY(1.04)', offset: 0.8 }, { transform: 'scaleY(1)' }], { duration: 480, fill: 'none' });
     },
 
     fx: {
