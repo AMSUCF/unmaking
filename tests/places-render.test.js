@@ -120,3 +120,39 @@ test('unknown places are ignored', async () => {
   assert.equal(await Places.go('paper', 'nope'), false);
   assert.equal(roots().length, 0);
 });
+
+test('edge-hugging pieces are widened by their plane drift; interior ones are not', () => {
+  const b = Places.build('paper', 'r-a', {
+    label: 'E', credit: '', floor: 640,
+    pieces: [
+      { layer: 'near', cls: 'n', box: [0, 660, 1280, 60] },
+      { layer: 'mid', cls: 'm', box: [1212, 200, 60, 200] },
+    ],
+  });
+  const n = b.root.querySelector('.n');
+  assert.equal(n.style.left, '-9px');
+  assert.equal(n.style.width, '1298px');
+  const m = b.root.querySelector('.m');
+  assert.equal(m.style.left, '1212px');
+  assert.equal(m.style.width, '60px');
+});
+
+test('each place owns its sky: the old one is stopped once after the transition, reset stops the rest', async () => {
+  const handles = [];
+  global.PixelSky = { mount: () => { const h = { stops: 0, stop() { this.stops++; } }; handles.push(h); return h; }, stop() {} };
+  const sky = { top: '#000000', bottom: '#111111' };
+  PlaceDecls.register('paper', { 'r-s1': Object.assign(decl('S1'), { sky }), 'r-s2': Object.assign(decl('S2'), { sky }) });
+  fresh();
+  await Places.go('paper', 'r-s1');
+  let duringStops = -1;
+  global.Crafts.placeTransition = async () => { duringStops = handles[0].stops; };
+  await Places.go('paper', 'r-s2', { animate: true });
+  global.Crafts.placeTransition = async () => { transitions++; };
+  assert.equal(duringStops, 0);   // outgoing sky still alive mid-transition
+  assert.equal(handles[0].stops, 1);
+  assert.equal(handles[1].stops, 0);
+  Places.reset('paper');
+  assert.equal(handles[1].stops, 1);
+  assert.equal(handles[0].stops, 1);
+  delete global.PixelSky;
+});

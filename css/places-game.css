@@ -2,7 +2,7 @@
 .place-game { --plane-dim: .7; image-rendering: pixelated; }
 .pixel-sky { position: absolute; inset: 0; width: 1280px; height: 720px; image-rendering: pixelated; }
 .iris-wipe { position: absolute; inset: 0; background: #000; }
-.place-game .g-floor { box-shadow: -14px 0 0 var(--f1, #3a2a1e), 14px 0 0 var(--f1, #3a2a1e); border-top: 6px solid #22160e; background: repeating-conic-gradient(var(--f1, #3a2a1e) 0 25%, var(--f2, #4a3626) 0 50%) 0 0 / 48px 48px; }
+.place-game .g-floor { border-top: 6px solid #22160e; background: repeating-conic-gradient(var(--f1, #3a2a1e) 0 25%, var(--f2, #4a3626) 0 50%) 0 0 / 48px 48px; }
 
 /* THE WORKSHOP */
 .place-game .gw-pegboard { background: radial-gradient(circle, #3a2614 2px, transparent 2.5px) 0 0 / 20px 20px, #a07a4c; border: 8px solid #5a3a20; }
@@ -61,4 +61,3 @@
 .place-game .gd-post::before { content: ''; position: absolute; left: -10px; top: 0; width: 32px; height: 10px; background: #f0b450; box-shadow: 0 0 18px #f0b450; }
 .place-game .gd-moto { background: radial-gradient(circle 14px at 22px 24px, #05050a 70%, transparent 72%), radial-gradient(circle 14px at 108px 24px, #05050a 70%, transparent 72%), linear-gradient(#05050a, #05050a) 30px 8px / 70px 12px no-repeat; }
 .place-game .gd-floor { --f1: #121018; --f2: #121018; background-image: linear-gradient(90deg, transparent 45%, #f0b450 45% 55%, transparent 55%); background-size: 120px 6px; background-repeat: repeat-x; background-position: 0 60px; }
-.place-game .ga-scarecrow { transform: translateY(12px); } /* keep the hat clear of the HUD bar */

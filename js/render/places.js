@@ -6,6 +6,7 @@
   const g = globalThis;
   let current = null; // { craft, id, decl, root, planes }
   let live = [];      // every place root still in the backdrop
+  const skies = new Map(); // place root -> its PixelSky handle
   let epoch = 0;      // bumped by every go()/reset(), so a stale transition never cleans up a newer place
 
   const $ = (id) => document.getElementById(id);
@@ -21,9 +22,12 @@
     decl.pieces.forEach((p) => {
       const n = mk('piece ' + p.cls);
       const [x, y, w, h] = p.box;
-      n.style.left = x + 'px';
+      const d = DRIFT[p.layer] || 0; // widen edge-hugging pieces so a nudged plane never exposes the stage edge
+      const l = x <= 0 ? x - d : x;
+      const r = x + w >= 1280 ? x + w + d : x + w;
+      n.style.left = l + 'px';
       n.style.top = y + 'px';
-      n.style.width = w + 'px';
+      n.style.width = (r - l) + 'px';
       n.style.height = h + 'px';
       if (p.text) n.textContent = p.text;
       if (p.layer === 'occluder') occluders.push(n);
@@ -44,13 +48,18 @@
     if (stage) stage.style.setProperty('--floor', decl.floor + 'px');
     const hud = host.querySelector('.room-name');
     if (hud) hud.textContent = decl.label;
-    if (decl.sky && g.PixelSky) g.PixelSky.mount(built.planes.sky, decl.sky, reducedMotion());
+    if (decl.sky && g.PixelSky) { const h = g.PixelSky.mount(built.planes.sky, decl.sky, reducedMotion()); if (h) skies.set(built.root, h); }
     current = { craft, id, decl, root: built.root, planes: built.planes };
     return current;
   }
 
+  function stopSky(r) {
+    const h = skies.get(r);
+    if (h) { h.stop(); skies.delete(r); }
+  }
+
   function sweep(keep) {
-    live.filter((r) => r !== keep).forEach((r) => r.remove());
+    live.filter((r) => r !== keep).forEach((r) => { r.remove(); stopSky(r); });
     live = keep ? [keep] : [];
   }
 
@@ -83,6 +92,7 @@
   function reset(craft) {
     epoch++;
     current = null;
+    live.forEach(stopSky);
     live = [];
     const fg = $('foreground');
     if (fg) fg.replaceChildren();
