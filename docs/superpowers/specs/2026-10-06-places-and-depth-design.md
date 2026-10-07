@@ -91,7 +91,7 @@ Each craft file (`js/fx/paper.js`, `textile.js`, `zine.js`, `game.js`) exports a
 - The **content frame** is the area where cards and media are laid out: x 220–1208, y 56–648 (game act: x 220–1200, y 64–530).
 - Pieces on `mid`, `near` and `egg` must not intersect the content frame, except where a piece is marked `quiet: true`. A quiet piece must be at most 35% opacity or low-contrast. This is enforced by a unit test on the `box` values.
 - `far` and `sky` may sit behind the content frame but are drawn at reduced contrast. A CSS variable `--plane-dim` per craft caps them.
-- Avatar gutters (x < 220, and x > 1060 for `avatar-right` scenes) can hold `near` pieces only below the avatar's knees, so the avatar stays readable.
+- The avatar gutter (x < 220) can hold `near` pieces only below the avatar's knees, so the avatar stays readable. No scene currently puts the avatar on the right. If one ever does, the content frame mirrors to x 72–1060.
 
 ### Parallax
 
