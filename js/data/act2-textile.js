@@ -24,14 +24,22 @@
       notes: 'Sousanis’s dissertation-as-comic, and a text we teach in Critical Making (paired with the Comic chapter; his Making Comics course inspired our mini-comic exercise). Flatness is the single fixed viewpoint; unflattening is seeing from many at once, which is what making in another form does. The comic is the argument: form and content together. TODO: add an image (the cover or a spread) and confirm the page number; the publisher and image sites are blocked from the build environment.',
     },
     {
-      id: 'a2-learn-to-code', act: 2, minutes: 1, place: 'code-camp', layout: 'gallery',
+      id: 'a2-learn-to-code', act: 2, minutes: 0.75, place: 'code-camp', layout: 'image',
       text: 'The learn-to-code movement (Hour of Code, “more hack, less yack,” credential-checking in DH) drew pushback for misogyny and for ignoring histories of exclusion.',
+      media: [{ src: 'assets/act2/hour-of-code-frozen.jpg', alt: 'Code.org’s Hour of Code tile for its Frozen tutorial: Anna and Elsa on either side of an ice-blue rink, where a white snowflake pattern has been drawn by repeating lines.' }],
+      source: 'Code.org, Hour of Code: Code with Anna and Elsa (2014)',
+      fx: ['needle-pass'],
+      notes: 'Code.org’s 2014 Frozen tutorial: drag-and-drop blocks to make Anna and Elsa skate snowflakes on the ice. Disney licensing as the friendly face of an access campaign, explicitly aimed at bringing girls in. Image is Code.org’s own course tile, from its open-source repository (code-dot-org/code-dot-org).',
+    },
+    {
+      id: 'a2-geek-masculinity', act: 2, minutes: 0.75, layout: 'gallery',
+      text: 'My earlier work traces how these platforms and their cultures are toxic geek masculinity all the way down.',
       media: [
         { src: 'assets/act2/geek.jpg', alt: 'Cover of Toxic Geek Masculinity in Media by Anastasia Salter and Bridget Blodgett.' },
         { src: 'assets/act2/fanboy.jpg', alt: 'Cover of A Portrait of the Auteur as Fanboy by Anastasia Salter and Mel Stanfill.' },
       ],
-      fx: ['quilt-assemble'],
-      notes: 'It is toxic geek masculinity all the way down. Name the history before celebrating access.',
+      fx: ['quilt-assemble'], avatar: { pose: 'point', x: 60 },
+      notes: 'Toxic Geek Masculinity in Media (with Bridget Blodgett, 2017) and A Portrait of the Auteur as Fanboy (with Mel Stanfill, 2020): the same cultures that build and promote these platforms decide who belongs in them. A cute Frozen skin does not change who the field was built for. Name that history before celebrating access.',
     },
     {
       id: 'a2-widner', act: 2, minutes: 1.25, layout: 'quote',
