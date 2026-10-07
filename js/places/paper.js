@@ -22,9 +22,9 @@
       label: 'Handmade Hamlet', credit: 'Personal homepages, webrings and guestbooks', floor: 684,
       pieces: [
         { layer: 'far', cls: 'hm-hill', box: [0, 420, 1280, 300] },
-        { layer: 'far', cls: 'hm-cottage', box: [250, 330, 150, 150] },
-        { layer: 'far', cls: 'hm-cottage hm-c2', box: [560, 300, 170, 180] },
-        { layer: 'far', cls: 'hm-cottage hm-c3', box: [900, 340, 150, 140] },
+        { layer: 'far', cls: 'hm-cottage', box: [490, 34, 120, 116] },
+        { layer: 'far', cls: 'hm-cottage hm-c2', box: [760, 20, 130, 130] },
+        { layer: 'far', cls: 'hm-cottage hm-c3', box: [1030, 34, 120, 116] },
         { layer: 'mid', cls: 'hm-mailbox', box: [140, 630, 56, 54], text: 'guest\nbook' },
         { layer: 'mid', cls: 'hm-bridge', box: [420, 650, 460, 46], text: '◄ webring ►' },
         { layer: 'egg', cls: 'hm-sawhorse', box: [1000, 664, 64, 40] },
@@ -50,9 +50,9 @@
       pieces: [
         { layer: 'far', cls: 'mw-dusk', box: [0, 0, 1280, 720] },
         { layer: 'far', cls: 'mw-dunes', box: [0, 430, 1280, 290] },
-        { layer: 'far', cls: 'mw-tower', box: [1030, 80, 84, 370] },
-        { layer: 'egg', cls: 'mw-ghost', box: [320, 200, 64, 74], quiet: true },
-        { layer: 'egg', cls: 'mw-ghost mw-pac', box: [880, 130, 64, 64], quiet: true },
+        { layer: 'far', cls: 'mw-tower', box: [1180, 120, 80, 520] },
+        { layer: 'egg', cls: 'mw-ghost', box: [530, 0, 52, 54] },
+        { layer: 'egg', cls: 'mw-ghost mw-pac', box: [900, 0, 52, 52] },
         { layer: 'egg', cls: 'mw-monorail', box: [0, 72, 212, 40], text: 'BLAINE' },
         { layer: 'egg', cls: 'mw-gunslinger', box: [1228, 520, 16, 32] },
         { layer: 'egg', cls: 'mw-lobster', box: [700, 656, 64, 44] },
@@ -64,7 +64,7 @@
     'gallery-row': {
       label: 'Gallery Row', credit: 'Apricitas Economics; Andersen v. Stability AI', floor: 684,
       pieces: [
-        { layer: 'far', cls: 'gy-shops', box: [220, 240, 1000, 430], text: 'FOR LEASE          FOR LEASE          FOR LEASE' },
+        { layer: 'far', cls: 'gy-shops', box: [220, 70, 1000, 600], text: 'FOR LEASE             FOR LEASE             FOR LEASE' },
         { layer: 'mid', cls: 'gy-columns', box: [1210, 110, 68, 560] },
         { layer: 'egg', cls: 'gy-lamp', box: [150, 6, 40, 110] },
         { layer: 'near', cls: 'gy-sidewalk', box: [0, 664, 1280, 56] },

@@ -37,9 +37,9 @@
 /* Mid-World */
 .place-paper .mw-dusk { background: linear-gradient(#e9a466, #f3d29a 60%, #efe4cf); }
 .place-paper .mw-dunes { background: #d9a86a; border-radius: 40% 60% 0 0 / 30% 50% 0 0; }
-.place-paper .mw-tower { background: #2b2118; clip-path: polygon(30% 0, 70% 0, 72% 8%, 64% 8%, 68% 100%, 32% 100%, 36% 8%, 28% 8%); }
-.place-paper .mw-ghost { background: rgba(255, 255, 255, .9); opacity: .3; border-radius: 50% 50% 10% 10%; clip-path: polygon(0 40%, 10% 10%, 50% 0, 90% 10%, 100% 40%, 100% 100%, 80% 85%, 60% 100%, 40% 85%, 20% 100%, 0 85%); animation: mw-float 9s ease-in-out infinite alternate; }
-.place-paper .mw-pac { animation-duration: 12s; }
+.place-paper .mw-tower { background: #0e0a07; clip-path: polygon(34% 0, 66% 0, 70% 6%, 60% 6%, 64% 22%, 58% 24%, 62% 100%, 38% 100%, 42% 24%, 36% 22%, 40% 6%, 30% 6%); }
+.place-paper .mw-ghost { background: #efe8ff; border: 0; opacity: .8; filter: drop-shadow(0 0 1.5px #2b2118) drop-shadow(0 2px 1px rgba(60, 40, 20, .4)); border-radius: 50% 50% 10% 10%; clip-path: polygon(0 40%, 10% 10%, 50% 0, 90% 10%, 100% 40%, 100% 100%, 80% 85%, 60% 100%, 40% 85%, 20% 100%, 0 85%); animation: mw-float 9s ease-in-out infinite alternate; }
+.place-paper .mw-pac { background: #f2c230; border-radius: 50%; clip-path: polygon(50% 50%, 100% 18%, 100% 0, 0 0, 0 100%, 100% 100%, 100% 82%); animation-duration: 12s; }
 @keyframes mw-float { to { transform: translate(60px, -24px); } }
 .place-paper .mw-monorail { background: #fffaf0; border: 3px solid #2b2118; border-radius: 30px 6px 6px 30px; color: #b6452c; font: 18px/34px 'Patrick Hand', cursive; text-align: center; transform: rotate(-4deg); }
 .place-paper .mw-gunslinger { background: #2b2118; clip-path: polygon(30% 0, 70% 0, 70% 20%, 100% 22%, 0 22%, 30% 20%, 30% 30%, 75% 32%, 70% 100%, 55% 100%, 50% 65%, 45% 100%, 30% 100%, 25% 32%); }
@@ -48,7 +48,7 @@
 .place-paper .mw-sand { background: #c99a5e; }
 
 /* Gallery Row */
-.place-paper .gy-shops { background: repeating-linear-gradient(90deg, #f1e6d0 0 300px, #d9ccb0 300px 334px), #f1e6d0; color: #b6452c; font: 28px/430px 'Patrick Hand', cursive; text-align: center; white-space: pre; }
+.place-paper .gy-shops { background: repeating-linear-gradient(90deg, #b6452c 0 25px, #fffaf0 25px 50px) 0 0 / 334px 56px repeat-x, repeating-linear-gradient(90deg, #e6d6b6 0 300px, #bfae8a 300px 334px); color: #8e2f1c; font: 24px/40px 'Special Elite', monospace; padding: 62px 0 0 170px; text-align: left; white-space: pre; }
 .place-paper .gy-columns { background: repeating-linear-gradient(90deg, #fffaf0 0 18px, #d9ccb0 18px 24px) 0 40px / 100% calc(100% - 60px) no-repeat, linear-gradient(#fffaf0, #fffaf0) 0 0 / 100% 36px no-repeat, linear-gradient(#d9ccb0, #d9ccb0) 0 100% / 100% 20px no-repeat; }
 .place-paper .gy-lamp { background: linear-gradient(#2b2118, #2b2118) 50% 20px / 5px 90px no-repeat, radial-gradient(ellipse 20px 10px at 50% 14px, #b6452c 96%, transparent) no-repeat; }
 .place-paper .gy-sidewalk { background: repeating-linear-gradient(90deg, #b5a58a 0 98px, #8a8478 98px 100px); }
@@ -66,7 +66,7 @@
 .backdrop[data-watch="1"] .cs-shelf { --eye: 17px; }
 .place-paper .cs-furby { background: radial-gradient(circle 7px at 35% 40%, #fff 40%, #2b2118 45% 60%, #fff 65%, transparent 70%) no-repeat, radial-gradient(circle 7px at 65% 40%, #fff 40%, #2b2118 45% 60%, #fff 65%, transparent 70%) no-repeat, radial-gradient(ellipse 28px 24px at 50% 50%, #7b4fb3 96%, transparent); }
 .place-paper .cs-tamagotchi { background: radial-gradient(ellipse 14px 12px at 50% 46%, #cfe8c4 96%, transparent) no-repeat, radial-gradient(ellipse 26px 33px at 50% 50%, #e98e7f 96%, transparent); }
-.place-paper .cs-yeti { background: linear-gradient(#2b2b36, #2b2b36) 50% 100% / 48px 54px no-repeat, radial-gradient(ellipse 26px 34px at 50% 36px, #f4ead8 96%, transparent) no-repeat, linear-gradient(#111, #111) 50% 30px / 34px 6px no-repeat; }
+.place-paper .cs-yeti { background: radial-gradient(circle 4px at 36% 40px, #111 96%, transparent) no-repeat, radial-gradient(circle 4px at 64% 40px, #111 96%, transparent) no-repeat, radial-gradient(circle 8px at 14% 18px, #f4ead8 96%, transparent) no-repeat, radial-gradient(circle 8px at 86% 18px, #f4ead8 96%, transparent) no-repeat, radial-gradient(ellipse 25px 28px at 50% 36px, #f4ead8 96%, transparent) no-repeat, radial-gradient(ellipse 22px 28px at 50% 100%, #2b2b36 96%, transparent) no-repeat; }
 .place-paper .cs-tag { background: #fffaf0; color: #b6452c; font: 24px/38px 'Patrick Hand', cursive; text-align: center; clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 0 50%); }
 .cs-counter { background: linear-gradient(#e98e7f 0 12px, #fffaf0 12px); border-radius: 6px 6px 0 0; filter: drop-shadow(0 -2px 2px rgba(60, 40, 20, .3)); }
 
