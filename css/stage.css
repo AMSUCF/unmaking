@@ -33,7 +33,7 @@ blockquote.text { quotes: none; white-space: pre-line; }
 .layout-quote .media img { max-height: 500px; }
 .layout-image, .layout-video, .layout-handoff, .layout-gallery { grid-template-rows: minmax(0, 1fr) auto; }
 .layout-image .media img, .layout-video .media video, .layout-handoff .media img { max-height: 460px; }
-.layout-image .card, .layout-video .card, .layout-handoff .card, .layout-gallery .card { max-height: 180px; padding: 16px 28px; }
+.layout-image .card, .layout-video .card, .layout-handoff .card, .layout-gallery .card { max-height: 250px; padding: 16px 28px; }
 .layout-image .text, .layout-video .text, .layout-handoff .text, .layout-gallery .text { font-size: 26px; }
 .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 20px; width: 100%; height: 100%; min-height: 0; align-items: center; }
 .gallery .media img, .gallery .media video { max-height: 420px; }
