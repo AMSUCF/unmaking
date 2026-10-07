@@ -8,7 +8,10 @@
   const remote = PresenterState.createRemote(scenes, { storage });
   const channel = 'BroadcastChannel' in window ? new BroadcastChannel('unmaking-deck') : null;
   let linked = null; // last deck state while linked, else null
-  let soloPinned = false;
+  let soloPinned = false; // once "Go solo" is pressed, stay solo until the page reloads
+  let lastState = 0;      // time of the last deck state message
+  const LINK_TTL = 5000;  // drop back to solo if the deck goes quiet this long
+  const setText = (id, text) => { const el = $(id); if (el.textContent !== text) el.textContent = text; };
 
   function summary(s, step) {
     if (!s) return '(end of deck)';
@@ -25,6 +28,7 @@
   }
 
   function render() {
+    if (linked && Date.now() - lastState > LINK_TTL) linked = null;
     const v = view();
     const s = v.scene;
     const act = v.act;
@@ -40,11 +44,11 @@
     $('p-pace').textContent = v.started ? `planned ${Timer.formatClock(v.planned)} · ${pace}` : 'clocks not started';
     $('p-pace').dataset.pace = v.started ? pace : '';
     $('p-total').textContent = v.started ? 'total ' + Timer.formatClock(v.total) : '';
-    $('p-notes').textContent = s.notes;
-    $('p-current').textContent = summary(s, v.step);
+    setText('p-notes', s.notes || '');
+    setText('p-current', summary(s, v.step));
     $('p-url').textContent = s.url || '';
     const next = scenes[v.index + 1];
-    $('p-next').textContent = next ? `${next.id}\n${summary(next, 0)}` : '(end of deck)';
+    setText('p-next', next ? `${next.id}\n${summary(next, 0)}` : '(end of deck)');
     $('p-start').classList.toggle('hidden', !!linked || v.started);
     ['p-reset-act', 'p-restart'].forEach((id) => $(id).classList.toggle('hidden', !!linked));
     document.querySelectorAll('[data-act]').forEach((b) => b.classList.toggle('hidden', !!linked));
@@ -72,24 +76,29 @@
   };
 
   document.addEventListener('keydown', (e) => {
+    if (e.target && e.target.closest && e.target.closest('button, a, input, select, textarea')) return;
     if (['ArrowRight', ' ', 'PageDown', 'Enter'].includes(e.key)) { e.preventDefault(); next(); }
     if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); prev(); }
   });
 
   // Swipe left for next, right for prev, on the notes.
   let x0 = null;
-  $('p-notes').addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  let y0 = 0;
+  $('p-notes').addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
   $('p-notes').addEventListener('touchend', (e) => {
     if (x0 === null) return;
     const dx = e.changedTouches[0].clientX - x0;
+    const dy = e.changedTouches[0].clientY - y0;
     x0 = null;
-    if (dx < -60) next(); else if (dx > 60) prev();
+    if (Math.abs(dx) <= 60 || Math.abs(dx) <= 1.5 * Math.abs(dy)) return; // vertical scroll, not a swipe
+    if (dx < 0) next(); else prev();
   });
 
   if (channel) {
     channel.onmessage = ({ data }) => {
       if (!data || data.type !== 'state' || soloPinned || !scenes[data.index]) return;
       linked = data;
+      lastState = Date.now();
       render();
     };
     channel.postMessage({ type: 'hello' });
