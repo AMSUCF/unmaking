@@ -16,6 +16,14 @@
       notes: 'Pose the question we keep asking ourselves: are we critiquing (unflattening) or making? Critical making says both, at once.',
     },
     {
+      id: 'a2-sousanis', act: 2, minutes: 0.75, layout: 'quote',
+      heading: 'Unflattening',
+      text: '“A simultaneous engagement of multiple vantage points from which to engender new ways of seeing.”',
+      source: 'Nick Sousanis, Unflattening (Harvard University Press, 2015)',
+      fx: ['stitch-in'], avatar: { pose: 'point', x: 60 }, draft: true,
+      notes: 'Sousanis’s dissertation-as-comic, and a text we teach in Critical Making (paired with the Comic chapter; his Making Comics course inspired our mini-comic exercise). Flatness is the single fixed viewpoint; unflattening is seeing from many at once, which is what making in another form does. The comic is the argument: form and content together. TODO: add an image (the cover or a spread) and confirm the page number; the publisher and image sites are blocked from the build environment.',
+    },
+    {
       id: 'a2-learn-to-code', act: 2, minutes: 1, place: 'code-camp', layout: 'gallery',
       text: 'The learn-to-code movement (Hour of Code, “more hack, less yack,” credential-checking in DH) drew pushback for misogyny and for ignoring histories of exclusion.',
       media: [
