@@ -2,33 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#15131c">
   <title>Presenter · Critical (Un)Making</title>
-  <link rel="stylesheet" href="css/hud.css">
   <style>
-    body { margin: 0; padding: 20px; background: #15131c; color: #eee; font: 18px/1.45 system-ui, sans-serif; display: grid; gap: 14px; grid-template-columns: 2fr 1fr; grid-template-rows: auto 1fr auto; height: 100vh; box-sizing: border-box; }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; padding: 20px; background: #15131c; color: #eee; font: 18px/1.45 system-ui, sans-serif; display: grid; gap: 14px; grid-template-columns: 2fr 1fr; grid-template-rows: auto auto 1fr auto; height: 100vh; overflow-x: hidden; }
     body[data-presenter="emily"] #p-who { background: #b6452c; }
     body[data-presenter="anastasia"] #p-who { background: #7b4fb3; }
-    header { grid-column: 1 / -1; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .hidden { display: none !important; }
+    header { grid-column: 1 / -1; display: flex; gap: 6px 16px; align-items: center; flex-wrap: wrap; }
     #p-who { padding: 4px 10px; border-radius: 6px; font-weight: 700; }
+    #p-mode { padding: 3px 10px; border-radius: 99px; border: 1px solid #5a5570; font-size: 13px; }
     #p-clock, #p-total { font: 700 26px/1 ui-monospace, monospace; }
-    #p-notes { font-size: 24px; overflow: auto; background: #1f1c29; padding: 16px; border-radius: 10px; }
-    aside { display: grid; gap: 12px; align-content: start; }
+    #p-pace { font-size: 15px; }
+    #p-pace[data-pace="ahead"] { color: #5fd38a; }
+    #p-pace[data-pace="on"] { color: #ddd; }
+    #p-pace[data-pace="behind"] { color: #ff6b6b; }
+    #p-meta { font-size: 13px; opacity: .7; flex-basis: 100%; }
+    #p-tools { grid-column: 1 / -1; display: flex; gap: 8px; flex-wrap: wrap; }
+    #p-tools button { background: #2b2838; color: #eee; font-size: 15px; min-height: 44px; padding: 8px 14px; }
+    #p-tools #p-start { background: #2f7d4f; }
+    #p-notes { white-space: pre-wrap; font-size: 24px; overflow: auto; background: #1f1c29; padding: 16px; border-radius: 10px; }
+    aside { display: grid; gap: 12px; align-content: start; overflow: auto; }
     .label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; opacity: .6; }
-    #p-current, #p-next { background: #1f1c29; padding: 12px; border-radius: 10px; }
+    #p-current, #p-next { white-space: pre-wrap; background: #1f1c29; padding: 12px; border-radius: 10px; }
     #p-url { word-break: break-all; font-size: 13px; opacity: .7; }
-    footer { grid-column: 1 / -1; display: flex; gap: 10px; }
-    button { font: 700 18px system-ui; padding: 10px 22px; border-radius: 8px; border: 0; cursor: pointer; }
+    footer { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }
+    footer button { background: #3a3550; color: #fff; }
+    footer #p-next-btn { background: #6d46b0; }
+    button { font: 700 18px system-ui; min-height: 64px; padding: 10px 22px; border-radius: 8px; border: 0; cursor: pointer; touch-action: manipulation; }
+
+    @media (max-width: 760px) {
+      body { display: block; height: auto; min-height: 100vh; padding: 0 14px calc(72px + 28px + env(safe-area-inset-bottom)); }
+      header { position: sticky; top: 0; z-index: 5; background: #15131c; padding: 10px 0 8px; border-bottom: 1px solid #2b2838; }
+      #p-clock, #p-total { font-size: 30px; }
+      #p-tools { padding: 10px 0; }
+      #p-notes { font-size: 21px; overflow: visible; }
+      aside { margin-top: 14px; }
+      footer { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: #15131c; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid #2b2838; }
+      footer button { min-height: 72px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <span id="p-who">waiting for deck…</span>
-    <span id="p-meta"></span>
+    <span id="p-mode">Solo</span>
     <span id="p-clock"></span>
     <span id="p-pace"></span>
     <span id="p-total"></span>
+    <span id="p-meta"></span>
   </header>
-  <main id="p-notes">Open the deck with npm start, then press P in the deck window.</main>
+  <div id="p-tools">
+    <button id="p-start">Start clocks</button>
+    <button id="p-reset-act">Reset act clock</button>
+    <button data-act="1">Act I</button>
+    <button data-act="2">Act II</button>
+    <button data-act="3">Act III</button>
+    <button data-act="4">Act IV</button>
+    <button id="p-restart">Restart talk</button>
+    <button id="p-solo" class="hidden">Go solo</button>
+  </div>
+  <main id="p-notes"></main>
   <aside>
     <div><div class="label">Now on screen</div><div id="p-current"></div><div id="p-url"></div></div>
     <div><div class="label">Next</div><div id="p-next"></div></div>
@@ -40,8 +77,15 @@
 
   <script src="js/core/random.js"></script>
   <script src="js/core/acts.js"></script>
+  <script src="js/places/registry.js"></script>
+  <script src="js/places/paper.js"></script>
+  <script src="js/places/textile.js"></script>
+  <script src="js/places/zine.js"></script>
+  <script src="js/places/game.js"></script>
   <script src="js/core/deck.js"></script>
+  <script src="js/core/nav.js"></script>
   <script src="js/core/timer.js"></script>
+  <script src="js/core/presenter-state.js"></script>
   <script src="js/data/act1-paper.js"></script>
   <script src="js/data/act2-textile.js"></script>
   <script src="js/data/act3-zine.js"></script>

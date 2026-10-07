@@ -46,3 +46,16 @@ test('act clock resetAll clears every act so clocks restart on next mark', () =>
   t = 7000; c.mark(2); t = 8000;
   assert.equal(c.elapsed(2), 1000);
 });
+
+test('act clock snapshot and restore round-trip, ignoring junk', () => {
+  let t = 1000;
+  const c = Timer.createActClock(() => t);
+  c.mark(1); t = 5000; c.mark(2);
+  const snap = c.snapshot();
+  const d = Timer.createActClock(() => t);
+  d.restore(Object.assign({}, snap, { 3: 'nope' }));
+  t = 9000;
+  assert.equal(d.elapsed(1), 8000);
+  assert.equal(d.elapsed(2), 4000);
+  assert.equal(d.elapsed(3), 0);
+});

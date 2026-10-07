@@ -35,6 +35,11 @@
         const times = Object.values(started);
         return times.length ? now() - Math.min(...times) : 0;
       },
+      snapshot() { return Object.assign({}, started); },
+      restore(saved) {
+        for (const k of Object.keys(started)) delete started[k];
+        Object.entries(saved || {}).forEach(([k, v]) => { if (Number.isFinite(v)) started[k] = v; });
+      },
     };
   }
 
