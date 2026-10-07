@@ -24,8 +24,14 @@
       id: 'a1-act', act: 1, minutes: 0.5, layout: 'statement',
       heading: 'Act I: The Death of the Web (As We Know It)',
       text: 'Coding · enshittification · politics',
-      fx: ['paper-tear'],
-      notes: 'Section title. Three threads: what coding is now, what platforms have become, and the politics underneath both.',
+      fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
+      props: [
+        { cls: 'prop-fire', box: [0, 600, 1280, 120] },
+        { cls: 'prop-fine-stick', box: [165, 452, 6, 96] },
+        { cls: 'prop-fine-sign', box: [30, 380, 186, 76], text: 'and this\nis fine.' },
+        { cls: 'prop-fine-dog', box: [1100, 520, 130, 160] },
+      ],
+      notes: 'Section title. Three threads: what coding is now, what platforms have become, and the politics underneath both. Emily holds up the "this is fine" sign while the paper web burns (after KC Green, "On Fire," Gunshow, 2013).',
     },
     {
       id: 'a1-personal', act: 1, minutes: 1, place: 'hamlet', layout: 'statement',

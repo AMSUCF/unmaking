@@ -90,6 +90,13 @@ const Stage = (() => {
     }
     if (scene.source && scene.layout !== 'quote') card.append(make('p', 'source', scene.source));
     if (scene.draft) root.append(make('div', 'draft-flag', 'DRAFT'));
+    (scene.props || []).forEach((p) => {
+      const n = make('div', 'prop ' + p.cls, p.text);
+      const [x, y, w, h] = p.box;
+      Object.assign(n.style, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' });
+      n.setAttribute('aria-hidden', 'true');
+      root.append(n);
+    });
     return root;
   }
 

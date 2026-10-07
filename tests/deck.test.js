@@ -56,6 +56,15 @@ test('media needs src and alt', () => {
   assert.ok(has(e, 'missing alt'));
 });
 
+test('slide props need a class and an on-stage box', () => {
+  const p = (props) => errs(ok({ props }));
+  assert.deepEqual(p([{ cls: 'prop-x', box: [0, 600, 1280, 120], text: 'hi' }]), []);
+  assert.ok(has(p([{ box: [0, 0, 10, 10] }]), 'props[0] needs cls'));
+  assert.ok(has(p([{ cls: 'a', box: [0, 0, 10] }]), 'props[0] needs a box'));
+  assert.ok(has(p([{ cls: 'a', box: [1200, 0, 100, 10] }]), 'props[0] box leaves the stage'));
+  assert.ok(has(p('nope'), 'props must be an array'));
+});
+
 test('handoff must target the next act craft', () => {
   const h = (to, act) => errs(ok({ id: `a${act.n}-h`, act: act.n, layout: 'handoff', to, fx: [] }), act);
   assert.deepEqual(h('textile', A1), []);

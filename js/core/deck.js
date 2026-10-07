@@ -27,6 +27,17 @@
       if (!m || typeof m.alt !== 'string' || !m.alt.trim()) fail(`media[${i}] missing alt`);
     });
 
+    // Slide props: small cut-out extras drawn for one slide only, placed in stage pixels.
+    if (scene.props !== undefined) {
+      if (!Array.isArray(scene.props)) fail('props must be an array');
+      else scene.props.forEach((p, i) => {
+        if (!p || typeof p.cls !== 'string' || !p.cls) fail(`props[${i}] needs cls`);
+        const b = p && p.box;
+        if (!Array.isArray(b) || b.length !== 4 || !b.every(Number.isFinite)) fail(`props[${i}] needs a box [x, y, w, h]`);
+        else if (b[0] < 0 || b[1] < 0 || b[0] + b[2] > STAGE.width || b[1] + b[3] > STAGE.height) fail(`props[${i}] box leaves the stage`);
+      });
+    }
+
     const textMax = scene.layout === 'quote' ? LIMITS.quote : LIMITS.statement;
     if (len(scene.text) > textMax) fail(`text is ${len(scene.text)} chars (max ${textMax})`);
 

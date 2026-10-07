@@ -15,3 +15,7 @@
 @media (prefers-reduced-motion: reduce) {
   .place, .place * { animation: none !important; transition: none !important; }
 }
+
+/* Slide props: one-slide cut-outs declared in scene data (Stage.renderScene). */
+.prop { position: absolute; pointer-events: none; white-space: pre-line; }
+@media (prefers-reduced-motion: reduce) { .prop, .prop::before { animation: none !important; } }
