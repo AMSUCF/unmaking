@@ -34,7 +34,7 @@
       id: 'a4-centaurs', act: 4, minutes: 1.25, layout: 'quote', agency: 1,
       heading: 'Centaurs and reverse centaurs',
       text: '“Reading these testimonies closely, it’s clear that these coders tend to be in charge of their own workload, pursuing personal projects, or working in a capacity with little oversight. That means that they get to adopt AI tools in a manner and to a degree that they alone decide upon. They’re centaurs.\n\nFor the reverse centaurs in code shops, it’s a very different story.”',
-      source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (2026), p. 85',
+      source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (MCD/Farrar, Straus and Giroux, 2026), p. 85',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'Doctorow’s terms: a centaur is a person riding a machine, using the tool at their own pace and for their own ends; a reverse centaur is a machine riding a person, who works at the tool’s pace. Same AI, opposite agency. The coders praising chatbots set their own workloads; the next paragraph turns to Noam Scheiber’s 2025 New York Times reporting on Amazon programmers, whose CEO touted AI saving “the equivalent of 4,500 developer years.” This is the fourth loss from the previous slide: who decides the steps. Critical making keeps us centaurs.',
     },
@@ -47,7 +47,7 @@
     {
       id: 'a4-intent', act: 4, minutes: 1, layout: 'quote', agency: 1,
       text: '“For someone to make good art with an AI, they will have to increase the quantum of human communicative intent in the AI’s output. That is, they will have to say more to the AI (obviously, they will also have to have something to say).”',
-      source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (2026), p. 103',
+      source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (MCD/Farrar, Straus and Giroux, 2026), p. 103',
       fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
       notes: 'One answer to “where is the human contribution?”: intent. He goes on to describe artists whose striking AI work came from many, many rounds of prompting, searching for and uploading reference material, choosing among variations, and then reworking the result by hand in Photoshop or GIMP: “infusing still more communicative human judgment into the output.” The contribution is not the click; it is everything you bring to it. And you still have to have something to say.',
     },
@@ -137,7 +137,7 @@
     {
       id: 'a4-street', act: 4, minutes: 1, layout: 'quote', agency: 3,
       text: '“There is nothing about the technology of AI that determines how it must be used. We can choose to use it sometimes, or never, or all the time, depending on our needs and proclivities. We don’t have to let billionaires tell us how it must be used.”',
-      source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (2026), Introduction',
+      source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (MCD/Farrar, Straus and Giroux, 2026), Introduction',
       fx: ['iris-in'], avatar: { pose: 'talk', x: 60 },
       notes: 'Against “there is no alternative.” Doctorow sets Thatcher’s line against William Gibson’s maxim: “The street finds its own use for things.” And then: “SF writers make lousy prophets, but we can be pretty good technology critics.” Sometimes, never, or all the time: refusal (Stuart’s students) and making (our students) are both choices. The frontier platforms want the default to be all the time. What comes next is how we choose otherwise: small, local, open.',
     },
