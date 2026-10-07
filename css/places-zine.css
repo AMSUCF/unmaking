@@ -30,7 +30,7 @@
 /* GeoCities */
 .place-zine .gc-tiles { background: radial-gradient(#ff4fb8 2px, transparent 2.6px) 0 0 / 30px 30px, radial-gradient(#22e0ff 2px, transparent 2.6px) 15px 15px / 30px 30px; }
 .place-zine .gc-signs { font: 22px/28px 'VT323', monospace; text-align: center; }
-.place-zine .gc-construction { background: linear-gradient(#ffd800, #ffd800) 0 5px / 100% 20px no-repeat, repeating-linear-gradient(45deg, #ffd800 0 12px, #111 12px 24px) !important; color: #111 !important; font: 18px/30px 'VT323', monospace; text-align: center; animation: gc-blink 1s steps(2) infinite; filter: none !important; }
+.place-zine .gc-construction { background: linear-gradient(#ffd800, #ffd800) 0 1px / 100% 26px no-repeat, repeating-linear-gradient(45deg, #ffd800 0 12px, #111 12px 24px) !important; color: #111 !important; font: 18px/30px 'VT323', monospace; text-align: center; animation: gc-blink 1s steps(2) infinite; filter: none !important; }
 @keyframes gc-blink { 50% { color: #c00; } }
 .place-zine .gc-webring { font: 24px/34px 'VT323', monospace; text-align: center; }
 

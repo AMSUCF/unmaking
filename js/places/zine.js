@@ -51,9 +51,9 @@
       pieces: [
         ...win('The Bot Garden'),
         { layer: 'far', cls: 'bg-rows', box: [240, 420, 960, 230] },
-        { layer: 'mid', cls: 'bg-cage', box: [30, 80, 90, 40] },
+        { layer: 'mid', cls: 'bg-cage', box: [30, 88, 90, 32] },
         { layer: 'mid', cls: 'bg-tools', box: [300, 650, 400, 32], text: 'MAINTENANCE IS RESISTANCE' },
-        { layer: 'mid', cls: 'bg-arcade', box: [1212, 430, 60, 170], text: 'INSERT\nCOIN' },
+        { layer: 'mid', cls: 'bg-arcade', box: [1216, 430, 58, 170], text: 'INSERT\nCOIN' },
         { layer: 'egg', cls: 'bg-birds', box: [1212, 110, 60, 220] },
       ],
     },
