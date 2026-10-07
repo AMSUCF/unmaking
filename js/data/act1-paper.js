@@ -168,6 +168,17 @@
       notes: 'The lure of AI as interface, and the next death of search and even of the feed. They are obvious Sanrio and Labubu riffs with OpenClaw wrappers, but they are marketed as the solution to the very problem their makers created. Even The Daily Show noticed (next slide).',
     },
     {
+      id: 'a1-keroppi-phud', act: 1, minutes: 1, layout: 'gallery',
+      text: 'The kind of “work” a companion can do: Keroppi earned a PhuD on my behalf, for a dissertation called “The Remainder Is a Person.”',
+      media: [
+        { src: 'assets/act1/underacademy-phud.jpg', alt: 'UnderAcademy College diploma, “A Non-Degree Granting Institution,” conferring on “Anastasia Salter / Keroppi” the honorary, fully defunded degree of PhuD, Honors Hallucinatorius, signed by Talan Memmott, President, and Mark C. Marino, Provisional Provost, with a cartoon Keroppi in a mortarboard atop books labeled Play, Prompt and Pure Nonsense.' },
+        { src: 'assets/act1/underacademy-journal.jpg', alt: 'Journal of Untrained Models, Volume 5, Number ∞, The Monetized Number: a New PhuD listing for “The Remainder Is a Person” by “Keroppi, stochastically generated applicant, on behalf of Anastasia Salter,” Doctor of Philosophy, Unreality and Design, beside a heavily redacted text.' },
+      ],
+      source: 'UnderAcademy College (Talan Memmott and Mark C. Marino), October 2026',
+      fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
+      notes: 'UnderAcademy College is Talan Memmott and Mark Marino’s long-running parody institution: “a non-degree granting institution,” motto “Do No Ham,” now granting the “honorary, fully defunded degree of PhuD” (Honors Hallucinatorius) to anyone who submits an AI-generated dissertation. Mine went to Keroppi, “stochastically generated applicant, on behalf of Anastasia Salter,” for “The Remainder Is a Person,” provisionally “Toward a Framework for the Strategic Management of the Person Who Is Still Here.” From Keroppi’s letter of application: “I believe my ability to produce an appropriate quantity of language makes me a strong candidate for further quantities of language.” That is the labor these companions are built for: plausible quantity, on our behalf. I join Davin Heckman, Scott Rettberg, Talan, and others as a newly generated PhuD.',
+    },
+    {
       id: 'a1-muse-jolly', act: 1, minutes: 0.5, layout: 'quote',
       text: '“It’s my job to strip mine all that you are to help you.”',
       source: 'Jolly, Meta Muse’s mascot (voiced by Jon Stewart), The Daily Show, October 5, 2026',
