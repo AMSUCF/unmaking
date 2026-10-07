@@ -38,7 +38,12 @@
     return { root: rootEl, planes, occluders };
   }
 
-  function mount(craft, id) {
+  function setLabel(host, decl) {
+    const hud = host.querySelector('.room-name');
+    if (hud) hud.textContent = decl.label;
+  }
+
+  function mount(craft, id, deferLabel) {
     const decl = g.PlaceDecls.get(craft, id);
     const host = $('backdrop');
     const built = build(craft, id, decl);
@@ -48,8 +53,7 @@
     if (fg) fg.replaceChildren(...built.occluders);
     const stage = $('stage');
     if (stage) stage.style.setProperty('--floor', decl.floor + 'px');
-    const hud = host.querySelector('.room-name');
-    if (hud) hud.textContent = decl.label;
+    if (!deferLabel) setLabel(host, decl);
     if (decl.sky && g.PixelSky) { const h = g.PixelSky.mount(built.planes.sky, decl.sky, reducedMotion()); if (h) skies.set(built.root, h); }
     current = { craft, id, decl, root: built.root, planes: built.planes };
     return current;
@@ -72,11 +76,12 @@
     const old = current && current.craft === craft ? current : null;
     if (!animate || !old) { sweep(null); mount(craft, id); return true; }
     if (onChange) onChange();
-    const next = mount(craft, id);
+    const next = mount(craft, id, true); // the HUD label waits for the walk-out to finish
     next.root.style.zIndex = '1';
     await crafts().placeTransition(craft, old.root, next.root, ctx);
     if (mine !== epoch) return true; // a newer go() or reset() owns the backdrop now
     next.root.style.zIndex = '';
+    setLabel($('backdrop'), next.decl);
     sweep(next.root);
     return true;
   }

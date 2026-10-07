@@ -35,7 +35,7 @@ body[data-craft="zine"] #stage { color: #111; font-family: 'Special Elite', 'Cou
 @keyframes xerox-jitter { from { transform: translate(0, 0) rotate(-1deg); } to { transform: translate(1px, -1px) rotate(1deg); } }
 [data-craft="zine"] #say { background: #fff; border: 3px solid #111; box-shadow: 5px 5px 0 #ff4fb8; font-family: 'Special Elite', monospace; }
 /* Keep media clear of the window title bar: image-over-card layouts must fit below y=84. */
-[data-craft="zine"] .layout-image .media img, [data-craft="zine"] .layout-video .media video, [data-craft="zine"] .layout-handoff .media img { max-height: 300px; }
-[data-craft="zine"] .layout-gallery .media img { max-height: 300px; }
+[data-craft="zine"] .layout-image .media img, [data-craft="zine"] .layout-video .media video, [data-craft="zine"] .layout-handoff .media img { max-height: 340px; }
+[data-craft="zine"] .layout-gallery .media img { max-height: 340px; }
 [data-craft="zine"] .layout-image, [data-craft="zine"] .layout-video, [data-craft="zine"] .layout-handoff, [data-craft="zine"] .layout-gallery { gap: 20px; }
 [data-craft="zine"] .layout-image .heading, [data-craft="zine"] .layout-video .heading, [data-craft="zine"] .layout-gallery .heading { font-size: 40px; }

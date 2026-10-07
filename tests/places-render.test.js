@@ -62,6 +62,22 @@ test('going back across a boundary restores the earlier place', async () => {
   assert.deepEqual(roots().map((r) => r.dataset.place), ['r-a']);
 });
 
+test('HUD room label changes after an animated transition, immediately otherwise', async () => {
+  fresh();
+  const hud = document.createElement('div');
+  hud.className = 'room-name';
+  dom.backdrop.append(hud);
+  await Places.go('paper', 'r-a');
+  assert.equal(hud.textContent, 'A'); // non-animated mount: immediate
+  let during = null;
+  const saved = global.Crafts.placeTransition;
+  global.Crafts.placeTransition = async () => { during = hud.textContent; };
+  await Places.go('paper', 'r-b', { animate: true });
+  global.Crafts.placeTransition = saved;
+  assert.equal(during, 'A');          // still the old room while the avatar walks out
+  assert.equal(hud.textContent, 'B'); // new label once the transition completes
+});
+
 test('a second go during a transition wins and leaves exactly one root', async () => {
   fresh();
   await Places.go('paper', 'r-a');

@@ -27,6 +27,7 @@
     return remote.status();
   }
 
+  let lastIndex = -1;
   function render() {
     if (linked && Date.now() - lastState > LINK_TTL) linked = null;
     const v = view();
@@ -53,6 +54,7 @@
     ['p-reset-act', 'p-restart'].forEach((id) => $(id).classList.toggle('hidden', !!linked));
     document.querySelectorAll('[data-act]').forEach((b) => b.classList.toggle('hidden', !!linked));
     $('p-solo').classList.toggle('hidden', !linked);
+    if (v.index !== lastIndex) { lastIndex = v.index; window.scrollTo(0, 0); } // new notes start in view on small screens
   }
 
   const act = (fn) => () => { fn(); render(); };
@@ -76,7 +78,8 @@
   };
 
   document.addEventListener('keydown', (e) => {
-    if (e.target && e.target.closest && e.target.closest('button, a, input, select, textarea')) return;
+    if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+    if (e.target && e.target.closest && e.target.closest('button, a, input, select, textarea') && (e.key === ' ' || e.key === 'Enter')) return;
     if (['ArrowRight', ' ', 'PageDown', 'Enter'].includes(e.key)) { e.preventDefault(); next(); }
     if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); prev(); }
   });
