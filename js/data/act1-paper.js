@@ -219,9 +219,9 @@
     },
     {
       id: 'a1-lens', act: 1, minutes: 1, place: 'worktable', layout: 'statement',
-      text: 'So agentic tools risk becoming another proprietary platform we overtrust, one that becomes our lens for the world.',
+      text: 'Just as critical making and digital humanities practices look to build tools and communities that critique and push back at corporate platforms, so too can agentic humanities be an opportunity to understand and shape the future of the field',
       fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
-      notes: 'The risk, plainly stated. From practice: “So agentic tools risk becoming another proprietary platform that we overtrust, and that becomes our lens.”',
+      notes: 'The turn from critique to agency. DH and critical making have always built their own tools and communities in answer to corporate platforms; agentic humanities can do the same with agents, instead of leaving the future of the field to the companies selling them.',
     },
     {
       id: 'a1-metatools', act: 1, minutes: 1, layout: 'image',
