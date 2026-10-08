@@ -86,7 +86,7 @@
     {
       id: 'a4-defaults', act: 4, minutes: 1, layout: 'gallery', agency: 2,
       heading: 'Whose defaults?',
-      text: 'Ask an image model for a “professor of digital culture” and see who it imagines. We built our guides by hand.',
+      text: 'Ask an image model for a “professor of digital culture” and see who it imagines.',
       media: [
         { src: 'assets/act4/mj-professor.png', alt: 'Image-model results for two prompts: “woman professor of digital culture” (top row) and “professor of digital culture” (bottom row), eight similar portraits, all wearing glasses.' },
         { src: 'assets/act4/mj-beautiful-woman.png', alt: 'Image-model results for “beautiful woman”: four near-identical close-up portraits of young women with dark hair and light eyes.' },
