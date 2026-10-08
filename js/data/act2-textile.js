@@ -226,6 +226,18 @@
       notes: 'Materiality as a choice: quilting, knitting and sewing are coming back for calm and community, not efficiency. The friction is the point, which sets up the next slide on process. From practice: people are pushing back by embracing slow, material ways of working. Can we harness that in the digital and the technical?',
     },
     {
+      id: 'a2-longarm', act: 2, minutes: 1, layout: 'choice',
+      heading: 'Claude Code is a longarm',
+      choices: [
+        'Freehand: you guide every stitch. Default mode: you approve every step.',
+        'Computerized pantograph: the machine stitches edge to edge. Auto mode: the agent runs the whole loop.',
+        'Either way, you pieced the top, chose the pattern, and fix the thread breaks.',
+        'And quilters still ask whether it counts.',
+      ],
+      fx: ['stitch-in'], avatar: { pose: 'point', x: 60 },
+      notes: 'Reveal one per press. A longarm is a frame-mounted quilting machine: you can guide it by hand (often with a stitch regulator evening out each stitch), or load a digital pantograph and let a computerized system stitch the whole quilt edge to edge. Claude Code has the same two modes: approve each step, or let auto mode run. But in both cases the machine does not make the quilt. The quilter chose the fabric, pieced the top, picked or drew the pattern, loads and tensions it, and watches for the thread break that ruins a row; with an agent, you wrote the spec, chose the approach, and review and fix what it does. And the argument is already familiar to quilters: whether computer-guided quilting is “real” quilting, and who gets credit on the label (“pieced by,” “quilted by”). That is the centaur question from Act IV, in thread. It sets up the next slide: process was the point, and the longarm shows you can keep it.',
+    },
+    {
       id: 'a2-process', act: 2, minutes: 1, layout: 'image',
       heading: 'Process was the point… isn’t it still?',
       text: 'Process over product (p. 14); making restores agency (p. xiii). Agents automate the intermediate steps.',
