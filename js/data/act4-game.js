@@ -30,8 +30,10 @@
       id: 'a4-triad', act: 4, minutes: 1.25, place: 'workshop', layout: 'statement', agency: 1,
       heading: 'Material, tools, time… and steps',
       text: 'Nowviskie’s triad (“Resistance in the Materials”), plus a fourth loss: control over the steps and decisions themselves, sold as convenience.',
+      source: 'Bethany Nowviskie, “Resistance in the Materials,” Debates in the Digital Humanities 2016, ed. Matthew K. Gold and Lauren F. Klein',
+      url: 'https://dhdebates.gc.cuny.edu/read/untitled/section/c2d3c339-bcf3-47d7-9520-2939c22837f8',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Bethany Nowviskie’s triad as we use it in the book. Agents add a fourth thing we can lose.',
+      notes: 'Bethany Nowviskie’s triad as we use it in the book. She takes it from William Morris: the beauty of medieval handicraft came from the workman having “control over his material, tools, and time.” Her worry was casualized academic labor turning scholars into consumers of commodity tools. Agents add a fourth thing we can lose.',
     },
     {
       id: 'a4-centaurs', act: 4, minutes: 1.25, layout: 'quote', agency: 1,
