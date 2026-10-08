@@ -225,7 +225,7 @@
     },
     {
       id: 'a1-metatools', act: 1, minutes: 1, layout: 'image',
-      text: 'Unlike platform-driven agents, agentic coding tools are also metatools for building alternatives to those same platforms.',
+      text: 'Unlike platform-driven agents, agentic coding tools are metatools for building alternatives to those same platforms.',
       media: [{ src: 'assets/act1/claude-process.png', alt: 'Terminal output from an agentic coding tool: a plan titled “Three Approaches” laying out a three-act animated sequence built around an author’s name.' }],
       fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
       notes: 'The turn: the same tools can make the alternatives. That is where Anastasia picks up. From practice: “But here’s the turn: agentic coding tools are also metatools. Here an agentic coding tool lays out a plan with three approaches before writing any code. The same tools that threaten to become the next platform can help us build the alternatives to those platforms.”',
