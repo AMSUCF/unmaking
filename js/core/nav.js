@@ -57,7 +57,14 @@
     };
   }
 
-  const api = { stepsOf, advance, retreat, transitionFor, actStartIndex, parseStartParam, createNavQueue };
+  // A touch that travels mostly sideways is a swipe: left is next, right is prev. Anything else
+  // (a tap, or a vertical scroll of the notes) is null.
+  function swipeDirection(dx, dy) {
+    if (Math.abs(dx) <= 60 || Math.abs(dx) <= 1.5 * Math.abs(dy)) return null;
+    return dx < 0 ? 'next' : 'prev';
+  }
+
+  const api = { stepsOf, advance, retreat, transitionFor, actStartIndex, parseStartParam, createNavQueue, swipeDirection };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.Nav = api;
 })(globalThis);

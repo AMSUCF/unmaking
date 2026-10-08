@@ -1,6 +1,6 @@
 /* Stage: fixed 1280x720, scaled by main.js. Layers stack bottom to top. */
 * { box-sizing: border-box; }
-html, body { margin: 0; height: 100%; background: #111; overflow: hidden; }
+html, body { margin: 0; height: 100%; background: #111; overflow: hidden; overscroll-behavior: none; touch-action: manipulation; }
 #stage { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: 0 0; overflow: hidden; background: #222; --floor: 684px; }
 #backdrop, #content, #avatars, #fx-layer { position: absolute; inset: 0; }
 #backdrop { z-index: 0; overflow: hidden; transition: opacity .4s; }

@@ -90,11 +90,10 @@
   $('p-notes').addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
   $('p-notes').addEventListener('touchend', (e) => {
     if (x0 === null) return;
-    const dx = e.changedTouches[0].clientX - x0;
-    const dy = e.changedTouches[0].clientY - y0;
+    const dir = Nav.swipeDirection(e.changedTouches[0].clientX - x0, e.changedTouches[0].clientY - y0);
     x0 = null;
-    if (Math.abs(dx) <= 60 || Math.abs(dx) <= 1.5 * Math.abs(dy)) return; // vertical scroll, not a swipe
-    if (dx < 0) next(); else prev();
+    if (dir === 'next') next();
+    else if (dir === 'prev') prev();
   });
 
   if (channel) {

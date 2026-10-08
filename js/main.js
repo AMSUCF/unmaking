@@ -129,6 +129,19 @@
       if (e.target.closest('a, button, video')) return;
       request(Nav.advance(intended, scenes));
     });
+    // Swipe left for next, right for prev, anywhere on the page (including the letterbox).
+    let touch = null;
+    document.addEventListener('touchstart', (e) => {
+      touch = e.touches.length === 1 && !e.target.closest('a, button, video')
+        ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : null;
+    }, { passive: true });
+    document.addEventListener('touchend', (e) => {
+      if (!touch) return;
+      const dir = Nav.swipeDirection(e.changedTouches[0].clientX - touch.x, e.changedTouches[0].clientY - touch.y);
+      touch = null;
+      if (dir === 'next') request(Nav.advance(intended, scenes));
+      else if (dir === 'prev') request(Nav.retreat(intended, scenes));
+    });
     if (channel) channel.onmessage = onMessage;
     try { await document.fonts.ready; } catch (e) { /* fonts optional */ }
     await Avatar.preload();

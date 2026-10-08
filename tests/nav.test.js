@@ -58,3 +58,11 @@ test('nav queue: latest request wins while busy', () => {
   assert.equal(q.finish(), null);
   assert.equal(q.isBusy(), false);
 });
+
+test('swipeDirection: sideways swipes navigate; taps and vertical scrolls do not', () => {
+  assert.equal(Nav.swipeDirection(-120, 10), 'next');
+  assert.equal(Nav.swipeDirection(120, -10), 'prev');
+  assert.equal(Nav.swipeDirection(-40, 0), null); // too short: a tap or a wobble
+  assert.equal(Nav.swipeDirection(-100, 90), null); // mostly vertical: scrolling the notes
+  assert.equal(Nav.swipeDirection(0, 0), null);
+});
