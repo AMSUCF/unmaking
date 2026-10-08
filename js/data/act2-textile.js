@@ -16,14 +16,6 @@
       notes: 'Textiles have been here before: the power loom, the Jacquard punch cards that fed early computing, and the Luddites, who were skilled weavers fighting for control of their craft and wages rather than against machines as such. The argument over where automation belongs in expressive work is an old one, and the humanities are having it now. From practice: we are in a moment when the web is shrinking and its audience may be almost entirely agentic, and the motivation to keep making anything in the experimental fields of e-lit and DH can be hard to find. The tools in our book are ways of building something personal and expressive, patterned after the textile arts: joining community practices and building on craft can unflatten our scholarship, to use Nick Sousanis’s term.',
     },
     {
-      id: 'a2-sousanis', act: 2, minutes: 0.75, layout: 'image',
-      heading: 'Unflattening',
-      media: [{ src: 'assets/act2/unflattening.png', alt: 'Black-and-white comics page from Nick Sousanis’s Unflattening: nine panels of tangled roots and branches with a crow, a spider web, a snake, a lizard and a meditating Buddha, captioned with lines about comics being read sequentially and viewed all at once, “both tree-like, hierarchical and rhizomatic, interwoven in a single form.”' }],
-      source: 'Nick Sousanis, Unflattening (Harvard University Press, 2015)',
-      fx: ['stitch-in'], avatar: { pose: 'point', x: 60 },
-      notes: 'Sousanis’s dissertation-as-comic, and a text we teach in Critical Making (paired with the Comic chapter; his Making Comics course inspired our mini-comic exercise). Flatness is the single fixed viewpoint; unflattening is seeing from many at once, which is what making in another form does. The comic is the argument: form and content together. From practice: Unflattening is a book I teach every time I teach critical making, and one I still turn to constantly. Sousanis has spoken out repeatedly about AI production of comics: a re-flattening of the medium rather than the unflattening we are looking for.',
-    },
-    {
       id: 'a2-learn-to-code', act: 2, minutes: 0.75, place: 'code-camp', layout: 'image',
       text: 'The learn-to-code movement (Hour of Code, “more hack, less yack,” credential-checking in DH) drew pushback for misogyny and for ignoring histories of exclusion.',
       media: [{ src: 'assets/act2/hour-of-code-frozen.jpg', alt: 'Code.org’s Hour of Code tile for its Frozen tutorial: Anna and Elsa on either side of an ice-blue rink, where a white snowflake pattern has been drawn by repeating lines.' }],

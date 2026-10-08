@@ -90,6 +90,7 @@ const Stage = (() => {
       }
     }
     if (scene.source && scene.layout !== 'quote') card.append(make('p', 'source', scene.source));
+    if (!card.children.length) root.classList.add('no-card'); // a picture on its own: no empty caption card
     if (scene.draft) root.append(make('div', 'draft-flag', 'DRAFT'));
     (scene.props || []).forEach((p) => {
       const n = make('div', 'prop ' + p.cls, p.text);

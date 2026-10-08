@@ -14,12 +14,10 @@
     },
     {
       id: 'a1-critical-making', act: 1, minutes: 0.75, layout: 'image',
-      text: '“Critical making combines the concepts of critical thinking and physical production, focusing on the act of creating as an avenue for reflection.” We see this practice as engaging both the digital and the material.',
       media: [{ src: 'assets/shared/critmaking-cover.png', alt: 'Cover of Critical Making in the Age of AI by Emily K. Johnson and Anastasia Salter: sewing-pattern pieces arranged into a profile of a head, with stitched lettering.' }],
-      source: 'Emily K. Johnson and Anastasia Salter, Critical Making in the Age of AI (Amherst College Press), p. 8',
       url: 'https://www.fulcrum.org/concern/monographs/zc77ss95p',
       fx: ['fold-in'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Our definition, from the introduction to the book. Then the gloss: we ask makers to make “both physical and computational things (and physical-computational things),” and this talk does both: paper, thread, zine, and game, all built for the web.',
+      notes: 'The book, large. Say our definition (introduction, p. 8): “Critical making combines the concepts of critical thinking and physical production, focusing on the act of creating as an avenue for reflection.” We see this practice as engaging both the digital and the material. Then the gloss: we ask makers to make “both physical and computational things (and physical-computational things),” and this talk does both: paper, thread, zine, and game, all built for the web.',
     },
     {
       id: 'a1-crafts', act: 1, minutes: 0.75, layout: 'statement',
