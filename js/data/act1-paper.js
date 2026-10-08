@@ -29,7 +29,7 @@
     },
     {
       id: 'a1-act', act: 1, minutes: 0.5, layout: 'statement',
-      heading: 'Act I: Making and Unmaking the Web',
+      heading: 'Act I: The End of Making as We Know It?',
       text: 'Critical making · enshittification · language machines',
       fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
       props: [
