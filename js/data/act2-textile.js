@@ -153,13 +153,14 @@
       notes: 'Definition from our NEH AI & DH workshop (week 7). Klimas built Twine for people who were writers more than coders; now anyone who can write a sentence can make the tool. That makes the agent the ultimate low-code platform, and the one that threatens to replace the rest: why learn Twine if you can describe the story? It is also continuous with distant coding: working with code you did not author line by line, by reading, directing, and judging it instead.',
     },
     {
-      id: 'a2-intelligent-ui', act: 2, minutes: 1, layout: 'statement',
+      id: 'a2-intelligent-ui', act: 2, minutes: 1, layout: 'image',
       heading: 'The interface is generated',
       text: 'GPT-6’s “Intelligent UI” answers with a working tool built on the spot, for ChatGPT’s 1.2 billion weekly users. Natural language programming becomes the computer’s interface.',
+      media: [{ src: 'assets/act2/gpt6-intelligent-ui.png', alt: 'OpenAI announcement page headed “GPT-6 and Intelligent UI for everyone,” over a video still: a man sits on a garage floor among packing paper assembling a small yellow children’s bike, beside a generated panel titled “Rocket Youth Bike, Assembly instructions” showing a bike diagram and “Step 4 of 6: Match the pedals.”' }],
       source: 'OpenAI, “GPT-6 and Intelligent UI for everyone” (October 7, 2026)',
       url: 'https://openai.com/index/gpt-6-for-everyone/',
       fx: ['stitch-in'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Announced the week of this talk. Ask a question and ChatGPT may answer with an interactive visual or a calculator it builds for that question, without leaving the conversation. Rolling out to paid tiers first, then Free and Go. This is the casual creator taken to its end point: not Twine for writers, but a new tool generated for every question, by everyone, with no making visible at all. Two questions to hold: who gets to keep the tool (it lives inside OpenAI’s platform, not on open ground like a Twine file), and what happens to learning when the interface is never built by us. Then the upside: an interface generated on demand can be generated for the person in front of it (next slide). TODO: add a screenshot of the announcement or an Intelligent UI answer; openai.com was blocked from the build environment.',
+      notes: 'Announced the week of this talk. Ask a question and ChatGPT may answer with an interactive visual or a calculator it builds for that question, without leaving the conversation. Rolling out to paid tiers first, then Free and Go. This is the casual creator taken to its end point: not Twine for writers, but a new tool generated for every question, by everyone, with no making visible at all. Two questions to hold: who gets to keep the tool (it lives inside OpenAI’s platform, not on open ground like a Twine file), and what happens to learning when the interface is never built by us. Then the upside: an interface generated on demand can be generated for the person in front of it (next slide). The launch image is itself about making: a generated, step-by-step assembly guide for a kid’s bike, the instructions leaflet rebuilt on the spot.',
     },
     {
       id: 'a2-accessibility', act: 2, minutes: 0.75, layout: 'statement',
