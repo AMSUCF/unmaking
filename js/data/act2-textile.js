@@ -16,12 +16,13 @@
       notes: 'Pose the question we keep asking ourselves: are we critiquing (unflattening) or making? Critical making says both, at once.',
     },
     {
-      id: 'a2-sousanis', act: 2, minutes: 0.75, layout: 'quote',
+      id: 'a2-sousanis', act: 2, minutes: 0.75, layout: 'image',
       heading: 'Unflattening',
       text: '“A simultaneous engagement of multiple vantage points from which to engender new ways of seeing.”',
+      media: [{ src: 'assets/act2/unflattening.png', alt: 'Black-and-white comics page from Nick Sousanis’s Unflattening: nine panels of tangled roots and branches with a crow, a spider web, a snake, a lizard and a meditating Buddha, captioned with lines about comics being read sequentially and viewed all at once, “both tree-like, hierarchical and rhizomatic, interwoven in a single form.”' }],
       source: 'Nick Sousanis, Unflattening (Harvard University Press, 2015)',
       fx: ['stitch-in'], avatar: { pose: 'point', x: 60 }, draft: true,
-      notes: 'Sousanis’s dissertation-as-comic, and a text we teach in Critical Making (paired with the Comic chapter; his Making Comics course inspired our mini-comic exercise). Flatness is the single fixed viewpoint; unflattening is seeing from many at once, which is what making in another form does. The comic is the argument: form and content together. TODO: add an image (the cover or a spread) and confirm the page number; the publisher and image sites are blocked from the build environment.',
+      notes: 'Sousanis’s dissertation-as-comic, and a text we teach in Critical Making (paired with the Comic chapter; his Making Comics course inspired our mini-comic exercise). Flatness is the single fixed viewpoint; unflattening is seeing from many at once, which is what making in another form does. The comic is the argument: form and content together. TODO: confirm the page number for the quote.',
     },
     {
       id: 'a2-learn-to-code', act: 2, minutes: 0.75, place: 'code-camp', layout: 'image',

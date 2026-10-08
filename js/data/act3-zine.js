@@ -61,13 +61,6 @@
       notes: 'He asks himself “Ironic? Yes and no.” The agent as a ladder, not a landlord: use it to get out, then keep the thing you made on open ground (static HTML you can host anywhere). Spelling “Jeckyll” is his.',
     },
     {
-      id: 'a3-libgen', act: 3, minutes: 1, place: 'babel', layout: 'image',
-      text: 'Meanwhile, something is reading everything we make.',
-      media: [{ src: 'assets/act3/libgen.png', alt: 'The Atlantic’s LibGen author search for “Anastasia Salter”, with 26 results including Jane Jensen and Plundered Hearts.' }],
-      fx: ['xerox-scan'], draft: true,
-      notes: 'From the Author Function talk: Books3, LibGen, and The Atlantic’s search tool. Decide whether this belongs here or in Act I.',
-    },
-    {
       id: 'a3-noble', act: 3, minutes: 1.25, layout: 'gallery',
       text: 'Before AI read everything we make, search did. Safiya Noble asked who is responsible for the results.',
       media: [
