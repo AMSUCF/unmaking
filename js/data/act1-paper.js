@@ -49,6 +49,15 @@
       notes: 'The thesis we keep returning to: the web we loved was handmade. The tools we study exist to make personal, expressive things. From practice: the tools in our book and our work exist so that people can keep making personal, expressive things against a tide of regimented and boring web platforms.',
     },
     {
+      id: 'a1-beaded', act: 1, minutes: 0.75, layout: 'image',
+      text: 'BeadED Adventures: a STEM-ed game with tangible learning artifacts. Solve the puzzles, earn the beads, and leave with a bracelet you made.',
+      media: [{ src: 'assets/act1/beaded-adventures.jpg', alt: 'BeadED Adventures, current version: six corked glass jars of beads (pink, orange, gold, green, blue, silver) on a dark wooden stand lit from underneath in rainbow colors, wired to a laptop showing the game.' }],
+      source: 'Emily K. Johnson, BeadED Adventures (current version, 2020)',
+      url: 'https://ekjphd.com/beadedadventures.html',
+      fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
+      notes: 'My own example before the students’. BeadED Adventures merges tabletop and video games: players work through an interactive story, solve STEM puzzles, and collect physical beads that become bracelets, keychains, or bookmarks. It began as a 2018 prototype with a Makey Makey controller; this is the current version. Digital and material at once: the game runs on the laptop, and the learning goes home on your wrist.',
+    },
+    {
       id: 'a1-student-selfie', act: 1, minutes: 0.5, layout: 'image',
       text: 'From our book: students made it personal. A selfie, sculpted in clay.',
       media: [{ src: 'assets/act1/student-lopez-selfie.jpg', alt: 'A hand holds a sculpted clay self-portrait: a smiling face with long auburn hair and blue eyes.' }],
