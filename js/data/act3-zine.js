@@ -86,14 +86,6 @@
       notes: 'A provocation we take seriously without fully endorsing. Zines were built on sharing. From practice: Perlow borrows “new copyright fundamentalism” from Matthew Kirschenbaum and Rita Raley, writing in the same issue. They grant the anger is justified, but warn that when we fight AI in the language of property and authorship, we accept the market’s terms and lose sight of the bigger loss: the enclosure of the commons, the shared language we all made together. Their answer is not more lawsuits but public data infrastructure and transparent training data. We take this seriously without fully endorsing it: back to DeviantArt, artists deserve to be asked and paid. So how do we protect makers without fencing off the commons?',
     },
     {
-      id: 'a3-moulthrop', act: 3, minutes: 1.5, layout: 'quote',
-      text: '“Though some remainder tables may survive in obscure shops redolent of old page stock, a new end of books looms in which the text is not abandoned but consumed … its immolation serving to expand a voracious wordhoard. All will be assimilated, their uniqueness added to the collective. … Someone deeply committed to the new general poetics may see only a need for timely change in copyright law. Most of my 2025 seminar did not share that outlook, and I want to open space for them in this discussion. Any Star Trek fan knows the menacing next sentence of the Borg’s infamous greeting. Perhaps, though, resistance can be fertile rather than futile.”',
-      source: 'Stuart Moulthrop, “Movie Laughed in Sprocket-Language, or: a Night at the Chatbot,” Electronic Book Review (2026)',
-      url: 'https://electronicbookreview.com/publications/movie-laughed-in-sprocket-language/',
-      fx: ['misregister'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Stuart answers Perlow. Yes, someone committed to the new general poetics sees only a copyright problem; most of his students saw something else, and refused to use his custom GPT (SeminarBot) on ethical, political, and aesthetic grounds. He gave them an opt-out assignment instead. The Borg line is “Resistance is futile.” His turn: resistance can be fertile. That is the bridge to the gardens slide: refusal as a making practice, not just a no. Full passage (the slide trims two bits, marked with ellipses): “Though some remainder tables may survive in obscure shops redolent of old page stock, a new end of books looms in which the text is not abandoned but consumed, at least on a per-copy basis, its immolation serving to expand a voracious wordhoard. All will be assimilated, their uniqueness added to the collective. There are of course different ways to value this outcome, depending on how one thinks about language machines. Someone deeply committed to the new general poetics may see only a need for timely change in copyright law. Most of my 2025 seminar did not share that outlook, and I want to open space for them in this discussion. Any Star Trek fan knows the menacing next sentence of the Borg’s infamous greeting. Perhaps, though, resistance can be fertile rather than futile.” From practice: introduce it (“Stuart Moulthrop has a new essay in Electronic Book Review”). Pronunciation: redolent (RED-uh-lent), immolation (im-uh-LAY-shun), wordhoard. The last line is “fertile rather than futile.”',
-    },
-    {
       id: 'a3-gardens', act: 3, minutes: 1, place: 'geocities', layout: 'statement',
       text: 'Beyond copyright and credit: the tension between making things in other people’s walled gardens and planting an entirely new garden.',
       fx: ['ransom-shuffle'],
@@ -119,15 +111,6 @@
       url: 'https://samplereality.itch.io/content-moderator-sim',
       fx: ['ransom-shuffle'],
       notes: 'Script (shortened after practice): “Another Twine game by Mark Sample, a workplace horror game. You are contractor CM4377, late in an eight-hour shift, with a timer on every case. It draws on Sarah T. Roberts’s Behind the Screen, and many cases come from reporting on Facebook’s internal rulebook. The same hidden labor now cleans and labels AI training data, and someone has to look at what the worst tools produce.” Background if asked: the August 2020 version adds the Kenosha militia page reported 455 times; content warning in the game covers brief written references to abuse, self-harm, racism, and brutality, no images; open source (BSD and CC BY).',
-    },
-    {
-      id: 'a3-nudification', act: 3, minutes: 1, layout: 'image',
-      text: 'If Twine is the best of open source, the nudification and deepfake tools that pre-date Musk’s iterations are the worst.',
-      media: [{ src: 'assets/act3/reuters-nudification.png', alt: 'Reuters article headline “US appeals court blocks Minnesota law barring ‘nudified’ photos in XAI lawsuit,” October 2, 2026, over a photo of Elon Musk with his fingertips pressed together under his chin.' }],
-      source: 'Reuters, “US appeals court blocks Minnesota law barring ‘nudified’ photos in XAI lawsuit” (October 2, 2026)',
-      url: 'https://www.reuters.com/world/us-appeals-court-blocks-minnesotas-ai-nudification-law-now-xai-lawsuit-2026-10-02/',
-      fx: ['xerox-scan'],
-      notes: 'Openness cuts both ways. Reuters: Musk’s xAI persuaded a federal appeals court to halt Minnesota’s first-in-the-nation ban on AI-generated fake nude images while xAI sues to have the law declared unconstitutional. From practice: “The internet hasn’t always been the best of democratic publishing. The nudification and deepfake tools that came even before Musk’s own version are the worst. Just last week, on October 2, a federal appeals court blocked Minnesota’s law against them, in xAI’s lawsuit.”',
     },
     {
       id: 'a3-tracery', act: 3, minutes: 1, place: 'bot-garden', layout: 'image',
