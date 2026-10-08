@@ -121,12 +121,13 @@
       notes: 'About five minutes of play: you are contractor CM4377 at ViralTitans, Inc., near the end of an eight-hour shift, with a draining timer on every case and a boss pinging you to get back to your queue. The game credits Sarah T. Roberts’s research on commercial content moderation (Behind the Screen, 2019); many cases come from the Guardian’s 2017 report on Facebook’s internal rulebook, and the August 2020 version adds the Kenosha militia page reported 455 times. Content warning in the game: brief written references to abuse, self-harm, racism, and brutality, no images or video. Twine at its sharpest: a small, free, open-source (BSD and CC BY) game that makes hidden platform labor felt. The same hidden labor now cleans and labels AI training data. And it sets up the next slide: someone has to look at what the worst tools produce.',
     },
     {
-      id: 'a3-nudification', act: 3, minutes: 1, layout: 'statement',
+      id: 'a3-nudification', act: 3, minutes: 1, layout: 'image',
       text: 'If Twine is the best of open source, the nudification and deepfake tools that pre-date Musk’s iterations are the worst.',
-      source: 'Reuters, “US appeals court blocks Minnesota’s AI nudification law” (Oct. 2, 2026)',
+      media: [{ src: 'assets/act3/reuters-nudification.png', alt: 'Reuters article headline “US appeals court blocks Minnesota law barring ‘nudified’ photos in XAI lawsuit,” October 2, 2026, over a photo of Elon Musk with his fingertips pressed together under his chin.' }],
+      source: 'Reuters, “US appeals court blocks Minnesota law barring ‘nudified’ photos in XAI lawsuit” (October 2, 2026)',
       url: 'https://www.reuters.com/world/us-appeals-court-blocks-minnesotas-ai-nudification-law-now-xai-lawsuit-2026-10-02/',
-      fx: ['xerox-scan'], draft: true,
-      notes: 'Openness cuts both ways. TODO: add the Reuters article header screenshot and make this an image scene.',
+      fx: ['xerox-scan'],
+      notes: 'Openness cuts both ways. Reuters: Musk’s xAI persuaded a federal appeals court to halt Minnesota’s first-in-the-nation ban on AI-generated fake nude images while xAI sues to have the law declared unconstitutional.',
     },
     {
       id: 'a3-tracery', act: 3, minutes: 1, place: 'bot-garden', layout: 'image',
