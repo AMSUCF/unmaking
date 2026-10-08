@@ -44,7 +44,7 @@
     },
     {
       id: 'a1-personal', act: 1, minutes: 1, place: 'hamlet', layout: 'statement',
-      text: 'All these tools are for building something personal and expressive against a tide of regimented and boring web platforms.',
+      text: 'Critical making offers a means to reflect, express, and create personal responses to platforms and environments that are often regimented, dull, and corporate (both physical and digital), and a way to escape the tyranny of the essay.',
       fx: ['cut-out'], avatar: { pose: 'point', x: 60 },
       notes: 'The thesis we keep returning to: the web we loved was handmade. The tools we study exist to make personal, expressive things. From practice: the tools in our book and our work exist so that people can keep making personal, expressive things against a tide of regimented and boring web platforms.',
     },
