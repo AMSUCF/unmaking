@@ -138,7 +138,7 @@
       text: '“There is nothing about the technology of AI that determines how it must be used. We can choose to use it sometimes, or never, or all the time, depending on our needs and proclivities. We don’t have to let billionaires tell us how it must be used.”',
       source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (MCD/Farrar, Straus and Giroux, 2026), Introduction',
       fx: ['iris-in'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Against “there is no alternative.” Doctorow sets Thatcher’s line against William Gibson’s maxim: “The street finds its own use for things.” And then: “SF writers make lousy prophets, but we can be pretty good technology critics.” Sometimes, never, or all the time: refusal (Stuart’s students) and making (our students) are both choices. The frontier platforms want the default to be all the time. What comes next is how we choose otherwise: small, local, open. From practice: add, “and nor do we have to bring the billionaires’ platforms into the agentic humanities.”',
+      notes: 'Against “there is no alternative.” Doctorow sets Thatcher’s line against William Gibson’s maxim: “The street finds its own use for things.” And then: “SF writers make lousy prophets, but we can be pretty good technology critics.” Sometimes, never, or all the time: refusal and making are both choices. The frontier platforms want the default to be all the time. What comes next is how we choose otherwise: small, local, open. From practice: add, “and nor do we have to bring the billionaires’ platforms into the agentic humanities.”',
     },
     {
       id: 'a4-local-models', act: 4, minutes: 0.75, place: 'allotment', layout: 'image', agency: 3,

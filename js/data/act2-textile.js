@@ -66,7 +66,7 @@
       heading: 'Cultural software',
       text: 'Lev Manovich and critical code studies: understanding code is part of understanding what produces culture, and black-box platforms hide exactly that.',
       fx: ['stitch-in'],
-      notes: 'The counter-argument for learning code: not credentialing, but legibility of the systems that make culture. Transition (flagged in practice): “Every one of those quilts passed through software, from a Tracery grammar to the stitch patterns on a longarm machine. Lev Manovich has a name for that.” Then from practice: push the definition of cultural software to include agentic coding tools and the software on board a longarm quilting machine. The production of culture through code is everywhere, and the black-box forms increasingly taking over those spaces could reshape our cultural discourse in ways we can’t easily see.',
+      notes: 'The counter-argument for learning code: not credentialing, but legibility of the systems that make culture. Transition (reworked after the reorder; the quilts now come later): “Haraway says we are inside what we make. Lev Manovich says that, more and more, what makes our culture is software.” Then from practice: push the definition of cultural software to include agentic coding tools and the software on board a longarm quilting machine. The production of culture through code is everywhere, and the black-box forms increasingly taking over those spaces could reshape our cultural discourse in ways we can’t easily see.',
     },
     {
       id: 'a2-casual-creators', act: 2, minutes: 1.25, place: 'craft-fair', layout: 'gallery',
