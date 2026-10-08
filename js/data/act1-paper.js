@@ -13,6 +13,15 @@
       notes: 'Emily opens. Introduce both of us and our book, Critical Making in the Age of AI. Point at the cover: it is a sewing pattern, a paper promise of cloth. Hold that thought; it becomes Act II. From practice: “Thank you for coming. I’m Emily Johnson, this is Anastasia Salter, and we wrote Critical Making in the Age of AI. It’s part provocation and part pattern book, encouraging everyone to engage in more critical making.”',
     },
     {
+      id: 'a1-critical-making', act: 1, minutes: 0.75, layout: 'image',
+      text: '“Critical making combines the concepts of critical thinking and physical production, focusing on the act of creating as an avenue for reflection.” We see this practice as engaging both the digital and the material.',
+      media: [{ src: 'assets/shared/critmaking-cover.png', alt: 'Cover of Critical Making in the Age of AI by Emily K. Johnson and Anastasia Salter: sewing-pattern pieces arranged into a profile of a head, with stitched lettering.' }],
+      source: 'Emily K. Johnson and Anastasia Salter, Critical Making in the Age of AI (Amherst College Press), p. 8',
+      url: 'https://www.fulcrum.org/concern/monographs/zc77ss95p',
+      fx: ['fold-in'], avatar: { pose: 'talk', x: 60 },
+      notes: 'Our definition, from the introduction to the book. Then the gloss: we ask makers to make “both physical and computational things (and physical-computational things),” and this talk does both: paper, thread, zine, and game, all built for the web.',
+    },
+    {
       id: 'a1-crafts', act: 1, minutes: 0.75, layout: 'statement',
       heading: 'Four acts, four crafts',
       text: 'Paper. Thread. Zine. Game. Each act is made in a different craft, and each one gets unmade on the way to the next.',
