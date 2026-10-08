@@ -48,7 +48,6 @@
 .place-game .ga-beds { background: radial-gradient(circle 4px at 50% 30%, #4caf50 98%, transparent) 0 0 / 30px 38px, linear-gradient(transparent 22px, #6b4a2e 22px); }
 .place-game .ga-rack { background: repeating-linear-gradient(#2a2a2a 0 26px, #111 26px 30px); border: 4px solid #555; }
 .place-game .ga-rack::after { content: ''; position: absolute; inset: 8px 6px; background: radial-gradient(circle 2px, #9dff00 98%, transparent) 0 0 / 12px 30px; animation: save-twinkle .8s steps(2) infinite; }
-.place-game .ga-scarecrow { background: linear-gradient(#8a5a32, #8a5a32) 50% 20px / 6px 60px no-repeat, linear-gradient(#8a5a32, #8a5a32) 50% 34px / 50px 6px no-repeat, radial-gradient(circle 10px at 50% 14px, #e2b33c 98%, transparent) no-repeat, linear-gradient(#c0544a, #c0544a) 50% 0 / 30px 6px no-repeat; }
 .place-game .ga-floor { --f1: #5a8a42; --f2: #4f7d3a; }
 
 /* THE COMMONS, AT SUNRISE */

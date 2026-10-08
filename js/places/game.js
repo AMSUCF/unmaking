@@ -66,7 +66,6 @@
         { layer: 'far', cls: 'ga-fence', box: [220, 420, 980, 110] },
         { layer: 'mid', cls: 'ga-beds', box: [240, 532, 600, 38] },
         { layer: 'mid', cls: 'ga-rack', box: [1204, 380, 70, 190] },
-        { layer: 'egg', cls: 'ga-scarecrow', box: [120, 44, 56, 76] },
         floor('ga-floor'),
       ],
     },
