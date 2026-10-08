@@ -240,12 +240,6 @@ Moving beyond copyright, authorial credit, etc.,
 
 **Slide -**
 
-Video for “You Are Elon Musk” - https://direkris.itch.io/elon source 
-
----
-
-**Slide -**
-
 Then the screenshot from the article on his nudification - https://www.reuters.com/world/us-appeals-court-blocks-minnesotas-ai-nudification-law-now-xai-lawsuit-2026-10-02/?link_source=ta_bluesky_link&taid=6ac0238eaa92170001cc033a&utm_campaign=trueanthem&utm_medium=social&utm_source=bluesky
 
 (if twine is the best of open source, the nudification / deepfakes tools that pre-date Musk’s iterations are the worst)
@@ -295,12 +289,6 @@ Agentic Humanities must push back at agentic defaults and tools that take over p
 **Slide -**
 
 The book is intentionally political, written in a state where humanities work was cast as a "public threat" (p. xiv; pp. 231-232).
-
----
-
-**Slide -**
-
-Maybe today’s politics is what we are trying to unmake
 
 ---
 

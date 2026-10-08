@@ -128,12 +128,6 @@
       notes: 'Bratty and Catty, delighted about the end of humanity. Apocalypse talk is marketing too: if it might end the world, it must be powerful, and only its makers can manage it. Both stories take the decisions away from us. From practice: louder and louder promises that agents are here to replace humanity, perhaps destroy us all. It can become depressing even to talk about bringing these tools in.',
     },
     {
-      id: 'a4-unmake-politics', act: 4, minutes: 0.75, layout: 'statement', agency: 3,
-      text: 'Maybe today’s politics is what we are trying to unmake.',
-      fx: ['iris-in'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Pause here. From practice: “But the alternative of simply not engaging with the most powerful low-code tool ever developed is one I cannot stand.” When we are trying to unmake, preserve, and build so much with fewer resources, agentic tools offer mechanisms for that work.',
-    },
-    {
       id: 'a4-frontier', act: 4, minutes: 0.5, place: 'frontier', layout: 'statement', agency: 2,
       text: 'Frontier AI is the platform cycle again: good to users first. We have seen how that story ends.',
       fx: ['iris-in'], avatar: { pose: 'talk', x: 60 },

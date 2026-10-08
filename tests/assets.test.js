@@ -11,7 +11,6 @@ const MOVED = [
   'assets/act3/cbts.jpg',
   'assets/act3/bbdq.jpg',
   'assets/act3/flores-workshop.jpg',
-  'assets/act3/you-are-elon-musk.mp4',
   'assets/act3/lawhead-flash.png',
   'assets/act3/tracery.png',
   'assets/act4/racter-chamberlain.png',

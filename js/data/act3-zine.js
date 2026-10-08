@@ -92,27 +92,6 @@
       notes: 'Authorship versus ownership. The question is not only who gets paid, but where the thing can live. From practice: “The question is not only who gets paid; it is where your work can live.”',
     },
     {
-      id: 'a3-elon', act: 3, minutes: 1.25, layout: 'video',
-      heading: 'You Are Elon Musk',
-      source: 'direkris, itch.io',
-      url: 'https://direkris.itch.io/elon',
-      media: [{ src: 'assets/act3/you-are-elon-musk.mp4', alt: 'Screen recording of the interactive fiction You Are Elon Musk by direkris.' }],
-      fx: ['sticker-slap'],
-      notes: 'Click the video to play (it does not autoplay; click does not advance). The open web at its best: a sharp, small, self-published game. From practice: you wake up as Musk and have to spend his fortune. A pointed, sharp, self-published Twine game, free to play in the browser.',
-    },
-    {
-      id: 'a3-content-moderator', act: 3, minutes: 1, layout: 'gallery',
-      text: 'Mark Sample’s Content Moderator Sim: a “workplace horror game” about the people who screen what platforms don’t want us to see.',
-      media: [
-        { src: 'assets/act3/content-moderator-title.png', alt: 'Title screen of Content Moderator Sim, “A Workplace Horror Game” by Mark Sample, with a pop-up notification “@CM4377 Back to work!!!”: “It’s close to the end of an 8 hour shift at ViralTitans, Inc., the third largest online content moderation subcontractor in the Bay area,” above links Back to Work, Content Warning and About.' },
-        { src: 'assets/act3/content-moderator-case.png', alt: 'A case in Content Moderator Sim: “You have screened 969 cases today. Time Remaining to Review this Case,” with a draining timer bar, then “Break is over. On the screen is a short video. Someone posted it to a social media site. Somebody else reported it as inappropriate.”' },
-      ],
-      source: 'Mark Sample, Content Moderator Sim (Twine/SugarCube, 2020)',
-      url: 'https://samplereality.itch.io/content-moderator-sim',
-      fx: ['ransom-shuffle'],
-      notes: 'Script (shortened after practice): “Another Twine game by Mark Sample, a workplace horror game. You are contractor CM4377, late in an eight-hour shift, with a timer on every case. It draws on Sarah T. Roberts’s Behind the Screen, and many cases come from reporting on Facebook’s internal rulebook. The same hidden labor now cleans and labels AI training data, and someone has to look at what the worst tools produce.” Background if asked: the August 2020 version adds the Kenosha militia page reported 455 times; content warning in the game covers brief written references to abuse, self-harm, racism, and brutality, no images; open source (BSD and CC BY).',
-    },
-    {
       id: 'a3-tracery', act: 3, minutes: 1, place: 'bot-garden', layout: 'image',
       heading: 'Maintenance is resistance',
       text: 'Community: the people who keep the tools running.',
