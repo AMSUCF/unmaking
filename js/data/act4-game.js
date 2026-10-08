@@ -73,11 +73,13 @@
       notes: 'Each press reveals one option, like a dialogue menu. From the book: a critical maker rejects, supplements, extends, and critiques the tool. All four, not one.',
     },
     {
-      id: 'a4-ask', act: 4, minutes: 1.5, layout: 'choice', agency: 3,
-      heading: 'Ask of any agent:',
-      choices: ['What did it plan?', 'Which tools did it call?', 'Which sources did it choose?', 'What did it skip?', 'Where would a human have chosen differently?'],
-      fx: ['choice-menu'], avatar: { pose: 'point', x: 60 },
-      notes: 'The inspection pattern from Act III, made concrete. These questions work for students, for reviewers, and for us. Reveal one per press.',
+      id: 'a4-pushback', act: 4, minutes: 1.5, layout: 'image', agency: 3,
+      text: 'Agentic Humanities must push back at agentic defaults and tools that take over process and intention.',
+      media: [{ src: 'assets/act4/claude-auto-mode-default.png', alt: 'Claude blog announcement, August 7, 2026: “Auto mode is now the default in Claude Code for Pro, Max, and Team plans.” Subhead: “Claude Code will soon run auto mode by default for Pro, Max, and Team plans, enabling longer-running autonomous work, and catching more dangerous commands than manual review in our testing.”' }],
+      source: 'Anthropic, “Auto mode is now the default in Claude Code for Pro, Max, and Team plans” (August 7, 2026)',
+      url: 'https://claude.com/blog/auto-mode-default-in-claude-code',
+      fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
+      notes: 'A default is a decision someone else made for you. Since August 14, Claude Code no longer stops to ask before each step: a classifier model reviews every tool call and lets it run unless it looks irreversible, destructive, or aimed outside your environment. Anthropic’s case is safety: in their testing the classifier caught more dangerous commands than people did, because people stop reading the prompts. Maybe so, but the human checkpoint was also where process and intention lived. Pushing back means choosing the mode, reading the plan, and keeping the steps visible.',
     },
     {
       id: 'a4-defaults', act: 4, minutes: 1, layout: 'gallery', agency: 2,

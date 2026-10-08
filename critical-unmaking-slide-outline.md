@@ -288,7 +288,7 @@ Can we unmake the Agent? A critical maker rejects, supplements, extends, and cri
 
 **Slide -**
 
-Ask of any agent: What did it plan? Which tools did it call? Which sources did it choose? What did it skip? Where would a human have chosen differently?
+Agentic Humanities must push back at agentic defaults and tools that take over process and intention. (Screenshot: Claude Code's auto mode is now the default, https://claude.com/blog/auto-mode-default-in-claude-code)
 
 ---
 
