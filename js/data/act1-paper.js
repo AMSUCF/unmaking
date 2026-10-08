@@ -46,7 +46,7 @@
       id: 'a1-personal', act: 1, minutes: 1, place: 'hamlet', layout: 'statement',
       text: 'Critical making offers a means to reflect, express, and create personal responses to platforms and environments that are often regimented, dull, and corporate (both physical and digital), and a way to escape the tyranny of the essay.',
       fx: ['cut-out'], avatar: { pose: 'point', x: 60 },
-      notes: 'The thesis we keep returning to: the web we loved was handmade. The tools we study exist to make personal, expressive things. From practice: the tools in our book and our work exist so that people can keep making personal, expressive things against a tide of regimented and boring web platforms.',
+      notes: 'The thesis we keep returning to. Critical making is how we reflect, express, and make personal responses to the regimented, dull, corporate spaces we are handed, on screen and off: the platform feed, but also the classroom and the campus. It is also a way out of the tyranny of the essay, the one form scholarship is expected to take. The examples that follow show it: my own BeadED Adventures, then four students’ work from the book.',
     },
     {
       id: 'a1-beaded', act: 1, minutes: 0.75, layout: 'image',
