@@ -111,7 +111,9 @@
       id: 'a1-libgen', act: 1, minutes: 1, layout: 'image',
       text: 'Meanwhile, something is reading everything we make.',
       media: [{ src: 'assets/act1/libgen.png', alt: 'The Atlantic’s LibGen author search for “Anastasia Salter”, with 26 results including Jane Jensen and Plundered Hearts.' }],
-      fx: ['cut-out'], draft: true,
+      source: 'Alex Reisner, “Search LibGen, the Pirated-Books Database That Meta Used to Train AI,” The Atlantic (March 20, 2025)',
+      url: 'https://www.theatlantic.com/technology/archive/2025/03/search-libgen-data-set/682094/',
+      fx: ['cut-out'],
       notes: 'From the Author Function talk: Books3, LibGen, and The Atlantic’s search tool.',
     },
     {
@@ -121,7 +123,7 @@
       source: 'Books By People, as reported in Wired (October 2025)',
       url: 'https://www.wired.com/story/organic-literature-books-by-people-stamp-ai/',
       fx: ['paper-tear'],
-      notes: 'After the creative class fights back in court, the market answer: certify the human. Books By People, a UK start-up (Esme Dennys, Conrad Young, Gavin Johnston), certifies independent publishers: a cover stamp, a certification ID, a public directory. Verification is human evaluation, text analysis, and editorial-process review; they rejected AI detectors as too easy to fool. First stamped book: Gonzalo C Garcia’s Telenovela (Galley Beggar Press). Dennys: “There are just so many AI-generated books, and our aim is to provide an easy way for readers to be able to tell which ones are human-authored.” Questions for the room: where does “brainstorming” end and authorship begin? Would a writer who rebuilt their site with an agent still count? (Flores, in Act III, is that writer.) “Organic” borrows from food, the same move as the handmade revival Anastasia picks up in Act II: craft as a market label. TODO: add a screenshot of the Wired headline or the stamp (both sites are blocked from the build environment).',
+      notes: 'After the creative class fights back in court, the market answer: certify the human. Books By People, a UK start-up (Esme Dennys, Conrad Young, Gavin Johnston), certifies independent publishers: a cover stamp, a certification ID, a public directory. Verification is human evaluation, text analysis, and editorial-process review; they rejected AI detectors as too easy to fool. First stamped book: Gonzalo C Garcia’s Telenovela (Galley Beggar Press). Dennys: “There are just so many AI-generated books, and our aim is to provide an easy way for readers to be able to tell which ones are human-authored.” Questions for the room: where does “brainstorming” end and authorship begin? Would a writer who rebuilt their site with an agent still count? (Flores, in Act III, is that writer.) “Organic” borrows from food, the same move as the handmade revival Anastasia picks up in Act II: craft as a market label.',
     },
     {
       id: 'a1-agents-def', act: 1, minutes: 1, layout: 'image',
