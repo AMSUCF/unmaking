@@ -1,4 +1,5 @@
-/* Standalone presenter state (phone): position, reveal steps, act clocks, and persistence across reloads. */
+/* Standalone presenter state (phone): position, act clocks, and persistence across reloads.
+   The phone has nothing to reveal, so it moves slide to slide and skips choice reveal steps. */
 (function (root) {
   'use strict';
   const isNode = typeof module === 'object' && module.exports;
@@ -22,8 +23,7 @@
       try {
         const d = JSON.parse(storage.getItem(KEY) || 'null');
         if (!d || !d.pos || !scenes[d.pos.index]) return;
-        const max = Nav.stepsOf(scenes[d.pos.index]);
-        pos = { index: d.pos.index, step: Math.max(0, Math.min(max, d.pos.step | 0)) };
+        pos = { index: d.pos.index, step: 0 };
         started = !!d.started;
         clock.restore(d.clocks);
       } catch (e) { /* corrupt or blocked storage: start fresh */ }
@@ -42,8 +42,8 @@
     }
 
     const api = {
-      next() { move(Nav.advance(pos, scenes)); },
-      prev() { move(Nav.retreat(pos, scenes)); },
+      next() { if (pos.index < scenes.length - 1) move({ index: pos.index + 1, step: 0 }); },
+      prev() { if (pos.index > 0) move({ index: pos.index - 1, step: 0 }); },
       goto(index) { if (scenes[index]) move({ index, step: 0 }); },
       gotoAct(n) { const i = Nav.actStartIndex(scenes, n); if (i >= 0) api.goto(i); },
       start() { started = true; clock.mark(scenes[pos.index].act); save(); },

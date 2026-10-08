@@ -11,12 +11,13 @@ const scenes = [
 ];
 const memory = () => { const m = {}; return { getItem: (k) => (k in m ? m[k] : null), setItem: (k, v) => { m[k] = String(v); } }; };
 
-test('next and prev walk slides and reveal steps', () => {
+test('next and prev move slide to slide, skipping choice reveal steps', () => {
   const r = PresenterState.createRemote(scenes);
   r.next(); assert.deepEqual([r.status().index, r.status().step], [1, 0]);
-  r.next(); r.next(); assert.deepEqual([r.status().index, r.status().step], [1, 2]);
-  r.next(); assert.equal(r.status().scene.id, 'a2-a');
-  r.prev(); assert.deepEqual([r.status().index, r.status().step], [1, 2]);
+  r.next(); assert.deepEqual([r.status().index, r.status().step], [2, 0]);
+  r.prev(); assert.deepEqual([r.status().index, r.status().step], [1, 0]);
+  r.prev(); r.prev(); assert.equal(r.status().index, 0);
+  r.next(); r.next(); r.next(); r.next(); assert.equal(r.status().index, 3);
 });
 
 test('clocks wait for start, then reset on a forward act entry only', () => {
@@ -27,7 +28,7 @@ test('clocks wait for start, then reset on a forward act entry only', () => {
   assert.equal(r.status().elapsed, 0);
   r.start(); t = 65000;
   assert.equal(r.status().elapsed, 60000);
-  r.next(); r.next(); t = 70000; r.next();   // forward into act 2
+  t = 70000; r.next();                      // forward into act 2
   t = 80000;
   assert.equal(r.status().act.n, 2);
   assert.equal(r.status().elapsed, 10000);
@@ -60,9 +61,9 @@ test('state survives a reload through storage', () => {
   let t = 0;
   const storage = memory();
   const a = PresenterState.createRemote(scenes, { now: () => t, storage });
-  a.start(); a.next(); a.next(); t = 7000;
+  a.start(); a.next(); t = 7000;
   const b = PresenterState.createRemote(scenes, { now: () => t, storage });
-  assert.deepEqual([b.status().index, b.status().step, b.status().started], [1, 1, true]);
+  assert.deepEqual([b.status().index, b.status().step, b.status().started], [1, 0, true]);
   assert.equal(b.status().elapsed, 7000);
 });
 
@@ -75,7 +76,7 @@ test('corrupt, stale or blocked storage starts fresh', () => {
   assert.equal(PresenterState.createRemote(scenes, { storage: stale }).status().index, 0);
   const clamp = memory();
   clamp.setItem(PresenterState.KEY, JSON.stringify({ pos: { index: 1, step: 9 }, started: false, clocks: {} }));
-  assert.equal(PresenterState.createRemote(scenes, { storage: clamp }).status().step, 2);
+  assert.equal(PresenterState.createRemote(scenes, { storage: clamp }).status().step, 0);
   const blocked = { getItem() { throw new Error('denied'); }, setItem() { throw new Error('denied'); } };
   const r = PresenterState.createRemote(scenes, { storage: blocked });
   r.next();

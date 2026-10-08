@@ -13,9 +13,9 @@
   const LINK_TTL = 5000;  // drop back to solo if the deck goes quiet this long
   const setText = (id, text) => { const el = $(id); if (el.textContent !== text) el.textContent = text; };
 
-  function summary(s, step) {
+  function summary(s) {
     if (!s) return '(end of deck)';
-    const choices = s.choices ? s.choices.map((c, i) => (i < step ? '✔ ' : '· ') + c).join('\n') : '';
+    const choices = s.choices ? s.choices.map((c) => '· ' + c).join('\n') : '';
     return [s.heading, s.text && s.text.replace(/\*([^*\n]+)\*/g, '$1'), choices, s.source].filter(Boolean).join('\n');
   }
 
@@ -46,10 +46,10 @@
     $('p-pace').dataset.pace = v.started ? pace : '';
     $('p-total').textContent = v.started ? 'total ' + Timer.formatClock(v.total) : '';
     setText('p-notes', s.notes || '');
-    setText('p-current', summary(s, v.step));
+    setText('p-current', summary(s));
     $('p-url').textContent = s.url || '';
     const next = scenes[v.index + 1];
-    setText('p-next', next ? `${next.id}\n${summary(next, 0)}` : '(end of deck)');
+    setText('p-next', next ? `${next.id}\n${summary(next)}` : '(end of deck)');
     $('p-start').classList.toggle('hidden', !!linked || v.started);
     ['p-reset-act', 'p-restart'].forEach((id) => $(id).classList.toggle('hidden', !!linked));
     document.querySelectorAll('[data-act]').forEach((b) => b.classList.toggle('hidden', !!linked));
