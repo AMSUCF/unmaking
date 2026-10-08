@@ -193,7 +193,7 @@
     },
     {
       id: 'a1-muse', act: 1, minutes: 1.25, place: 'companion-shop', layout: 'gallery',
-      text: 'Meta Muse and OpenAI Dots: cute companions marketed as the cure for enshittification, sold by the companies selling enshittification.',
+      text: 'Agents are now being marketed for the everyday user: Meta Muse and OpenAI Dots, cute companions sold by platforms as a cure for the web’s enshittification.',
       media: [{ src: 'assets/act1/muse-keroppi.png', alt: 'Chat companion profile with a green Keroppi-style frog avatar wearing a bow tie, labeled “Keroppi, Active.”' },
         { src: 'assets/act1/meta-tamagotchi.png', alt: 'A hand with pink manicured nails holding a small black Meta device showing a cream, plush-looking cartoon creature, captioned “Meta unveils pocket-sized ‘AI Tamagotchi.’”' }],
       fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
