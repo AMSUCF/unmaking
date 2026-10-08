@@ -166,20 +166,11 @@
       notes: 'From the Author Function talk: Books3, LibGen, and The Atlantic’s search tool. From practice: “Meanwhile, something is reading everything we make. In 2025, The Atlantic released a tool to search LibGen, the pirated library that Meta and other AI companies drew on. These are Anastasia’s results.”',
     },
     {
-      id: 'a1-organic', act: 1, minutes: 1, layout: 'quote',
-      heading: 'Certified organic',
-      text: '“Previous book-labeling schemes, like Human Authored, have operated under an honesty system, where an author promises they haven’t used AI in the development process. To try to add more weight to its certification, Books by People asks for an authorship declaration, runs each manuscript through proprietary software, and manually examines early drafts and research materials supplied by the writer and editor for “indicators of humanity.”\n\nThe organization is “looking at all the things that give us the best sense of whether a person wrote the work—whether the work was made during a natural process of drafting and redrafting,” says Dennys.',
-      source: 'Books By People, as reported in Wired (October 2025)',
-      url: 'https://www.wired.com/story/organic-literature-books-by-people-stamp-ai/',
-      fx: ['paper-tear'],
-      notes: 'Script (Emily stumbled here in practice): “And the market’s answer: certify the human.” Last fall, the UK start-up Books By People began stamping books “Organic Literature.” Earlier labels ran on an honesty system where authors promised they had not used AI; Books By People asks for an authorship declaration, runs each manuscript through its own software, and samples early drafts and research notes for indicators of humanity. So where does brainstorming end and authorship begin? And “organic,” of course, comes from food. Books By People, a UK start-up (Esme Dennys, Conrad Young, Gavin Johnston), certifies independent publishers: a cover stamp, a certification ID, a public directory. Verification is human evaluation, text analysis, and editorial-process review; they rejected AI detectors as too easy to fool. First stamped book: Gonzalo C Garcia’s Telenovela (Galley Beggar Press). Dennys: “There are just so many AI-generated books, and our aim is to provide an easy way for readers to be able to tell which ones are human-authored.” Questions for the room: where does “brainstorming” end and authorship begin? Would a writer who rebuilt their site with an agent still count? (Flores, in Act III, is that writer.) “Organic” borrows from food, the same move as the handmade revival Anastasia picks up in Act II: craft as a market label.',
-    },
-    {
       id: 'a1-agents-def', act: 1, minutes: 1, layout: 'image',
-      text: 'Agents are generative AI put to a purpose: “An LLM agent runs tools in a loop to achieve a goal.” (Simon Willison)',
+      text: 'Generative AI is relatively passive, but we are now watching platforms be made and unmade by agentic AI. Simon Willison defines agentic AI as an LLM agent that “runs tools in a loop to achieve a goal.”',
       media: [{ src: 'assets/act1/agents.jpg', alt: 'Pixel-art arcade-cabinet diagram titled “Agentic AI: The LLM at the Controls”: a brain in a captain’s hat plans, selects a tool, observes output, and loops, with a tool palette and the caption “An LLM agent runs tools in a loop to achieve a goal.”' }],
       fx: ['cut-out'],
-      notes: 'Define terms for the room: AI with tools that lets it serve as a low- or no-code interface for many tasks. From practice: “Simon Willison explains: an LLM agent runs tools in a loop to achieve a goal. It’s generative AI put to a purpose, with tools that let it act as a low-code or no-code interface for almost anything.”',
+      notes: 'Define terms for the room. A chatbot waits for you to ask; an agent acts: it plans, picks a tool, checks the result, and goes again, which lets it serve as a low- or no-code interface for many tasks, including building and tearing down the platforms themselves. From practice: “Simon Willison explains: an LLM agent runs tools in a loop to achieve a goal. It’s generative AI put to a purpose, with tools that let it act as a low-code or no-code interface for almost anything.”',
     },
     {
       id: 'a1-ghost-agents', act: 1, minutes: 1, layout: 'gallery',
