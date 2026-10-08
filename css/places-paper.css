@@ -113,7 +113,6 @@
 }
 
 /* Slide props: "you are already here" map sticker (a1-already-here) */
-.prop-you-are-here { padding-top: 70px; color: #fffaf0; font: 700 20px/22px 'Patrick Hand', cursive; text-align: center; transform: rotate(6deg);
   background: radial-gradient(circle 24px at 50% 32px, #b6452c 0 60%, #fffaf0 62% 78%, #b6452c 80% 96%, transparent) no-repeat,
     linear-gradient(#b6452c, #b6452c) 50% 66px / 120px 56px no-repeat;
   filter: drop-shadow(0 3px 2px rgba(60, 40, 20, .35)); }
