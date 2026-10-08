@@ -7,7 +7,7 @@
   const releaseHeld = (parts) => parts.forEach((p) => p.getAnimations().forEach((a) => a.cancel()));
   const wrapOf = (root) => root.querySelector('.card-wrap');
   // On these slides the Companion Shop plushies' eyes turn toward the avatar.
-  const WATCHING = ['a1-muse-memory', 'a1-muse-strengthen'];
+  const WATCHING = ['a1-muse-jolly'];
 
   Crafts.register('paper', {
     backdrop() {},

@@ -200,17 +200,6 @@
       notes: 'The lure of AI as interface, and the next death of search and even of the feed. They are obvious Sanrio and Labubu riffs with OpenClaw wrappers, but they are marketed as the solution to the very problem their makers created. Even The Daily Show noticed (next slide). From practice: Anastasia is using OpenAI Dots (the Keroppi is hers). The Muse charm recalls a Tamagotchi; the Keroppi is a Sanrio rip-off. Marketed as the cure for enshittification by the companies selling enshittification. AI as interface may be the next death of search, and even of the feed.',
     },
     {
-      id: 'a1-keroppi-phud', act: 1, minutes: 1, layout: 'gallery',
-      text: 'The kind of “work” a companion can do: Keroppi earned a PhuD on Anastasia’s behalf, for a “dissertation” called “The Remainder Is a Person.”',
-      media: [
-        { src: 'assets/act1/underacademy-phud.jpg', alt: 'UnderAcademy College diploma, “A Non-Degree Granting Institution,” conferring on “Anastasia Salter / Keroppi” the honorary, fully defunded degree of PhuD, Honors Hallucinatorius, signed by Talan Memmott, President, and Mark C. Marino, Provisional Provost, with a cartoon Keroppi in a mortarboard atop books labeled Play, Prompt and Pure Nonsense.' },
-        { src: 'assets/act1/underacademy-journal.jpg', alt: 'Journal of Untrained Models, Volume 5, Number ∞, The Monetized Number: a New PhuD listing for “The Remainder Is a Person” by “Keroppi, stochastically generated applicant, on behalf of Anastasia Salter,” Doctor of Philosophy, Unreality and Design, beside a heavily redacted text.' },
-      ],
-      source: 'UnderAcademy College (Talan Memmott and Mark C. Marino), October 2026',
-      fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
-      notes: 'UnderAcademy College is Talan Memmott and Mark Marino’s long-running parody institution: “a non-degree granting institution,” motto “Do No Ham,” now granting the “honorary, fully defunded degree of PhuD” (Honors Hallucinatorius) to anyone who submits an AI-generated dissertation. Mine went to Keroppi, “stochastically generated applicant, on behalf of Anastasia Salter,” for “The Remainder Is a Person,” provisionally “Toward a Framework for the Strategic Management of the Person Who Is Still Here.” From Keroppi’s letter of application: “I believe my ability to produce an appropriate quantity of language makes me a strong candidate for further quantities of language.” That is the labor these companions are built for: plausible quantity, on our behalf. I join Davin Heckman, Scott Rettberg, Talan, and others as a newly generated PhuD. From practice (Emily lost her place here; use this script): “Here’s the kind of ‘work’ a companion can do. Keroppi (keh-ROP-ee) earned a PhuD on Anastasia’s behalf, from UnderAcademy College, which is not accredited, for a dissertation called ‘The Remainder Is a Person,’ about uncompensated labor in higher education.”',
-    },
-    {
       id: 'a1-muse-jolly', act: 1, minutes: 0.5, layout: 'quote',
       text: '“It’s my job to strip mine all that you are to help you.”',
       source: 'Jolly, Meta Muse’s mascot (voiced by Jon Stewart), The Daily Show, October 5, 2026',
@@ -227,22 +216,6 @@
         { src: 'assets/act1/muse-api.jpg', alt: 'Post by Mark Zuckerberg (@finkd): “Opening access for developers to build Muse connectors. You bring the API -- Muse brings the agent, the browser, and the context of what the person actually wants. People reach your service just by asking for it, and their agent takes it from there. New connectors are live today. Come build with us. muse.ai/platform”' }],
       fx: ['cut-out'],
       notes: 'Click the video to play (clicking does not advance). Muse is genuinely useful right now: it makes using Facebook easier. That is stage one of enshittification. Remember Doctorow: good to users first, then the squeeze. From practice: point at the yeti’s ankles. For the API post (Emily had no line yet), try: “And Meta has opened Muse to outside developers: you bring the API, Muse brings the agent. Every service becomes something you reach through Meta’s agent.”',
-    },
-    {
-      id: 'a1-muse-memory', act: 1, minutes: 1, layout: 'quote',
-      text: '“Where they live, what they do, the threads that recur (the apartment move, the shared savings goal)” … the “dates that matter,” such as birthdays or anniversaries … “the trip in March, the argument that got resolved, the milestone last week.”',
-      source: 'Wired, “Muse Creates Detailed Profiles of All Your Friends and Family”',
-      url: 'https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/',
-      fx: ['fold-in'],
-      notes: 'From Muse’s own system instructions, as reported by Wired. It remembers your friends for you. From practice: “Wired reported what Muse remembers: your friends, for you. Where they live, the dates that matter, the argument that got resolved. Why bother putting effort into friendship?”',
-    },
-    {
-      id: 'a1-muse-strengthen', act: 1, minutes: 1, layout: 'quote',
-      text: '“How close they are, what it is built on, how they act with each other, and what it seems to need right now.” … “A reason to call, a date worth remembering, something they said to circle back on, a way to be there for them that matters.”',
-      source: 'Wired, on Muse’s “Strengthening” instructions',
-      url: 'https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/',
-      fx: ['fold-in'],
-      notes: 'The "Strengthening" section: relationship maintenance outsourced to a platform that profits from the data.',
     },
     {
       id: 'a1-lens', act: 1, minutes: 1, place: 'worktable', layout: 'statement',
