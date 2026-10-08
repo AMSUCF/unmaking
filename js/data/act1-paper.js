@@ -169,7 +169,7 @@
     },
     {
       id: 'a1-keroppi-phud', act: 1, minutes: 1, layout: 'gallery',
-      text: 'The kind of “work” a companion can do: Keroppi earned a PhuD on my behalf, for a dissertation called “The Remainder Is a Person.”',
+      text: 'The kind of “work” a companion can do: Keroppi earned a PhuD on Anastasia’s behalf, for a “dissertation” called “The Remainder Is a Person.”',
       media: [
         { src: 'assets/act1/underacademy-phud.jpg', alt: 'UnderAcademy College diploma, “A Non-Degree Granting Institution,” conferring on “Anastasia Salter / Keroppi” the honorary, fully defunded degree of PhuD, Honors Hallucinatorius, signed by Talan Memmott, President, and Mark C. Marino, Provisional Provost, with a cartoon Keroppi in a mortarboard atop books labeled Play, Prompt and Pure Nonsense.' },
         { src: 'assets/act1/underacademy-journal.jpg', alt: 'Journal of Untrained Models, Volume 5, Number ∞, The Monetized Number: a New PhuD listing for “The Remainder Is a Person” by “Keroppi, stochastically generated applicant, on behalf of Anastasia Salter,” Doctor of Philosophy, Unreality and Design, beside a heavily redacted text.' },
