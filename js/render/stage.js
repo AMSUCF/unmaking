@@ -76,6 +76,7 @@ const Stage = (() => {
       const ol = make('ol', 'choices');
       scene.choices.forEach((c) => ol.append(make('li', 'choice', c)));
       card.append(ol);
+      if (media[0]) root.append(figure(media[0]));
     } else if (scene.layout === 'credits') {
       const ul = make('ul', 'credits');
       scene.lines.forEach((l) => ul.append(make('li', '', l)));
