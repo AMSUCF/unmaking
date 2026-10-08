@@ -1,4 +1,4 @@
-/* Act I — Paper — presented by Emily K. Johnson. Outline: "Death of the Web as we know it". */
+/* Act I — Paper — presented by Emily K. Johnson. Outline: "Making and Unmaking the Web". */
 (function (root) {
   'use strict';
   const ACT1_SCENES = [
@@ -31,8 +31,8 @@
     },
     {
       id: 'a1-act', act: 1, minutes: 0.5, layout: 'statement',
-      heading: 'Act I: The Death of the Web (As We Know It)',
-      text: 'Coding · enshittification · politics',
+      heading: 'Act I: Making and Unmaking the Web',
+      text: 'Critical making · enshittification · language machines',
       fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
       props: [
         { cls: 'prop-fire', box: [0, 600, 1280, 120] },
@@ -40,7 +40,7 @@
         { cls: 'prop-fine-sign', box: [30, 380, 186, 76], text: 'and this\nis fine.' },
         { cls: 'prop-fine-dog', box: [1100, 520, 130, 160] },
       ],
-      notes: 'Section title. Three threads: what coding is now, what platforms have become, and the politics underneath both. Emily holds up the "this is fine" sign while the paper web burns (after KC Green, "On Fire," Gunshow, 2013). From practice: Emily: “I’m usually the optimist of the two of us, so it’s fun to get the doom slide this time.” Then the three threads. Then: about a decade ago, the Computer Science for All initiative and the learn-to-code movement told everyone they had to code, and a lot of resources went into programs to teach it. Now AI agents promise that no one has to code at all.',
+      notes: 'Section title. Three threads: critical making (the handmade web and who gets to make it), enshittification (what platforms have become), and language machines (the text flooding in, and the companions selling themselves as the cure). Emily holds up the "this is fine" sign while the paper web burns (after KC Green, "On Fire," Gunshow, 2013). From practice: Emily: “I’m usually the optimist of the two of us, so it’s fun to get the doom slide this time.” Then the three threads (updated since practice: critical making, enshittification, language machines). Then: about a decade ago, the Computer Science for All initiative and the learn-to-code movement told everyone they had to code, and a lot of resources went into programs to teach it. Now AI agents promise that no one has to code at all.',
     },
     {
       id: 'a1-personal', act: 1, minutes: 1, place: 'hamlet', layout: 'statement',

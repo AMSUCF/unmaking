@@ -6,9 +6,9 @@
 
 **Slide -**
 
-## -Death of the Web as we know it-
+## -Making and Unmaking the Web-
 
-Coding, enshittification, politics
+Critical making, enshittification, language machines
 
 ---
 
