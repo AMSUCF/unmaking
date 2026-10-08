@@ -1,0 +1,14 @@
+{
+  "origin": ["[maker:#name#]#block#"],
+  "block": [
+    "#maker# pieced a #pattern# block in #color# and #color#: #stitch#.",
+    "A #pattern# block from #maker#'s scrap bin, #stitch#, labeled \"#label#.\"",
+    "#maker# could not finish the #pattern#, so the #color# square says \"#label#.\""
+  ],
+  "name": ["CyberStitch", "PixelGrrl", "Auntie Modem", "the night-shift quilter", "an anonymous maker"],
+  "pattern": ["log cabin", "flying geese", "nine-patch", "drunkard's path", "double wedding ring", "crazy quilt", "QR code"],
+  "color": ["teal", "rust", "web-safe magenta", "unbleached muslin", "faded denim", "hot pink", "goldenrod"],
+  "stitch": ["hand-quilted in running stitch", "stitched on a longarm", "tied with embroidery floss", "basted and left unfinished", "machine-pieced at 2 a.m."],
+  "label": ["404: pattern not found", "made by hand, mostly", "for the archive", "under construction", "you are visitor #number#"],
+  "number": ["0001", "1999", "4040", "0042", "1337"]
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Act I: Twine</title>
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="css/workshop.css">
+</head>
+<body data-craft="paper">
+  <a class="skip" href="#main">Skip to the tutorial</a>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="home" href="index.html">UNMAKING WORKSHOP</a>
+      <nav aria-label="Acts">
+        <ol>
+          <li><a href="act1-twine.html" aria-current="page">I TWINE</a></li>
+          <li><a href="act2-tracery.html">II TRACERY</a></li>
+          <li><a href="act3-p5.html">III P5.JS</a></li>
+          <li><a href="act4-agents.html">IV AGENTS</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">ACT I · PAPER</p>
+        <h1>Passages</h1>
+        <p class="lede">Hypertext is linked text. Plan one with index cards and string, then build it in Twine, a tool made for writers rather than coders.</p>
+        <p class="question">From the talk: the end of making as we know it?</p>
+        <ul class="meta">
+          <li>Suggested: 40 min</li>
+          <li>Make: a branching hypertext</li>
+          <li>Need: cards, string, tape, a browser</li>
+        </ul>
+      </div>
+      <div class="side">
+        <p class="say">Start on paper. The string is the twine.</p>
+        <div class="guide" data-who="emily" data-pose="talk"></div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="wrap">
+    <nav class="toc" aria-label="Steps">
+      <ol>
+        <li><a href="#prototype">1 · Prototype</a></li>
+        <li><a href="#open">2 · Open Twine</a></li>
+        <li><a href="#links">3 · Passages &amp; links</a></li>
+        <li><a href="#choices">4 · Choices that count</a></li>
+        <li><a href="#publish">5 · Play &amp; publish</a></li>
+        <li><a href="#unmake">Unmake</a></li>
+        <li><a href="#files">Files</a></li>
+      </ol>
+    </nav>
+
+    <section class="card lined" id="prototype">
+      <span class="time">10 min</span>
+      <h2><span class="step-n">1.</span> The paper prototype</h2>
+      <p>Twine works in <strong>passages</strong> (what the reader sees) and <strong>links</strong> (how they move). Plan both by hand first, after Deena Larsen's shower-curtain map of a hypertext, now in the MITH archives.</p>
+      <ol>
+        <li>Mark one index card with a star and title it <strong>Start</strong>. It introduces the piece and sets up the first choice.</li>
+        <li>Give every card a unique title. You'll use the titles to make links.</li>
+        <li>Tape string from the <em>word or phrase</em> that should be clicked to the card it leads to.</li>
+        <li>Make at least one complete path with a sense of an ending.</li>
+        <li>Check that every card is connected to something. A passage nothing links to can't be reached.</li>
+      </ol>
+      <p class="callout"><strong>Fewer, bigger choices.</strong> You don't need many branches. A few paths with real differences (contrasting views, a deeper dive, a consequence) say more than many small decisions.</p>
+    </section>
+
+    <section class="card" id="open">
+      <span class="time">5 min</span>
+      <h2><span class="step-n">2.</span> Open Twine</h2>
+      <ol>
+        <li>Go to <a href="https://twinery.org/">twinery.org</a>. Use Twine in your browser, or download the desktop app if you can install software. The two look nearly the same.</li>
+        <li>Create a new story and give it your prototype's name.</li>
+        <li>Keep the default story format, <strong>Harlowe</strong>. Everything below is Harlowe.</li>
+      </ol>
+      <p class="callout"><strong>Twine is not a host.</strong> The browser version saves into that one browser's storage. Use <em>Build → Publish to File</em> often. Clearing your browser data, or switching computers, loses unsaved work.</p>
+    </section>
+
+    <section class="card" id="links">
+      <span class="time">10 min</span>
+      <h2><span class="step-n">3.</span> Passages and links</h2>
+      <p>Double-click the start passage (marked with the green rocket), rename it <strong>Start</strong>, and type the text of your first card. Put square brackets around the words your string was taped to:</p>
+<pre><code>We might [[say one thing->phrase of significance]] and [[mean another->another passage]].
+We can even have links that look different but lead to the [[same place->another passage]].
+
+[[Go back<-Start]]
+[[Start]]</code></pre>
+      <ul>
+        <li><code>[[text->Passage]]</code> shows <em>text</em> and goes to <em>Passage</em>.</li>
+        <li><code>[[Passage&lt;-text]]</code> is the same link written the other way round.</li>
+        <li><code>[[Passage]]</code> shows the passage's own title.</li>
+      </ul>
+      <p>Whenever you link to a title that doesn't exist yet, Twine draws a new passage for it. Follow your strings until every card is a passage.</p>
+    </section>
+
+    <section class="card" id="choices">
+      <span class="time">10 min</span>
+      <h2><span class="step-n">4.</span> Make choices count</h2>
+      <p>Harlowe can remember what the reader did and change later passages. Three macros go a long way. <strong>Set</strong> a variable when a choice is made:</p>
+<pre><code>(set: $handed to it + 1)
+You let the machine stitch the next row.</code></pre>
+      <p>Check it later with <strong>if / else</strong>:</p>
+<pre><code>(if: $handed is 0)[Pieced and quilted by hand.]
+(else:)[Pieced by you. Quilted by the machine.]</code></pre>
+      <p>And let the passage pick for itself with <strong>either</strong>:</p>
+<pre><code>You choose a pattern: (either: "swirling feathers", "interlocking stars", "a meander").</code></pre>
+      <p class="callout"><code>(either:)</code> is a tiny generative grammar: one slot, a list of options, a random pick each time. Keep it in mind: Act II builds whole sentences this way.</p>
+      <p>To see all three working together, import <a href="files/twine/the-longarm-archive.html">The Longarm</a> (below): a short story about a quilter deciding how much of the quilting to hand to a machine.</p>
+    </section>
+
+    <section class="card" id="publish">
+      <span class="time">5 min</span>
+      <h2><span class="step-n">5.</span> Play and publish</h2>
+      <ol>
+        <li>Use <em>Build → Play</em> (or <em>Test</em>, which shows your variables) to read your story as a reader would.</li>
+        <li>Use <em>Build → Publish to File</em>. The result is one <code>.html</code> file that opens in any browser.</li>
+        <li>To share it, host the file anywhere that serves HTML, such as GitHub Pages, which we set up in Act IV. To add images, upload them next to the file and use <code>&lt;img src="picture.jpg"&gt;</code> in a passage.</li>
+      </ol>
+      <p>Want more? The <a href="https://twinery.org/cookbook/">Twine Cookbook</a> has working examples for each story format, and the practical chapters of <a href="https://www.fulcrum.org/concern/monographs/ms35tb924"><cite>Twining</cite></a> (Salter and Moulthrop) cover aesthetics (P-4) and procedure and poetics (P-2, P-3). The course demo <a href="https://amsucf.github.io/Critical-Making-Syllabus/exercises/materials/CriticalMaking.html">Critical Making</a> is a published Twine you can read and then import to see how it's built.</p>
+    </section>
+
+    <section class="card unmake" id="unmake">
+      <h2>Unmake</h2>
+      <blockquote>
+        <p>“[Twine] might have been my graduate thesis, originally, if I had the patience to complete one … I was studying interaction design, so Twine was my attempt to make something that would be friendly to people who were writers more than coders.”</p>
+        <footer>Chris Klimas, interviewed for <cite>Twining</cite></footer>
+      </blockquote>
+      <ul>
+        <li>Twine was made by one person, then kept going by a community, for people who were left out of “learn to code.” An agent will now write a Twine for anyone who can describe one. So is Twine pointless now? What did the cards and string give you that a description wouldn't?</li>
+        <li>Look at your prototype. Which choices did the reader get, and which did you keep for yourself?</li>
+        <li>Rewrite the last passage of <em>The Longarm</em> with your own question about making with machines. Keep it: you'll come back to it in Act IV.</li>
+      </ul>
+      <div class="figs">
+        <figure><img src="../assets/act2/twine-interface.png" alt="A Twine story map: passages as text boxes connected by arrows."><figcaption>A Twine story map: passages and links, the cards and string on screen.</figcaption></figure>
+        <figure><img src="../assets/act2/twining.png" alt="Cover of Twining: Critical and Creative Approaches to Hypertext Narratives by Anastasia Salter and Stuart Moulthrop."><figcaption><cite>Twining</cite>, Salter and Moulthrop.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="card" id="files">
+      <h2>Reference files</h2>
+      <ul class="files">
+        <li><a href="files/twine/the-longarm-archive.html" download>the-longarm-archive.html</a><p>Import into Twine: <em>Library → Import</em>, choose this file. Opens as an editable story map.</p></li>
+        <li><a href="files/twine/the-longarm.twee">the-longarm.twee</a><p>The same story as plain text (Twee 3). Readable in any editor; Twine 2.6+ and Tweego can import it.</p></li>
+      </ul>
+    </section>
+
+    <nav class="next" aria-label="Next">
+      <a href="index.html">◀ Workshop home</a>
+      <a href="act2-tracery.html">Act II: Tracery ▶</a>
+    </nav>
+  </main>
+
+  <footer class="site-foot"><div class="wrap"><p>Tutorial adapted from ENG 6819 Making Exercise Five: Hypertext (<a href="https://github.com/AMSUCF/CriticalMaking2026">AMSUCF/CriticalMaking2026</a>). Quotation from Chris Klimas, interviewed by Anastasia Salter and Stuart Moulthrop for <cite>Twining</cite>.</p></div></footer>
+  <script src="../js/render/avatar-pixels.js"></script>
+  <script src="js/workshop.js"></script>
+</body>
+</html>

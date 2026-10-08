@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Act II: Tracery</title>
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="css/workshop.css">
+</head>
+<body data-craft="textile">
+  <a class="skip" href="#main">Skip to the tutorial</a>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="home" href="index.html">UNMAKING WORKSHOP</a>
+      <nav aria-label="Acts">
+        <ol>
+          <li><a href="act1-twine.html">I TWINE</a></li>
+          <li><a href="act2-tracery.html" aria-current="page">II TRACERY</a></li>
+          <li><a href="act3-p5.html">III P5.JS</a></li>
+          <li><a href="act4-agents.html">IV AGENTS</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div class="quilt-border" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">ACT II · TEXTILE</p>
+        <h1>Patterns</h1>
+        <p class="lede">Tracery, by Kate Compton, is a grammar for generating text. Like a quilt pattern, it names the pieces, says how they fit together, and lets them repeat in new combinations.</p>
+        <p class="question">From the talk: why keep making?</p>
+        <ul class="meta">
+          <li>Suggested: 35 min</li>
+          <li>Make: a grammar, plus a flat version for print</li>
+          <li>Need: a browser</li>
+        </ul>
+      </div>
+      <div class="side">
+        <p class="say">Every block is a rule. Piece them together.</p>
+        <div class="guide" data-who="anastasia" data-pose="talk"></div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="wrap">
+    <nav class="toc" aria-label="Steps">
+      <ol>
+        <li><a href="#read">1 · Read a grammar</a></li>
+        <li><a href="#play">2 · Playground</a></li>
+        <li><a href="#grow">3 · Grow three rules</a></li>
+        <li><a href="#save">4 · Remember a choice</a></li>
+        <li><a href="#launch">5 · Put it somewhere</a></li>
+        <li><a href="#flatten">6 · Flatten it for print</a></li>
+        <li><a href="#unmake">Unmake</a></li>
+        <li><a href="#files">Files</a></li>
+      </ol>
+    </nav>
+
+    <section class="card" id="read">
+      <span class="time">5 min</span>
+      <h2><span class="step-n">1.</span> Read a grammar</h2>
+      <p>A Tracery grammar is written in <strong>JSON</strong>: a list of named rules. Each name is a <em>symbol</em>; each symbol has a list of options. Wrap a symbol in <code>#hashes#</code> to have Tracery pick one of its options there.</p>
+<pre><code>{
+  "origin": ["#maker.capitalize# #made# #thing.a# out of #material#."],
+  "maker": ["a quilter", "a student", "the bot"],
+  "made": ["stitched", "folded", "remixed"],
+  "thing": ["map", "archive", "zine"],
+  "material": ["old t-shirts", "index cards", "dead links"]
+}</code></pre>
+      <ul>
+        <li><code>origin</code> is where every run starts.</li>
+        <li>Modifiers fix the grammar of the sentence: <code>.capitalize</code>, <code>.a</code> (a or an), <code>.s</code> (plural), <code>.ed</code> (past tense).</li>
+        <li>JSON is strict. Each option is in <code>"double quotes"</code>, options are separated by commas, and the <em>last</em> item in a list or object has no comma after it.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="play">
+      <span class="time">10 min</span>
+      <h2><span class="step-n">2.</span> The playground</h2>
+      <p>Edit the grammar and the output changes as you type. This runs the real Tracery library, stored locally, so it works without Wi-Fi.</p>
+      <div class="play">
+        <div class="row">
+          <button type="button" data-run>Regenerate</button>
+          <button type="button" class="alt" data-load="starter">Load: starter</button>
+          <button type="button" class="alt" data-load="quilt">Load: quilt blocks</button>
+          <button type="button" class="alt" data-load="cryptex">Load: cryptex (flat)</button>
+        </div>
+        <p class="out" aria-live="polite"></p>
+        <p class="status" role="status"></p>
+        <label for="grammar">Grammar (JSON)</label>
+        <textarea id="grammar" spellcheck="false"></textarea>
+      </div>
+    </section>
+
+    <section class="card" id="grow">
+      <span class="time">10 min</span>
+      <h2><span class="step-n">3.</span> Grow at least three rules</h2>
+      <p>Make the grammar yours: words from your own research, craft, or memory. For variety, give <code>origin</code> more than one sentence shape, and let rules call other rules:</p>
+<pre><code>"origin": ["#line#", "#line# #line#", "#question#"],
+"line": ["#maker.capitalize# #made# #thing.a#.", "Nobody asked for #thing.a#, so #maker# made one."],
+"question": ["Who taught #maker# to make #thing.a#?"]</code></pre>
+      <p class="callout">Press Regenerate twenty times. Which outputs surprise you? Which repeat too often? A word that appears in many lists, or a list with only two options, shows up a lot.</p>
+    </section>
+
+    <section class="card" id="save">
+      <span class="time">5 min</span>
+      <h2><span class="step-n">4.</span> Remember a choice</h2>
+      <p>An <strong>action</strong> in square brackets picks once and saves the result, so a name can recur in the same sentence. Load <em>quilt blocks</em> in the playground to see it:</p>
+<pre><code>"origin": ["[maker:#name#]#block#"],
+"block": ["#maker# could not finish the #pattern#, so #maker# gave it away."]</code></pre>
+      <p>Without <code>[maker:#name#]</code>, each <code>#maker#</code> would pick a different name.</p>
+    </section>
+
+    <section class="card" id="launch">
+      <span class="time">5 min</span>
+      <h2><span class="step-n">5.</span> Put it somewhere</h2>
+      <ul>
+        <li><strong>A page of your own:</strong> download <a href="files/tracery/generator.html" download>generator.html</a>, paste your grammar in, and you have a generator that runs from one file.</li>
+        <li><strong>A template:</strong> Leonardo Flores's <a href="https://iloveepoetry.org/creative/floresgenerativetemplate.html">Generative Grammar Template</a>.</li>
+        <li><strong>A bot:</strong> <a href="https://bluebotsdonequick.com/">Blue Bots, Done Quick!</a> posts your grammar to Bluesky. All you need is an account for the bot.</li>
+        <li><strong>Go deeper:</strong> Kate Compton's <a href="https://tracery.io/archival/crystalcodepalace/tracerytut.html">Tracery tutorial</a> goes well past what we need today.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="flatten">
+      <span class="time">5 min</span>
+      <h2><span class="step-n">6.</span> Flatten it for print</h2>
+      <p>To get Act IV ready, make a second, <strong>flat</strong> version of your grammar: an <code>origin</code> made only of symbols, and lists of plain words, with no nested <code>#rules#</code> inside them. A printed ring can't expand a rule, so every word on one ring has to work next to every word on the others.</p>
+<pre><code>{
+  "origin": ["#who# #when# #does# #how#"],
+  "who": ["the agent", "a quilter", "my bot", "the archive", "a student", "the machine", "our zine", "the cursor"],
+  "when": ["always", "never", "slowly", "quietly", "sometimes", "rarely", "gladly", "still"],
+  "does": ["unravels", "remembers", "stitches", "forgets", "loops", "glitches", "listens", "wanders"],
+  "how": ["by hand", "offline", "in public", "at night", "for us", "in loops", "on paper", "elsewhere"]
+}</code></pre>
+      <p>Same number of words in every list: each becomes one face of a ring. Load <em>cryptex (flat)</em> above, regenerate, and read a few aloud. Cut any word that breaks a sentence. Save your flat grammar as <code>grammar.json</code>.</p>
+    </section>
+
+    <section class="card unmake" id="unmake">
+      <h2>Unmake</h2>
+      <p>Textile arts have long argued about what automation means for expressive work. Tracery has gone back and forth between screens and cloth: in <em>Re:Traced Threads</em> (ELO 2019), a Tracery bot proposed quilted text, and its output was stitched into nine physical blocks.</p>
+      <ul>
+        <li>When the machine generates and a person stitches, whose work is it? Who goes on the label?</li>
+        <li>Tracery grammars are plain JSON. When Twitter shut off its API, the bots moved to Mastodon and then to Bluesky, because the format was open and people rebuilt the hosts. What in your grammar would survive the next platform closing?</li>
+        <li>Which words in your grammar could only have come from you?</li>
+      </ul>
+      <div class="figs">
+        <figure><img src="../assets/act2/retraced-threads.jpg" alt="A grid of small art quilts with appliquéd circles and stitched lines of generated text, beside a monitor showing the bot that designed them."><figcaption><em>Re:Traced Threads</em>: a Tracery bot's proposals, quilted.</figcaption></figure>
+        <figure><img src="../assets/act1/student-kennedy-tracery.png" alt="Vee Kennedy’s Tracery page “The Internet Graveyard of Critical Baking” on a mint-green background, showing one generated verse and a Regenerate button."><figcaption>Vee Kennedy, <em>The Internet Graveyard of Critical Baking</em>: a student grammar of baking, dead websites, and PhD life.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="card" id="files">
+      <h2>Reference files</h2>
+      <ul class="files">
+        <li><a href="files/tracery/generator.html">generator.html</a><p>A complete one-file generator. Paste in a grammar; keep the file.</p></li>
+        <li><a href="files/tracery/starter.json">starter.json</a><p>The starter grammar from the playground.</p></li>
+        <li><a href="files/tracery/quilt-blocks.json">quilt-blocks.json</a><p>Actions, nested rules, and several sentence shapes.</p></li>
+        <li><a href="files/tracery/cryptex-grammar.json">cryptex-grammar.json</a><p>A flat, four-slot grammar for the Act IV cryptex.</p></li>
+        <li><a href="files/tracery/spinner-grammar.json">spinner-grammar.json</a><p>A flat, two-slot grammar for the flower spinner.</p></li>
+      </ul>
+    </section>
+
+    <nav class="next" aria-label="Next">
+      <a href="act1-twine.html">◀ Act I: Twine</a>
+      <a href="act3-p5.html">Act III: p5.js ▶</a>
+    </nav>
+  </main>
+
+  <footer class="site-foot"><div class="wrap"><p>Tutorial adapted from ENG 6819 Making Exercise Seven: Grammar (<a href="https://github.com/AMSUCF/CriticalMaking2026">AMSUCF/CriticalMaking2026</a>). Tracery by Kate Compton.</p></div></footer>
+
+  <script type="application/json" data-example="starter">
+{
+  "origin": ["#maker.capitalize# #made# #thing.a# out of #material#, #because#."],
+  "maker": ["a quilter", "my grandmother", "a student", "the bot", "a librarian", "someone on GeoCities"],
+  "made": ["stitched", "folded", "photocopied", "coded", "pieced", "remixed"],
+  "thing": ["map", "archive", "love letter", "zine", "game", "website", "sampler"],
+  "material": ["old t-shirts", "index cards", "borrowed code", "dead links", "thread", "a broken printer"],
+  "because": ["because the platform closed", "for a friend", "to remember", "just to see if it would work", "because no one else would", "and then gave it away"]
+}
+  </script>
+  <script type="application/json" data-example="quilt">
+{
+  "origin": ["[maker:#name#]#block#"],
+  "block": [
+    "#maker# pieced a #pattern# block in #color# and #color#: #stitch#.",
+    "A #pattern# block from #maker#'s scrap bin, #stitch#, labeled \"#label#.\"",
+    "#maker# could not finish the #pattern#, so the #color# square says \"#label#.\""
+  ],
+  "name": ["CyberStitch", "PixelGrrl", "Auntie Modem", "the night-shift quilter", "an anonymous maker"],
+  "pattern": ["log cabin", "flying geese", "nine-patch", "drunkard's path", "double wedding ring", "crazy quilt", "QR code"],
+  "color": ["teal", "rust", "web-safe magenta", "unbleached muslin", "faded denim", "hot pink", "goldenrod"],
+  "stitch": ["hand-quilted in running stitch", "stitched on a longarm", "tied with embroidery floss", "basted and left unfinished", "machine-pieced at 2 a.m."],
+  "label": ["404: pattern not found", "made by hand, mostly", "for the archive", "under construction", "you are visitor #number#"],
+  "number": ["0001", "1999", "4040", "0042", "1337"]
+}
+  </script>
+  <script type="application/json" data-example="cryptex">
+{
+  "origin": ["#who# #when# #does# #how#"],
+  "who": ["the agent", "a quilter", "my bot", "the archive", "a student", "the machine", "our zine", "the cursor"],
+  "when": ["always", "never", "slowly", "quietly", "sometimes", "rarely", "gladly", "still"],
+  "does": ["unravels", "remembers", "stitches", "forgets", "loops", "glitches", "listens", "wanders"],
+  "how": ["by hand", "offline", "in public", "at night", "for us", "in loops", "on paper", "elsewhere"]
+}
+  </script>
+  <script src="vendor/tracery.js"></script>
+  <script src="../js/render/avatar-pixels.js"></script>
+  <script src="js/workshop.js"></script>
+</body>
+</html>

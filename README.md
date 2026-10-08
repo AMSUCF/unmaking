@@ -21,8 +21,11 @@ A four-act talk by Emily K. Johnson and Anastasia Salter. Act I is paper, Act II
 
 Start at a specific scene with `index.html?scene=a3-perlow`.
 
+## Workshop
+`workshop/` is the companion workshop site, in the same four crafts: Twine (paper), Tracery (textile), p5.js (zine), and agentic code with 3D-printable grammars (game). Open `workshop/index.html`; it also runs offline. See `workshop/README.md`.
+
 ## Develop
-- `npm test` runs the JS unit and content tests. `npm run test:py` runs the sprite tool tests.
+- `npm test` runs the JS unit and content tests, including the workshop's (`node workshop/tools/build-files.js` regenerates its `.scad` files and Twine archive). `npm run test:py` runs the sprite tool tests.
 - `npm run import-assets` re-copies images from sibling repos (read-only on sources).
 
 ## Rehearsal checklist

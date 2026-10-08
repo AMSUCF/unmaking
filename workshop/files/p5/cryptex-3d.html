@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- Act IV: unflatten a grammar. Each #symbol# in origin becomes one ring; each word in its list becomes one face.
+     Turn the rings to read sentences across them, then download an OpenSCAD file to print.
+     After the talk's word cryptex (Emily K. Johnson, from her p5.js sketch "Traceretry"). -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grammar Cryptex</title>
+  <script src="../../vendor/p5.min.js"></script>
+  <script src="../../js/scad.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: #1c1430; color: #f2f2f2; font: 18px/1.45 'Courier New', monospace; }
+    main { max-width: 980px; margin: 0 auto; padding: 16px; display: grid; gap: 14px; }
+    h1 { margin: 0; font-size: 22px; color: #ffd84a; letter-spacing: .05em; }
+    #sketch { width: 100%; border: 4px solid #f2f2f2; background: #0d0b1a; touch-action: none; }
+    #sketch canvas { display: block; }
+    #reading { margin: 0; min-height: 1.5em; font-size: 24px; color: #9dff00; text-align: center; }
+    .rings { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .ring { display: flex; align-items: center; gap: 4px; padding: 4px 6px; border: 2px solid #555; }
+    .ring span { min-width: 4ch; text-align: center; color: #cfcfcf; }
+    button { font: inherit; padding: 6px 12px; background: #000; color: #fff; border: 3px solid #fff; cursor: pointer; }
+    button:focus-visible, textarea:focus-visible { outline: 3px solid #ffd84a; outline-offset: 2px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    label { font-size: 16px; color: #cfcfcf; }
+    textarea { width: 100%; min-height: 220px; padding: 10px; background: #000; color: #9dff00; border: 3px solid #f2f2f2; font: 15px/1.4 'Courier New', monospace; }
+    #status { margin: 0; font-size: 16px; color: #ff8fb1; min-height: 1.4em; }
+    .hint { margin: 0; font-size: 15px; color: #a9a9c9; text-align: center; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>GRAMMAR CRYPTEX</h1>
+  <div id="sketch" aria-label="3D preview of the cryptex. Drag to orbit."></div>
+  <p id="reading" aria-live="polite"></p>
+  <div class="rings" id="rings"></div>
+  <div class="actions">
+    <button type="button" id="run">Run the grammar</button>
+    <button type="button" id="scad">Download .scad</button>
+    <button type="button" id="json">Download grammar .json</button>
+  </div>
+  <p class="hint">Drag the preview to orbit. The bright row is the reading line.</p>
+  <label for="grammar">Grammar: every word in a ring must work with every word in the others.</label>
+  <textarea id="grammar" spellcheck="false"></textarea>
+  <p id="status" role="status"></p>
+</main>
+<script>
+// Same grammar as files/tracery/cryptex-grammar.json.
+const START = {
+  "origin": ["#who# #when# #does# #how#"],
+  "who": ["the agent", "a quilter", "my bot", "the archive", "a student", "the machine", "our zine", "the cursor"],
+  "when": ["always", "never", "slowly", "quietly", "sometimes", "rarely", "gladly", "still"],
+  "does": ["unravels", "remembers", "stitches", "forgets", "loops", "glitches", "listens", "wanders"],
+  "how": ["by hand", "offline", "in public", "at night", "for us", "in loops", "on paper", "elsewhere"]
+};
+const MM = 6;                 // preview pixels per millimetre
+const FACE_MM = 9, GAP_MM = 0.6, CAP_MM = 8;
+const COLOURS = ['#b9dcd8', '#8fc6c0'];
+
+let grammarJson = START, slots = [], picks = [], angles = [], textures = [], ringLen = 40;
+const $ = (id) => document.getElementById(id);
+
+function load(g) {
+  const next = Scad.slotsFromGrammar(g);
+  const errors = Scad.checkSlots(next);
+  $('status').textContent = errors.join(' · ');
+  if (errors.length) return;
+  grammarJson = g;
+  slots = next;
+  picks = slots.map(() => 0);
+  angles = slots.map(() => 0);
+  ringLen = Scad.ringLength(slots);
+  textures.flat().forEach((g) => g.remove());
+  textures = slots.map((s, r) => s.words.map((w) => faceTexture(w, COLOURS[r % 2])));
+  buildButtons();
+  read();
+}
+
+function faceTexture(word, colour) {
+  const g = createGraphics(512, Math.round(512 * FACE_MM / ringLen));
+  g.background(colour);
+  g.noFill(); g.stroke(0, 40); g.strokeWeight(4); g.rect(0, 0, g.width, g.height);
+  g.textFont('Arial'); g.textStyle(BOLD); g.textAlign(CENTER, CENTER);
+  g.textSize(g.height * 0.5);
+  g.noStroke();
+  g.fill(255, 120); g.text(word, g.width / 2 + 2, g.height / 2 + 2);   // a highlight, so it reads as recessed
+  g.fill('#1d2a44'); g.text(word, g.width / 2, g.height / 2);
+  return g;
+}
+
+function buildButtons() {
+  const box = $('rings');
+  box.textContent = '';
+  slots.forEach((s, r) => {
+    const div = document.createElement('div');
+    div.className = 'ring';
+    const turn = (d, label) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.textContent = label;
+      b.setAttribute('aria-label', `Turn the #${s.name}# ring ${d > 0 ? 'forward' : 'back'}`);
+      b.addEventListener('click', () => { picks[r] = (picks[r] + d + s.words.length) % s.words.length; read(); });
+      return b;
+    };
+    const name = document.createElement('span');
+    name.textContent = '#' + s.name + '#';
+    div.append(turn(-1, '▲'), name, turn(1, '▼'));
+    box.append(div);
+  });
+}
+
+// The reading line: the current face of every ring, through origin like Tracery would.
+function read() {
+  const line = slots.reduce((acc, s, r) => acc.replace(new RegExp('#' + s.name + '(\\.[A-Za-z.]+)?#'), s.words[picks[r]]), [].concat(grammarJson.origin)[0]);
+  $('reading').textContent = line;
+}
+
+function setup() {
+  const box = $('sketch');
+  const c = createCanvas(box.clientWidth - 8, Math.round((box.clientWidth - 8) * 0.5), WEBGL);
+  c.parent(box);
+  textureMode(NORMAL);
+  $('grammar').value = JSON.stringify(START, null, 2);
+  load(START);
+  let timer;
+  $('grammar').addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      try { load(JSON.parse($('grammar').value)); } catch (e) { $('status').textContent = 'JSON error: ' + e.message; }
+    }, 400);
+  });
+  $('run').addEventListener('click', () => { picks = slots.map((s) => floor(random(s.words.length))); read(); });
+  $('scad').addEventListener('click', () => save1(Scad.cryptex(slots), 'my-cryptex.scad'));
+  $('json').addEventListener('click', () => save1(JSON.stringify(grammarJson, null, 2) + '\n', 'my-cryptex-grammar.json'));
+}
+
+function save1(text, name) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([text], { type: 'text/plain' }));
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+function windowResized() {
+  const w = $('sketch').clientWidth - 8;
+  resizeCanvas(w, Math.round(w * 0.5));
+}
+
+function draw() {
+  background('#0d0b1a');
+  if (!slots.length) return;
+  orbitControl(2, 2, 0);
+  const n = slots[0].words.length;
+  const step = TWO_PI / n;
+  const face = FACE_MM * MM, L = ringLen * MM, gap = GAP_MM * MM, cap = CAP_MM * MM;
+  const apothem = face / (2 * Math.tan(PI / n));
+  const total = slots.length * (L + gap) + 2 * cap;
+  scale(min(1, (width * 0.78) / total));
+  rotateY(-0.25); rotateX(-0.18);
+  ambientLight(170); directionalLight(255, 255, 255, 0.3, 0.6, -1);
+  noStroke();
+
+  let x = -total / 2 + cap;
+  slots.forEach((s, r) => {
+    // Ease each ring toward its picked word: face j sits at (j - pick) * step from the reader.
+    let goal = -picks[r] * step;
+    while (goal - angles[r] > PI) goal -= TWO_PI;
+    while (angles[r] - goal > PI) goal += TWO_PI;
+    angles[r] = lerp(angles[r], goal, 0.15);
+    for (let j = 0; j < n; j++) {
+      push();
+      translate(x + L / 2, 0, 0);
+      rotateX(j * step + angles[r]);
+      translate(0, 0, apothem);
+      texture(textures[r][j]);
+      plane(L, face);
+      pop();
+    }
+    x += L + gap;
+  });
+  // End caps.
+  const capR = face / (2 * Math.sin(PI / n));
+  [-total / 2 + cap / 2, total / 2 - cap / 2].forEach((cx) => {
+    push(); translate(cx, 0, 0); rotateZ(HALF_PI); fill('#1d2a6b'); cylinder(capR, cap, 32, 1); pop();
+  });
+  // Reading line.
+  stroke('#9dff00'); strokeWeight(3);
+  [-1, 1].forEach((sgn) => line(-total / 2, sgn * face / 2, apothem + 1, total / 2, sgn * face / 2, apothem + 1));
+}
+</script>
+</body>
+</html>

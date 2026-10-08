@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Act III, step 3: a grammar you can spin. Two rings of petals turn independently; the pointer at the top
+     pairs one word from each ring, the way a two-symbol Tracery rule ("#outer# meets #inner#") would.
+     After the talk's flower spinner (Emily K. Johnson): a p5.js sketch first, a 3D print later (Act IV). -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flower Spinner</title>
+  <script src="../../vendor/p5.min.js"></script>
+  <style>
+    html, body { margin: 0; background: #1c1430; color: #f2f2f2; font: 18px/1.4 'Courier New', monospace; }
+    main { display: grid; place-items: center; gap: 12px; padding: 16px; }
+    #reading { min-height: 1.6em; font-size: 22px; color: #9dff00; text-align: center; }
+    button { font: inherit; padding: 8px 16px; background: #000; color: #fff; border: 3px solid #fff; cursor: pointer; }
+    button:focus-visible { outline: 3px solid #ffd84a; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+<main>
+  <div id="sketch"></div>
+  <p id="reading" aria-live="polite">Press SPIN (or the space bar).</p>
+  <button id="spin" type="button">SPIN</button>
+</main>
+<script>
+// Same shape as files/tracery/spinner-grammar.json. Change the words; 3 to 12 per ring reads well.
+const grammar = {
+  "origin": ["#outer# meets #inner#"],
+  "outer": ["DH", "Making", "Play", "Pedagogy", "Tech Comm", "Archives"],
+  "inner": ["Twine", "Tracery", "p5.js", "Agents", "Bitsy", "Zines"]
+};
+
+const rings = [
+  { words: grammar.outer, dist: 0.33, petal: 0.18, angle: 0, target: 0, colour: '#9fd8a8' },
+  { words: grammar.inner, dist: 0.17, petal: 0.13, angle: 0, target: 0, colour: '#d7f2c9' },
+];
+let S;  // canvas size
+
+function setup() {
+  S = min(560, windowWidth - 32);
+  createCanvas(S, S).parent('sketch');
+  textFont('Courier New');
+  textAlign(CENTER, CENTER);
+  document.getElementById('spin').addEventListener('click', spin);
+}
+
+function spin() {
+  // Each ring lands on a random petal after a few full turns.
+  rings.forEach((r) => {
+    const step = TWO_PI / r.words.length;
+    r.pick = floor(random(r.words.length));
+    r.target = r.angle + TWO_PI * floor(random(2, 5)) + ((-r.pick * step - r.angle) % TWO_PI + TWO_PI) % TWO_PI;
+  });
+  document.getElementById('reading').textContent = '…';
+}
+
+function keyPressed() { if (key === ' ') { spin(); return false; } }
+
+function draw() {
+  background('#1c1430');
+  translate(S / 2, S / 2);
+  let settled = true;
+  rings.forEach((r) => {
+    r.angle = lerp(r.angle, r.target, 0.04);
+    if (abs(r.target - r.angle) > 0.002) settled = false; else r.angle = r.target;
+    drawRing(r);
+  });
+  // Knob, and a pointer above the rings (fixed, pointing down at the top petals).
+  fill('#111'); stroke('#f2f2f2'); strokeWeight(3);
+  circle(0, 0, S * 0.1);
+  fill('#ffd84a'); noStroke();
+  const tip = -S * (rings[0].dist + rings[0].petal * 0.69);
+  triangle(-12, tip - 22, 12, tip - 22, 0, tip);
+  if (settled && rings[0].pick !== undefined) {
+    const line = grammar.origin[0].replace('#outer#', rings[0].words[rings[0].pick]).replace('#inner#', rings[1].words[rings[1].pick]);
+    const el = document.getElementById('reading');
+    if (el.textContent !== line) el.textContent = line;
+  }
+}
+
+function drawRing(r) {
+  const n = r.words.length;
+  push();
+  rotate(r.angle);
+  for (let i = 0; i < n; i++) {
+    push();
+    rotate(i * TWO_PI / n - HALF_PI);   // word 0 starts under the pointer
+    translate(r.dist * S, 0);
+    // The petal under the pointer gets a gold outline.
+    const up = ((r.angle + i * TWO_PI / n) % TWO_PI + TWO_PI) % TWO_PI;
+    const top = min(up, TWO_PI - up) < PI / n;
+    fill(r.colour); stroke(top ? '#ffd84a' : '#111'); strokeWeight(top ? 5 : 2);
+    ellipse(0, 0, r.petal * S * 1.35, r.petal * S);
+    noStroke(); fill('#111');
+    textSize(max(11, S * 0.03));
+    text(r.words[i], 0, 0);              // written outward from the centre, as in the print
+    pop();
+  }
+  pop();
+}
+</script>
+</body>
+</html>

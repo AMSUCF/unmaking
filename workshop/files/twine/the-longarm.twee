@@ -1,0 +1,79 @@
+:: StoryTitle
+The Longarm
+
+
+:: StoryData
+{
+  "ifid": "E940D8B7-41D8-40E8-BC9B-CC356B7C975B",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Start {"position":"100,100","size":"100,100"}
+(set: $handmade to 0)(set: $handed to 0)
+''The Longarm''
+
+The quilt top is pieced. Every block is yours: the t-shirts from old conventions, the squares you cut on the kitchen floor, the seam you ripped out three times.
+
+Now it has to be quilted, and the longarm is waiting in the corner of the studio.
+
+[[Guide it by hand->Freehand]]
+[[Load a pantograph and let it run->Pantograph]]
+
+
+:: Freehand {"position":"250,25","size":"100,100"}
+(set: $handmade to it + 1)
+You take the handles. The stitch regulator evens out your speed, but every curve is a decision: a loop here, a feather there, a straight line where the fabric wants to rest.
+
+It is slow. Your shoulders ache.
+
+[[Keep going->Thread Break]]
+[[Hand the rest to the machine->Pantograph]]
+
+
+:: Pantograph {"position":"250,175","size":"100,100"}
+(set: $handed to it + 1)
+You choose a pattern from the screen: (either: "swirling feathers", "interlocking stars", "a meander", "tiny pixel hearts"). The machine plans its path and begins, edge to edge.
+
+It is fast. It is very even. You watch.
+
+[[Watch the whole time->Thread Break]]
+[[Go make tea->Unattended]]
+
+
+:: Unattended {"position":"400,250","size":"100,100"}
+(set: $handed to it + 1)
+When you come back, the thread snapped an hour ago. The machine stitched on without it: a whole row of needle holes and no thread.
+
+Someone has to rip back, rethread, and restart in the right place. The machine does not know it broke.
+
+[[Fix it->Thread Break]]
+
+
+:: Thread Break {"position":"400,100","size":"100,100"}
+The thread breaks. It always does, sooner or later.
+
+You rethread the needle, find the last good stitch, and (link-reveal: "decide")[ where to begin again].
+
+[[Finish the quilt->Label]]
+
+
+:: Label {"position":"550,100","size":"100,100"}
+Every quilt gets a label stitched on the back.
+
+(if: $handed is 0)[''Pieced and quilted by hand.'' Nobody asks whether it counts.]
+(else-if: $handmade is 0)[''Pieced by you. Quilted by the machine.'' At the guild show, someone asks whether it counts.]
+(else:)[''Pieced by you. Quilted by you, and by the machine.'' You are not sure how to divide the credit, so you write both.]
+
+[[What would your label say?->Reflection]]
+
+
+:: Reflection {"position":"700,100","size":"100,100"}
+Replace this passage with your own question.
+
+Where did you make a choice? Where did the tool make one for you? Which steps did you want to keep?
+
+[[Start again->Start]]
