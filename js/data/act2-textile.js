@@ -62,25 +62,6 @@
       notes: 'Losh says tools only seem neutral; Haraway says why they never are. “Made and unmade” is our title, and the method: critical making is choosing which connections to make, and which to unmake. From practice: take this as a thread metaphor. It speaks to the Meta Muse moment: passing off our own agency and initiative to agents, and the taking of the joy of craft and art, which are among the first things AI is deployed for (back to the artists’ lawsuit in Act I). But in craft we can also find a response: the tools of critical making, and a next generation of scholars who understand their own creative work as a form of protest.',
     },
     {
-      id: 'a2-craftivism', act: 2, minutes: 1, layout: 'image',
-      text: 'Craftivism: the needle as protest. In 2020, women sewed masks by the millions: life-saving labor, feminized and uncounted.',
-      media: [{ src: 'assets/act2/masked-making.jpg', alt: 'A cloth face mask printed with large pink and sage flowers.' }],
-      source: 'Lai-Tze Fan, Anne Sullivan & Anastasia Salter, Masked Making, ELO Covid E-Lit Exhibition (2021)',
-      fx: ['stitch-in'], avatar: { pose: 'talk', x: 60 },
-      notes: 'The explicit nod. Betsy Greer coined “craftivism” (2003): craft as activism, slow and public, often feminist. Our piece “Craftivism in the Time of COVID: Resisting Toxic Masculinity through Feminized Labor” (Feminist Media Studies, 2022) with Moreshead reads pandemic mask-making as craftivism pushing back against toxic masculinity. Image is from Masked Making: Uncovering Women’s Craft Labor during COVID-19 (Fan, Sullivan & Salter, ELO Covid E-Lit exhibition, 2021): a generator that keeps producing masks and makers, so the crafted object and its crafter stay ephemeral and disposable, which is the point. Earlier, I hand-made masks mailed to ELO 2020 participants. Hand off to the gallery: craft is also how I make e-lit. From practice: “My own work has often been in conversation with craftivism.” Masked Making, made in Tracery with Lai-Tze Fan and Anne Sullivan, speaks to the invisible labor behind mask making; the slide now cites it instead of the Moreshead article.',
-    },
-    {
-      id: 'a2-textile-elit', act: 2, minutes: 1.25, layout: 'gallery',
-      text: 'Text × tech × textile: feminist e-lit with QR codes pieced into quilts, a Tracery bot designing quilt blocks, and generated cross-stitch samplers.',
-      media: [
-        { src: 'assets/act2/blocked-connections.jpg', alt: 'Four quilts hung on a gallery wall, each pieced and appliquéd as a scannable QR code in blue, purple, pink, and brown fabric.' },
-        { src: 'assets/act2/retraced-threads.jpg', alt: 'A grid of small art quilts with appliquéd circles and stitched lines of generated text, beside a monitor showing the bot that designed them.' },
-        { src: 'assets/act2/tension-assembly.jpg', alt: 'An embroidery hoop holding white cross-stitch fabric stitched with “Quarantine on Twitter: indifferent. March 22, 2020 … This is fine.”' },
-      ],
-      fx: ['quilt-assemble'], avatar: { pose: 'point', x: 60 },
-      notes: 'Three works, left to right. Blocked Connections (Salter & Sullivan, ELO 2018 Montréal): quilt blocks that are also QR codes, telling the story of an imagined quilter on the 1999 web; two traditions of meaning, quilt-block language and hypertext trails. Re:Traced Threads (ELO 2019, the Glucksman, Cork; essay in Electronic Book Review, 2020): a Tracery Twitter bot proposing quilted textual art, and nine physical blocks made from its output, born-digital poetry made “soft.” Tension Assembly (Murray & Salter, (un)continuity, 2020): Tracery-generated poetic samplers that subvert the domestic embroidered poem with apocalyptic news, asking where each artist’s, and the machine’s, labor begins and ends. That last question is the one agents now force on all of us. All documented at anastasiasalter.net/elit.html. From practice: text, tech, and textile has been the space where I experiment and show students code as a tool for creative play, from putting a QR code into a quilt to the continual quilt-block generation of the Tracery project in the middle.',
-    },
-    {
       id: 'a2-manovich', act: 2, minutes: 0.75, layout: 'statement',
       heading: 'Cultural software',
       text: 'Lev Manovich and critical code studies: understanding code is part of understanding what produces culture, and black-box platforms hide exactly that.',
@@ -121,6 +102,25 @@
       media: [{ src: 'assets/act2/twine-interface.png', alt: 'A Twine story map: passages as text boxes connected by arrows.' }],
       fx: ['needle-pass'], avatar: { pose: 'point', x: 60 },
       notes: 'A tool made for writers, not coders, by a designer thinking about who gets left out. From practice: Chris Klimas made Twine, at the center of the workshop tomorrow, as a fellow student in one of Stuart Moulthrop’s classes when I was in graduate school. It was an attempt to make something friendlier to writers than coders; in a sense, agentic tools are the full realization of that.',
+    },
+    {
+      id: 'a2-craftivism', act: 2, place: 'sampler-wall', minutes: 1, layout: 'image',
+      text: 'Craftivism: the needle as protest. In 2020, women sewed masks by the millions: life-saving labor, feminized and uncounted.',
+      media: [{ src: 'assets/act2/masked-making.jpg', alt: 'A cloth face mask printed with large pink and sage flowers.' }],
+      source: 'Lai-Tze Fan, Anne Sullivan & Anastasia Salter, Masked Making, ELO Covid E-Lit Exhibition (2021)',
+      fx: ['stitch-in'], avatar: { pose: 'talk', x: 60 },
+      notes: 'The explicit nod. Betsy Greer coined “craftivism” (2003): craft as activism, slow and public, often feminist. Our piece “Craftivism in the Time of COVID: Resisting Toxic Masculinity through Feminized Labor” (Feminist Media Studies, 2022) with Moreshead reads pandemic mask-making as craftivism pushing back against toxic masculinity. Image is from Masked Making: Uncovering Women’s Craft Labor during COVID-19 (Fan, Sullivan & Salter, ELO Covid E-Lit exhibition, 2021): a generator that keeps producing masks and makers, so the crafted object and its crafter stay ephemeral and disposable, which is the point. Earlier, I hand-made masks mailed to ELO 2020 participants. Hand off to the gallery: craft is also how I make e-lit. From practice: “My own work has often been in conversation with craftivism.” Masked Making, made in Tracery with Lai-Tze Fan and Anne Sullivan, speaks to the invisible labor behind mask making; the slide now cites it instead of the Moreshead article.',
+    },
+    {
+      id: 'a2-textile-elit', act: 2, minutes: 1.25, layout: 'gallery',
+      text: 'Text × tech × textile: feminist e-lit with QR codes pieced into quilts, a Tracery bot designing quilt blocks, and generated cross-stitch samplers.',
+      media: [
+        { src: 'assets/act2/blocked-connections.jpg', alt: 'Four quilts hung on a gallery wall, each pieced and appliquéd as a scannable QR code in blue, purple, pink, and brown fabric.' },
+        { src: 'assets/act2/retraced-threads.jpg', alt: 'A grid of small art quilts with appliquéd circles and stitched lines of generated text, beside a monitor showing the bot that designed them.' },
+        { src: 'assets/act2/tension-assembly.jpg', alt: 'An embroidery hoop holding white cross-stitch fabric stitched with “Quarantine on Twitter: indifferent. March 22, 2020 … This is fine.”' },
+      ],
+      fx: ['quilt-assemble'], avatar: { pose: 'point', x: 60 },
+      notes: 'Three works, left to right. Blocked Connections (Salter & Sullivan, ELO 2018 Montréal): quilt blocks that are also QR codes, telling the story of an imagined quilter on the 1999 web; two traditions of meaning, quilt-block language and hypertext trails. Re:Traced Threads (ELO 2019, the Glucksman, Cork; essay in Electronic Book Review, 2020): a Tracery Twitter bot proposing quilted textual art, and nine physical blocks made from its output, born-digital poetry made “soft.” Tension Assembly (Murray & Salter, (un)continuity, 2020): Tracery-generated poetic samplers that subvert the domestic embroidered poem with apocalyptic news, asking where each artist’s, and the machine’s, labor begins and ends. That last question is the one agents now force on all of us. All documented at anastasiasalter.net/elit.html. From practice: text, tech, and textile has been the space where I experiment and show students code as a tool for creative play, from putting a QR code into a quilt to the continual quilt-block generation of the Tracery project in the middle.',
     },
     {
       id: 'a2-spinning-yarns', act: 2, minutes: 1, layout: 'image',
