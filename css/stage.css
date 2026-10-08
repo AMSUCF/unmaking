@@ -31,8 +31,10 @@ blockquote.text { quotes: none; white-space: pre-line; }
 .layout-statement .card { max-width: 860px; }
 .layout-quote:has(> .media) { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
 .layout-quote .media img { max-height: 500px; }
-.layout-choice:has(> .media) { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
-.layout-choice:has(> .media) .choice { font-size: 24px; }
+.layout-choice:has(> .media, > .media-stack) { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.layout-choice:has(> .media, > .media-stack) .choice { font-size: 24px; }
+.media-stack { display: flex; flex-direction: column; justify-content: center; gap: 18px; min-height: 0; }
+.layout-choice .media-stack .media img { max-height: 260px; }
 .layout-choice .media img { max-height: 560px; }
 .layout-image, .layout-video, .layout-handoff, .layout-gallery { grid-template-rows: minmax(0, 1fr) auto; }
 /* The image row is whatever the caption leaves; flex lets max-height: 100% resolve against it. */

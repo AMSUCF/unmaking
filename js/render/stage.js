@@ -76,7 +76,11 @@ const Stage = (() => {
       const ol = make('ol', 'choices');
       scene.choices.forEach((c) => ol.append(make('li', 'choice', c)));
       card.append(ol);
-      if (media[0]) root.append(figure(media[0]));
+      if (media.length > 1) { // stack several pictures in the side column
+        const stack = make('div', 'media-stack');
+        media.forEach((m) => stack.append(figure(m)));
+        root.append(stack);
+      } else if (media[0]) root.append(figure(media[0]));
     } else if (scene.layout === 'credits') {
       const ul = make('ul', 'credits');
       scene.lines.forEach((l) => ul.append(make('li', '', l)));
