@@ -11,9 +11,9 @@
     },
     {
       id: 'a2-unflatten', act: 2, minutes: 0.75, layout: 'statement',
-      text: 'These tools are for building something personal and expressive. Is the point to unflatten, or is the point to create?',
+      text: 'Textile arts have also struggled with what automation means (and not just the Luddites!). Current debates over where AI and especially agentic tools fit (or don’t) in the humanities are familiar and carry similar stakes for expressive work.',
       fx: ['needle-pass'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Pose the question we keep asking ourselves: are we critiquing (unflattening) or making? Critical making says both, at once. From practice: we are in a moment when the web is shrinking and its audience may be almost entirely agentic, and the motivation to keep making anything in the experimental fields of e-lit and DH can be hard to find. The tools in our book are ways of building something personal and expressive, patterned after the textile arts: joining community practices and building on craft can unflatten our scholarship, to use Nick Sousanis’s term.',
+      notes: 'Textiles have been here before: the power loom, the Jacquard punch cards that fed early computing, and the Luddites, who were skilled weavers fighting for control of their craft and wages rather than against machines as such. The argument over where automation belongs in expressive work is an old one, and the humanities are having it now. From practice: we are in a moment when the web is shrinking and its audience may be almost entirely agentic, and the motivation to keep making anything in the experimental fields of e-lit and DH can be hard to find. The tools in our book are ways of building something personal and expressive, patterned after the textile arts: joining community practices and building on craft can unflatten our scholarship, to use Nick Sousanis’s term.',
     },
     {
       id: 'a2-sousanis', act: 2, minutes: 0.75, layout: 'image',
