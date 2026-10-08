@@ -169,10 +169,13 @@
       notes: 'Follows the Intelligent UI slide: if the interface is generated on demand, it can be generated for the person in front of it. Outline flags this; expand with an example (voice-driven building, alt-text workflows, adapting interfaces).',
     },
     {
-      id: 'a2-metatools', act: 2, minutes: 1, layout: 'statement',
+      id: 'a2-metatools', act: 2, minutes: 1, layout: 'image',
       text: 'Agentic AI coding tools are metatools. They work best making multipurpose things that replace proprietary platforms: our Canvas alternatives, my local recording, transcript, and video tools.',
+      media: [{ src: 'assets/act2/canvas-deployer.png', alt: 'GitHub README for “Canvas Deployer” in the HumanitiesAI repository, last committed by AMSUCF and claude: a Canvas course content deployer for Humanities in the Age of AI that converts Jekyll week files into Canvas pages, discussions, modules and assignments, followed by Python setup commands and a .env file with placeholder Canvas API values.' }],
+      source: 'Canvas Deployer, HumanitiesAI repository (GitHub)',
+      url: 'https://github.com/AMSUCF/HumanitiesAI/tree/main/canvas',
       fx: ['needle-pass'], avatar: { pose: 'talk', x: 60 }, draft: true,
-      notes: 'Concrete examples from our own practice. TODO: add screenshots of the Canvas alternative and the local recording/transcript tools (gallery).',
+      notes: 'Concrete examples from our own practice. The course lives as Jekyll week files on open ground; the deployer pushes them into Canvas pages, discussions, modules and assignments, so Canvas becomes a delivery target rather than the home of the course. Committed by “AMSUCF and claude.” TODO: add a screenshot of the local recording/transcript tools and make this a gallery.',
     },
     {
       id: 'a2-artcraft', act: 2, minutes: 1, layout: 'gallery',
