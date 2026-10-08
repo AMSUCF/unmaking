@@ -42,12 +42,11 @@
       ],
     },
     'craft-fair': {
-      label: 'The Craft Fair', credit: 'Animal Crossing (Able Sisters); Kid Pix; Twine; Tracery', floor: 684,
+      label: 'The Craft Fair', credit: 'Animal Crossing (Able Sisters); Twine; Tracery', floor: 684,
       pieces: [
         hoop,
         { layer: 'far', cls: 'cf-stalls', box: [240, 290, 960, 370] },
         { layer: 'mid', cls: 'cf-bunting', box: [220, 40, 980, 16] },
-        { layer: 'mid', cls: 'cf-sign', box: [300, 648, 150, 30], text: 'KID PIX' },
         { layer: 'mid', cls: 'cf-sign', box: [470, 648, 130, 30], text: 'TWINE' },
         { layer: 'mid', cls: 'cf-sign', box: [620, 648, 150, 30], text: 'TRACERY' },
         { layer: 'mid', cls: 'cf-yarn', box: [120, 636, 90, 44] },

@@ -134,12 +134,6 @@ Casual Creators (Compton & Mataeas) and low-code platforms offer alternatives, u
 
 **Slide -**
 
-Kid Pix - http://red-green-blue.com/kid-pix-the-early-years
-
----
-
-**Slide -**
-
 https://www.nathalielawhead.com/candybox/on-ui-design-using-ui-as-a-means-to-tell-a-story-convey-emotion-create-personality-an-in-depth-look
 
 ---
@@ -276,19 +270,13 @@ The community rebuilt Tracery bots after Twitter broke them (p. 244). We need sh
 
 Material, Tools, Time... and Steps
 
-Nowviskie's triad (pp. 11-12), plus a fourth loss: control over the steps and decisions themselves, sold as convenience.
+Nowviskie's triad ("Resistance in the Materials"), plus a fourth loss: control over the steps and decisions themselves, sold as convenience.
 
 ---
 
 **Slide -**
 
 If my agent does all of the work to create a website, tracery, 3D print file, etc., where is the human contribution? At what point does lowering the barriers to entry remove the point of the making entirely?
-
----
-
-**Slide -**
-
-The title's pun is the argument. Making restores human agency; agentic AI transfers it to the system.
 
 ---
 

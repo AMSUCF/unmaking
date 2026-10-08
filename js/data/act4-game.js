@@ -29,7 +29,7 @@
     {
       id: 'a4-triad', act: 4, minutes: 1.25, place: 'workshop', layout: 'statement', agency: 1,
       heading: 'Material, tools, time… and steps',
-      text: 'Nowviskie’s triad (pp. 11–12), plus a fourth loss: control over the steps and decisions themselves, sold as convenience.',
+      text: 'Nowviskie’s triad (“Resistance in the Materials”), plus a fourth loss: control over the steps and decisions themselves, sold as convenience.',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'Bethany Nowviskie’s triad as we use it in the book. Agents add a fourth thing we can lose.',
     },
@@ -53,13 +53,6 @@
       source: 'Cory Doctorow, The Reverse Centaur’s Guide to Life After AI (MCD/Farrar, Straus and Giroux, 2026), p. 103',
       fx: ['pixel-dissolve'], avatar: { pose: 'point', x: 60 },
       notes: 'One answer to “where is the human contribution?”: intent. He goes on to describe artists whose striking AI work came from many, many rounds of prompting, searching for and uploading reference material, choosing among variations, and then reworking the result by hand in Photoshop or GIMP: “infusing still more communicative human judgment into the output.” The contribution is not the click; it is everything you bring to it. And you still have to have something to say.',
-    },
-    {
-      id: 'a4-pun', act: 4, minutes: 1, layout: 'statement', agency: 0,
-      heading: 'The pun is the argument',
-      text: 'Making restores human agency. Agentic AI transfers it to the system.',
-      fx: ['pixel-dissolve'],
-      notes: 'The title’s pun: agency, and agentic.',
     },
     {
       id: 'a4-undertale', act: 4, minutes: 0.75, place: 'office', layout: 'gallery', agency: 1,
