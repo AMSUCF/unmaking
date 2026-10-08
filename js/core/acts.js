@@ -8,7 +8,7 @@
   };
 
   const ACTS = [
-    { n: 1, craft: 'paper', presenter: 'emily', title: 'Act I', subtitle: 'Making and Unmaking the Web', budgetMinutes: 15 },
+    { n: 1, craft: 'paper', presenter: 'emily', title: 'Act I', subtitle: 'The End of Making as We Know It?', budgetMinutes: 15 },
     { n: 2, craft: 'textile', presenter: 'anastasia', title: 'Act II', subtitle: 'Why Keep Making?', budgetMinutes: 15 },
     { n: 3, craft: 'zine', presenter: 'emily', title: 'Act III', subtitle: 'Who Owns What We Make?', budgetMinutes: 15 },
     { n: 4, craft: 'game', presenter: 'anastasia', title: 'Act IV', subtitle: 'Is There Human Agency in Agentic AI?', budgetMinutes: 15 },

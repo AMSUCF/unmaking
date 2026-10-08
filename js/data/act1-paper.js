@@ -1,4 +1,4 @@
-/* Act I — Paper — presented by Emily K. Johnson. Outline: "Making and Unmaking the Web". */
+/* Act I — Paper — presented by Emily K. Johnson. Outline: "The End of Making as We Know It?". */
 (function (root) {
   'use strict';
   const ACT1_SCENES = [
