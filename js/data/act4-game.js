@@ -97,7 +97,7 @@
     },
     {
       id: 'a4-stanford', act: 4, minutes: 0.75, layout: 'image', agency: 1,
-      text: 'Defaults become policy: Stanford R&DE used AI to race-swap students in its advertising.',
+      text: 'Stanford R&DE used AI to race-swap students in its advertising. Token representation can now be imaginary, even as real efforts at diversifying campuses are being dismantled.',
       media: [{ src: 'assets/act4/stanford-race-swap.png', alt: 'News article: Stanford R&DE uses AI to race swap students for advertising, with before and after photos.' }],
       source: 'Garret Molloy and Zayd Patel, “Stanford R&DE Uses AI to Race Swap Students for Advertising,” The Stanford Review (September 21, 2026)',
       url: 'https://stanfordreview.org/stanford-r-de-uses-ai-to-race-swap-students-for-advertising/',
