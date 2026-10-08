@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 178" width="70" height="178">
+  <!-- After Clippy (Microsoft Office Assistant): a bent wire paperclip with eyes, standing on a sheet of paper. -->
+  <path d="M4 176 L14 152 L68 152 L60 176 Z" fill="#fffbe6" stroke="#1a1a24" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M15 158 H63 M11 165 H60 M8 172 H58" stroke="#8fb3e0" stroke-width="1.5"/>
+  <ellipse cx="30" cy="153" rx="18" ry="3" fill="#1a1a24" opacity=".35"/>
+  <g transform="rotate(-6 34 90)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path id="wire" d="M24 118 L24 52 A10 10 0 0 1 44 52 L44 128 A17 17 0 0 1 10 128 L10 40 A24 24 0 0 1 58 40 L58 108" stroke="#1a1a24" stroke-width="9"/>
+    <path d="M24 118 L24 52 A10 10 0 0 1 44 52 L44 128 A17 17 0 0 1 10 128 L10 40 A24 24 0 0 1 58 40 L58 108" stroke="#c9ced8" stroke-width="5"/>
+    <path d="M10 120 L10 40 A24 24 0 0 1 40 17" stroke="#ffffff" stroke-width="1.5" opacity=".8"/>
+    <path d="M13 47 Q22 39 31 46 M37 47 Q46 39 55 46" stroke="#1a1a24" stroke-width="3.5"/>
+    <ellipse cx="22" cy="63" rx="9" ry="11" fill="#ffffff" stroke="#1a1a24" stroke-width="2.5"/>
+    <ellipse cx="46" cy="63" rx="9" ry="11" fill="#ffffff" stroke="#1a1a24" stroke-width="2.5"/>
+    <circle cx="19" cy="59" r="3.5" fill="#1a1a24" stroke="none"/>
+    <circle cx="43" cy="59" r="3.5" fill="#1a1a24" stroke="none"/>
+  </g>
+</svg>

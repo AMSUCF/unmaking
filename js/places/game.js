@@ -32,8 +32,8 @@
       sky: { top: '#2e3a5a', bottom: '#1e2740' },
       pieces: [
         { layer: 'far', cls: 'go-crt', box: [980, 90, 220, 180] },
-        { layer: 'mid', cls: 'go-clippy', box: [1206, 250, 66, 110] },
-        { layer: 'mid', cls: 'go-bubble', box: [260, 536, 560, 28], text: '“It looks like you’re writing a talk.”' },
+        { layer: 'mid', cls: 'go-clippy', box: [1206, 392, 70, 178] },
+        { layer: 'mid', cls: 'go-bubble', box: [1203, 262, 75, 112], text: 'It looks like you’re writing a talk.' },
         { layer: 'mid', cls: 'go-desk', box: [880, 530, 320, 40] },
         { layer: 'egg', cls: 'go-save', box: [150, 64, 40, 40] },
         floor('go-floor'),

@@ -106,7 +106,7 @@
     },
     {
       id: 'a4-political', act: 4, minutes: 1, place: 'commons', layout: 'statement', agency: 2,
-      text: 'Our book is intentionally political, written in a state where humanities work was cast as a “public threat” (p. xiv; pp. 231–232).',
+      text: 'The humanities are still under attack, and AI tools are certainly being deployed in those attacks.',
       fx: ['pixel-dissolve'], avatar: { pose: 'talk', x: 60 },
       notes: 'Florida context. Making is never neutral, and neither is teaching it.',
     },
