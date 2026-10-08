@@ -3,25 +3,25 @@
   'use strict';
   const ACT3_SCENES = [
     {
-      id: 'a3-flash-dead', act: 3, minutes: 0.75, place: 'flash-graveyard', layout: 'statement',
-      heading: 'Flash is dead.',
-      text: 'So is Twine pointless now? If an agent can make the thing, who owns what gets made?',
-      fx: ['xerox-scan'], say: 'Fresh off the copier.',
-      notes: 'Emily returns. The transition from the outline: Flash is dead; is Twine pointless now? Into ownership.',
-    },
-    {
-      id: 'a3-act', act: 3, minutes: 0.5, layout: 'statement',
+      id: 'a3-act', act: 3, minutes: 0.5, place: 'flash-graveyard', layout: 'statement',
       heading: 'Act III: Who Owns What We Make?',
       text: 'Walled gardens · preservation · maintenance',
-      fx: ['ransom-shuffle'],
-      notes: 'Section title. Zines are the original answer to "who owns": copy it, staple it, hand it on.',
+      fx: ['xerox-scan'], say: 'Fresh off the copier.',
+      notes: 'Emily opens Act III here, right off the copier (moved to the top after practice): “Who owns what we make? Zines were the original answer: copy it, staple it, pass it on.”',
     },
     {
       id: 'a3-walled', act: 3, minutes: 1, layout: 'image',
       text: 'Previous platforms in this space suffered from walled gardens. RIP Flash, and all the dead works on the App Store.',
       media: [{ src: 'assets/act3/flash.jpg', alt: 'Cover of Flash: Building the Interactive Web by Anastasia Salter and John Murray.' }],
       fx: ['sticker-slap'], avatar: { pose: 'point', x: 60 },
-      notes: 'Anastasia and John Murray’s Flash book. Corporate walled gardens and the works lost with them.',
+      notes: 'Anastasia and John Murray’s Flash book. Corporate walled gardens and the works lost with them. From practice (now the second slide of the act, the overall frame): “We’ve seen this before.” Anastasia and John Murray wrote the book on Flash, the platform that let ordinary people build the interactive web. Adobe ended support at the end of 2020, browsers blocked Flash content in 2021, and the projects stopped working: the cost of corporate walled gardens.',
+    },
+    {
+      id: 'a3-flash-dead', act: 3, minutes: 0.75, layout: 'statement',
+      heading: 'Flash is dead.',
+      text: 'So is Twine pointless now? If an agent can make the thing, who owns what gets made?',
+      fx: ['xerox-scan'],
+      notes: 'Now after the Flash book slide (moved after practice). Tell the Twine story: one of our T&T students, working for another department, was asked by Writing and Rhetoric to build a Twine for faculty to use with their composition students. He spent a lot of time on it and sent it to his supervisor, who replied: great, I made a few updates, let me know what you think. The updated file no longer played in Twine: she had run it through Claude, or possibly Copilot, which turned it into HTML that no longer worked in the Twine platform. So is Twine pointless now? And who owns what gets made?',
     },
     {
       id: 'a3-lawhead', act: 3, minutes: 1.5, place: 'wayback-stacks', layout: 'quote',
@@ -30,7 +30,7 @@
       url: 'https://www.nathalielawhead.com/candybox/a-short-history-of-flash-the-forgotten-flash-website-movement-when-websites-were-the-new-emerging-artform',
       media: [{ src: 'assets/act3/lawhead-flash.png', alt: 'Collage of 2000s Flash websites under the caption “What did the space really look like?”' }],
       fx: ['misregister'], avatar: { pose: 'point', x: 60 },
-      notes: 'Read the quote. "The little people": who technology empowers, and how fast it can be erased.',
+      notes: 'Read the quote. "The little people": who technology empowers, and how fast it can be erased. From practice: Nathalie Lawhead made art in Flash. After the quote: technology empowered us, and then a huge part of that history was erased quickly, almost without a trace.',
     },
     {
       id: 'a3-preservation', act: 3, minutes: 1.25, layout: 'gallery',
@@ -40,7 +40,7 @@
         { src: 'assets/act3/flash-preservation-2.png', alt: 'Google search “why did flash die” with an AI Overview citing security flaws, poor performance, and HTML5.' },
       ],
       fx: ['sticker-slap'],
-      notes: 'Especially systems that compile and hide their source code. Agents are, in a sense, the ultimate compiled black box.',
+      notes: 'Especially systems that compile and hide their source code. Agents are, in a sense, the ultimate compiled black box. From practice: two lessons. First, support open data, especially now that communities are building new walls. Second, be wary of over-investing in proprietary systems, especially ones that compile and hide their source.',
     },
     {
       id: 'a3-flores', act: 3, minutes: 1.25, layout: 'image',
@@ -49,7 +49,7 @@
       source: 'Leonardo Flores, “A Farewell to Wordpress” (May 2026)',
       url: 'https://leonardoflores.net/posts/blog/news/a-farewell-to-wordpress.html',
       fx: ['xerox-scan'],
-      notes: 'Escaping a platform with AI assistance. Flores: WordPress’s LAMP stack had “too many dependencies and moving parts that can break”; I ♥ E-Poetry “was down for over a year because a no-longer-supported plugin (WPML) broke my database.” He had wanted to migrate for 6-7 years, but the migration tools needed more expertise than he had, and without funding to pay someone “it wasn’t going to happen without AI.” His own bio calls him “a cyborg digital writer.” Note the irony: his old WordPress URLs now return 404s.',
+      notes: 'Escaping a platform with AI assistance. Flores: WordPress’s LAMP stack had “too many dependencies and moving parts that can break”; I ♥ E-Poetry “was down for over a year because a no-longer-supported plugin (WPML) broke my database.” He had wanted to migrate for 6-7 years, but the migration tools needed more expertise than he had, and without funding to pay someone “it wasn’t going to happen without AI.” His own bio calls him “a cyborg digital writer.” Note the irony: his old WordPress URLs now return 404s. From practice: “But an agent can also help us climb out of that walled garden.”',
     },
     {
       id: 'a3-cyborg', act: 3, minutes: 0.75, layout: 'quote',
@@ -76,14 +76,14 @@
       text: '“Undoubtedly, search is also pivotal in the development of artificial intelligence.”',
       source: 'Safiya Umoja Noble, Algorithms of Oppression (2018), p. 149',
       fx: ['sticker-slap'],
-      notes: 'Written in 2018, before chatbots replaced the results page. Search sorted the web into what counted; AI is trained on that sorted web, and now answers in its place.',
+      notes: 'Written in 2018, before chatbots replaced the results page. Search sorted the web into what counted; AI is trained on that sorted web, and now answers in its place. From practice (Emily): I see a version of this in technical communication, my tenure home. We used to optimize technical writing for search engines (SEO); now we are writing for AI, adding metadata and thinking about information architecture differently, because the first reader of the page may be a machine.',
     },
     {
       id: 'a3-perlow', act: 3, minutes: 1.5, layout: 'quote',
       text: '“I close by addressing one area where responses to large AI models have been surprisingly reactionary—that of intellectual property. Objections to large AI models on copyright grounds amount to a dramatic reversal of attitudes among the American left, what Kirschenbaum and Raley call a ‘new copyright fundamentalism.’ Two decades ago, many people now urging copyright infringement claims against AI firms were deriding Metallica and the RIAA for their lawsuits against Napster and its successors. Back then, piracy was cool; we called it ‘sharing.’”',
-      source: 'Seth Perlow, “Generative Theories, Pretrained Responses: Large AI Models and the Humanities”',
+      source: 'Seth Perlow, “Generative Theories, Pretrained Responses: Large AI Models and the Humanities,” PMLA (2024)',
       fx: ['misregister'], avatar: { pose: 'talk', x: 60 },
-      notes: 'A provocation we take seriously without fully endorsing. Zines were built on sharing.',
+      notes: 'A provocation we take seriously without fully endorsing. Zines were built on sharing. From practice: Perlow borrows “new copyright fundamentalism” from Matthew Kirschenbaum and Rita Raley, writing in the same issue. They grant the anger is justified, but warn that when we fight AI in the language of property and authorship, we accept the market’s terms and lose sight of the bigger loss: the enclosure of the commons, the shared language we all made together. Their answer is not more lawsuits but public data infrastructure and transparent training data. We take this seriously without fully endorsing it: back to DeviantArt, artists deserve to be asked and paid. So how do we protect makers without fencing off the commons?',
     },
     {
       id: 'a3-moulthrop', act: 3, minutes: 1.5, layout: 'quote',
@@ -91,13 +91,13 @@
       source: 'Stuart Moulthrop, “Movie Laughed in Sprocket-Language, or: a Night at the Chatbot,” Electronic Book Review (2026)',
       url: 'https://electronicbookreview.com/publications/movie-laughed-in-sprocket-language/',
       fx: ['misregister'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Stuart answers Perlow. Yes, someone committed to the new general poetics sees only a copyright problem; most of his students saw something else, and refused to use his custom GPT (SeminarBot) on ethical, political, and aesthetic grounds. He gave them an opt-out assignment instead. The Borg line is “Resistance is futile.” His turn: resistance can be fertile. That is the bridge to the gardens slide: refusal as a making practice, not just a no. Full passage (the slide trims two bits, marked with ellipses): “Though some remainder tables may survive in obscure shops redolent of old page stock, a new end of books looms in which the text is not abandoned but consumed, at least on a per-copy basis, its immolation serving to expand a voracious wordhoard. All will be assimilated, their uniqueness added to the collective. There are of course different ways to value this outcome, depending on how one thinks about language machines. Someone deeply committed to the new general poetics may see only a need for timely change in copyright law. Most of my 2025 seminar did not share that outlook, and I want to open space for them in this discussion. Any Star Trek fan knows the menacing next sentence of the Borg’s infamous greeting. Perhaps, though, resistance can be fertile rather than futile.”',
+      notes: 'Stuart answers Perlow. Yes, someone committed to the new general poetics sees only a copyright problem; most of his students saw something else, and refused to use his custom GPT (SeminarBot) on ethical, political, and aesthetic grounds. He gave them an opt-out assignment instead. The Borg line is “Resistance is futile.” His turn: resistance can be fertile. That is the bridge to the gardens slide: refusal as a making practice, not just a no. Full passage (the slide trims two bits, marked with ellipses): “Though some remainder tables may survive in obscure shops redolent of old page stock, a new end of books looms in which the text is not abandoned but consumed, at least on a per-copy basis, its immolation serving to expand a voracious wordhoard. All will be assimilated, their uniqueness added to the collective. There are of course different ways to value this outcome, depending on how one thinks about language machines. Someone deeply committed to the new general poetics may see only a need for timely change in copyright law. Most of my 2025 seminar did not share that outlook, and I want to open space for them in this discussion. Any Star Trek fan knows the menacing next sentence of the Borg’s infamous greeting. Perhaps, though, resistance can be fertile rather than futile.” From practice: introduce it (“Stuart Moulthrop has a new essay in Electronic Book Review”). Pronunciation: redolent (RED-uh-lent), immolation (im-uh-LAY-shun), wordhoard. The last line is “fertile rather than futile.”',
     },
     {
       id: 'a3-gardens', act: 3, minutes: 1, place: 'geocities', layout: 'statement',
       text: 'Beyond copyright and credit: the tension between making things in other people’s walled gardens and planting an entirely new garden.',
       fx: ['ransom-shuffle'],
-      notes: 'Authorship versus ownership. The question is not only who gets paid, but where the thing can live.',
+      notes: 'Authorship versus ownership. The question is not only who gets paid, but where the thing can live. From practice: “The question is not only who gets paid; it is where your work can live.”',
     },
     {
       id: 'a3-elon', act: 3, minutes: 1.25, layout: 'video',
@@ -106,11 +106,11 @@
       url: 'https://direkris.itch.io/elon',
       media: [{ src: 'assets/act3/you-are-elon-musk.mp4', alt: 'Screen recording of the interactive fiction You Are Elon Musk by direkris.' }],
       fx: ['sticker-slap'],
-      notes: 'Click the video to play (it does not autoplay; click does not advance). The open web at its best: a sharp, small, self-published game.',
+      notes: 'Click the video to play (it does not autoplay; click does not advance). The open web at its best: a sharp, small, self-published game. From practice: you wake up as Musk and have to spend his fortune. A pointed, sharp, self-published Twine game, free to play in the browser.',
     },
     {
       id: 'a3-content-moderator', act: 3, minutes: 1, layout: 'gallery',
-      text: 'Subversive Twine: Mark Sample’s Content Moderator Sim, a “workplace horror game” about the people who screen what platforms don’t want us to see.',
+      text: 'Mark Sample’s Content Moderator Sim: a “workplace horror game” about the people who screen what platforms don’t want us to see.',
       media: [
         { src: 'assets/act3/content-moderator-title.png', alt: 'Title screen of Content Moderator Sim, “A Workplace Horror Game” by Mark Sample, with a pop-up notification “@CM4377 Back to work!!!”: “It’s close to the end of an 8 hour shift at ViralTitans, Inc., the third largest online content moderation subcontractor in the Bay area,” above links Back to Work, Content Warning and About.' },
         { src: 'assets/act3/content-moderator-case.png', alt: 'A case in Content Moderator Sim: “You have screened 969 cases today. Time Remaining to Review this Case,” with a draining timer bar, then “Break is over. On the screen is a short video. Someone posted it to a social media site. Somebody else reported it as inappropriate.”' },
@@ -118,7 +118,7 @@
       source: 'Mark Sample, Content Moderator Sim (Twine/SugarCube, 2020)',
       url: 'https://samplereality.itch.io/content-moderator-sim',
       fx: ['ransom-shuffle'],
-      notes: 'About five minutes of play: you are contractor CM4377 at ViralTitans, Inc., near the end of an eight-hour shift, with a draining timer on every case and a boss pinging you to get back to your queue. The game credits Sarah T. Roberts’s research on commercial content moderation (Behind the Screen, 2019); many cases come from the Guardian’s 2017 report on Facebook’s internal rulebook, and the August 2020 version adds the Kenosha militia page reported 455 times. Content warning in the game: brief written references to abuse, self-harm, racism, and brutality, no images or video. Twine at its sharpest: a small, free, open-source (BSD and CC BY) game that makes hidden platform labor felt. The same hidden labor now cleans and labels AI training data. And it sets up the next slide: someone has to look at what the worst tools produce.',
+      notes: 'Script (shortened after practice): “Another Twine game by Mark Sample, a workplace horror game. You are contractor CM4377, late in an eight-hour shift, with a timer on every case. It draws on Sarah T. Roberts’s Behind the Screen, and many cases come from reporting on Facebook’s internal rulebook. The same hidden labor now cleans and labels AI training data, and someone has to look at what the worst tools produce.” Background if asked: the August 2020 version adds the Kenosha militia page reported 455 times; content warning in the game covers brief written references to abuse, self-harm, racism, and brutality, no images; open source (BSD and CC BY).',
     },
     {
       id: 'a3-nudification', act: 3, minutes: 1, layout: 'image',
@@ -127,7 +127,7 @@
       source: 'Reuters, “US appeals court blocks Minnesota law barring ‘nudified’ photos in XAI lawsuit” (October 2, 2026)',
       url: 'https://www.reuters.com/world/us-appeals-court-blocks-minnesotas-ai-nudification-law-now-xai-lawsuit-2026-10-02/',
       fx: ['xerox-scan'],
-      notes: 'Openness cuts both ways. Reuters: Musk’s xAI persuaded a federal appeals court to halt Minnesota’s first-in-the-nation ban on AI-generated fake nude images while xAI sues to have the law declared unconstitutional.',
+      notes: 'Openness cuts both ways. Reuters: Musk’s xAI persuaded a federal appeals court to halt Minnesota’s first-in-the-nation ban on AI-generated fake nude images while xAI sues to have the law declared unconstitutional. From practice: “The internet hasn’t always been the best of democratic publishing. The nudification and deepfake tools that came even before Musk’s own version are the worst. Just last week, on October 2, a federal appeals court blocked Minnesota’s law against them, in xAI’s lawsuit.”',
     },
     {
       id: 'a3-tracery', act: 3, minutes: 1, place: 'bot-garden', layout: 'image',
@@ -135,7 +135,7 @@
       text: 'Community: the people who keep the tools running.',
       media: [{ src: 'assets/act3/tracery.png', alt: 'Crystal Code Palace’s Tracery tutorial, with a grammar of animals and a list of generated results.' }],
       fx: ['xerox-scan'],
-      notes: 'Kate Compton’s Tracery, and the people who kept it alive.',
+      notes: 'Kate Compton’s Tracery, and the people who kept it alive. From practice: Kate Compton’s Tracery, a simple grammar tool that powered thousands of bots. Its tutorial site itself fell victim to domain hijacking after the domain lapsed, and she revived it on a different domain (confirm details).',
     },
     {
       id: 'a3-cbdq', act: 3, minutes: 0.5, layout: 'image',
@@ -143,7 +143,7 @@
       media: [{ src: 'assets/act3/cbdq-closure.jpg', alt: 'Cheap Bots, Done Quick! closure notice: “Update (6th April 2023): CBDQ has closed down! Twitter has ended all large-scale API usage, and this means that CBDQ is unable to operate.” Below it: “If you are interested in moving your bot to Mastodon, @boodooperson has set up Cheap Bots, Toot Sweet!, which operates using the same syntax.”' }],
       source: 'v buckenham, Cheap Bots, Done Quick! (closure notice, April 6, 2023)',
       fx: ['sticker-slap'], avatar: { pose: 'point', x: 60 },
-      notes: 'Rebuilding is a practice, not a rescue (p. 244). v buckenham built CBDQ so anyone could run a Tracery bot without servers or code; thousands of poetry and art bots lived there. When Twitter turned hostile to small makers and shut off the API, the closure notice did not just say goodbye: it pointed users to the next home, a Mastodon port someone else had already built. The platform died; the community’s first move was a forwarding address.',
+      notes: 'Rebuilding is a practice, not a rescue (p. 244). v buckenham built CBDQ so anyone could run a Tracery bot without servers or code; thousands of poetry and art bots lived there. When Twitter turned hostile to small makers and shut off the API, the closure notice did not just say goodbye: it pointed users to the next home, a Mastodon port someone else had already built. The platform died; the community’s first move was a forwarding address. From practice: CBDQ was wonderful in my classes.',
     },
     {
       id: 'a3-cbts', act: 3, minutes: 0.5, layout: 'image',
@@ -167,13 +167,13 @@
       media: [{ src: 'assets/act3/flores-workshop-bot.jpg', alt: 'Leonardo Flores’s Bluesky Bot Workshop, “What is a bot?”: bots deployed on social networks (especially Twitter, Mastodon, both struck through, then Bluesky and Tumblr), and the artistic, literary, educational and activist bots the workshop will make.' }],
       source: 'Leonardo Flores, Bluesky Bot Workshop',
       fx: ['sticker-slap'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Look at the strikethrough in his definition of a bot: “Twitter, Mastodon” crossed out, Bluesky left standing. That is the history of this tool in one line. Rebuilding is not finished when the code runs again; it is finished when new people can learn to make with it. Workshops, tutorials, and shared docs are infrastructure too. This is the model for agentic tools: when the platform dies or turns hostile, what survives is the community, the open format, and the teaching.',
+      notes: 'Look at the strikethrough in his definition of a bot: “Twitter, Mastodon” crossed out, Bluesky left standing. That is the history of this tool in one line. Rebuilding is not finished when the code runs again; it is finished when new people can learn to make with it. Workshops, tutorials, and shared docs are infrastructure too. This is the model for agentic tools: when the platform dies or turns hostile, what survives is the community, the open format, and the teaching. From practice: Flores also built a great HTML site; my students downloaded it, read the comments, changed the Tracery code, and had their own working bot website.',
     },
     {
       id: 'a3-inspect', act: 3, minutes: 1, layout: 'statement',
       text: 'We need shared patterns for inspecting agents, not just ban policies.',
       fx: ['ransom-shuffle'], avatar: { pose: 'talk', x: 60 },
-      notes: 'The constructive turn, which Act IV makes concrete.',
+      notes: 'The constructive turn, which Act IV makes concrete. From practice: “Back to Doctorow: we need community. We need shared patterns.”',
     },
     {
       id: 'a3-handoff', act: 3, minutes: 1, layout: 'handoff', to: 'game',

@@ -10,7 +10,7 @@
       media: [{ src: 'assets/shared/critmaking-cover.png', alt: 'Cover of Critical Making in the Age of AI by Emily K. Johnson and Anastasia Salter: sewing-pattern pieces arranged into a profile of a head, with stitched lettering.' }],
       fx: ['popup-rise'],
       say: 'Welcome! Pull up a chair.',
-      notes: 'Emily opens. Introduce both of us and our book, Critical Making in the Age of AI. Point at the cover: it is a sewing pattern, a paper promise of cloth. Hold that thought; it becomes Act II.',
+      notes: 'Emily opens. Introduce both of us and our book, Critical Making in the Age of AI. Point at the cover: it is a sewing pattern, a paper promise of cloth. Hold that thought; it becomes Act II. From practice: “Thank you for coming. I’m Emily Johnson, this is Anastasia Salter, and we wrote Critical Making in the Age of AI. It’s part provocation and part pattern book, encouraging everyone to engage in more critical making.”',
     },
     {
       id: 'a1-crafts', act: 1, minutes: 0.75, layout: 'statement',
@@ -18,7 +18,7 @@
       text: 'Paper. Thread. Zine. Game. Each act is made in a different craft, and each one gets unmade on the way to the next.',
       fx: ['fold-in'], avatar: { pose: 'talk', x: 60 },
       say: "I'm your guide for Act I.",
-      notes: 'Explain the structure. We alternate: I take paper and the zine; Anastasia takes textiles and the game. Critical making as method: the form of each act is part of the argument, and these avatars were made, not prompted.',
+      notes: 'Explain the structure. We alternate: I take paper and the zine; Anastasia takes textiles and the game. Critical making as method: the form of each act is part of the argument, and these avatars were made, not prompted. From practice: “Our talk is organized into four acts, or crafts: paper, thread, zine, and game.”',
     },
     {
       id: 'a1-act', act: 1, minutes: 0.5, layout: 'statement',
@@ -31,13 +31,13 @@
         { cls: 'prop-fine-sign', box: [30, 380, 186, 76], text: 'and this\nis fine.' },
         { cls: 'prop-fine-dog', box: [1100, 520, 130, 160] },
       ],
-      notes: 'Section title. Three threads: what coding is now, what platforms have become, and the politics underneath both. Emily holds up the "this is fine" sign while the paper web burns (after KC Green, "On Fire," Gunshow, 2013).',
+      notes: 'Section title. Three threads: what coding is now, what platforms have become, and the politics underneath both. Emily holds up the "this is fine" sign while the paper web burns (after KC Green, "On Fire," Gunshow, 2013). From practice: Emily: “I’m usually the optimist of the two of us, so it’s fun to get the doom slide this time.” Then the three threads. Then: about a decade ago, the Computer Science for All initiative and the learn-to-code movement told everyone they had to code, and a lot of resources went into programs to teach it. Now AI agents promise that no one has to code at all.',
     },
     {
       id: 'a1-personal', act: 1, minutes: 1, place: 'hamlet', layout: 'statement',
       text: 'All these tools are for building something personal and expressive against a tide of regimented and boring web platforms.',
       fx: ['cut-out'], avatar: { pose: 'point', x: 60 },
-      notes: 'The thesis we keep returning to: the web we loved was handmade. The tools we study exist to make personal, expressive things.',
+      notes: 'The thesis we keep returning to: the web we loved was handmade. The tools we study exist to make personal, expressive things. From practice: the tools in our book and our work exist so that people can keep making personal, expressive things against a tide of regimented and boring web platforms.',
     },
     {
       id: 'a1-student-selfie', act: 1, minutes: 0.5, layout: 'image',
@@ -45,7 +45,7 @@
       media: [{ src: 'assets/act1/student-lopez-selfie.jpg', alt: 'A hand holds a sculpted clay self-portrait: a smiling face with long auburn hair and blue eyes.' }],
       source: 'Alessandra Zinicola Lopez, Critical Making in the Age of AI (with permission)',
       fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
-      notes: 'The book pairs every pattern with attributed student samples, reproduced with the students’ permission. First of four. Selfie pattern: Lopez made hers in clay. This is the personal, expressive web we are trying to protect.',
+      notes: 'The book pairs every pattern with attributed student samples, reproduced with the students’ permission. First of four. Selfie pattern: Lopez made hers in clay. This is the personal, expressive web we are trying to protect. From practice: every pattern in our book comes with student samples, shared here with their permission. This selfie is by Alessandra Zinicola Lopez.',
     },
     {
       id: 'a1-student-comic', act: 1, minutes: 0.5, layout: 'image',
@@ -53,7 +53,7 @@
       media: [{ src: 'assets/act1/student-buckley-comic.jpg', alt: 'An open hand-drawn comic zine about growing up: collaged pages titled American Girl, I Got It!, Age Eight, and So Much Hair!, signed Emilie Buckley.' }],
       source: 'Emilie Buckley, Critical Making in the Age of AI (with permission)',
       fx: ['popup-rise'],
-      notes: 'Comic pattern: Buckley’s hand-drawn, collaged zine about growing up.',
+      notes: 'Comic pattern: Buckley’s hand-drawn, collaged zine about growing up. From practice: Emilie Buckley’s hand-drawn, collaged comic zine.',
     },
     {
       id: 'a1-student-gif-berge', act: 1, minutes: 0.5, layout: 'image',
@@ -61,7 +61,7 @@
       media: [{ src: 'assets/act1/student-berge.gif', alt: 'Looping GIF captioned “VR hates your living room”: a woman in a VR headset stalks through a living room with claws.' }],
       source: 'PB Berge, Critical Making in the Age of AI (with permission)',
       fx: ['popup-rise'],
-      notes: 'GIF pattern, first of two. Berge’s full GIF: three VR ads (Wolverine, Batman Arkham VR, the apartment crumbling into the void), re-encoded at 10 fps from CritMakingAgeOfAI/Examples/BergeGIF.gif. About 26 seconds; it loops, so no need to wait it out.',
+      notes: 'GIF pattern, first of two. Berge’s full GIF: three VR ads (Wolverine, Batman Arkham VR, the apartment crumbling into the void), re-encoded at 10 fps from CritMakingAgeOfAI/Examples/BergeGIF.gif. About 26 seconds; it loops, so no need to wait it out. From practice: say “PB Berge” (it came out as a different first name in practice). A remix of VR ads into a reaction GIF about how much VR truly hates your living room.',
     },
     {
       id: 'a1-student-gif-prior', act: 1, minutes: 0.5, layout: 'image',
@@ -69,7 +69,7 @@
       media: [{ src: 'assets/act1/student-prior.gif', alt: 'Pixel-text meme GIF over a cartoon villain: “If I had a nickel for every time a history professor told me I write too journalistically, I’d have two nickels.”' }],
       source: 'Kate Prior, Critical Making in the Age of AI (with permission)',
       fx: ['popup-rise'], avatar: { pose: 'talk', x: 60 },
-      notes: 'GIF pattern, second of two. Let the joke land.',
+      notes: 'GIF pattern, second of two. Let the joke land. From practice: Kate Prior’s GIF. Read it aloud: “If I had a nickel for every time a history professor told me I write too journalistically, I’d have two nickels. Which isn’t a lot, but it’s weird that it happened twice.”',
     },
     {
       id: 'a1-enshittification', act: 1, minutes: 1.5, place: 'platform-city', layout: 'quote',
@@ -77,7 +77,7 @@
       source: 'Cory Doctorow, “My McLuhan Lecture on Enshittification”',
       url: 'https://doctorow.medium.com/my-mcluhan-lecture-on-enshittification-ea343342b9bc',
       fx: ['fold-in'], avatar: { pose: 'point', x: 60 },
-      notes: 'Read the quote. Note the irony that it is hosted on Medium, itself a platform mid-cycle.',
+      notes: 'Read the quote. Note the irony that it is hosted on Medium, itself a platform mid-cycle. From practice: the American Dialect Society’s 2023 Word of the Year, coined by Cory Doctorow: platforms serve users, then squeeze everyone for profit, then die. This quote is from a 2024 talk he also published on Medium, a platform arguably somewhere in the middle of that cycle.',
     },
     {
       id: 'a1-dark-tower', act: 1, minutes: 1, place: 'mid-world', layout: 'quote',
@@ -86,7 +86,7 @@
       source: 'Cory Doctorow, “The World Has Moved On. But It Need Not Stay This Way Forever,” Bulletin of the Atomic Scientists (2026)',
       url: 'https://www.tandfonline.com/doi/full/10.1080/00963402.2026.2720324#d1e126',
       fx: ['page-turn'],
-      notes: 'Doctorow on platforms and politics, borrowing Stephen King’s Dark Tower refrain: the machinery still runs, but no one remembers why. Read it with the source’s spacing: pause before “And then the world moved on.”',
+      notes: 'Doctorow on platforms and politics, borrowing Stephen King’s Dark Tower refrain: the machinery still runs, but no one remembers why. Read it with the source’s spacing: pause before “And then the world moved on.” From practice: Doctorow takes it further in this more recent essay. “The world has moved on” is the refrain from Stephen King’s Dark Tower novels, where things that break can no longer be fixed because the Beams holding back chaos are failing. Doctorow maps those Beams onto antitrust law, consumer rights, labor protections, and civil rights: we let them erode, and our platforms caved with them. So the fix is political: we cannot shop our way out of monopoly; we have to organize. “Hell is other people,” he writes, “but only because it’s so hard to figure out how to work together.” (Check these lines against the essay’s exact wording before quoting them as his.)',
     },
     {
       id: 'a1-artists-sue', act: 1, minutes: 0.75, place: 'gallery-row', layout: 'image',
@@ -95,7 +95,7 @@
       source: 'Matthias Bastian, THE DECODER, January 16, 2023',
       url: 'https://the-decoder.com/artists-sue-stability-ai-midjourney-and-deviantart/',
       fx: ['cut-out'],
-      notes: 'The creative class fights back in court: the 2023 class action by artists against Stability AI, Midjourney and DeviantArt. Note the header art is itself Midjourney output.',
+      notes: 'The creative class fights back in court: the 2023 class action by artists against Stability AI, Midjourney and DeviantArt. Note the header art is itself Midjourney output. From practice: the squeeze reached the people who make things. DeviantArt was where artists hosted work to gain publicity and sell prints and commissions; their work ended up in the dataset used to train Stable Diffusion without their consent. DeviantArt then launched its own generator, DreamUp, built on that same model, and a few months later three artists sued, naming DeviantArt alongside Stability AI and Midjourney. Good to the artists at first; then they were the product.',
     },
     {
       id: 'a1-creative-class', act: 1, minutes: 1, layout: 'image',
@@ -105,7 +105,7 @@
       source: 'Joseph Politano, Apricitas Economics, “AI and the Fall of the Creative Class” (BLS data)',
       url: 'https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class',
       fx: ['fold-in'],
-      notes: 'Point at the red line: creative-class employment has been shrinking year over year since early 2023 and has not recovered. The biggest losses are in film and sound recording and in newspaper, magazine and book publishing.',
+      notes: 'Point at the red line: creative-class employment has been shrinking year over year since early 2023 and has not recovered. The biggest losses are in film and sound recording and in newspaper, magazine and book publishing. From practice: “So who gets to make a living by making? Joseph Politano at Apricitas reports that the US has lost more than 200,000 jobs in creative industries over the past four years.” (Confirm the figure against the chart before saying it.)',
     },
     {
       id: 'a1-libgen', act: 1, minutes: 1, layout: 'image',
@@ -114,7 +114,7 @@
       source: 'Alex Reisner, “Search LibGen, the Pirated-Books Database That Meta Used to Train AI,” The Atlantic (March 20, 2025)',
       url: 'https://www.theatlantic.com/technology/archive/2025/03/search-libgen-data-set/682094/',
       fx: ['cut-out'],
-      notes: 'From the Author Function talk: Books3, LibGen, and The Atlantic’s search tool.',
+      notes: 'From the Author Function talk: Books3, LibGen, and The Atlantic’s search tool. From practice: “Meanwhile, something is reading everything we make. In 2025, The Atlantic released a tool to search LibGen, the pirated library that Meta and other AI companies drew on. These are Anastasia’s results.”',
     },
     {
       id: 'a1-organic', act: 1, minutes: 1, layout: 'quote',
@@ -123,14 +123,14 @@
       source: 'Books By People, as reported in Wired (October 2025)',
       url: 'https://www.wired.com/story/organic-literature-books-by-people-stamp-ai/',
       fx: ['paper-tear'],
-      notes: 'After the creative class fights back in court, the market answer: certify the human. Books By People, a UK start-up (Esme Dennys, Conrad Young, Gavin Johnston), certifies independent publishers: a cover stamp, a certification ID, a public directory. Verification is human evaluation, text analysis, and editorial-process review; they rejected AI detectors as too easy to fool. First stamped book: Gonzalo C Garcia’s Telenovela (Galley Beggar Press). Dennys: “There are just so many AI-generated books, and our aim is to provide an easy way for readers to be able to tell which ones are human-authored.” Questions for the room: where does “brainstorming” end and authorship begin? Would a writer who rebuilt their site with an agent still count? (Flores, in Act III, is that writer.) “Organic” borrows from food, the same move as the handmade revival Anastasia picks up in Act II: craft as a market label.',
+      notes: 'Script (Emily stumbled here in practice): “And the market’s answer: certify the human.” Last fall, the UK start-up Books By People began stamping books “Organic Literature.” Earlier labels ran on an honesty system where authors promised they had not used AI; Books By People asks for an authorship declaration, runs each manuscript through its own software, and samples early drafts and research notes for indicators of humanity. So where does brainstorming end and authorship begin? And “organic,” of course, comes from food. Books By People, a UK start-up (Esme Dennys, Conrad Young, Gavin Johnston), certifies independent publishers: a cover stamp, a certification ID, a public directory. Verification is human evaluation, text analysis, and editorial-process review; they rejected AI detectors as too easy to fool. First stamped book: Gonzalo C Garcia’s Telenovela (Galley Beggar Press). Dennys: “There are just so many AI-generated books, and our aim is to provide an easy way for readers to be able to tell which ones are human-authored.” Questions for the room: where does “brainstorming” end and authorship begin? Would a writer who rebuilt their site with an agent still count? (Flores, in Act III, is that writer.) “Organic” borrows from food, the same move as the handmade revival Anastasia picks up in Act II: craft as a market label.',
     },
     {
       id: 'a1-agents-def', act: 1, minutes: 1, layout: 'image',
       text: 'Agents are generative AI put to a purpose: “An LLM agent runs tools in a loop to achieve a goal.” (Simon Willison)',
       media: [{ src: 'assets/act1/agents.jpg', alt: 'Pixel-art arcade-cabinet diagram titled “Agentic AI: The LLM at the Controls”: a brain in a captain’s hat plans, selects a tool, observes output, and loops, with a tool palette and the caption “An LLM agent runs tools in a loop to achieve a goal.”' }],
       fx: ['cut-out'],
-      notes: 'Define terms for the room: AI with tools that lets it serve as a low- or no-code interface for many tasks.',
+      notes: 'Define terms for the room: AI with tools that lets it serve as a low- or no-code interface for many tasks. From practice: “Simon Willison explains: an LLM agent runs tools in a loop to achieve a goal. It’s generative AI put to a purpose, with tools that let it act as a low-code or no-code interface for almost anything.”',
     },
     {
       id: 'a1-ghost-agents', act: 1, minutes: 1, layout: 'gallery',
@@ -140,7 +140,7 @@
       source: 'Cloudflare, “Content Independence Day, one year on: building the business model for the agentic Internet” (July 1, 2026)',
       url: 'https://blog.cloudflare.com/agentic-internet-bot-report/',
       fx: ['cut-out'],
-      notes: 'Agents crawl and post but do not read the way people do. Moltbook as the extreme case: a network performed by agents for human onlookers. Cloudflare’s numbers: more than 50% of Internet traffic is now non-human; 52% of crawler requests are for AI training as of June 2026, up from 22% in spring 2025; some heavily crawled categories lost as much as 40% of their human traffic in under a year. For every hour spent searching for information, only 15 minutes is spent on the open web. The chart is directional framing, not one measured series.',
+      notes: 'Agents crawl and post but do not read the way people do. Moltbook as the extreme case: a network performed by agents for human onlookers. Cloudflare’s numbers: more than 50% of Internet traffic is now non-human; 52% of crawler requests are for AI training as of June 2026, up from 22% in spring 2025; some heavily crawled categories lost as much as 40% of their human traffic in under a year. For every hour spent searching for information, only 15 minutes is spent on the open web. The chart is directional framing, not one measured series. From practice: the traffic statistic came out garbled; say the Cloudflare figures above and move on.',
     },
     {
       id: 'a1-track-changes', act: 1, minutes: 1, place: 'mid-world', layout: 'gallery',
@@ -151,7 +151,7 @@
       ],
       source: 'Matthew G. Kirschenbaum, Track Changes: A Literary History of Word Processing (2016)',
       fx: ['fold-in'],
-      notes: 'Kirschenbaum’s Track Changes is a chronicle of how Coover was right: the novel was changing fundamentally, not dead, but reshaped by the word processor. As Ivan Flores wrote in 1983, with a word processor “you can actually produce a perfect document.” Sound familiar?',
+      notes: 'Kirschenbaum’s Track Changes is a chronicle of how Coover was right: the novel was changing fundamentally, not dead, but reshaped by the word processor. As Ivan Flores wrote in 1983, with a word processor “you can actually produce a perfect document.” Sound familiar? From practice: Matt Kirschenbaum is in the room; acknowledge him.',
     },
     {
       id: 'a1-textpocalypse', act: 1, minutes: 1, layout: 'image',
@@ -170,7 +170,7 @@
       url: 'https://www.theatlantic.com/technology/archive/2023/03/ai-chatgpt-writing-language-models/673318/',
       fx: ['fold-in'],
       props: [{ cls: 'prop-you-are-here', box: [1130, 64, 140, 132], text: 'YOU ARE\nHERE' }],
-      notes: 'Written in 2023 as a warning; read now as a description. It is not coming, it is here, and it is moving fastest in code: open-source maintainers are already overwhelmed by AI-authored pull requests.',
+      notes: 'Written in 2023 as a warning; read now as a description. It is not coming, it is here, and it is moving fastest in code: open-source maintainers are already overwhelmed by AI-authored pull requests. From practice: “And in case we didn’t know he was in the room…” He wrote this in 2023.',
     },
     {
       id: 'a1-muse', act: 1, minutes: 1.25, place: 'companion-shop', layout: 'gallery',
@@ -178,7 +178,7 @@
       media: [{ src: 'assets/act1/muse-keroppi.png', alt: 'Chat companion profile with a green Keroppi-style frog avatar wearing a bow tie, labeled “Keroppi, Active.”' },
         { src: 'assets/act1/meta-tamagotchi.png', alt: 'A hand with pink manicured nails holding a small black Meta device showing a cream, plush-looking cartoon creature, captioned “Meta unveils pocket-sized ‘AI Tamagotchi.’”' }],
       fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
-      notes: 'The lure of AI as interface, and the next death of search and even of the feed. They are obvious Sanrio and Labubu riffs with OpenClaw wrappers, but they are marketed as the solution to the very problem their makers created. Even The Daily Show noticed (next slide).',
+      notes: 'The lure of AI as interface, and the next death of search and even of the feed. They are obvious Sanrio and Labubu riffs with OpenClaw wrappers, but they are marketed as the solution to the very problem their makers created. Even The Daily Show noticed (next slide). From practice: Anastasia is using OpenAI Dots (the Keroppi is hers). The Muse charm recalls a Tamagotchi; the Keroppi is a Sanrio rip-off. Marketed as the cure for enshittification by the companies selling enshittification. AI as interface may be the next death of search, and even of the feed.',
     },
     {
       id: 'a1-keroppi-phud', act: 1, minutes: 1, layout: 'gallery',
@@ -189,7 +189,7 @@
       ],
       source: 'UnderAcademy College (Talan Memmott and Mark C. Marino), October 2026',
       fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
-      notes: 'UnderAcademy College is Talan Memmott and Mark Marino’s long-running parody institution: “a non-degree granting institution,” motto “Do No Ham,” now granting the “honorary, fully defunded degree of PhuD” (Honors Hallucinatorius) to anyone who submits an AI-generated dissertation. Mine went to Keroppi, “stochastically generated applicant, on behalf of Anastasia Salter,” for “The Remainder Is a Person,” provisionally “Toward a Framework for the Strategic Management of the Person Who Is Still Here.” From Keroppi’s letter of application: “I believe my ability to produce an appropriate quantity of language makes me a strong candidate for further quantities of language.” That is the labor these companions are built for: plausible quantity, on our behalf. I join Davin Heckman, Scott Rettberg, Talan, and others as a newly generated PhuD.',
+      notes: 'UnderAcademy College is Talan Memmott and Mark Marino’s long-running parody institution: “a non-degree granting institution,” motto “Do No Ham,” now granting the “honorary, fully defunded degree of PhuD” (Honors Hallucinatorius) to anyone who submits an AI-generated dissertation. Mine went to Keroppi, “stochastically generated applicant, on behalf of Anastasia Salter,” for “The Remainder Is a Person,” provisionally “Toward a Framework for the Strategic Management of the Person Who Is Still Here.” From Keroppi’s letter of application: “I believe my ability to produce an appropriate quantity of language makes me a strong candidate for further quantities of language.” That is the labor these companions are built for: plausible quantity, on our behalf. I join Davin Heckman, Scott Rettberg, Talan, and others as a newly generated PhuD. From practice (Emily lost her place here; use this script): “Here’s the kind of ‘work’ a companion can do. Keroppi (keh-ROP-ee) earned a PhuD on Anastasia’s behalf, from UnderAcademy College, which is not accredited, for a dissertation called ‘The Remainder Is a Person,’ about uncompensated labor in higher education.”',
     },
     {
       id: 'a1-muse-jolly', act: 1, minutes: 0.5, layout: 'quote',
@@ -198,7 +198,7 @@
       media: [{ src: 'assets/act1/daily-show-jolly.jpg', alt: 'The Daily Show thumbnail “The AI Endgame Is… Socialism?”: Jolly, Muse’s fuzzy cream-colored mascot, wears a fur hat with a red star and a hammer and sickle on its belly, surrounded by Elon Musk, Sam Altman, Mark Zuckerberg, Sundar Pichai and another tech executive, with Jon Stewart at right.' }],
       url: 'https://www.youtube.com/watch?v=S18jxWZntUo',
       fx: ['paper-tear'],
-      notes: 'On October 5, 2026, Jon Stewart voiced Jolly, Muse’s default mascot, at his desk. It offered help with scheduling and email, then “assuming power of attorney.” Stewart: “I can see right through this cutesy act of yours, Muse. You won’t rid our world of humanity that easily.” The cute mascot says the quiet part out loud. Let it land, then move to what Muse actually does today.',
+      notes: 'On October 5, 2026, Jon Stewart voiced Jolly, Muse’s default mascot, at his desk. It offered help with scheduling and email, then “assuming power of attorney.” Stewart: “I can see right through this cutesy act of yours, Muse. You won’t rid our world of humanity that easily.” The cute mascot says the quiet part out loud. Let it land, then move to what Muse actually does today. From practice: “On Monday, Jon Stewart voiced Muse’s mascot, Jolly…” (Monday was October 5.)',
     },
     {
       id: 'a1-muse-video', act: 1, minutes: 1, layout: 'gallery',
@@ -207,7 +207,7 @@
       media: [{ src: 'assets/act1/meta-muse-yeti-smith.mp4', alt: 'Short clip of a Meta Muse companion character: a plush cream-colored yeti in a black suit, tie and sunglasses, walking stiffly on thick ankles.' },
         { src: 'assets/act1/muse-api.jpg', alt: 'Post by Mark Zuckerberg (@finkd): “Opening access for developers to build Muse connectors. You bring the API -- Muse brings the agent, the browser, and the context of what the person actually wants. People reach your service just by asking for it, and their agent takes it from there. New connectors are live today. Come build with us. muse.ai/platform”' }],
       fx: ['cut-out'],
-      notes: 'Click the video to play (clicking does not advance). Muse is genuinely useful right now: it makes using Facebook easier. That is stage one of enshittification. Remember Doctorow: good to users first, then the squeeze.',
+      notes: 'Click the video to play (clicking does not advance). Muse is genuinely useful right now: it makes using Facebook easier. That is stage one of enshittification. Remember Doctorow: good to users first, then the squeeze. From practice: point at the yeti’s ankles. For the API post (Emily had no line yet), try: “And Meta has opened Muse to outside developers: you bring the API, Muse brings the agent. Every service becomes something you reach through Meta’s agent.”',
     },
     {
       id: 'a1-muse-memory', act: 1, minutes: 1, layout: 'quote',
@@ -215,7 +215,7 @@
       source: 'Wired, “Muse Creates Detailed Profiles of All Your Friends and Family”',
       url: 'https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/',
       fx: ['fold-in'],
-      notes: 'From Muse’s own system instructions, as reported by Wired. It remembers your friends for you.',
+      notes: 'From Muse’s own system instructions, as reported by Wired. It remembers your friends for you. From practice: “Wired reported what Muse remembers: your friends, for you. Where they live, the dates that matter, the argument that got resolved. Why bother putting effort into friendship?”',
     },
     {
       id: 'a1-muse-strengthen', act: 1, minutes: 1, layout: 'quote',
@@ -229,14 +229,14 @@
       id: 'a1-lens', act: 1, minutes: 1, place: 'worktable', layout: 'statement',
       text: 'So agentic tools risk becoming another proprietary platform we overtrust, one that becomes our lens for the world.',
       fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
-      notes: 'The risk, plainly stated.',
+      notes: 'The risk, plainly stated. From practice: “So agentic tools risk becoming another proprietary platform that we overtrust, and that becomes our lens.”',
     },
     {
       id: 'a1-metatools', act: 1, minutes: 1, layout: 'image',
       text: 'But agentic coding tools are also metatools for building alternatives to those same platforms.',
       media: [{ src: 'assets/act1/claude-process.png', alt: 'Terminal output from an agentic coding tool: a plan titled “Three Approaches” laying out a three-act animated sequence built around an author’s name.' }],
       fx: ['popup-rise'], avatar: { pose: 'point', x: 60 },
-      notes: 'The turn: the same tools can make the alternatives. That is where Anastasia picks up.',
+      notes: 'The turn: the same tools can make the alternatives. That is where Anastasia picks up. From practice: “But here’s the turn: agentic coding tools are also metatools. Here an agentic coding tool lays out a plan with three approaches before writing any code. The same tools that threaten to become the next platform can help us build the alternatives to those platforms.”',
     },
     {
       id: 'a1-handoff', act: 1, minutes: 1, layout: 'handoff', to: 'textile',
