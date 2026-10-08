@@ -180,13 +180,14 @@
       notes: 'Darren Paskell, visually impaired, on 18 months with Meta’s smart glasses: sorting post, reading labels, telling jars apart. An agent as interface rather than generator: one spoken command, and the world is read aloud. Hold this next to Muse in Act I: the same company, the same always-on camera.',
     },
     {
-      id: 'a2-metatools', act: 2, minutes: 1, layout: 'image',
+      id: 'a2-metatools', act: 2, minutes: 1, layout: 'gallery',
       text: 'Agentic AI coding tools are metatools. They work best making multipurpose things that replace proprietary platforms: our Canvas alternatives, my local recording, transcript, and video tools.',
-      media: [{ src: 'assets/act2/canvas-deployer.png', alt: 'GitHub README for “Canvas Deployer” in the HumanitiesAI repository, last committed by AMSUCF and claude: a Canvas course content deployer for Humanities in the Age of AI that converts Jekyll week files into Canvas pages, discussions, modules and assignments, followed by Python setup commands and a .env file with placeholder Canvas API values.' }],
+      media: [{ src: 'assets/act2/canvas-deployer.png', alt: 'GitHub README for “Canvas Deployer” in the HumanitiesAI repository, last committed by AMSUCF and claude: a Canvas course content deployer for Humanities in the Age of AI that converts Jekyll week files into Canvas pages, discussions, modules and assignments, followed by Python setup commands and a .env file with placeholder Canvas API values.' },
+        { src: 'assets/act2/claude-code-swipe-session.png', alt: 'Claude Code terminal session building this deck: the request “make sure the slides are swipe responsive for mobile,” Claude’s short plan to add swipe navigation shared with the presenter window, and a green diff adding a swipeDirection function to nav.js.' }],
       source: 'Canvas Deployer, HumanitiesAI repository (GitHub)',
       url: 'https://github.com/AMSUCF/HumanitiesAI/tree/main/canvas',
       fx: ['needle-pass'], avatar: { pose: 'talk', x: 60 },
-      notes: 'Concrete examples from our own practice. The course lives as Jekyll week files on open ground; the deployer pushes them into Canvas pages, discussions, modules and assignments, so Canvas becomes a delivery target rather than the home of the course. Committed by “AMSUCF and claude.”',
+      notes: 'Concrete examples from our own practice. The course lives as Jekyll week files on open ground; the deployer pushes them into Canvas pages, discussions, modules and assignments, so Canvas becomes a delivery target rather than the home of the course. Committed by “AMSUCF and claude.” The terminal is this deck being made: last night’s request to make the slides swipe-responsive on phones, and the agent’s plan and diff. The deck you are watching is a metatool’s output too, hosted on open ground (static HTML on GitHub Pages).',
     },
     {
       id: 'a2-artcraft', act: 2, minutes: 1, layout: 'gallery',
