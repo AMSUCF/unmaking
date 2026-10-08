@@ -100,6 +100,18 @@
       notes: 'Bot pattern. Vee Kennedy’s Tracery grammar mixes baking, dead corners of the old web (Neopets, GeoCities, Myspace), and PhD life; every Regenerate makes a new verse. Kennedy baked their way through the semester and, as the book quotes, found the “code epiphany”: “if it works for baking, it must work for code, too.” From their statement: “Your computer is on fire, your world is on fire. Let your imposter syndrome be on fire, too.”',
     },
     {
+      id: 'a1-tools-materials', act: 1, minutes: 0.5, layout: 'statement',
+      text: 'In selecting tools and materials for our courses, we focus on what is available, accessible, and sustainable.',
+      fx: ['fold-in'], avatar: { pose: 'talk', x: 60 },
+      notes: 'Transition from the student work to the platforms. Every pattern in the book had to pass the same test: can a student get it, use it, and still have it next year?',
+    },
+    {
+      id: 'a1-tools-harder', act: 1, minutes: 0.5, layout: 'statement',
+      text: 'That’s getting more difficult, as maintenance of community-driven, grant-funded, and/or open source tools is labor intensive and expensive. Meanwhile, corporate platforms are getting worse…',
+      fx: ['paper-tear'], avatar: { pose: 'talk', x: 60 },
+      notes: 'The free, community-built tools that pass that test are kept alive by a few overworked maintainers and short grants. Let the ellipsis hang, then click: the platforms are getting worse, and Doctorow has a word for it.',
+    },
+    {
       id: 'a1-enshittification', act: 1, minutes: 1.5, place: 'platform-city', layout: 'quote',
       text: 'Enshittification is a “three stage process: First, platforms are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves. Then, they die.”',
       source: 'Cory Doctorow, “My McLuhan Lecture on Enshittification”',
