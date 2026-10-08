@@ -129,6 +129,15 @@
       notes: 'Doctorow on platforms and politics, borrowing Stephen King’s Dark Tower refrain: the machinery still runs, but no one remembers why. Read it with the source’s spacing: pause before “And then the world moved on.” From practice: Doctorow takes it further in this more recent essay. “The world has moved on” is the refrain from Stephen King’s Dark Tower novels, where things that break can no longer be fixed because the Beams holding back chaos are failing. Doctorow maps those Beams onto antitrust law, consumer rights, labor protections, and civil rights: we let them erode, and our platforms caved with them. So the fix is political: we cannot shop our way out of monopoly; we have to organize. “Hell is other people,” he writes, “but only because it’s so hard to figure out how to work together.” (Check these lines against the essay’s exact wording before quoting them as his.)',
     },
     {
+      id: 'a1-chatgpt-launch', act: 1, minutes: 0.75, layout: 'image',
+      text: 'And now generative AI is overtaking, and fueled by, these enshittified platforms.',
+      media: [{ src: 'assets/act1/chatgpt-launch-2022.png', alt: 'OpenAI’s original ChatGPT announcement, November 30, 2022: “ChatGPT: Optimizing Language Models for Dialogue. We’ve trained a model called ChatGPT which interacts in a conversational way,” beside an abstract graphic of magenta and green stripes.' }],
+      source: 'OpenAI, “ChatGPT: Optimizing Language Models for Dialogue” (November 30, 2022), via the Internet Archive',
+      url: 'https://web.archive.org/web/20221201000000/https://openai.com/blog/chatgpt/',
+      fx: ['cut-out'], avatar: { pose: 'talk', x: 60 },
+      notes: 'Where the world moved on. ChatGPT launched as a free “research preview” on November 30, 2022, promising a model that could “admit its mistakes” and “reject inappropriate requests.” It was trained on the open web those platforms enshittified, and it now competes with them for the same attention.',
+    },
+    {
       id: 'a1-artists-sue', act: 1, minutes: 0.75, place: 'gallery-row', layout: 'image',
       text: 'Artists sue Stability AI, Midjourney and DeviantArt.',
       media: [{ src: 'assets/act1/artists-sue.jpg', alt: 'THE DECODER article header, “Artists sue Stability AI, Midjourney and DeviantArt,” by Matthias Bastian, January 16, 2023, over a Midjourney-generated painting of a teal-haired young man in a courtroom with flames behind him.' }],
