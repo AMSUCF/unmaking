@@ -18,11 +18,10 @@
     {
       id: 'a2-sousanis', act: 2, minutes: 0.75, layout: 'image',
       heading: 'Unflattening',
-      text: '“A simultaneous engagement of multiple vantage points from which to engender new ways of seeing.”',
       media: [{ src: 'assets/act2/unflattening.png', alt: 'Black-and-white comics page from Nick Sousanis’s Unflattening: nine panels of tangled roots and branches with a crow, a spider web, a snake, a lizard and a meditating Buddha, captioned with lines about comics being read sequentially and viewed all at once, “both tree-like, hierarchical and rhizomatic, interwoven in a single form.”' }],
       source: 'Nick Sousanis, Unflattening (Harvard University Press, 2015)',
-      fx: ['stitch-in'], avatar: { pose: 'point', x: 60 }, draft: true,
-      notes: 'Sousanis’s dissertation-as-comic, and a text we teach in Critical Making (paired with the Comic chapter; his Making Comics course inspired our mini-comic exercise). Flatness is the single fixed viewpoint; unflattening is seeing from many at once, which is what making in another form does. The comic is the argument: form and content together. TODO: confirm the page number for the quote.',
+      fx: ['stitch-in'], avatar: { pose: 'point', x: 60 },
+      notes: 'Sousanis’s dissertation-as-comic, and a text we teach in Critical Making (paired with the Comic chapter; his Making Comics course inspired our mini-comic exercise). Flatness is the single fixed viewpoint; unflattening is seeing from many at once, which is what making in another form does. The comic is the argument: form and content together.',
     },
     {
       id: 'a2-learn-to-code', act: 2, minutes: 0.75, place: 'code-camp', layout: 'image',
@@ -107,14 +106,6 @@
       ],
       fx: ['quilt-assemble'], avatar: { pose: 'point', x: 60 },
       notes: 'In DH we have Omeka and Voyant. For creative work: Twine, Tracery, Bitsy, p5. Each is specialized, but they share HTML, CSS, and JS, so they can be remixed.',
-    },
-    {
-      id: 'a2-kidpix', act: 2, minutes: 0.75, layout: 'statement',
-      heading: 'Kid Pix',
-      text: 'Playful tools teach that software can have a personality, and that making can be joyful.',
-      url: 'http://red-green-blue.com/kid-pix-the-early-years',
-      fx: ['needle-pass'], draft: true,
-      notes: 'Kid Pix, the early years (red-green-blue.com). TODO: add a Kid Pix screenshot and make this an image scene.',
     },
     {
       id: 'a2-lawhead-ui', act: 2, minutes: 0.75, layout: 'statement',
