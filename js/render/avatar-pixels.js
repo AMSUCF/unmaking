@@ -113,6 +113,7 @@
     walk3: [1, -1, 0, 2, -1, 1, 0, 'down'],
     walk4: [0, 0, 0, 0, 0, 0, 1, 'down'],
     talk:  [0, 0, 0, 0, 0, 0, 0, 'raised'],
+    wave:  [0, 0, 0, 0, 0, 0, 0, 'wave'],
     point: [0, 0, 0, 0, 0, 0, 0, 'point'],
   };
 
@@ -148,10 +149,17 @@
     stamp(g, TORSOS[who], HEAD_X, TORSO_Y + bob);
     armDown(g, 5, lad);
     if (right === 'down') armDown(g, 22, rad);
-    else if (right === 'raised') {                    // elbow out, forearm up, palm open
-      rect(g, 22, 18, 6, 3, 'T');
-      rect(g, 26, 12, 3, 6, 'S');
-      rect(g, 25, 9, 4, 3, 'S');
+    else if (right === 'raised' || right === 'wave') { // a wave: arm up and away from the head, open hand above it
+      const tilt = right === 'wave' ? 1 : 0;           // second frame: hand swings out, fingers splay
+      rect(g, 22, 17, 3, 3, 'T');                      // sleeve at the shoulder
+      rect(g, 24, 15, 2, 3, 'T');
+      rect(g, 25, 11, 2, 4, 'S');                      // forearm angled up and out
+      rect(g, 25 + tilt, 7, 3, 4, 'S');                // palm
+      put(g, 24 + tilt, 9, 'S');                       // thumb
+      rect(g, 25 + tilt, 4 + tilt, 1, 3 - tilt, 'S');  // three spread fingers
+      rect(g, 27 + tilt, 4 + tilt, 1, 3 - tilt, 'S');
+      if (!tilt) rect(g, 26, 5, 1, 2, 'S');
+      else put(g, 28, 5, 'S');
     } else {                                          // pointing to the viewer's right
       rect(g, 22, 18, 3, 3, 'T');
       rect(g, 25, 19, 4, 2, 'S');

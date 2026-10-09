@@ -1,7 +1,7 @@
 /* Presenter avatars: two sprite slots, per-craft skins, walking between scenes. */
 const Avatar = (() => {
   const WHO = ['emily', 'anastasia'];
-  const FRAMES = ['idle', 'walk1', 'walk2', 'walk3', 'walk4', 'talk', 'point'];
+  const FRAMES = ['idle', 'walk1', 'walk2', 'walk3', 'walk4', 'talk', 'wave', 'point'];
   const WALK = ['walk1', 'walk2', 'walk3', 'walk4'];
   const LABELS = { emily: 'Emily', anastasia: 'Anastasia' };
   const slots = {};
@@ -34,7 +34,7 @@ const Avatar = (() => {
       frame.append(img);
       el.append(frame);
       layer.append(el);
-      slots[who] = { el, img, x: -200, frame: 'idle', skin: 'paper', timer: null, walk: null };
+      slots[who] = { el, img, x: -200, frame: 'idle', skin: 'paper', timer: null, walk: null, waving: null };
       render(who);
     });
   }
@@ -60,11 +60,28 @@ const Avatar = (() => {
   }
   function setSkin(who, skin) { slots[who].skin = skin; render(who); }
   function setSkinAll(skin) { WHO.forEach((w) => setSkin(w, skin)); }
+  const still = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // A raised hand waves: a few swings between 'talk' and 'wave', then it holds on 'talk'.
+  function wave(who) {
+    const s = slots[who];
+    clearInterval(s.waving);
+    s.waving = null;
+    if (still()) return;
+    let n = 0;
+    s.waving = setInterval(() => {
+      if (s.frame !== 'talk' && s.frame !== 'wave') { clearInterval(s.waving); s.waving = null; return; }
+      s.frame = n % 2 ? 'talk' : 'wave';
+      render(who);
+      if (++n >= 6) { clearInterval(s.waving); s.waving = null; }
+    }, 220);
+  }
   function pose(who, frame) {
     const s = slots[who];
-    if (s.frame === frame) return;
+    if (s.frame === frame || (frame === 'talk' && s.waving)) return;
+    if (s.waving) { clearInterval(s.waving); s.waving = null; }
     s.frame = frame;
     render(who);
+    if (frame === 'talk') wave(who);
   }
   function show(who) { slots[who].el.classList.remove('hidden'); }
   function hide(who) { slots[who].el.classList.add('hidden'); }
@@ -74,6 +91,8 @@ const Avatar = (() => {
   function stop(who) {
     const s = slots[who];
     clearInterval(s.timer);
+    clearInterval(s.waving);
+    s.waving = null;
     if (s.walk) s.walk.cancel();
     s.walk = null;
     s.el.classList.remove('walking', 'flip');

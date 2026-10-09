@@ -7,6 +7,16 @@
 
   // A guide is <div class="guide" data-who="emily|anastasia" data-pose="talk">.
   // Inside a textile section the avatar is cross-stitched, as in the deck.
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // A raised hand (pose "talk") waves: a few swings, then it holds. Again on hover.
+  function waveGuide(el, img, skin) {
+    if (still || el.dataset.pose !== 'talk' || el.waving) return;
+    let n = 0;
+    el.waving = setInterval(() => {
+      img.src = AP.url(el.dataset.who, n % 2 ? 'talk' : 'wave', skin);
+      if (++n >= 6) { clearInterval(el.waving); el.waving = null; }
+    }, 220);
+  }
   function paintGuides() {
     if (!AP) return;
     document.querySelectorAll('.guide[data-who]').forEach((el) => {
@@ -16,6 +26,9 @@
       if (!img) { img = new Image(); img.alt = ''; el.append(img); }
       img.src = AP.url(el.dataset.who, el.dataset.pose || 'idle', skin);
       el.dataset.skin = skin;
+      if (el.closest('.walker')) return;   // the hub walkers animate themselves
+      waveGuide(el, img, skin);
+      (el.closest('a, .card, .side') || el).addEventListener('mouseenter', () => waveGuide(el, img, skin));
     });
   }
 
@@ -23,7 +36,6 @@
   function walkers() {
     const floor = document.querySelector('.floor');
     if (!AP || !floor) return;
-    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
     floor.querySelectorAll('.walker').forEach((el, i) => {
       const guide = el.querySelector('.guide');
       const img = guide.querySelector('img');
@@ -34,7 +46,7 @@
       place();
       if (still) return;
       setInterval(() => {
-        if (pause > 0) { pause--; img.src = AP.url(who, pause > 6 ? 'talk' : 'idle'); return; }
+        if (pause > 0) { pause--; img.src = AP.url(who, pause > 6 ? (pause % 2 ? 'wave' : 'talk') : 'idle'); return; }
         x += dir * 0.006;
         if (x > 0.9 || x < 0.08) { dir = -dir; pause = 14; }
         else if (Math.random() < 0.01) pause = 18;
