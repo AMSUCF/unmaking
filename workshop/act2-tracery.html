@@ -32,7 +32,7 @@
         <p class="lede">Tracery, by Kate Compton (<a href="https://tracery.io/archival/crystalcodepalace/tracerytut.html">her tutorial</a>), is a grammar for generating text. Like a quilt pattern, it names the pieces, says how they fit together, and lets them repeat in new combinations.</p>
         <p class="question">From the talk: why keep making?</p>
         <ul class="meta">
-          <li>Suggested: 25 min</li>
+          <li>Suggested: 35 min</li>
           <li>Make: a grammar, plus a flat version for print</li>
           <li>Need: a browser</li>
         </ul>
@@ -72,7 +72,7 @@
     </section>
 
     <section class="card" id="read">
-      <span class="time">3 min</span>
+      <span class="time">5 min</span>
       <h2><span class="step-n">1.</span> Read a grammar</h2>
       <p>A Tracery grammar is written in <strong>JSON</strong>: a list of named rules. Each name is a <em>symbol</em>; each symbol has a list of options. Wrap a symbol in <code>#hashes#</code> to have Tracery pick one of its options there.</p>
 <pre><code>{
@@ -90,7 +90,7 @@
     </section>
 
     <section class="card" id="play">
-      <span class="time">5 min</span>
+      <span class="time">8 min</span>
       <h2><span class="step-n">2.</span> The playground</h2>
       <p>Edit the grammar and the output changes as you type. This runs the real Tracery library, stored locally, so it works without Wi-Fi.</p>
       <div class="play">
@@ -108,7 +108,7 @@
     </section>
 
     <section class="card" id="grow">
-      <span class="time">7 min</span>
+      <span class="time">10 min</span>
       <h2><span class="step-n">3.</span> Grow at least three rules</h2>
       <p>Make the grammar yours: words from your own research, craft, or memory. For variety, give <code>origin</code> more than one sentence shape, and let rules call other rules:</p>
 <pre><code>"origin": ["#line#", "#line# #line#", "#question#"],
@@ -138,7 +138,7 @@
     </section>
 
     <section class="card" id="flatten">
-      <span class="time">5 min</span>
+      <span class="time">7 min</span>
       <h2><span class="step-n">6.</span> Flatten it for print</h2>
       <p>To get Act IV ready, make a second, <strong>flat</strong> version of your grammar: an <code>origin</code> made only of symbols, and lists of plain words, with no nested <code>#rules#</code> inside them. A printed ring can't expand a rule, so every word on one ring has to work next to every word on the others.</p>
 <pre><code>{
