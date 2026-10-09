@@ -42,6 +42,8 @@
     @media print {
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       body { background: #fff; font-size: 11px; }
+      table, .meta, .handoff { font-size: 10.5px; }
+      .goal { font-size: 12.5px; }
       h3 { margin: 10px 0 4px; }
       .top { display: none; }
       .sheet { box-shadow: none; margin: 0; max-width: none; padding: 0 0 0 10px; border-top: 0; border-left: 6px solid var(--who); border-radius: 0; break-after: page; }
@@ -54,7 +56,7 @@
 <body>
   <div class="top">
     <h1>Presenter cheat sheets</h1>
-    <p>One sheet per act; each prints on its own page. Anastasia leads Acts I and IV; Emily leads Acts II and III. Times follow the step labels on each act's page.</p>
+    <p>One sheet per act, plus the intermission; each prints on its own page. Anastasia leads Act I, the intermission, and Act IV; Emily leads Acts II and III. Times follow the step labels on each act's page.</p>
     <p><a href="index.html">◀ Workshop home</a></p>
   </div>
 
@@ -93,9 +95,41 @@
       <li>An agent will write a Twine for anyone who can describe one. So is Twine pointless now? What did cards and string give you that a description wouldn't?</li>
       <li>Which choices did the reader get, and which did you keep for yourself?</li>
     </ul>
-    <p><strong>Show:</strong> <em>From Beyond</em> (with John Murray, ELO 2015), a Twine story played on a sensor-equipped Ouija board: physical Twine, the cards and string taken further. Photo is in the Unmake section of the act page.</p>
+    <p><strong>Show:</strong> <em>From Beyond</em> (with John Murray, ELO 2015), a Twine story played on a sensor-equipped Ouija board, and Emily's <em>BeadED Adventures</em>, a STEM story whose solved puzzles earn real beads that go home as a bracelet: physical Twine, the cards and string taken further. Both photos are in the Unmake section of the act page.</p>
     <p class="say">“<code>(either:)</code> is a tiny grammar: one slot, a few options, a random pick. Hold onto that; Emily turns it into whole sentences next.”</p>
-    <p class="handoff"><strong>Before handing off:</strong> ask everyone to rewrite the last passage of The Longarm with their own question; they come back to it in Act IV. <strong>Hand to Emily</strong> for Tracery.</p>
+    <p class="handoff"><strong>Before handing off:</strong> ask everyone to rewrite the last passage of The Longarm with their own question; they come back to it in Act IV. <strong>Then the intermission</strong> (next sheet), then hand to Emily for Tracery.</p>
+  </section>
+
+  <section class="sheet" data-who="anastasia" id="intermission">
+    <div class="head"><h2>Intermission · Demo: Claude Code as power tool</h2><span class="who">Anastasia</span><span class="meta">After Act I · 10 min, then it runs on its own</span></div>
+    <p class="goal"><strong>The point:</strong> show the power tool at full speed. We build something complicated together, then let it finish on auto mode while the room keeps making. Act IV is the slow, approve-every-step version of the same tool.</p>
+    <div class="cols">
+      <div>
+        <h3>Before</h3>
+        <ul>
+          <li>Pick the build and test the opening prompt the night before. Not linked on the workshop site.</li>
+          <li>A repository and a Claude Code session open on the projector machine, signed in.</li>
+          <li>Power and a machine that won't sleep for the next hour and a half.</li>
+        </ul>
+        <h3>Watch for</h3>
+        <ul>
+          <li>Plan with the room in plan mode, then switch to auto mode and say so out loud.</li>
+          <li>Leave the session visible or minimized but running; don't close the laptop.</li>
+          <li>If it stalls or asks a question, note it for Act IV rather than fixing it live.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Run of show</h3>
+        <table>
+          <tr><td class="t">0–5</td><td class="s">Build the ask together</td><td>Take suggestions from the room. Read the plan aloud before approving it.</td></tr>
+          <tr><td class="t">5–10</td><td class="s">Hand it the wheel</td><td>Switch to auto mode. Let it start; show the first few steps.</td></tr>
+          <tr><td class="t">Acts II–III</td><td class="s">It keeps going</td><td>Emily teaches; the agent works.</td></tr>
+          <tr><td class="t">Act IV</td><td class="s">Come back</td><td>Open it at the start of Act IV: what did it make, what did it decide, what broke?</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="say">“This is the computerized pantograph: we chose the pattern, and now the machine stitches edge to edge. We'll check the back of the quilt in Act IV.”</p>
+    <p class="handoff"><strong>Hand to Emily</strong> for Tracery.</p>
   </section>
 
   <section class="sheet" data-who="emily" id="act2">
@@ -182,11 +216,11 @@
       <div>
         <h3>Before</h3>
         <ul>
-          <li>Ask people to make a free GitHub account during the break; it's the slowest step.</li>
+          <li>Ask people to make a free GitHub account early; it's the slowest step.</li>
           <li>Your own repository ready to demo, with <code>CLAUDE.md</code> in place and a session open in claude.ai/code.</li>
           <li><code>files/p5/cryptex-3d.html</code> open with the flat grammar loaded.</li>
           <li>OpenSCAD installed on the demo machine if you'll show F5/F6.</li>
-        </ul>
+                  </ul>
         <h3>Watch for</h3>
         <ul>
           <li><strong>Mode:</strong> auto mode has been the default since August. Have everyone switch to approving each step, and plan mode for the first two prompts.</li>
@@ -198,7 +232,7 @@
       <div>
         <h3>Run of show</h3>
         <table>
-          <tr><td class="t">0–5</td><td class="s">0 · Choose your mode</td><td>Claude Code is a longarm: freehand vs. pantograph. Show your longarm photo.</td></tr>
+          <tr><td class="t">0–5</td><td class="s">0 · Choose your mode</td><td>First, open the intermission build: what did auto mode do? Then freehand vs. pantograph.</td></tr>
           <tr><td class="t">5–15</td><td class="s">1 · Set up a repository</td><td>Upload grammar.json, the sketch, CLAUDE.md, process-log.md.</td></tr>
           <tr><td class="t">15–20</td><td class="s">2 · House rules</td><td>Edit CLAUDE.md: which steps stay yours?</td></tr>
           <tr><td class="t">20–25</td><td class="s">3 · Plan before code</td><td>Plan mode: read the grammar back first. The prompt is the source.</td></tr>
