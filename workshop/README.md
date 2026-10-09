@@ -1,7 +1,7 @@
 # Critical (Un)Making Workshop
 
 A hands-on companion to the talk, in the talk's four crafts, with the
-presenters' pixel avatars as guides. It runs two hours: I 25 min, II 25, an intermission demo 10, III 25, IV 35.
+presenters' pixel avatars as guides. It runs three hours; the acts take two of them: I 25 min, II 25, an intermission demo 10, III 25, IV 35.
 Open `workshop/index.html`. It runs from
 `file://` with no Wi-Fi, like the deck.
 
