@@ -16,6 +16,10 @@
     E: '#2a2030', M: '#b5566a',            // eyes, mouth
     O: '#24242c', o: '#4a4a56',            // shoes
     K: '#14121c',                          // outline
+    X: '#c3cad6', x: '#7d8696',            // steel (scissor blades)
+    R: '#c0392b',                          // red scissor handles
+    Y: '#e8c34a', y: '#8a6a1a',            // wooden ruler, tick marks
+    B: '#2f6fd1', b: '#1f4e9a', W: '#f4f4f4', // marker body, shade, white cap band
   };
   const PALETTES = {
     emily: Object.assign({}, BASE, { H: '#b98a55', h: '#d6ae78', P: '#2b2b36', p: '#1e1e28', T: '#5e1f3d', t: '#47162e' }), // plum tee
@@ -114,6 +118,9 @@
     walk4: [0, 0, 0, 0, 0, 0, 1, 'down'],
     talk:  [0, 0, 0, 0, 0, 0, 0, 'raised'],
     wave:  [0, 0, 0, 0, 0, 0, 0, 'wave'],
+    scissors: [0, 0, 0, 0, 0, 0, 0, 'scissors'],
+    ruler:    [0, 0, 0, 0, 0, 0, 0, 'ruler'],
+    marker:   [0, 0, 0, 0, 0, 0, 0, 'marker'],
     point: [0, 0, 0, 0, 0, 0, 0, 'point'],
   };
 
@@ -160,6 +167,28 @@
       rect(g, 27 + tilt, 4 + tilt, 1, 3 - tilt, 'S');
       if (!tilt) rect(g, 26, 5, 1, 2, 'S');
       else put(g, 28, 5, 'S');
+    } else if (right === 'scissors' || right === 'ruler' || right === 'marker') { // holding a tool up, fist above the shoulder
+      rect(g, 22, 17, 3, 3, 'T');
+      rect(g, 24, 15, 2, 3, 'T');
+      rect(g, 25, 12, 2, 3, 'S');                      // forearm
+      if (right === 'scissors') {
+        rect(g, 23, 8, 2, 2, 'R'); rect(g, 28, 8, 1, 2, 'R');   // handle loops either side of the fist
+        put(g, 27, 8, 'R');
+        [[25, 7], [26, 6], [27, 5], [27, 4], [28, 3], [28, 2], [28, 1]].forEach(([x, y]) => put(g, x, y, 'X')); // blades cross
+        [[27, 7], [25, 5], [25, 4], [24, 3], [24, 2], [24, 1]].forEach(([x, y]) => put(g, x, y, 'X'));          // at the pivot
+        put(g, 26, 6, 'x');                                     // pivot screw
+      } else if (right === 'ruler') {
+        rect(g, 26, 1, 2, 10, 'Y');                             // long ruler, end of it in the fist
+        for (let y = 2; y <= 8; y += 2) put(g, 26, y, 'y');     // tick marks
+        put(g, 27, 5, 'y');
+      } else {
+        rect(g, 26, 3, 2, 6, 'B');                              // marker body
+        rect(g, 27, 3, 1, 6, 'b');
+        rect(g, 26, 5, 2, 1, 'W');                              // cap band
+        put(g, 26, 2, 'E'); put(g, 27, 2, 'E');                 // felt tip
+      }
+      rect(g, 25, 9, 3, 3, 'S');                               // fist closed around the tool
+      put(g, 25, 11, 's'); put(g, 27, 9, 's');
     } else {                                          // pointing to the viewer's right
       rect(g, 22, 18, 3, 3, 'T');
       rect(g, 25, 19, 4, 2, 'S');

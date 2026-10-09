@@ -32,7 +32,7 @@
     });
   }
 
-  // Hub: the two presenters walk the floor, pause, and turn around.
+  // Hub: the two presenters walk the floor, and when they pause they hold up a tool.
   function walkers() {
     const floor = document.querySelector('.floor');
     if (!AP || !floor) return;
@@ -41,15 +41,19 @@
       const img = guide.querySelector('img');
       const who = guide.dataset.who;
       const frames = ['walk1', 'walk2', 'walk3', 'walk4'];
-      let x = i ? 0.62 : 0.18, dir = i ? -1 : 1, f = 0, pause = 0;
-      const place = () => { el.style.left = `calc(${(x * 100).toFixed(2)}% - 60px)`; el.classList.toggle('flip', dir < 0); };
+      const tools = ['scissors', 'ruler', 'marker'];
+      const lines = { scissors: 'Pick up the scissors.', ruler: 'Measure twice.', marker: 'Mark it up.' };
+      const say = el.querySelector('.say');
+      let x = i ? 0.62 : 0.18, dir = i ? -1 : 1, f = 0, pause = 0, t = i, tool = tools[t];
+      const stop = (n) => { pause = n; tool = tools[t++ % tools.length]; if (say) say.textContent = lines[tool]; };
+      const place = () => { el.style.left = `calc(${(x * 100).toFixed(2)}% - 60px)`; el.classList.toggle('flip', dir < 0); el.classList.toggle('say-left', x > 0.55); };
       place();
       if (still) return;
       setInterval(() => {
-        if (pause > 0) { pause--; img.src = AP.url(who, pause > 6 ? (pause % 2 ? 'wave' : 'talk') : 'idle'); return; }
+        if (pause > 0) { pause--; img.src = AP.url(who, pause > 4 ? tool : 'idle'); return; }
         x += dir * 0.006;
-        if (x > 0.9 || x < 0.08) { dir = -dir; pause = 14; }
-        else if (Math.random() < 0.01) pause = 18;
+        if (x > 0.9 || x < 0.08) { dir = -dir; stop(20); }
+        else if (Math.random() < 0.01) stop(24);
         img.src = AP.url(who, frames[f++ % 4]);
         place();
       }, 140);

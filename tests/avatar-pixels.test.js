@@ -4,9 +4,9 @@ const assert = require('node:assert/strict');
 const AP = require('../js/render/avatar-pixels.js');
 
 const WHO = ['emily', 'anastasia'];
-const POSES = ['idle', 'walk1', 'walk2', 'walk3', 'walk4', 'talk', 'wave', 'point'];
+const POSES = ['idle', 'walk1', 'walk2', 'walk3', 'walk4', 'talk', 'wave', 'scissors', 'ruler', 'marker', 'point'];
 
-test('exposes the grid size and the eight poses', () => {
+test('exposes the grid size and every pose', () => {
   assert.equal(AP.W, 30);
   assert.equal(AP.H, 45);
   assert.deepEqual(Object.keys(AP.POSES).sort(), [...POSES].sort());

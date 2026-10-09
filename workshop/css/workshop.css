@@ -212,8 +212,11 @@ body.hub { background: #111; }
 .floor { position: relative; height: 210px; margin-top: 24px; }
 .floor::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 36px; background: repeating-linear-gradient(90deg, #4a3220 0 32px, #5a3e28 32px 64px); border-top: 4px solid #000; }
 .walker { position: absolute; bottom: 30px; left: 0; z-index: 1; }
+.floor .desk { position: absolute; left: 50%; bottom: 36px; width: 288px; height: 136px; transform: translateX(-50%); z-index: 0; image-rendering: pixelated; }
+@media (max-width: 640px) { .floor .desk { width: 216px; height: 102px; } }
 .walker.flip img { transform: scaleX(-1); }
 .walker .say { position: absolute; bottom: 120px; left: 112px; width: max-content; max-width: 220px; background: #000; border: 3px solid #fff; color: #9dff00; font: 22px/1.15 'VT323', monospace; }
+.walker.say-left .say { left: auto; right: 112px; }
 .acts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; padding: 36px 0 12px; }
 .act-card { position: relative; display: flex; flex-direction: column; gap: 10px; min-height: 340px; padding: 26px 24px 22px; text-decoration: none; color: inherit; transition: transform .2s; }
 .act-card:hover, .act-card:focus-visible { transform: translateY(-6px) rotate(-.6deg); }
