@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" role="img" aria-labelledby="t d">
+  <title id="t">A fill-in-the-blank story beside the same story as a Tracery grammar</title>
+  <desc id="d">Left: a word-game pad with the sentence "blank (person) blank (verb, past tense) a blank (noun) out of blank (plural noun)", the blanks filled in by hand with "a quilter", "stitched", "map", "dead links". Right: the same sentence as a Tracery origin rule, with each blank's label become a symbol in hashes, and a list of options under each symbol.</desc>
+  <style>
+    .pad{fill:#fffdf5;stroke:#1d1a24;stroke-width:3}
+    .head{fill:#d8442f}
+    .ht{font:700 22px 'Courier New',monospace;fill:#fffdf5;letter-spacing:2px}
+    .txt{font:20px Georgia,serif;fill:#1d1a24}
+    .lab{font:12px 'Courier New',monospace;fill:#5b5666;letter-spacing:1px}
+    .hand{font:italic 22px 'Comic Sans MS','Segoe Print',cursive;fill:#2a54b8}
+    .line{stroke:#1d1a24;stroke-width:1.5}
+    .code{fill:#1d1a24}
+    .ct{font:15px 'Courier New',monospace;fill:#efe9dc}
+    .sym{fill:#ffcf4a}
+    .str{fill:#9dff00}
+    .arrow{stroke:#1d1a24;stroke-width:4;fill:none}
+    .cap{font:700 14px 'Courier New',monospace;fill:#1d1a24;letter-spacing:2px}
+  </style>
+  <!-- the pad -->
+  <rect class="pad" x="10" y="10" width="380" height="300" rx="6"/>
+  <rect class="head" x="11.5" y="11.5" width="377" height="46"/>
+  <text class="ht" x="200" y="43" text-anchor="middle">FILL IN THE BLANKS</text>
+  <g class="txt">
+    <line class="line" x1="40" y1="120" x2="190" y2="120"/><text class="hand" x="56" y="113">a quilter</text>
+    <text class="lab" x="70" y="137">PERSON</text>
+    <line class="line" x1="210" y1="120" x2="350" y2="120"/><text class="hand" x="232" y="113">stitched</text>
+    <text class="lab" x="210" y="137">VERB, PAST TENSE</text>
+    <text x="40" y="200">a</text>
+    <line class="line" x1="62" y1="200" x2="170" y2="200"/><text class="hand" x="88" y="193">map</text>
+    <text class="lab" x="100" y="217">NOUN</text>
+    <text x="182" y="200">out of</text>
+    <line class="line" x1="40" y1="270" x2="230" y2="270"/><text class="hand" x="70" y="263">dead links</text>
+    <text class="lab" x="90" y="287">PLURAL NOUN</text>
+    <text x="236" y="270">.</text>
+  </g>
+  <!-- arrow -->
+  <path class="arrow" d="M402 160 H452 M440 148 L454 160 L440 172"/>
+  <!-- the grammar -->
+  <rect class="code" x="466" y="10" width="404" height="300" rx="6"/>
+  <g class="ct">
+    <text x="486" y="44">{</text>
+    <text x="500" y="72">"origin": ["<tspan class="sym">#person.capitalize#</tspan></text>
+    <text x="520" y="94"><tspan class="sym">#made#</tspan> <tspan class="sym">#thing.a#</tspan> out of</text>
+    <text x="520" y="116"><tspan class="sym">#material#</tspan>."],</text>
+    <text x="500" y="152">"person": [<tspan class="str">"a quilter"</tspan>, <tspan class="str">"the bot"</tspan>],</text>
+    <text x="500" y="182">"made": [<tspan class="str">"stitched"</tspan>, <tspan class="str">"folded"</tspan>],</text>
+    <text x="500" y="212">"thing": [<tspan class="str">"map"</tspan>, <tspan class="str">"archive"</tspan>],</text>
+    <text x="500" y="242">"material": [<tspan class="str">"dead links"</tspan>,</text>
+    <text x="608" y="264"><tspan class="str">"old t-shirts"</tspan>]</text>
+    <text x="486" y="292">}</text>
+  </g>
+  <text class="cap" x="200" y="326" text-anchor="middle">A PERSON FILLS EACH BLANK ONCE</text>
+  <text class="cap" x="668" y="326" text-anchor="middle">TRACERY FILLS THEM EVERY RUN</text>
+</svg>

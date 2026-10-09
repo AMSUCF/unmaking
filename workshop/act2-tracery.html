@@ -29,7 +29,7 @@
       <div>
         <p class="kicker">ACT II · TEXTILE</p>
         <h1>Patterns</h1>
-        <p class="lede">Tracery, by Kate Compton, is a grammar for generating text. Like a quilt pattern, it names the pieces, says how they fit together, and lets them repeat in new combinations.</p>
+        <p class="lede">Tracery, by Kate Compton (<a href="https://tracery.io/archival/crystalcodepalace/tracerytut.html">her tutorial</a>), is a grammar for generating text. Like a quilt pattern, it names the pieces, says how they fit together, and lets them repeat in new combinations.</p>
         <p class="question">From the talk: why keep making?</p>
         <ul class="meta">
           <li>Suggested: 25 min</li>
@@ -47,6 +47,7 @@
   <main id="main" class="wrap">
     <nav class="toc" aria-label="Steps">
       <ol>
+        <li><a href="#madlibs">Like Mad Libs</a></li>
         <li><a href="#read">1 · Read a grammar</a></li>
         <li><a href="#play">2 · Playground</a></li>
         <li><a href="#grow">3 · Grow three rules</a></li>
@@ -57,6 +58,18 @@
         <li><a href="#files">Files</a></li>
       </ol>
     </nav>
+
+    <section class="card" id="madlibs">
+      <h2>Like Mad Libs, run backwards</h2>
+      <figure><img src="img/madlibs-vs-tracery.svg" alt="Left: a fill-in-the-blank pad reading '(person) (verb, past tense) a (noun) out of (plural noun)', filled in by hand with 'a quilter stitched a map out of dead links'. An arrow points right to the same sentence as a Tracery grammar: an origin rule with #person#, #made#, #thing# and #material# in place of the blanks, and a list of options for each."></figure>
+      <p>If you've played <cite>Mad Libs</cite>, you already know how Tracery works. A Mad Libs page is a story with blanks, and under each blank is a label: <em>noun</em>, <em>verb, past tense</em>, <em>plural noun</em>. A Tracery grammar is the same thing. The story with blanks is the <code>origin</code> rule; each label becomes a <strong>symbol</strong> in <code>#hashes#</code>.</p>
+      <ul>
+        <li><strong>Who fills the blanks.</strong> In Mad Libs, a friend calls out a word for each label, once. In Tracery, you write a list of words for each symbol ahead of time, and the machine picks from it every time it runs.</li>
+        <li><strong>Who sees the story.</strong> Mad Libs is funny because the person choosing words can't see the sentence. In Tracery you write both, so you can make the words fit, or make them clash on purpose.</li>
+        <li><strong>Blanks inside blanks.</strong> A Mad Libs blank takes one word. A Tracery option can hold more <code>#symbols#</code>, so one blank can open into a whole new sentence.</li>
+      </ul>
+      <p class="callout"><strong>Start with Kate Compton's own <a href="https://tracery.io/archival/crystalcodepalace/tracerytut.html">Tracery tutorial</a>.</strong> It walks through symbols, rules and modifiers with live examples, and goes well past what we need today. Keep it open in a tab.</p>
+    </section>
 
     <section class="card" id="read">
       <span class="time">3 min</span>
