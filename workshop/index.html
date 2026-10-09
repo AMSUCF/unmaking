@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unmaking Workshop</title>
+  <meta name="description" content="A four-act hands-on workshop on Twine, Tracery, p5.js and agentic code, companion to the talk Critical (Un)Making and the Agentic Humanities.">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="css/workshop.css">
+</head>
+<body class="hub">
+  <a class="skip" href="#acts">Skip to the four acts</a>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="home" href="index.html" aria-current="page">UNMAKING WORKSHOP</a>
+      <nav aria-label="Acts">
+        <ol>
+          <li><a href="act1-twine.html">I TWINE</a></li>
+          <li><a href="act2-tracery.html">II TRACERY</a></li>
+          <li><a href="act3-p5.html">III P5.JS</a></li>
+          <li><a href="act4-agents.html">IV AGENTS</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hub-hero" aria-labelledby="title">
+    <div class="wrap">
+      <p class="kicker" style="color:#9dff00">A WORKSHOP IN FOUR ACTS</p>
+      <h1 id="title">Critical (Un)Making Workshop</h1>
+      <p class="byline">with Emily K. Johnson and Anastasia Salter</p>
+      <p class="lede">Make a hypertext in Twine, a grammar in Tracery, and a sketch in p5.js. Then hand the grammar to an agent and turn it into an object you can hold: a printed cryptex or flower spinner whose rings are the rules you wrote.</p>
+    </div>
+    <div class="floor" aria-hidden="true">
+      <div class="walker"><div class="guide" data-who="emily" data-pose="walk1"></div><p class="say">Pick up the scissors.</p></div>
+      <div class="walker"><div class="guide" data-who="anastasia" data-pose="walk3"></div></div>
+    </div>
+  </section>
+
+  <main id="acts" class="wrap">
+    <div class="acts">
+      <a class="act-card" data-craft="paper" href="act1-twine.html">
+        <span class="num">ACT I · PAPER</span>
+        <h2>Passages</h2>
+        <p class="q">Index cards, string, and a hypertext with choices that count.</p>
+        <div class="foot"><p class="tool">Twine + Harlowe</p><div class="guide small" data-who="emily" data-pose="point"></div></div>
+      </a>
+      <a class="act-card" data-craft="textile" href="act2-tracery.html">
+        <span class="num">ACT II · TEXTILE</span>
+        <h2>Patterns</h2>
+        <p class="q">A grammar is a pattern: symbols, rules, and the pieces that repeat.</p>
+        <div class="foot"><p class="tool">Tracery</p><div class="guide small" data-who="anastasia" data-pose="talk"></div></div>
+      </a>
+      <a class="act-card" data-craft="zine" href="act3-p5.html">
+        <span class="num">ACT III · ZINE</span>
+        <h2>Sketches</h2>
+        <p class="q">Shapes, clicks, and drifting text. Fork it, credit it, give it away.</p>
+        <div class="foot"><p class="tool">p5.js</p><div class="guide small" data-who="emily" data-pose="talk"></div></div>
+      </a>
+      <a class="act-card" data-craft="game" href="act4-agents.html">
+        <span class="num">ACT IV · GAME</span>
+        <h2>Agents</h2>
+        <p class="q">Work with an agent to unflatten the grammar into a 3D print, and keep track of who decided what.</p>
+        <div class="foot"><p class="tool">Claude Code + OpenSCAD</p><div class="guides"><div class="guide small" data-who="anastasia" data-pose="point"></div><div class="guide small" data-who="emily" data-pose="idle"></div></div></div>
+      </a>
+    </div>
+
+    <section class="card" aria-labelledby="flow">
+      <h2 id="flow">HOW THE ACTS CONNECT</h2>
+      <p>Each act makes something you'll use in the next one. The Twine passage that picks at random in Act I is a tiny grammar. In Act II you write a full grammar in Tracery and flatten it into slots. In Act III that grammar runs inside a p5.js sketch you can click and spin. In Act IV you work with an agent to turn the same grammar into geometry, then print it. Each act ends with an <strong>unmaking</strong> question from the talk, so we stop and ask what the tool did and what we did.</p>
+      <div class="table-wrap"><table class="schedule">
+        <caption class="sr-only">Suggested schedule</caption>
+        <thead><tr><th scope="col">Act</th><th scope="col">Make</th><th scope="col">Talk question</th><th scope="col">Time</th></tr></thead>
+        <tbody>
+          <tr><td>I · Paper</td><td>A paper prototype, then a branching Twine</td><td>The end of making as we know it?</td><td>40 min</td></tr>
+          <tr><td>II · Textile</td><td>A Tracery grammar, and a flat version of it for print</td><td>Why keep making?</td><td>35 min</td></tr>
+          <tr><td>III · Zine</td><td>A p5.js sketch that runs your grammar</td><td>Who owns what we make?</td><td>40 min</td></tr>
+          <tr><td>IV · Game</td><td>A 3D preview, an OpenSCAD file, a process log</td><td>Is there human agency in agentic AI?</td><td>50 min</td></tr>
+        </tbody>
+      </table></div>
+      <p>The times are suggestions. Acts I–III each stand on their own, and Act IV works best after Act II.</p>
+    </section>
+
+    <section class="card" aria-labelledby="bring">
+      <h2 id="bring">BRING</h2>
+      <ul>
+        <li>A laptop with a current web browser. Everything in <a href="files/README.md">the reference files</a> runs offline from this folder.</li>
+        <li>For Act I: index cards, string or yarn, tape, and a marker.</li>
+        <li>For Act IV: a free <a href="https://github.com/">GitHub</a> account, and Claude Code (<a href="https://claude.ai/code">claude.ai/code</a> in a browser is enough). No subscription? The act includes a way to work with a free chat assistant instead. <a href="https://openscad.org/">OpenSCAD</a> (free) if you want to open the print files yourself.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="sources">
+      <h2 id="sources">SOURCES</h2>
+      <ul>
+        <li>The talk this workshop accompanies: <a href="../index.html">Critical (Un)Making and the Agentic Humanities</a> (the four acts, crafts and avatars come from its slides).</li>
+        <li>Emily K. Johnson and Anastasia Salter, <a href="https://www.fulcrum.org/concern/monographs/zc77ss95p"><cite>Critical Making in the Age of AI</cite></a> (open access).</li>
+        <li>Tutorials adapted from ENG 6819, <a href="https://github.com/AMSUCF/CriticalMaking2026">Critical Making in Digital Humanities</a> (UCF, Spring 2026): exercises on hypertext, grammar, code, generation, and tools.</li>
+        <li>The cryptex and flower spinner: Emily K. Johnson, <a href="https://ekjphd.com/unmaking/">ekjphd.com/unmaking</a>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>Twine by Chris Klimas and contributors. Tracery by Kate Compton (ISC). p5.js by the Processing Foundation and contributors (LGPL 2.1). Local copies of Tracery and p5.js are in <code>vendor/</code> so the workshop runs without Wi-Fi.</p>
+    </div>
+  </footer>
+
+  <script src="../js/render/avatar-pixels.js"></script>
+  <script src="js/workshop.js"></script>
+</body>
+</html>

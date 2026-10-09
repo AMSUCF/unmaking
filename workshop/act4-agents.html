@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Act IV: Agents</title>
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="css/workshop.css">
+</head>
+<body data-craft="game">
+  <a class="skip" href="#main">Skip to the tutorial</a>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="home" href="index.html">UNMAKING WORKSHOP</a>
+      <nav aria-label="Acts">
+        <ol>
+          <li><a href="act1-twine.html">I TWINE</a></li>
+          <li><a href="act2-tracery.html">II TRACERY</a></li>
+          <li><a href="act3-p5.html">III P5.JS</a></li>
+          <li><a href="act4-agents.html" aria-current="page">IV AGENTS</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div class="hudbar" aria-hidden="true"><span>ACT IV · THE WORKSHOP</span><span class="agency">AGENCY ■■■■□</span></div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">ACT IV · GAME · 2 PLAYERS</p>
+        <h1>Agents</h1>
+        <p class="lede">An agent is generative AI with tools, put to a purpose. Here the purpose is to unflatten your grammar into an object you can hold: a cryptex whose rings are its slots, or a flower spinner whose petals pair words.</p>
+        <p class="question">From the talk: is there human agency in agentic AI?</p>
+        <ul class="meta">
+          <li>Suggested: 50 min</li>
+          <li>Make: a 3D preview, a print file, a process log</li>
+          <li>Need: GitHub, Claude Code, your flat grammar</li>
+        </ul>
+      </div>
+      <div class="side">
+        <p class="say">PLAYER TWO, PRESS START. You keep the controller.</p>
+        <div class="guides"><div class="guide" data-who="anastasia" data-pose="talk"></div><div class="guide" data-who="emily" data-pose="point"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="wrap">
+    <nav class="toc" aria-label="Steps">
+      <ol>
+        <li><a href="#prints">The prints</a></li>
+        <li><a href="#longarm">0 · Choose your mode</a></li>
+        <li><a href="#setup">1 · Set up</a></li>
+        <li><a href="#rules">2 · House rules</a></li>
+        <li><a href="#plan">3 · Plan</a></li>
+        <li><a href="#check">4 · Check every sentence</a></li>
+        <li><a href="#preview">5 · Preview</a></li>
+        <li><a href="#print">6 · Print</a></li>
+        <li><a href="#label">7 · Credit &amp; label</a></li>
+        <li><a href="#unmake">Unmake</a></li>
+        <li><a href="#files">Files</a></li>
+      </ol>
+    </nav>
+
+    <section class="card" id="prints">
+      <h2>The prints from the talk</h2>
+      <p>In Act III of the talk, Emily showed two of her p5.js sketches made physical with Claude:</p>
+      <div class="figs">
+        <figure>
+          <img src="../assets/act3/prints-cryptex.jpg" alt="A hand holds Emily’s finished 3D-printed cryptex: pale blue-green octagonal rings between dark navy end caps, each face carrying a recessed Spanish word, reading across “el gato / siempre / bebe / mucho.”">
+          <figcaption><strong>The cryptex.</strong> “Traceretry,” a Tracery-style p5.js sketch that makes Spanish nonsense sentences, unflattened into four rings: subject, when, verb, how or where. Ten words each make 10,000 sentences, such as “la vaca siempre vuela arriba” (the cow always flies up). Claude helped rewrite the grammar so every combination works. The geometry remixes two MakerWorld cryptex designs (CC BY-NC and CC BY-NC-SA).</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/act3/prints-flower-spinner.jpg" alt="A hand holds Emily’s finished 3D-printed flower spinner: two layers of pale green round petals on a black base with a black knob in the center, each petal carrying a recessed word: Making, Play, Technology, DH, Tech Comm, Pedagogy.">
+          <figcaption><strong>The flower spinner.</strong> A p5.js sketch for brainstorming how fields combine. Two rings of petals spin on their own, so the pointer pairs two fields at random. Here Claude generated all of the 3D geometry, after print-in-place spinners whose petals were fixed.</figcaption>
+        </figure>
+      </div>
+      <p>Both were printed on a Bambu Lab A1 in PLA. The files and design history are at <a href="https://ekjphd.com/unmaking/">ekjphd.com/unmaking</a>. Today's reference files are simpler teaching models of the same two ideas, generated from the Act II grammars.</p>
+    </section>
+
+    <section class="card" id="longarm">
+      <span class="time">5 min</span>
+      <h2>0. Choose your mode</h2>
+      <p>From Act II of the talk: <em>Claude Code is a longarm.</em></p>
+      <ul class="choices">
+        <li>Freehand: you guide every stitch. Default mode: you approve every step.</li>
+        <li>Computerized pantograph: the machine stitches edge to edge. Auto mode: the agent runs the whole loop.</li>
+        <li>Either way, you pieced the top, chose the pattern, and fix the thread breaks.</li>
+      </ul>
+      <p class="callout">Since August 2026, auto mode is the default in Claude Code for Pro, Max, and Team plans. A default is a decision someone else made for you. For this act, choose a mode where you approve each step, and use plan mode for the first two prompts.</p>
+    </section>
+
+    <section class="card" id="setup">
+      <span class="time">10 min</span>
+      <h2>1. Set up a repository</h2>
+      <ol>
+        <li>On GitHub, create a new public repository (for example <code>my-grammar-object</code>) and tick <em>Add a README</em>.</li>
+        <li>Upload your files: your flat grammar from Act II as <code>grammar.json</code>, your sketch from Act III, and <a href="files/agents/CLAUDE.md">CLAUDE.md</a> and <a href="files/agents/process-log.md">process-log.md</a> from this workshop.</li>
+        <li>Open <a href="https://claude.ai/code">claude.ai/code</a>, connect GitHub, and start a session on the new repository. Claude Code also runs in the desktop app and in a terminal.</li>
+        <li>To publish your page: <em>Settings → Pages</em>, deploy from the <code>main</code> branch. The file named <code>index.html</code> becomes the front page.</li>
+      </ol>
+      <p><strong>No subscription?</strong> Work the same steps in a free chat assistant: paste in your grammar and a prompt, copy the files it writes, upload them to the repository yourself, and turn on Pages. It's slower, and you see every file it writes.</p>
+    </section>
+
+    <section class="card" id="rules">
+      <span class="time">5 min</span>
+      <h2>2. Write the house rules</h2>
+      <p>Claude Code reads <code>CLAUDE.md</code> at the start of every session. It's where you decide, once, which parts of the process stay yours. The template starts with:</p>
+<pre><code>- Plan before you build. For anything bigger than a one-line fix,
+  describe your plan and wait for me to say yes.
+- Ask before each step. Make one change, tell me what changed and why, then stop.
+- My words are mine. Never rewrite, add, or remove words in grammar.json
+  on your own. Show me the broken sentences and suggest options. I choose.
+- Credit what we remix. Name it, link it, and keep its license in CREDITS.md.
+- Keep a log. After each step, add a line to process-log.md.</code></pre>
+      <p>Edit these. Delete the ones you don't want and add your own. Which steps do you want to keep?</p>
+    </section>
+
+    <section class="card" id="plan">
+      <span class="time">5 min</span>
+      <h2>3. Plan before code</h2>
+      <p>In plan mode, ask the agent to read your grammar back to you before it changes anything:</p>
+<pre><code>Read grammar.json. Don't change anything yet. Explain in plain language what
+each symbol does, which rules are nested, and which choices are saved with
+actions. Then tell me which parts could become physical parts of an object
+that someone turns by hand, and which parts could not.</code></pre>
+      <p>Then ask for a flat, ring-ready version in your own words. The full sequence is in <a href="files/agents/prompts.md">prompts.md</a>. Read each plan before you approve it. Edit the prompts before you send them: the prompt is the source.</p>
+    </section>
+
+    <section class="card" id="check">
+      <span class="time">5 min</span>
+      <h2>4. Check every sentence</h2>
+      <p>Eight words on four rings make 4,096 sentences. Ten make 10,000. Nobody reads them all, but every one gets printed. This is a job an agent does well, as long as you decide what counts as broken:</p>
+<pre><code>Write a small script that prints every sentence the flat grammar can make.
+Run it, then show me only the sentences that are ungrammatical or don't make
+sense, grouped by the word that causes the problem. Don't fix them.
+I'll choose which words to change.</code></pre>
+      <p>Write down which words you changed and why in <code>process-log.md</code>.</p>
+    </section>
+
+    <section class="card" id="preview">
+      <span class="time">5 min</span>
+      <h2>5. Preview it in 3D</h2>
+      <p>Open <a href="files/p5/cryptex-3d.html">cryptex-3d.html</a> and paste in your flat grammar. Each <code>#symbol#</code> in <code>origin</code> becomes a ring, and each word becomes a face. Turn the rings, drag to orbit, and read sentences along the bright row.</p>
+      <p>Then ask your agent to build its own preview, and compare the two:</p>
+<pre><code>Add a p5.js sketch, cryptex.html, that shows the cryptex in 3D (WEBGL), with
+buttons to turn each ring and a line of text showing the sentence on the
+reading row. Use the grammar file directly. Comment the code for a beginner.</code></pre>
+      <p>Which version do you understand better? Which one would you rather maintain?</p>
+    </section>
+
+    <section class="card" id="print">
+      <span class="time">10 min</span>
+      <h2>6. Make it printable</h2>
+      <ol>
+        <li>In the preview, press <strong>Download .scad</strong>. You get an OpenSCAD file with your words in it. Or start from <a href="files/agents/cryptex.scad">cryptex.scad</a> or <a href="files/agents/spinner.scad">spinner.scad</a>, or ask your agent to write one (prompt 5).</li>
+        <li>Open it in <a href="https://openscad.org/">OpenSCAD</a>. Every measurement you might change is at the top: text size, ring length, clearance. Press <kbd>F5</kbd> to preview and <kbd>F6</kbd> to render, then <em>File → Export → STL</em>.</li>
+        <li>Slice the STL in your printer's slicer (Bambu Studio, PrusaSlicer, or Cura). PLA, 0.2 mm layers. Rings stand on end and need no supports.</li>
+        <li><strong>Print one ring and the core first.</strong> If the ring binds, raise <code>clearance</code>. If it wobbles, lower it. If the letters fill in, raise <code>text_depth</code> or <code>text_size</code>.</li>
+      </ol>
+      <p class="callout">The agent can't feel a ring bind. You can. That's the thread break from Act I's story: noticing it and deciding where to start again is your work.</p>
+      <p>These are teaching models: the rings spin freely, with no lock or click. For a real cryptex, remix a published design, as the talk's print did, and keep its license. No printer? Write each ring's words around a cardboard tube and slide the tubes onto a pencil.</p>
+    </section>
+
+    <section class="card" id="label">
+      <span class="time">5 min</span>
+      <h2>7. Credit and label</h2>
+      <p>Quilters argue about whether computer-guided quilting counts, and about who goes on the label: <em>pieced by</em>, <em>quilted by</em>. Finish your <code>process-log.md</code> with a label of your own:</p>
+<pre><code>Written by ______. Coded by ______. Printed by ______.</code></pre>
+      <p>Ask the agent to draft <code>CREDITS.md</code> (prompt 7), but write its last sentence yourself.</p>
+    </section>
+
+    <section class="card unmake" id="unmake">
+      <h2>Unmake</h2>
+      <ul class="choices">
+        <li>If my agent does all the work to create a website, a Tracery bot, a 3D print file, where is the human contribution? When does lowering barriers remove the point of making?</li>
+        <li>Bethany Nowviskie's “Resistance in the Materials” names three: materials, tools, and time. The talk adds a fourth loss: control over the steps and decisions themselves, sold as convenience. Which steps did you keep today?</li>
+        <li>A critical maker rejects, supplements, extends, and critiques the tool. Which of the four did you do?</li>
+        <li>Look back at the label in your log. Would you sign it?</li>
+      </ul>
+    </section>
+
+    <section class="card" id="files">
+      <h2>Reference files</h2>
+      <ul class="files">
+        <li><a href="files/p5/cryptex-3d.html">cryptex-3d.html</a><p>Paste a flat grammar, turn the rings, download an OpenSCAD file.</p></li>
+        <li><a href="files/agents/cryptex.scad">cryptex.scad</a><p>Parametric word cryptex from <code>cryptex-grammar.json</code>: rings, core, cap.</p></li>
+        <li><a href="files/agents/spinner.scad">spinner.scad</a><p>Parametric flower spinner from <code>spinner-grammar.json</code>: base, two petal layers, knob.</p></li>
+        <li><a href="files/agents/CLAUDE.md">CLAUDE.md</a><p>House rules for the agent. Copy it into your repository and edit it.</p></li>
+        <li><a href="files/agents/prompts.md">prompts.md</a><p>Seven prompts, from reading the grammar back to writing the credits.</p></li>
+        <li><a href="files/agents/process-log.md">process-log.md</a><p>Who asked, who did, who decided. Ends with your label.</p></li>
+      </ul>
+    </section>
+
+    <nav class="next" aria-label="Next">
+      <a href="act3-p5.html">◀ Act III: p5.js</a>
+      <a href="index.html">Workshop home ▶</a>
+    </nav>
+  </main>
+
+  <footer class="site-foot"><div class="wrap"><p>Tutorial adapted from ENG 6819 Making Exercises Nine (Generation) and Thirteen (Tools) (<a href="https://github.com/AMSUCF/CriticalMaking2026">AMSUCF/CriticalMaking2026</a>). Cryptex and flower spinner by Emily K. Johnson (<a href="https://ekjphd.com/unmaking/">ekjphd.com/unmaking</a>); the workshop's .scad files are new, simplified models.</p></div></footer>
+  <script src="../js/render/avatar-pixels.js"></script>
+  <script src="js/workshop.js"></script>
+</body>
+</html>

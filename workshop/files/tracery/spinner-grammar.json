@@ -1,0 +1,5 @@
+{
+  "origin": ["#outer# meets #inner#"],
+  "outer": ["DH", "Making", "Play", "Pedagogy", "Tech Comm", "Archives"],
+  "inner": ["Twine", "Tracery", "p5.js", "Agents", "Bitsy", "Zines"]
+}

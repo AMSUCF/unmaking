@@ -1,0 +1,8 @@
+{
+  "origin": ["#maker.capitalize# #made# #thing.a# out of #material#, #because#."],
+  "maker": ["a quilter", "my grandmother", "a student", "the bot", "a librarian", "someone on GeoCities"],
+  "made": ["stitched", "folded", "photocopied", "coded", "pieced", "remixed"],
+  "thing": ["map", "archive", "love letter", "zine", "game", "website", "sampler"],
+  "material": ["old t-shirts", "index cards", "borrowed code", "dead links", "thread", "a broken printer"],
+  "because": ["because the platform closed", "for a friend", "to remember", "just to see if it would work", "because no one else would", "and then gave it away"]
+}

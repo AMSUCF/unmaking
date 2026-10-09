@@ -1,0 +1,7 @@
+{
+  "origin": ["#who# #when# #does# #how#"],
+  "who": ["the agent", "a quilter", "my bot", "the archive", "a student", "the machine", "our zine", "the cursor"],
+  "when": ["always", "never", "slowly", "quietly", "sometimes", "rarely", "gladly", "still"],
+  "does": ["unravels", "remembers", "stitches", "forgets", "loops", "glitches", "listens", "wanders"],
+  "how": ["by hand", "offline", "in public", "at night", "for us", "in loops", "on paper", "elsewhere"]
+}
