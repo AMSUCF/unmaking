@@ -207,6 +207,7 @@ body.hub { background: #111; }
 .hub-hero { position: relative; overflow: hidden; padding: 56px 0 0; background: linear-gradient(#2e3a5a, #1c1430 70%); }
 .hub-hero .wrap { position: relative; z-index: 1; }
 .hub-hero h1 { font: 400 clamp(26px, 5.4vw, 54px)/1.35 'Press Start 2P', monospace; color: #ffd84a; text-shadow: 4px 4px 0 #000; }
+.hub-hero h1 .sub { display: block; margin-top: 8px; font-size: clamp(15px, 2.4vw, 24px); line-height: 1.5; color: #f2f2f2; }
 .hub-hero .lede { color: #f2f2f2; max-width: 56ch; }
 .hub-hero .byline { margin: 10px 0 0; color: #9dff00; font: 24px/1.2 'VT323', monospace; }
 .floor { position: relative; height: 210px; margin-top: 24px; }

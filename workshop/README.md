@@ -1,4 +1,4 @@
-# Critical (Un)Making Workshop
+# Critical Making: Grammars, Hypertext, and Play in the Age of AI
 
 A hands-on companion to the talk, in the talk's four crafts, with the
 presenters' pixel avatars as guides. It runs three hours: I 35 min, II 35, an intermission demo 10, a 15-minute break, III 35, IV 50.
