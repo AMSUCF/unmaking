@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const AP = require('../js/render/avatar-pixels.js');
 
 const WHO = ['emily', 'anastasia'];
-const POSES = ['idle', 'walk1', 'walk2', 'walk3', 'walk4', 'talk', 'wave', 'scissors', 'ruler', 'marker', 'point'];
+const POSES = ['idle', 'walk1', 'walk2', 'walk3', 'walk4', 'talk', 'wave', 'scissors', 'ruler', 'marker', 'needle', 'controller', 'point'];
 
 test('exposes the grid size and every pose', () => {
   assert.equal(AP.W, 30);
