@@ -5,10 +5,11 @@ browser, open a `.json`, `.twee` or `.scad` file in any text editor. The p5.js
 and Tracery libraries are in `../vendor/`.
 
 ## Act I · Twine (`twine/`)
-- `the-longarm-archive.html`: a short Harlowe story to import into Twine
-  (*Library → Import*). Shows links, `(set:)`, `(if:)`/`(else:)` and `(either:)`.
+- `the-longarm.html`: a short Harlowe story, published. Open it in a browser
+  to play; import it into Twine (*Library → Import*) to edit. Shows links,
+  `(set:)`, `(if:)`/`(else:)` and `(either:)`.
 - `the-longarm.twee`: the same story as Twee 3 text. This is the source; the
-  archive is built from it.
+  published file is built from it with Harlowe 3.3.9 (`../vendor/`).
 
 ## Act II · Tracery (`tracery/`)
 - `generator.html`: a one-file Tracery generator. Paste in a grammar.
@@ -33,7 +34,7 @@ and Tracery libraries are in `../vendor/`.
   two grammars above. Teaching models: the rings spin freely, with no lock.
 
 ## Rebuilding
-The `.scad` files and the Twine archive are generated. After editing
+The `.scad` files and the published Twine story are generated. After editing
 `cryptex-grammar.json`, `spinner-grammar.json` or `the-longarm.twee`, run
 `node workshop/tools/build-files.js` from the repository root. `npm test` checks
 that they are in sync.

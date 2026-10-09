@@ -16,7 +16,8 @@ function walk(rel) {
   if (fs.statSync(abs).isFile()) return [rel];
   return fs.readdirSync(abs).flatMap((f) => walk(`${rel}/${f}`));
 }
-const pages = walk(W).filter((f) => f.endsWith('.html') && !f.endsWith('-archive.html'));
+// The published Twine story and Harlowe's template are generated or vendored, not hand-written pages.
+const pages = walk(W).filter((f) => f.endsWith('.html') && !f.startsWith(`${W}/vendor/`) && f !== `${W}/files/twine/the-longarm.html`);
 
 test('every local src/href in workshop pages exists with exact case', () => {
   const missing = [];
@@ -41,7 +42,7 @@ test('workshop pages load no remote scripts, styles, or images (links out are fi
   assert.deepEqual(hits, []);
 });
 
-test('generated .scad files and the Twine archive match their sources', () => {
+test('generated .scad files and the published Twine story match their sources', () => {
   Object.entries(build()).forEach(([f, src]) => assert.equal(read(`${W}/files/${f}`), src, `${f} is stale: run node workshop/tools/build-files.js`));
 });
 
@@ -102,5 +103,8 @@ test('every Twine link in The Longarm leads to a passage', () => {
   });
   assert.deepEqual(broken, []);
   assert.ok(names.has('Start'));
-  assert.match(read(`${W}/files/twine/the-longarm-archive.html`), /startnode="1"[^>]*format="Harlowe"/);
+  const published = read(`${W}/files/twine/the-longarm.html`);
+  assert.match(published, /<tw-storydata name="The Longarm" startnode="1"[^>]*format="Harlowe" format-version="3.3.9"/);
+  assert.match(published, /<title>The Longarm<\/title>/);
+  assert.ok(!published.includes('{{STORY_'), 'template placeholders left in the published story');
 });

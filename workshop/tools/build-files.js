@@ -1,5 +1,8 @@
 /* Regenerates the workshop's derived reference files: the OpenSCAD models
-   from the grammars, and the importable Twine archive from the Twee source.
+   from the grammars, and the published Twine story from the Twee source.
+   The story is published the way Twine does it (Harlowe's template with the
+   story data dropped in), so one file both plays in a browser and imports
+   into Twine (Library > Import).
    Run: node workshop/tools/build-files.js (tests check the files stay in sync). */
 'use strict';
 const fs = require('fs');
@@ -8,7 +11,7 @@ const Scad = require('../js/scad.js');
 const dir = path.join(__dirname, '..', 'files');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
 
-// Twee 3 -> Twine 2 archive (Twine: Library > Import). Handles what our story uses:
+// Twee 3 -> Twine 2 story data. Handles what our story uses:
 // StoryTitle, StoryData, and passages with optional [tags] and {metadata}.
 function parseTwee(src) {
   const passages = [];
@@ -34,13 +37,22 @@ function tweeToArchive(src) {
   return `<tw-storydata name="${esc(title)}" startnode="${start}" creator="Twine" creator-version="2.10.0" format="${data.format}" format-version="${data['format-version']}" ifid="${data.ifid}" options="" tags="" zoom="${data.zoom || 1}" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script>${passages.join('')}</tw-storydata>\n`;
 }
 
+// Publish: Harlowe's page template with the story name and data filled in.
+function publish(src) {
+  const template = fs.readFileSync(path.join(__dirname, '..', 'vendor', 'harlowe-3.3.9.html'), 'utf8');
+  const all = parseTwee(src);
+  const title = all.find((p) => p.name === 'StoryTitle').text.trim();
+  const data = tweeToArchive(src).trim();
+  return template.split('{{STORY_NAME}}').join(esc(title)).split('{{STORY_DATA}}').join(data);
+}
+
 function build() {
   const crypt = Scad.slotsFromGrammar(read('tracery/cryptex-grammar.json'));
   const spin = read('tracery/spinner-grammar.json');
   return {
     'agents/cryptex.scad': Scad.cryptex(crypt),
     'agents/spinner.scad': Scad.spinner(spin.outer, spin.inner),
-    'twine/the-longarm-archive.html': tweeToArchive(fs.readFileSync(path.join(dir, 'twine/the-longarm.twee'), 'utf8')),
+    'twine/the-longarm.html': publish(fs.readFileSync(path.join(dir, 'twine/the-longarm.twee'), 'utf8')),
   };
 }
 
@@ -50,4 +62,4 @@ if (require.main === module) {
     console.log('wrote workshop/files/' + f);
   });
 }
-module.exports = { build, parseTwee, tweeToArchive };
+module.exports = { build, parseTwee, tweeToArchive, publish };

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presenter Cheat Sheets · Unmaking Workshop</title>
+  <meta name="description" content="One printable sheet per act for the presenters of the Unmaking workshop: timing, what to check, what to say, what goes wrong, and the handoff.">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <style>
+    :root { --ink: #1d1a24; --muted: #5b5666; --rule: #d9d3c7; --paper: #fbf8f1; --anastasia: #7b4fb3; --emily: #b6452c; }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: #e9e4d8; color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .top { max-width: 820px; margin: 0 auto; padding: 24px 16px 8px; }
+    .top h1 { font: 400 26px/1.2 "Press Start 2P", system-ui, sans-serif; margin: 0 0 10px; font-size: 18px; }
+    .top p { margin: 4px 0; color: var(--muted); }
+    .top a { color: inherit; }
+    .sheet { max-width: 820px; margin: 16px auto; background: var(--paper); padding: 24px 28px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.08); border-top: 8px solid var(--who); }
+    .sheet[data-who="anastasia"] { --who: var(--anastasia); }
+    .sheet[data-who="emily"] { --who: var(--emily); }
+    .head { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; border-bottom: 2px solid var(--rule); padding-bottom: 8px; margin-bottom: 12px; }
+    .head h2 { margin: 0; font-size: 22px; }
+    .who { background: var(--who); color: #fff; font-weight: 700; padding: 2px 10px; border-radius: 99px; font-size: 14px; }
+    .meta { color: var(--muted); font-size: 14px; }
+    .goal { font-size: 16px; margin: 0 0 12px; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 22px; }
+    h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--who); margin: 14px 0 6px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin: 3px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    td { padding: 4px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    td.t { width: 64px; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); }
+    td.s { width: 30%; font-weight: 600; }
+    .say { border-left: 4px solid var(--who); background: #fff; padding: 8px 12px; margin: 10px 0 0; font-style: italic; }
+    .handoff { margin-top: 14px; padding: 8px 12px; background: #f1ece1; border-radius: 6px; font-size: 14px; }
+    code { font: 13px ui-monospace, Menlo, monospace; background: #efe9dc; padding: 0 3px; border-radius: 3px; }
+    @media (max-width: 640px) {
+      .sheet { padding: 18px 16px; border-radius: 0; }
+      .cols { grid-template-columns: 1fr; }
+      td.s { width: auto; }
+    }
+    @media print {
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body { background: #fff; font-size: 11px; }
+      h3 { margin: 10px 0 4px; }
+      .top { display: none; }
+      .sheet { box-shadow: none; margin: 0; max-width: none; padding: 0 0 0 10px; border-top: 0; border-left: 6px solid var(--who); border-radius: 0; break-after: page; }
+      .sheet:last-of-type { break-after: auto; }
+      .say, .handoff { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <h1>Presenter cheat sheets</h1>
+    <p>One sheet per act; each prints on its own page. Anastasia leads Acts I and IV; Emily leads Acts II and III. Times follow the step labels on each act's page.</p>
+    <p><a href="index.html">◀ Workshop home</a></p>
+  </div>
+
+  <section class="sheet" data-who="anastasia" id="act1">
+    <div class="head"><h2>Act I · Passages · Twine</h2><span class="who">Anastasia</span><span class="meta">Paper · 40 min · <a href="act1-twine.html">act1-twine.html</a></span></div>
+    <p class="goal"><strong>They leave with:</strong> a paper prototype and a branching Harlowe story that uses at least one choice that counts.</p>
+    <div class="cols">
+      <div>
+        <h3>Before</h3>
+        <ul>
+          <li>Index cards, string or yarn, tape, markers on every table.</li>
+          <li>twinery.org loads on the room Wi-Fi. Have the desktop app as a fallback.</li>
+          <li>Open <code>files/twine/the-longarm.html</code> in a browser to play, and import it into Twine once yourself (<em>Library → Import</em>).</li>
+        </ul>
+        <h3>Watch for</h3>
+        <ul>
+          <li><strong>Lost work:</strong> browser Twine saves to that one browser. Say “Publish to File” early and often.</li>
+          <li>Orphan cards nothing links to. Ask: can a reader reach this?</li>
+          <li>Link typos make new empty passages. Spot the dashed-outline passages on the map.</li>
+          <li>Too many tiny branches: “Fewer, bigger choices.”</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Run of show</h3>
+        <table>
+          <tr><td class="t">0–10</td><td class="s">1 · Paper prototype</td><td>Star card = Start. String from the clickable words. One full path to an ending.</td></tr>
+          <tr><td class="t">10–15</td><td class="s">2 · Open Twine</td><td>New story, keep Harlowe.</td></tr>
+          <tr><td class="t">15–25</td><td class="s">3 · Passages &amp; links</td><td><code>[[text-&gt;Passage]]</code>. Follow the strings until every card is a passage.</td></tr>
+          <tr><td class="t">25–35</td><td class="s">4 · Choices that count</td><td><code>(set:)</code>, <code>(if:)/(else:)</code>, <code>(either:)</code>. Demo The Longarm: try the “Go make tea” path.</td></tr>
+          <tr><td class="t">35–40</td><td class="s">5 · Play &amp; publish, Unmake</td><td>Build → Test shows variables. Publish to File.</td></tr>
+        </table>
+      </div>
+    </div>
+    <h3>Unmake (pick one)</h3>
+    <ul>
+      <li>An agent will write a Twine for anyone who can describe one. So is Twine pointless now? What did cards and string give you that a description wouldn't?</li>
+      <li>Which choices did the reader get, and which did you keep for yourself?</li>
+    </ul>
+    <p class="say">“<code>(either:)</code> is a tiny grammar: one slot, a few options, a random pick. Hold onto that; Emily turns it into whole sentences next.”</p>
+    <p class="handoff"><strong>Before handing off:</strong> ask everyone to rewrite the last passage of The Longarm with their own question; they come back to it in Act IV. <strong>Hand to Emily</strong> for Tracery.</p>
+  </section>
+
+  <section class="sheet" data-who="emily" id="act2">
+    <div class="head"><h2>Act II · Patterns · Tracery</h2><span class="who">Emily</span><span class="meta">Textile · 35 min (steps add to 40; trim step 5) · <a href="act2-tracery.html">act2-tracery.html</a></span></div>
+    <p class="goal"><strong>They leave with:</strong> their own Tracery grammar, plus a flat version saved as <code>grammar.json</code> for Act IV.</p>
+    <div class="cols">
+      <div>
+        <h3>Before</h3>
+        <ul>
+          <li>The playground on the act page runs offline. Load <em>starter</em>, <em>quilt blocks</em>, and <em>cryptex (flat)</em> once to check.</li>
+          <li><code>files/tracery/generator.html</code> open in a tab for the “put it somewhere” step.</li>
+        </ul>
+        <h3>Watch for</h3>
+        <ul>
+          <li><strong>JSON errors:</strong> curly quotes from a word processor, a missing comma, or a comma after the last item. Most “it broke” moments are one of these.</li>
+          <li><code>((symbol))</code> in the output means a <code>#symbol#</code> with no rule; check spelling.</li>
+          <li>One word showing up too often: it's in many lists, or its list is short.</li>
+          <li>Flat grammar: every list the same length, plain words only, no <code>#rules#</code> inside.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Run of show</h3>
+        <table>
+          <tr><td class="t">0–5</td><td class="s">1 · Read a grammar</td><td><code>origin</code>, symbols, <code>#hashes#</code>, modifiers <code>.capitalize .a .s .ed</code>.</td></tr>
+          <tr><td class="t">5–15</td><td class="s">2 · Playground</td><td>Edit live; regenerate.</td></tr>
+          <tr><td class="t">15–25</td><td class="s">3 · Grow three rules</td><td>Their own words. Several sentence shapes. Regenerate twenty times.</td></tr>
+          <tr><td class="t">25–30</td><td class="s">4 · Remember a choice</td><td><code>[maker:#name#]</code>: load quilt blocks.</td></tr>
+          <tr><td class="t">(skip if late)</td><td class="s">5 · Put it somewhere</td><td>generator.html, Flores's template, Blue Bots, Done Quick!</td></tr>
+          <tr><td class="t">30–35</td><td class="s">6 · Flatten it, Unmake</td><td>Save the flat version as <code>grammar.json</code>. Read a few aloud; cut words that break sentences.</td></tr>
+        </table>
+      </div>
+    </div>
+    <h3>Unmake (pick one)</h3>
+    <ul>
+      <li>Re:Traced Threads: a bot proposed quilted text and a person stitched it. Whose work is it? Who goes on the label?</li>
+      <li>When Twitter shut its API, Tracery bots moved because the format was open. What in your grammar would survive the next platform closing?</li>
+    </ul>
+    <p class="say">“Every block is a rule. A printed ring can't expand a rule, so for Act IV every word on one ring has to work next to every word on the others.”</p>
+    <p class="handoff"><strong>Check before moving on:</strong> everyone has <code>grammar.json</code> saved somewhere they can find it. <strong>Emily continues</strong> into Act III.</p>
+  </section>
+
+  <section class="sheet" data-who="emily" id="act3">
+    <div class="head"><h2>Act III · Sketches · p5.js</h2><span class="who">Emily</span><span class="meta">Zine · 40 min · <a href="act3-p5.html">act3-p5.html</a></span></div>
+    <p class="goal"><strong>They leave with:</strong> a p5.js sketch running their grammar, with a credit comment at the top.</p>
+    <div class="cols">
+      <div>
+        <h3>Before</h3>
+        <ul>
+          <li>Everyone has a plain text editor (not Word). Offline files run from the folder; editor.p5js.org works with Wi-Fi.</li>
+          <li>Your printed cryptex and flower spinner to pass around in step 4.</li>
+        </ul>
+        <h3>Watch for</h3>
+        <ul>
+          <li><strong>Blank page:</strong> open the console (F12, or Cmd+Option+J on a Mac); the first red line names the line number.</li>
+          <li>Pasting the grammar: it replaces the whole <code>grammarSource = { … }</code> object, braces included.</li>
+          <li>Edited the file but nothing changed: save, then reload.</li>
+          <li>Web editor users: paste only what's between the <code>&lt;script&gt;</code> tags.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Run of show</h3>
+        <table>
+          <tr><td class="t">0–5</td><td class="s">1 · First sketch</td><td>Pick: offline file, web editor, or OpenProcessing.</td></tr>
+          <tr><td class="t">5–15</td><td class="s">2 · setup &amp; draw</td><td>Change the <code>TRY</code> lines. S saves the canvas. Breaking it is part of it.</td></tr>
+          <tr><td class="t">15–25</td><td class="s">3 · Add your grammar</td><td><code>tracery-particles.html</code>: paste over <code>grammarSource</code>; click to release lines.</td></tr>
+          <tr><td class="t">25–35</td><td class="s">4 · A grammar you can spin</td><td><code>flower-spinner.html</code>. Pass the prints around: what can the screen do that the print can't?</td></tr>
+          <tr><td class="t">35–40</td><td class="s">5 · Fork &amp; credit, Unmake</td><td>Credit comment at the top: Parrish → ENG 6819 → here.</td></tr>
+        </table>
+      </div>
+    </div>
+    <h3>Unmake (pick one)</h3>
+    <ul>
+      <li>Flash ended and a generation's work went with it. What would it take for your sketch to run in twenty years?</li>
+      <li>If an AI assistant rewrites your sketch, is it still yours? What about the grammar inside it?</li>
+    </ul>
+    <p class="say">“A p5.js sketch is a plain text file. You can read it, keep it, and open it in ten years without anyone's permission.”</p>
+    <p class="handoff"><strong>Set up the turn:</strong> “These prints started as sketches like yours. Anastasia's going to show you how to get from the grammar to the object, with an agent, while keeping the decisions yours.” <strong>Hand to Anastasia</strong> for Agents.</p>
+  </section>
+
+  <section class="sheet" data-who="anastasia" id="act4">
+    <div class="head"><h2>Act IV · Agents · Claude Code + OpenSCAD</h2><span class="who">Anastasia</span><span class="meta">Game · 50 min · <a href="act4-agents.html">act4-agents.html</a></span></div>
+    <p class="goal"><strong>They leave with:</strong> a GitHub repository with their grammar, a 3D preview, a <code>.scad</code> print file, and a process log ending in a label they'd sign.</p>
+    <div class="cols">
+      <div>
+        <h3>Before</h3>
+        <ul>
+          <li>Ask people to make a free GitHub account during the break; it's the slowest step.</li>
+          <li>Your own repository ready to demo, with <code>CLAUDE.md</code> in place and a session open in claude.ai/code.</li>
+          <li><code>files/p5/cryptex-3d.html</code> open with the flat grammar loaded.</li>
+          <li>OpenSCAD installed on the demo machine if you'll show F5/F6.</li>
+        </ul>
+        <h3>Watch for</h3>
+        <ul>
+          <li><strong>Mode:</strong> auto mode has been the default since August. Have everyone switch to approving each step, and plan mode for the first two prompts.</li>
+          <li>No subscription: use the free chat route on the page (paste, copy files, upload by hand).</li>
+          <li>The agent “fixing” their words: point to the house rule “My words are mine.”</li>
+          <li>Pages not showing: Settings → Pages → main branch; give it a minute.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Run of show</h3>
+        <table>
+          <tr><td class="t">0–5</td><td class="s">0 · Choose your mode</td><td>Claude Code is a longarm: freehand vs. pantograph. Show your longarm photo.</td></tr>
+          <tr><td class="t">5–15</td><td class="s">1 · Set up a repository</td><td>Upload grammar.json, the sketch, CLAUDE.md, process-log.md.</td></tr>
+          <tr><td class="t">15–20</td><td class="s">2 · House rules</td><td>Edit CLAUDE.md: which steps stay yours?</td></tr>
+          <tr><td class="t">20–25</td><td class="s">3 · Plan before code</td><td>Plan mode: read the grammar back first. The prompt is the source.</td></tr>
+          <tr><td class="t">25–30</td><td class="s">4 · Check every sentence</td><td>Script lists broken sentences; they choose the fixes.</td></tr>
+          <tr><td class="t">30–35</td><td class="s">5 · Preview in 3D</td><td>cryptex-3d.html vs. the agent's own preview.</td></tr>
+          <tr><td class="t">35–45</td><td class="s">6 · Make it printable</td><td>Download .scad, F5/F6, export STL. No printer: cardboard tubes on a pencil.</td></tr>
+          <tr><td class="t">45–50</td><td class="s">7 · Credit &amp; label, Unmake</td><td>“Written by / Coded by / Printed by.” They write the last line of CREDITS.md.</td></tr>
+        </table>
+      </div>
+    </div>
+    <h3>Unmake (pick one)</h3>
+    <ul>
+      <li>Nowviskie's materials, tools, and time, plus the fourth loss: control over the steps. Which steps did you keep today?</li>
+      <li>A critical maker rejects, supplements, extends, and critiques the tool. Which of the four did you do?</li>
+      <li>Look at the label in your log. Would you sign it?</li>
+    </ul>
+    <p class="say">“The agent can't feel a ring bind. You can. Noticing the thread break and deciding where to start again is your work.”</p>
+    <p class="handoff"><strong>Close:</strong> bring back the question they wrote at the end of The Longarm in Act I, and ask who wants to read theirs.</p>
+  </section>
+</body>
+</html>
