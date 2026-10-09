@@ -45,8 +45,13 @@ function draw() {
   }
   if (!particles.length) {
     fill(200); noStroke(); textSize(18);
-    text('click anywhere', width / 2, height / 2);
+    text('click anywhere · press S to save a still', width / 2, height / 2);
   }
+}
+
+// Press S to save the current frame as a PNG: a still you can print (we make buttons from them).
+function keyPressed() {
+  if (key === 's' || key === 'S') saveCanvas('my-sketch-still', 'png');
 }
 
 function mouseClicked() {
