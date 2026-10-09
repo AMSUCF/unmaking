@@ -237,10 +237,6 @@ body.hub { background: #111; }
 .act-card[data-craft="game"] h2 { font: 400 22px/1.4 'Press Start 2P', monospace; color: #ffd84a; }
 .hub .card { background: #0d0b1a; border: 4px solid #f2f2f2; }
 .hub h2 { font: 400 20px/1.5 'Press Start 2P', monospace; color: #ffd84a; }
-.table-wrap { overflow-x: auto; }
-.schedule { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 17px; }
-.schedule th, .schedule td { padding: 8px 10px; border-bottom: 2px solid #333; text-align: left; vertical-align: top; }
-.schedule th { font: 11px/1.4 'Press Start 2P', monospace; color: #9dff00; }
 
 /* Hub intermission: a non-link band in the act grid, between Acts II and III. */
 @media (min-width: 640px) { .acts { grid-template-columns: repeat(2, 1fr); } }
