@@ -34,7 +34,7 @@
         <ul class="meta">
           <li>Suggested: 25 min</li>
           <li>Make: a sketch that runs your grammar</li>
-          <li>Need: a browser, a text editor</li>
+          <li>Need: a browser, a free OpenProcessing account</li>
         </ul>
       </div>
       <div class="side">
@@ -60,12 +60,13 @@
     <section class="card" id="first">
       <span class="time">3 min</span>
       <h2><span class="step-n">1.</span> A first sketch</h2>
-      <p>Pick one place to work:</p>
-      <ul>
-        <li><strong>Offline, from this folder:</strong> open <a href="files/p5/first-sketch.html">first-sketch.html</a> in your browser and in a text editor. Edit, save, reload.</li>
-        <li><strong>The p5.js web editor:</strong> <a href="https://editor.p5js.org/">editor.p5js.org</a>. Paste in everything between the <code>&lt;script&gt;</code> tags.</li>
-        <li><strong>OpenProcessing:</strong> <a href="https://openprocessing.org/">openprocessing.org</a> lets you <em>fork</em> someone's sketch with one click. Start with the course samples: <a href="https://openprocessing.org/sketch/1307584">bar chart</a>, <a href="https://openprocessing.org/sketch/1307661">pie chart</a>, <a href="https://openprocessing.org/sketch/1307624">text click</a>.</li>
-      </ul>
+      <p>We all work in <a href="https://openprocessing.org/">OpenProcessing</a>: p5.js in the browser, with nothing to install, and a <em>fork</em> button that copies anyone's sketch with one click and keeps the link back to theirs.</p>
+      <ol>
+        <li>Sign in (a free account is enough) and choose <em>Create a Sketch</em>. Leave the mode on p5.js.</li>
+        <li>Open <a href="files/p5/openprocessing/first-sketch.js">first-sketch.js</a>, copy all of it, and paste it over the starter code.</li>
+        <li>Press play (▶). Click to stamp, drag to draw. Save the sketch so it has a link you can share.</li>
+      </ol>
+      <p>Each sketch on this page comes as one <code>.js</code> file to paste in the same way. To see what forking looks like, open a course sample and fork it: <a href="https://openprocessing.org/sketch/1307584">bar chart</a>, <a href="https://openprocessing.org/sketch/1307661">pie chart</a>, <a href="https://openprocessing.org/sketch/1307624">text click</a>.</p>
     </section>
 
     <section class="card" id="draw">
@@ -89,14 +90,14 @@ function mouseClicked() {
   fill(random(['#c0544a', '#3f8f8a', '#e2b33c']));
   rect(mouseX - 20, mouseY - 20, 40, 40);
 }</code></pre>
-      <p>In <code>first-sketch.html</code>, every line marked <code>TRY</code> is a place to change one thing. Change the colours, swap <code>rect</code> for <code>ellipse</code>, make every stamp the same size. Press <kbd>S</kbd> to save the canvas as an image.</p>
-      <p class="callout">Breaking it is part of the exercise. If the page goes blank, open the browser console (<kbd>F12</kbd>, or <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> on a Mac) and read the first red line. It usually names the line number.</p>
+      <p>In <code>first-sketch.js</code>, every line marked <code>TRY</code> is a place to change one thing. Change the colours, swap <code>rect</code> for <code>ellipse</code>, make every stamp the same size, and press ▶ again. Press <kbd>S</kbd> to save the canvas as an image.</p>
+      <p class="callout">Breaking it is part of the exercise. If the canvas goes blank, read the first red line in the console under the code. It usually names the line number.</p>
     </section>
 
     <section class="card" id="grammar">
       <span class="time">6 min</span>
       <h2><span class="step-n">3.</span> Add your grammar</h2>
-      <p>Open <a href="files/p5/tracery-particles.html">tracery-particles.html</a>. Every click flattens a Tracery grammar into a line of text that drifts and fades. Find <code>grammarSource</code> and paste your Act II grammar over it:</p>
+      <p>Make a new sketch from <a href="files/p5/openprocessing/tracery-particles.js">tracery-particles.js</a>. Every click flattens a Tracery grammar into a line of text that drifts and fades. Tracery itself is pasted in at the bottom of the file, so there is no library to add. Find <code>grammarSource</code> at the top and paste your Act II grammar over it:</p>
 <pre><code>const grammarSource = { /* your grammar from Act II */ };
 
 function setup() {
@@ -109,13 +110,13 @@ function mouseClicked() {
   particles.push(new Particle(mouseX, mouseY, grammar.flatten('#origin#')));
 }</code></pre>
       <p>Then try the <code>TRY</code> lines: longer trails, a different drift, your own colours.</p>
-      <p class="callout"><strong>Stills become buttons.</strong> An animation is a run of frames, and any one of them can leave the screen. When you catch a frame you like, press <kbd>S</kbd> to save it as a PNG (it works in <code>first-sketch.html</code> too). We'll print animation stills and make buttons from them, so save a few.</p>
+      <p class="callout"><strong>Stills become buttons.</strong> An animation is a run of frames, and any one of them can leave the screen. When you catch a frame you like, press <kbd>S</kbd> to save it as a PNG (it works in your first sketch too). We'll print animation stills and make buttons from them, so save a few.</p>
     </section>
 
     <section class="card" id="spin">
       <span class="time">6 min</span>
       <h2><span class="step-n">4.</span> A grammar you can spin</h2>
-      <p>Open <a href="files/p5/flower-spinner.html">flower-spinner.html</a>. Two rings of petals turn on their own. When they stop, the pointer reads one word from each ring, the way a two-symbol rule like <code>"#outer# meets #inner#"</code> would.</p>
+      <p>Make a new sketch from <a href="files/p5/openprocessing/flower-spinner.js">flower-spinner.js</a>. Two rings of petals turn on their own. When they stop, the pointer reads one word from each ring, the way a two-symbol rule like <code>"#outer# meets #inner#"</code> would.</p>
       <p>Change the words to two fields of your own, or two halves of your grammar. This is a prototype of a <em>physical</em> object: in Act IV you'll turn it, or the four-ring cryptex, into a 3D print. Notice what the screen version can do that the print can't, and the other way round.</p>
       <figure><img src="../assets/act3/prints-flower-spinner.jpg" alt="A hand holds Emily’s finished 3D-printed flower spinner: two layers of pale green round petals on a black base with a black knob in the center, each petal carrying a recessed word: Making, Play, Technology, DH, Tech Comm, Pedagogy."><figcaption>Emily K. Johnson's flower spinner, from her p5.js research sketch (3D printed, 2026).</figcaption></figure>
     </section>
@@ -124,10 +125,11 @@ function mouseClicked() {
       <span class="time">3 min</span>
       <h2><span class="step-n">5.</span> Fork and credit</h2>
       <p>The particle sketch has a history: an example by Allison Parrish, adapted for a critical making course, adapted again here. Each version keeps the credit in a comment at the top. Do the same:</p>
-<pre><code>&lt;!-- Grammar and words: (you).
-     Particle code adapted from the ENG 6819 demo, after Allison Parrish.
-     p5.js (LGPL 2.1) and Tracery (ISC) are open source. --&gt;</code></pre>
-      <p>A p5.js sketch is a plain text file. You can read it, keep it, and open it in ten years without anyone's permission.</p>
+<pre><code>// Grammar and words: (you).
+// Particle code adapted from the ENG 6819 demo, after Allison Parrish.
+// p5.js (LGPL 2.1) and Tracery (ISC) are open source.</code></pre>
+      <p>OpenProcessing keeps part of this for you: a fork links back to the sketch it came from. The comment keeps the rest, including the people who never had an account there.</p>
+      <p>Then download your sketch from OpenProcessing and keep the file. A p5.js sketch is a plain text file. You can read it, keep it, and open it in ten years without anyone's permission, or the platform's. You'll upload it in Act IV.</p>
     </section>
 
     <section class="card unmake" id="unmake">
@@ -143,9 +145,9 @@ function mouseClicked() {
     <section class="card" id="files">
       <h2>Reference files</h2>
       <ul class="files">
-        <li><a href="files/p5/first-sketch.html">first-sketch.html</a><p>Shapes, colour, mouse and keyboard, with TRY comments.</p></li>
-        <li><a href="files/p5/tracery-particles.html">tracery-particles.html</a><p>Tracery inside p5: click to release drifting lines.</p></li>
-        <li><a href="files/p5/flower-spinner.html">flower-spinner.html</a><p>Two rings of words that spin and pair at a pointer.</p></li>
+        <li><a href="files/p5/openprocessing/first-sketch.js">first-sketch.js</a><p>Shapes, colour, mouse and keyboard, with TRY comments. Paste into a new OpenProcessing sketch. (<a href="files/p5/first-sketch.html">See it run</a>.)</p></li>
+        <li><a href="files/p5/openprocessing/tracery-particles.js">tracery-particles.js</a><p>Tracery inside p5: click to release drifting lines. Tracery is included at the bottom. (<a href="files/p5/tracery-particles.html">See it run</a>.)</p></li>
+        <li><a href="files/p5/openprocessing/flower-spinner.js">flower-spinner.js</a><p>Two rings of words that spin and pair at a pointer. (<a href="files/p5/flower-spinner.html">See it run</a>.)</p></li>
         <li><a href="files/p5/cryptex-3d.html">cryptex-3d.html</a><p>A 3D preview of a four-ring grammar cryptex. Act IV starts here.</p></li>
       </ul>
     </section>

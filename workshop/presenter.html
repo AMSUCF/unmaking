@@ -62,18 +62,19 @@
 
   <section class="sheet" data-who="anastasia" id="act1">
     <div class="head"><h2>Act I · Passages · Twine</h2><span class="who">Anastasia</span><span class="meta">Paper · 25 min · <a href="act1-twine.html">act1-twine.html</a></span></div>
-    <p class="goal"><strong>They leave with:</strong> a branching Harlowe story that uses at least one choice that counts.</p>
+    <p class="goal"><strong>They leave with:</strong> a paper prototype and a branching Harlowe story that uses at least one choice that counts.</p>
     <div class="cols">
       <div>
         <h3>Before</h3>
         <ul>
+          <li>Index cards, string or yarn, tape, markers on every table.</li>
           <li>twinery.org loads on the room Wi-Fi. Have the desktop app as a fallback.</li>
           <li>Open <code>files/twine/the-longarm.html</code> in a browser to play, and import it into Twine once yourself (<em>Library → Import</em>).</li>
         </ul>
         <h3>Watch for</h3>
         <ul>
           <li><strong>Lost work:</strong> browser Twine saves to that one browser. Say “Publish to File” early and often.</li>
-          <li>Orphan passages nothing links to. Ask: can a reader reach this?</li>
+          <li>Orphan cards nothing links to. Ask: can a reader reach this?</li>
           <li>Link typos make new empty passages. Spot the dashed-outline passages on the map.</li>
           <li>Too many tiny branches: “Fewer, bigger choices.”</li>
         </ul>
@@ -81,19 +82,20 @@
       <div>
         <h3>Run of show</h3>
         <table>
-          <tr><td class="t">0–5</td><td class="s">1 · Open Twine</td><td>New story, keep Harlowe.</td></tr>
-          <tr><td class="t">5–13</td><td class="s">2 · Passages &amp; links</td><td><code>[[text-&gt;Passage]]</code>. Start sets up the first choice; one full path to an ending.</td></tr>
-          <tr><td class="t">13–20</td><td class="s">3 · Choices that count</td><td><code>(set:)</code>, <code>(if:)/(else:)</code>, <code>(either:)</code>. Demo The Longarm: try the “Go make tea” path.</td></tr>
-          <tr><td class="t">20–25</td><td class="s">4 · Play &amp; publish, Unmake</td><td>Build → Test shows variables. Publish to File.</td></tr>
+          <tr><td class="t">0–7</td><td class="s">1 · Paper prototype</td><td>Star card = Start. String from the clickable words. One full path to an ending.</td></tr>
+          <tr><td class="t">7–10</td><td class="s">2 · Open Twine</td><td>New story, keep Harlowe.</td></tr>
+          <tr><td class="t">10–16</td><td class="s">3 · Passages &amp; links</td><td><code>[[text-&gt;Passage]]</code>. Follow the strings until every card is a passage.</td></tr>
+          <tr><td class="t">16–22</td><td class="s">4 · Choices that count</td><td><code>(set:)</code>, <code>(if:)/(else:)</code>, <code>(either:)</code>. Demo The Longarm: try the “Go make tea” path.</td></tr>
+          <tr><td class="t">22–25</td><td class="s">5 · Play &amp; publish, Unmake</td><td>Build → Test shows variables. Publish to File.</td></tr>
         </table>
       </div>
     </div>
     <h3>Unmake (pick one)</h3>
     <ul>
-      <li>An agent will write a Twine for anyone who can describe one. So is Twine pointless now? What did building it link by link give you that a description wouldn't?</li>
+      <li>An agent will write a Twine for anyone who can describe one. So is Twine pointless now? What did cards and string give you that a description wouldn't?</li>
       <li>Which choices did the reader get, and which did you keep for yourself?</li>
     </ul>
-    <p><strong>Show:</strong> <em>From Beyond</em> (with John Murray, ELO 2015), a Twine story played on a sensor-equipped Ouija board, and Emily's <em>BeadED Adventures</em>, a STEM story whose solved puzzles earn real beads that go home as a bracelet: physical Twine, where the links are objects. Both photos are in the Unmake section of the act page.</p>
+    <p><strong>Show:</strong> <em>From Beyond</em> (with John Murray, ELO 2015), a Twine story played on a sensor-equipped Ouija board, and Emily's <em>BeadED Adventures</em>, a STEM story whose solved puzzles earn real beads that go home as a bracelet: physical Twine, the cards and string taken further. Both photos are in the Unmake section of the act page.</p>
     <p class="say">“<code>(either:)</code> is a tiny grammar: one slot, a few options, a random pick. Hold onto that; Emily turns it into whole sentences next.”</p>
     <p class="handoff"><strong>Before handing off:</strong> ask everyone to rewrite the last passage of The Longarm with their own question; they come back to it in Act IV. <strong>Hand to Emily</strong> for Tracery.</p>
   </section>
@@ -177,26 +179,26 @@
       <div>
         <h3>Before</h3>
         <ul>
-          <li>Everyone has a plain text editor (not Word). Offline files run from the folder; editor.p5js.org works with Wi-Fi.</li>
+          <li>Everyone signs in to openprocessing.org (free account) before the act starts; it needs Wi-Fi. Make one test sketch from <code>first-sketch.js</code> yourself.</li>
           <li>Your printed cryptex and flower spinner to pass around in step 4.</li>
           <li>A way to print saved stills and make buttons from them (printer, paper, button maker).</li>
         </ul>
         <h3>Watch for</h3>
         <ul>
-          <li><strong>Blank page:</strong> open the console (F12, or Cmd+Option+J on a Mac); the first red line names the line number.</li>
+          <li><strong>Blank canvas:</strong> the first red line in OpenProcessing's console names the line number.</li>
           <li>Pasting the grammar: it replaces the whole <code>grammarSource = { … }</code> object, braces included.</li>
-          <li>Edited the file but nothing changed: save, then reload.</li>
-          <li>Web editor users: paste only what's between the <code>&lt;script&gt;</code> tags.</li>
+          <li>Edited but nothing changed: press ▶ again.</li>
+          <li>Paste the <em>whole</em> <code>.js</code> file over the starter code; in <code>tracery-particles.js</code>, Tracery is the long part at the bottom, so leave it there.</li>
         </ul>
       </div>
       <div>
         <h3>Run of show</h3>
         <table>
-          <tr><td class="t">0–3</td><td class="s">1 · First sketch</td><td>Pick: offline file, web editor, or OpenProcessing.</td></tr>
+          <tr><td class="t">0–3</td><td class="s">1 · First sketch</td><td>OpenProcessing: Create a Sketch, paste <code>first-sketch.js</code>, ▶. Show the fork button on a course sample.</td></tr>
           <tr><td class="t">3–10</td><td class="s">2 · setup &amp; draw</td><td>Change the <code>TRY</code> lines. S saves the canvas. Breaking it is part of it.</td></tr>
-          <tr><td class="t">10–16</td><td class="s">3 · Add your grammar</td><td><code>tracery-particles.html</code>: paste over <code>grammarSource</code>; click to release lines. Press S to save stills: we print them as buttons.</td></tr>
-          <tr><td class="t">16–22</td><td class="s">4 · A grammar you can spin</td><td><code>flower-spinner.html</code>. Pass the prints around: what can the screen do that the print can't?</td></tr>
-          <tr><td class="t">22–25</td><td class="s">5 · Fork &amp; credit, Unmake</td><td>Credit comment at the top: Parrish → ENG 6819 → here.</td></tr>
+          <tr><td class="t">10–16</td><td class="s">3 · Add your grammar</td><td><code>tracery-particles.js</code> as a new sketch: paste over <code>grammarSource</code>; click to release lines. Press S to save stills: we print them as buttons.</td></tr>
+          <tr><td class="t">16–22</td><td class="s">4 · A grammar you can spin</td><td><code>flower-spinner.js</code>. Pass the prints around: what can the screen do that the print can't?</td></tr>
+          <tr><td class="t">22–25</td><td class="s">5 · Fork &amp; credit, Unmake</td><td>Credit comment at the top: Parrish → ENG 6819 → here. Download the sketch for Act IV.</td></tr>
         </table>
       </div>
     </div>

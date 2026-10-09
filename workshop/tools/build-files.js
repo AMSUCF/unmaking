@@ -46,12 +46,27 @@ function publish(src) {
   return template.split('{{STORY_NAME}}').join(esc(title)).split('{{STORY_DATA}}').join(data);
 }
 
+// OpenProcessing (Act III) takes one JavaScript file per sketch: the page's own <script>, plus Tracery
+// pasted underneath when the sketch needs it (setup() runs after the whole file has loaded).
+function openProcessing(name, withTracery) {
+  const html = fs.readFileSync(path.join(dir, 'p5', name + '.html'), 'utf8');
+  const code = html.slice(html.lastIndexOf('<script>') + 8, html.lastIndexOf('</script>')).replace(/^\n/, '');
+  const head = '// ' + name + '.js: for OpenProcessing. Paste this whole file over the starter code in a new p5.js sketch.\n' +
+    '// The same sketch runs offline as workshop/files/p5/' + name + '.html.\n\n';
+  if (!withTracery) return head + code;
+  const lib = fs.readFileSync(path.join(__dirname, '..', 'vendor', 'tracery.js'), 'utf8');
+  return head + code + '\n// ===== Tracery by Kate Compton (ISC). Leave everything below this line as it is. =====\n' + lib;
+}
+
 function build() {
   const crypt = Scad.slotsFromGrammar(read('tracery/cryptex-grammar.json'));
   const spin = read('tracery/spinner-grammar.json');
   return {
     'agents/cryptex.scad': Scad.cryptex(crypt),
     'agents/spinner.scad': Scad.spinner(spin.outer, spin.inner),
+    'p5/openprocessing/first-sketch.js': openProcessing('first-sketch', false),
+    'p5/openprocessing/tracery-particles.js': openProcessing('tracery-particles', true),
+    'p5/openprocessing/flower-spinner.js': openProcessing('flower-spinner', false),
     'twine/the-longarm.html': publish(fs.readFileSync(path.join(dir, 'twine/the-longarm.twee'), 'utf8')),
   };
 }

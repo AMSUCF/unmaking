@@ -7,7 +7,7 @@ Open `workshop/index.html`. It runs from
 
 | Act | Craft | Tool | Make |
 |---|---|---|---|
-| I · Passages | Paper | Twine (Harlowe) | A branching hypertext |
+| I · Passages | Paper | Twine (Harlowe) | A paper prototype, then a branching hypertext |
 | II · Patterns | Textile | Tracery | A grammar, plus a flat version for print |
 | III · Sketches | Zine | p5.js | A sketch that runs the grammar |
 | IV · Agents | Game | Claude Code + OpenSCAD | A 3D cryptex or flower spinner from the grammar, and a process log |
@@ -22,7 +22,7 @@ cryptex and flower-spinner prints from Act III of the talk.
 - `presenter.html`: one printable cheat sheet per act for the presenters (Anastasia: I and IV; Emily: II and III).
 - `files/`: reference files for each act (see `files/README.md`).
 - `js/scad.js`: turns a flat grammar into OpenSCAD source (used by the 3D preview and the build script).
-- `tools/build-files.js`: regenerates the `.scad` files and publishes the Twine story.
+- `tools/build-files.js`: regenerates the `.scad` files and the OpenProcessing `.js` files, and publishes the Twine story.
 - `vendor/`: local copies of p5.js 1.11.1 (LGPL 2.1, `p5-license.txt`), Tracery 2.8.4 (ISC, Kate Compton), and Harlowe 3.3.9's page template (zlib, Leon Arnott, `harlowe-license.txt`).
 
 Avatars are drawn at runtime by the deck's `js/render/avatar-pixels.js`; fonts come from the deck's `css/fonts.css`.

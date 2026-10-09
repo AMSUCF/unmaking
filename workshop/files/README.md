@@ -23,6 +23,9 @@ and Tracery libraries are in `../vendor/`.
 - `tracery-particles.html`: Tracery in p5; each click releases a drifting line.
   Adapted from the ENG 6819 demo, after Allison Parrish.
 - `flower-spinner.html`: two rings of words that spin and pair at a pointer.
+- `openprocessing/`: the first three sketches as single `.js` files to paste into
+  a new OpenProcessing sketch (Act III works in OpenProcessing). Generated from
+  the `.html` files; `tracery-particles.js` has Tracery pasted in at the bottom.
 - `cryptex-3d.html`: a 3D (WEBGL) cryptex built from any flat grammar, with a
   download button for the matching OpenSCAD file.
 
@@ -34,7 +37,7 @@ and Tracery libraries are in `../vendor/`.
   two grammars above. Teaching models: the rings spin freely, with no lock.
 
 ## Rebuilding
-The `.scad` files and the published Twine story are generated. After editing
-`cryptex-grammar.json`, `spinner-grammar.json` or `the-longarm.twee`, run
+The `.scad` files, the OpenProcessing `.js` files and the published Twine story are generated. After editing
+`cryptex-grammar.json`, `spinner-grammar.json`, `the-longarm.twee` or the p5 sketches, run
 `node workshop/tools/build-files.js` from the repository root. `npm test` checks
 that they are in sync.

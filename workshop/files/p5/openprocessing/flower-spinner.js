@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<!-- Act III, step 3: a grammar you can spin. Two rings of petals turn independently; the pointer at the top
-     pairs one word from each ring, the way a two-symbol Tracery rule ("#outer# meets #inner#") would.
-     After the talk's flower spinner (Emily K. Johnson): a p5.js sketch first, a 3D print later (Act IV). -->
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flower Spinner</title>
-  <script src="../../vendor/p5.min.js"></script>
-  <style>
-    html, body { margin: 0; background: #1c1430; color: #f2f2f2; font: 18px/1.4 'Courier New', monospace; }
-    main { display: grid; place-items: center; gap: 12px; padding: 16px; }
-    #reading { min-height: 1.6em; font-size: 22px; color: #9dff00; text-align: center; }
-    button { font: inherit; padding: 8px 16px; background: #000; color: #fff; border: 3px solid #fff; cursor: pointer; }
-    button:focus-visible { outline: 3px solid #ffd84a; outline-offset: 2px; }
-  </style>
-</head>
-<body>
-<main>
-  <div id="sketch"></div>
-  <p id="reading" aria-live="polite">Press SPIN (or the space bar).</p>
-  <button id="spin" type="button">SPIN</button>
-</main>
-<script>
+// flower-spinner.js: for OpenProcessing. Paste this whole file over the starter code in a new p5.js sketch.
+// The same sketch runs offline as workshop/files/p5/flower-spinner.html.
+
 // Same shape as files/tracery/spinner-grammar.json. Change the words; 3 to 12 per ring reads well.
 const grammar = {
   "origin": ["#outer# meets #inner#"],
@@ -102,6 +80,3 @@ function drawRing(r) {
   }
   pop();
 }
-</script>
-</body>
-</html>
