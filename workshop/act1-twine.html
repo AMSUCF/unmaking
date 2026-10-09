@@ -28,16 +28,16 @@
       <div>
         <p class="kicker">ACT I · PAPER</p>
         <h1>Passages</h1>
-        <p class="lede">Hypertext is linked text. Plan one with index cards and string, then build it in Twine, a tool made for writers rather than coders.</p>
+        <p class="lede">Hypertext is linked text. Build one in Twine, a tool made for writers rather than coders.</p>
         <p class="question">From the talk: the end of making as we know it?</p>
         <ul class="meta">
-          <li>Suggested: 40 min</li>
+          <li>Suggested: 25 min</li>
           <li>Make: a branching hypertext</li>
-          <li>Need: cards, string, tape, a browser</li>
+          <li>Need: a browser</li>
         </ul>
       </div>
       <div class="side">
-        <p class="say">Start on paper. The string is the twine.</p>
+        <p class="say">Passages are what you read. Links are how you move.</p>
         <div class="guide" data-who="anastasia" data-pose="scissors"></div>
       </div>
     </div>
@@ -46,45 +46,32 @@
   <main id="main" class="wrap">
     <nav class="toc" aria-label="Steps">
       <ol>
-        <li><a href="#prototype">1 · Prototype</a></li>
-        <li><a href="#open">2 · Open Twine</a></li>
-        <li><a href="#links">3 · Passages &amp; links</a></li>
-        <li><a href="#choices">4 · Choices that count</a></li>
-        <li><a href="#publish">5 · Play &amp; publish</a></li>
+        <li><a href="#open">1 · Open Twine</a></li>
+        <li><a href="#links">2 · Passages &amp; links</a></li>
+        <li><a href="#choices">3 · Choices that count</a></li>
+        <li><a href="#publish">4 · Play &amp; publish</a></li>
         <li><a href="#unmake">Unmake</a></li>
         <li><a href="#files">Files</a></li>
       </ol>
     </nav>
 
-    <section class="card lined" id="prototype">
-      <span class="time">10 min</span>
-      <h2><span class="step-n">1.</span> The paper prototype</h2>
-      <p>Twine works in <strong>passages</strong> (what the reader sees) and <strong>links</strong> (how they move). Plan both by hand first, after Deena Larsen's shower-curtain map of a hypertext, now in the MITH archives.</p>
-      <ol>
-        <li>Mark one index card with a star and title it <strong>Start</strong>. It introduces the piece and sets up the first choice.</li>
-        <li>Give every card a unique title. You'll use the titles to make links.</li>
-        <li>Tape string from the <em>word or phrase</em> that should be clicked to the card it leads to.</li>
-        <li>Make at least one complete path with a sense of an ending.</li>
-        <li>Check that every card is connected to something. A passage nothing links to can't be reached.</li>
-      </ol>
-      <p class="callout"><strong>Fewer, bigger choices.</strong> You don't need many branches. A few paths with real differences (contrasting views, a deeper dive, a consequence) say more than many small decisions.</p>
-    </section>
 
     <section class="card" id="open">
       <span class="time">5 min</span>
-      <h2><span class="step-n">2.</span> Open Twine</h2>
+      <h2><span class="step-n">1.</span> Open Twine</h2>
       <ol>
         <li>Go to <a href="https://twinery.org/">twinery.org</a>. Use Twine in your browser, or download the desktop app if you can install software. The two look nearly the same.</li>
-        <li>Create a new story and give it your prototype's name.</li>
+        <li>Create a new story and give it a name.</li>
         <li>Keep the default story format, <strong>Harlowe</strong>. Everything below is Harlowe.</li>
       </ol>
       <p class="callout"><strong>Twine is not a host.</strong> The browser version saves into that one browser's storage. Use <em>Build → Publish to File</em> often. Clearing your browser data, or switching computers, loses unsaved work.</p>
     </section>
 
     <section class="card" id="links">
-      <span class="time">10 min</span>
-      <h2><span class="step-n">3.</span> Passages and links</h2>
-      <p>Double-click the start passage (marked with the green rocket), rename it <strong>Start</strong>, and type the text of your first card. Put square brackets around the words your string was taped to:</p>
+      <span class="time">8 min</span>
+      <h2><span class="step-n">2.</span> Passages and links</h2>
+      <p>Twine works in <strong>passages</strong> (what the reader sees) and <strong>links</strong> (how they move). Its story map descends from hand-drawn ones like Deena Larsen's shower-curtain map of a hypertext, now in the MITH archives.</p>
+      <p>Double-click the start passage (marked with the green rocket), rename it <strong>Start</strong>, and write an opening that sets up the first choice. Put square brackets around the words the reader should click:</p>
 <pre><code>We might [[say one thing->phrase of significance]] and [[mean another->another passage]].
 We can even have links that look different but lead to the [[same place->another passage]].
 
@@ -95,12 +82,13 @@ We can even have links that look different but lead to the [[same place->another
         <li><code>[[Passage&lt;-text]]</code> is the same link written the other way round.</li>
         <li><code>[[Passage]]</code> shows the passage's own title.</li>
       </ul>
-      <p>Whenever you link to a title that doesn't exist yet, Twine draws a new passage for it. Follow your strings until every card is a passage.</p>
+      <p>Whenever you link to a title that doesn't exist yet, Twine draws a new passage for it. Make at least one complete path with a sense of an ending, and check that every passage is linked from somewhere: a passage nothing links to can't be reached.</p>
+      <p class="callout"><strong>Fewer, bigger choices.</strong> You don't need many branches. A few paths with real differences (contrasting views, a deeper dive, a consequence) say more than many small decisions.</p>
     </section>
 
     <section class="card" id="choices">
-      <span class="time">10 min</span>
-      <h2><span class="step-n">4.</span> Make choices count</h2>
+      <span class="time">7 min</span>
+      <h2><span class="step-n">3.</span> Make choices count</h2>
       <p>Harlowe can remember what the reader did and change later passages. Three macros go a long way. <strong>Set</strong> a variable when a choice is made:</p>
 <pre><code>(set: $handed to it + 1)
 You let the machine stitch the next row.</code></pre>
@@ -115,7 +103,7 @@ You let the machine stitch the next row.</code></pre>
 
     <section class="card" id="publish">
       <span class="time">5 min</span>
-      <h2><span class="step-n">5.</span> Play and publish</h2>
+      <h2><span class="step-n">4.</span> Play and publish</h2>
       <ol>
         <li>Use <em>Build → Play</em> (or <em>Test</em>, which shows your variables) to read your story as a reader would.</li>
         <li>Use <em>Build → Publish to File</em>. The result is one <code>.html</code> file that opens in any browser.</li>
@@ -131,15 +119,15 @@ You let the machine stitch the next row.</code></pre>
         <footer>Chris Klimas, interviewed for <cite>Twining</cite></footer>
       </blockquote>
       <ul>
-        <li>Twine was made by one person, then kept going by a community, for people who were left out of “learn to code.” An agent will now write a Twine for anyone who can describe one. So is Twine pointless now? What did the cards and string give you that a description wouldn't?</li>
-        <li>Look at your prototype. Which choices did the reader get, and which did you keep for yourself?</li>
+        <li>Twine was made by one person, then kept going by a community, for people who were left out of “learn to code.” An agent will now write a Twine for anyone who can describe one. So is Twine pointless now? What did building it link by link give you that a description wouldn't?</li>
+        <li>Look at your story map. Which choices did the reader get, and which did you keep for yourself?</li>
         <li>Rewrite the last passage of <em>The Longarm</em> with your own question about making with machines. Keep it: you'll come back to it in Act IV.</li>
-        <li>Twine doesn't have to stay on a screen. In <a href="http://aco.booktype.pro/elo-2015-the-ends-of-electronic-literature/john-murray-and-anastasia-salter-from-beyond-hybridity-ouija-board-project/"><cite>From Beyond</cite></a> (John Murray and Anastasia Salter, ELO 2015, Bergen), readers chose each link by moving the planchette of a wooden Ouija board; sensors in the board sent the choice to a modified Twine story about the supernatural. Emily's <a href="https://ekjphd.com/beadedadventures.html"><cite>BeadED Adventures</cite></a> goes the other way: an interactive STEM story where each puzzle you solve earns a real bead, and the choices you make leave with you as a bracelet. Your index cards and string are already a physical Twine. What would yours be if the links were objects?</li>
+        <li>Twine doesn't have to stay on a screen. In <a href="http://aco.booktype.pro/elo-2015-the-ends-of-electronic-literature/john-murray-and-anastasia-salter-from-beyond-hybridity-ouija-board-project/"><cite>From Beyond</cite></a> (John Murray and Anastasia Salter, ELO 2015, Bergen), readers chose each link by moving the planchette of a wooden Ouija board; sensors in the board sent the choice to a modified Twine story about the supernatural. Emily's <a href="https://ekjphd.com/beadedadventures.html"><cite>BeadED Adventures</cite></a> goes the other way: an interactive STEM story where each puzzle you solve earns a real bead, and the choices you make leave with you as a bracelet. What would your Twine be if the links were objects?</li>
       </ul>
       <div class="figs">
         <figure><img src="img/from-beyond.png" alt="From Beyond: a laser-cut wooden Ouija board reading BEYOND, with a mirrored alphabet, YES, NO and GOOD BYE, and a heart-shaped planchette, lit by a bare filament bulb in a dark room."><figcaption><cite>From Beyond</cite> (Murray and Salter, 2015): a Twine story played on a Ouija board.</figcaption></figure>
         <figure><img src="../assets/act1/beaded-adventures.jpg" alt="BeadED Adventures: six corked glass jars of beads (pink, orange, gold, green, blue, silver) on a dark wooden stand lit from underneath in rainbow colors, wired to a laptop showing the game."><figcaption>Emily K. Johnson, <cite>BeadED Adventures</cite>: a story you play to earn beads, and take home on your wrist.</figcaption></figure>
-        <figure><img src="../assets/act2/twine-interface.png" alt="A Twine story map: passages as text boxes connected by arrows."><figcaption>A Twine story map: passages and links, the cards and string on screen.</figcaption></figure>
+        <figure><img src="../assets/act2/twine-interface.png" alt="A Twine story map: passages as text boxes connected by arrows."><figcaption>A Twine story map: passages and links, drawn as a map.</figcaption></figure>
         <figure><img src="../assets/act2/twining.png" alt="Cover of Twining: Critical and Creative Approaches to Hypertext Narratives by Anastasia Salter and Stuart Moulthrop."><figcaption><cite>Twining</cite>, Salter and Moulthrop.</figcaption></figure>
       </div>
     </section>

@@ -1,12 +1,13 @@
 # Critical (Un)Making Workshop
 
 A hands-on companion to the talk, in the talk's four crafts, with the
-presenters' pixel avatars as guides. Open `workshop/index.html`. It runs from
+presenters' pixel avatars as guides. It runs two hours: I 25 min, II 25, an intermission demo 10, III 25, IV 35.
+Open `workshop/index.html`. It runs from
 `file://` with no Wi-Fi, like the deck.
 
 | Act | Craft | Tool | Make |
 |---|---|---|---|
-| I · Passages | Paper | Twine (Harlowe) | A paper prototype, then a branching hypertext |
+| I · Passages | Paper | Twine (Harlowe) | A branching hypertext |
 | II · Patterns | Textile | Tracery | A grammar, plus a flat version for print |
 | III · Sketches | Zine | p5.js | A sketch that runs the grammar |
 | IV · Agents | Game | Claude Code + OpenSCAD | A 3D cryptex or flower spinner from the grammar, and a process log |
